@@ -8,12 +8,14 @@ from __future__ import annotations
 from pathlib import Path
 import argparse
 import json
+import os
 import sys
 
 SCOPES = ["https://www.googleapis.com/auth/drive"]
 REPO = Path(__file__).resolve().parents[1]
 DEFAULT_SUBJECT = "math,ela"
-OAUTH_TOKEN = Path(r"c:\Users\neeli\kpkDevelopment\mts-new\.secrets\oauth-token.json")
+SECRETS_DIR = Path(os.environ.get("LOCALAPPDATA", str(Path.home() / "AppData" / "Local"))) / "MTS" / ".secrets"
+OAUTH_TOKEN = Path(os.environ.get("MTS_GOOGLE_OAUTH_TOKEN", str(SECRETS_DIR / "oauth-token.json")))
 
 sys.path.insert(0, str(REPO / "src"))
 from mts.infrastructure.google_docs import google_docs_adapter  # noqa: E402
@@ -27,6 +29,10 @@ def build_clients():
     from google.oauth2.credentials import Credentials
     from googleapiclient.discovery import build
 
+    if not OAUTH_TOKEN.is_file():
+        raise FileNotFoundError(
+            f"Google OAuth token not found at {OAUTH_TOKEN}. Run scripts/auth_google.py first."
+        )
     creds = Credentials.from_authorized_user_file(str(OAUTH_TOKEN), SCOPES)
     if creds.expired and creds.refresh_token:
         creds.refresh(Request())
