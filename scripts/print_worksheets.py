@@ -62,7 +62,12 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--week", default="current", help="'current', an instructional week number, or an ISO date.")
     parser.add_argument("--grades", default=None, help="Comma-separated grade ids; default is every configured grade.")
-    parser.add_argument("--source", choices=["staging", "publish"], default=None, help="Folder preset to print from.")
+    parser.add_argument(
+        "--source",
+        choices=["print_ready", "staging", "publish"],
+        default=None,
+        help="Folder preset to print from.",
+    )
     parser.add_argument("--include", choices=["both", "worksheet", "key"], default=None)
     parser.add_argument("--copies", default=None, help="Per-grade overrides, e.g. grade_5=6,grade_6=3:2.")
     parser.add_argument("--printer-name", "--printer", dest="printer_name", default=None, help="Select a configured printer name.")

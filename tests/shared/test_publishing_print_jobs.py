@@ -298,6 +298,35 @@ def test_batch_dry_run_plans_each_subject_and_sums_the_confirmation_total():
     assert adapter.exported == []
 
 
+def test_default_print_ready_source_is_shared_by_math_and_ela():
+    requests, configs, _ = batch_configs_and_adapter()
+    print_ready_id = "print-ready-folder"
+    files = staged_files() + [
+        file_entry("e1w", f"MTS-ELA-1-{WEEK}.pdf"),
+        file_entry("e1k", f"MTS-ELA-1-{WEEK}-KEY.pdf"),
+        file_entry("e6w", f"MTS-ELA-6-{WEEK}.pdf"),
+        file_entry("e6k", f"MTS-ELA-6-{WEEK}-KEY.pdf"),
+    ]
+    adapter = PrintAdapter(files={print_ready_id: files}, folders={print_ready_id: []})
+    for config in configs:
+        config["publishing"] = {
+            **config["publishing"],
+            "printing": {
+                **config["publishing"]["printing"],
+                "default_source": "print_ready",
+                "print_ready_folder_id": print_ready_id,
+            },
+        }
+
+    records = print_jobs.run_print_batch(requests, configs, adapter, dry_run=True)
+
+    assert [record["source"] for record in records] == ["print_ready", "print_ready"]
+    assert [
+        record["targets"][0]["effective_folder"]["id"] for record in records
+    ] == [print_ready_id, print_ready_id]
+    assert [record["planned_copies"] for record in records] == [10, 10]
+
+
 def test_batch_confirmation_is_checked_before_any_subject_spools():
     requests, configs, adapter = batch_configs_and_adapter()
     created_printers = []

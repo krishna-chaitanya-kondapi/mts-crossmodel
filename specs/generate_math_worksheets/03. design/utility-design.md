@@ -747,10 +747,11 @@ the documents it reads stay exactly where they were.
 
 ### 6.2 Shared Resolution And Pairing
 
-Printing defines no folder resolution and no pairing of its own:
+Printing defines no pairing of its own:
 
-- Targets come from `archive.resolve_targets` with the same `staging` and `publish` presets
-  (§2.3), and the effective folder from the shared `archive.resolve_effective_folder`.
+- `staging` and `publish` targets come from `archive.resolve_targets` with the same presets (§2.3),
+  and the effective folder from the shared `archive.resolve_effective_folder`. `print_ready` reads
+  the single configured `publishing.printing.print_ready_folder_id` directly.
 - In `publish` (parent) mode the folder date is the **requested week**, never `latest`, so printing a
   past week cannot silently pull the newest folder.
 - Grade/role pairing is `deliver.pair_from_staging` (§4.3). `ambiguous_name`, `incomplete_pair`, and
@@ -783,9 +784,10 @@ The one decision this utility owns is how many copies of each document to print.
 
 ### 6.5 Configuration Contract
 
-`publishing.printing` in `base.yaml`: `enabled`, `printer_name`, `backend`, `backends.<name>.executable`,
-`duplex`, `default_source`, `require_confirmation`, `spool_dir`. `enabled: false` is the kill switch.
-The subject file contributes `publishing.printing.copies_by_grade` only.
+`publishing.printing` in `base.yaml`: `enabled`, `print_ready_folder_id`, `printer_name`, `backend`,
+`backends.<name>.executable`, `duplex`, `default_source`, `require_confirmation`, `spool_dir`.
+`print_ready_folder_id` is the shared flat folder used by default for both subjects. `enabled: false`
+is the kill switch. The subject file contributes `publishing.printing.copies_by_grade` only.
 
 ### 6.6 Subject Neutrality
 
@@ -807,7 +809,7 @@ works. Math omits the field and its names are unaffected.
 |---|---|---|
 | `week` | `current`, a week number, or an ISO date | `current` |
 | `grades` | `all`, or a grade list | `all` |
-| `source` | `staging`, `publish` | `publishing.printing.default_source` |
+| `source` | `print_ready`, `staging`, `publish` | `publishing.printing.default_source` (`print_ready`) |
 | `include` | `both`, `worksheet`, `key` | `both` |
 | `copies` | per-grade overrides | configured counts |
 | `printer` | a Windows printer name | `publishing.printing.printer_name` |

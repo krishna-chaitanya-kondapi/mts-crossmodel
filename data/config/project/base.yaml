@@ -126,6 +126,7 @@ publishing:
   # with per-grade class counts. Never renders, edits, delivers, or approves anything.
   printing:
     enabled: true
+    print_ready_folder_id: "1LFjWyf368S5Ayq1j2I0W6lfJWttF6L79"
     printer_name: "Brother HL-L2380DW series Printer"
     available_printer_names:
       - "Brother HL-L2380DW series Printer"
@@ -140,7 +141,7 @@ publishing:
       acrobat:
         executable: "C:/Program Files/Adobe/Acrobat DC/Acrobat/Acrobat.exe"
     duplex: "duplex_long"
-    default_source: "staging"
+    default_source: "print_ready"
     # Paper is not undoable: applying requires a copy total matching the plan at apply time.
     require_confirmation: true
     spool_dir: "outputs/print"

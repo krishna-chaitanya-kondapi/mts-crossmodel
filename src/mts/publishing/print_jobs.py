@@ -41,8 +41,10 @@ def printing_settings(effective_config: Mapping[str, Any]) -> Mapping[str, Any]:
 
 def resolve_source(requested: Any, settings: Mapping[str, Any]) -> str:
     source = requested or settings.get("default_source", "staging")
-    if source not in ("staging", "publish"):
-        raise PrintError("source must be 'staging' or 'publish'.")
+    if source not in ("print_ready", "staging", "publish"):
+        raise PrintError("source must be 'print_ready', 'staging', or 'publish'.")
+    if source == "print_ready" and not settings.get("print_ready_folder_id"):
+        raise PrintError("publishing.printing.print_ready_folder_id is required for source 'print_ready'.")
     return source
 
 
@@ -212,7 +214,14 @@ def run_print(
         check_copy_counts_configured(settings, grade_ids, overrides)
     archive_folder_name = effective_config.get("publishing", {}).get("archive", {}).get("archive_folder_name")
     week_folder_pattern = week_folder_pattern_of(effective_config)
-    targets = resolve_targets({"folder": source, "grades": request.get("grades")}, effective_config)
+    if source == "print_ready":
+        targets = [{
+            "label": source,
+            "folder_id": settings["print_ready_folder_id"],
+            "folder_type": "folder",
+        }]
+    else:
+        targets = resolve_targets({"folder": source, "grades": request.get("grades")}, effective_config)
     # Destinations are shared per-grade folders; a grade this subject does not produce is not a failure.
     targets, skipped_targets = _restrict_targets_to_named_grades(targets, naming, request.get("grades"))
 

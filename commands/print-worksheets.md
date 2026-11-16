@@ -24,7 +24,7 @@ Concrete CLI entry point:
 |---|---|---|---|
 | `week` | `current`, an instructional week number, or an ISO date | `current` | Resolved to that week's ISO Monday. Selects which staged documents match, and which `Week_<WEEK_OF>` folder to read in `publish` mode. |
 | `grades` | `all`, or a comma-separated grade list | `all` | A named grade with no configured copy counts is a fail-closed error. |
-| `source` | `staging`, `publish` | `publishing.printing.default_source` (`staging`) | `staging` reads the approved staging folder; `publish` reads each grade's delivered `Week_<WEEK_OF>` folder. |
+| `source` | `print_ready`, `staging`, `publish` | `publishing.printing.default_source` (`print_ready`) | `print_ready` reads `publishing.printing.print_ready_folder_id`; `staging` reads the approved staging folder; `publish` reads each grade's delivered `Week_<WEEK_OF>` folder. |
 | `include` | `both`, `worksheet`, `key` | `both` | `key` prints answer keys only; `worksheet` prints student copies only. |
 | `copies` | per-grade overrides, e.g. `grade_5=6` or `grade_5=6:2` | configured counts | `<grade>=<worksheets>[:<keys>]`. Applies to this run only and is never persisted. |
 | `printer_name` | a configured Windows printer name | `publishing.printing.printer_name` (`Brother HL-L2380DW series Printer`) | Selects the configured Brother or HP queue; must match the configured name exactly. The CLI also accepts legacy `--printer`. |
@@ -41,6 +41,8 @@ to generate new ones.
 - **Math** is staged as Google Docs and exported to PDF on the way to the printer.
 - **ELA** is staged as finished PDFs and downloaded as-is. Its key suffix precedes the file extension
   (`…-2026-09-07-KEY.pdf`), which `naming.weekly.file_extension` accounts for.
+- The default `print_ready` source is one project-scoped folder shared by Math and ELA. Each subject
+  pairs only documents matching its configured naming prefixes.
 - Final Delivery destinations are project-scoped in `data/config/project/base.yaml` and are shared by
   Math and ELA. ELA can use `source=publish` for grades that have both a configured naming prefix
   and configured copy counts in `data/config/subjects/ela.yaml`.
