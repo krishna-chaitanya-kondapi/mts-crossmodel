@@ -1,0 +1,213 @@
+{
+  "version": 1,
+  "scope": "Three completed historical source-based benchmark reviews only",
+  "profiles": {
+    "ny2024_math_grade4": {
+      "reviewer": "Codex source/academic/visual review; isolated authorized ELA prediction review additionally recorded",
+      "method": "Independent item solutions, official scoring comparison, native text/source vector review, golden comparison and inspection of all rendered pages",
+      "source_sha256": "88351089919b18dfc2f3dc5d64809d20aadd68d56a1dc38841a3387354b8c0f6",
+      "student_manifest_sha256": "6747c166c530ac4298f037f47a40b003ab9ba9c2542d5b8957a4b77a5fa4bae7",
+      "teacher_manifest_sha256": "36fcdc0bc3cdac21d3ef771e8f6dc3e25b2a22cab367c142aaf6b8454a5265de",
+      "implementation_hashes": {
+        "__init__.py": "2f7160bde1e8af02610234978f8021fca3dbe86ee0bd3478391b20f674451716",
+        "ela_student.py": "666100c0eeee3adb4ecb3e96525d02959d0a942446b6b96a3ba607cc498db852",
+        "ela_teacher.py": "ba7953da69eb5b006f3f4afb95bdd6c5cc595dbe4e11307e5363624b61043748",
+        "grade4_student.py": "5ced6e629e130518ff3b017668094d97e728f5df94b77e8433e5a4f2ab70985c",
+        "grade5_student.py": "d580b4c3a845120d03ec0d442b7a6a4b711dc68766abbd16ea2976f7569dc8e7",
+        "item_map.py": "ae68b55fc46d7c4304dce9f1502d6c8ae159549b0adcaa188a96686e074d3bb7",
+        "release.py": "c0bd81545a95e540d31e9f8e3e6279aeb524b8989ca4edd953df28b95054ffb5",
+        "review_catalog.py": "8463c3c150e150331836b3a1ba90da95b64b19c2e458ef6ec8a500fd5a1b0be6",
+        "run_benchmark.py": "c7a7c9a11e5b363b4ef1fffd5db7d937e7a123738835aa8055d658eba408bf8a",
+        "source_render.py": "54ad336b49bb05a110a3d075205dbcede1ee132e5261ec123204ab848bf478c2",
+        "teacher_key.py": "ec2b722ac12bec20c9579f7af6902cfb43fd424ebd4935307035ffc4db97191a",
+        "verification.py": "e31302ca61abbfb65cd6675ff4cd149cfc73de260277f948a60874d8257f6de1"
+      },
+      "reviewed_revision": "436ed79afaee9c006c23204c1a73dae33a70af11",
+      "renderer_version": "2.1",
+      "student_page_pixels": [
+        "31911d3aebcb29af0ae04a73c0829104d662ee71dd6d41f68a2948544cd584af",
+        "beacce30ccd3ba74fa881d4411b8ec539bdf24d1edbc155ba21605ac8440557c",
+        "716f45a464bf18a8a265905298352058bfb78203be66eb74a0a3a53b3fe10f57",
+        "344f48b04954428d653c858842d02c0402ecd4530ae96e8cb8d4d1989c6eae4d"
+      ],
+      "teacher_page_pixels": [
+        "36c50a6f7c19b749ae851493b8b6717511dd67ae1b42108c65abc5dc4324d973"
+      ],
+      "academic_review": "PASS",
+      "source_fidelity": "PASS",
+      "visual_review": "PASS",
+      "evidence": [
+        {
+          "path": "outputs/iteration-27-review-closure.md",
+          "sha256": "2e2ec1840b52a4ac94611a39efb2ac257a3029ecd3451f4811d8956378f4bc4f"
+        },
+        {
+          "path": "outputs/iteration-27-artifact-audit.json",
+          "sha256": "3da9f06976a086f3438349c3757644981170ec7c1058075eb5895e835ac9311e"
+        },
+        {
+          "path": "outputs/iteration-27-golden-comparison.json",
+          "sha256": "66abd5abc435cc36f66a2900a8528a7a6583f1c820a691a5ec24b73af8c30d42"
+        },
+        {
+          "path": "outputs/iteration-27-golden-text-differences.txt",
+          "sha256": "674631a42e67ce94ab4f52ae3199d36c336edd8ad53a04c465760fa6abe65e27"
+        },
+        {
+          "path": "outputs/grade4-academic-review.md",
+          "sha256": "464e1af07cd89b3a94e51faef4c3379402bfbf85d2063bcc10d457732d0880cb"
+        },
+        {
+          "path": "outputs/math-official-scoring-evidence.json",
+          "sha256": "efbba6176db802218bdfcecb60b039ce9c56c2342f7defaa47d6b8ac1204a74c"
+        },
+        {
+          "path": "outputs/grade4-figure-clearance.json",
+          "sha256": "aee63ddd0b18fc67853cc55f14448ec18de2537ff0f8972fe342638104a19aa6"
+        }
+      ]
+    },
+    "ny2024_math_grade5": {
+      "reviewer": "Codex source/academic/visual review; isolated authorized ELA prediction review additionally recorded",
+      "method": "Independent item solutions, official scoring comparison, native text/source vector review, golden comparison and inspection of all rendered pages",
+      "source_sha256": "96bc4dca01185cda99056c98391ac85d41ecf7595b2b3ec29f7595b7e7b91f93",
+      "student_manifest_sha256": "c4eaf4338310b60cb937a945d3c1b159970b95e6788cca95616742626eaf6221",
+      "teacher_manifest_sha256": "0266fbb18e9ff6408a77d2ee48c70ddc71d9d5bcd87edb8f0f482cd1776d6877",
+      "implementation_hashes": {
+        "__init__.py": "2f7160bde1e8af02610234978f8021fca3dbe86ee0bd3478391b20f674451716",
+        "ela_student.py": "666100c0eeee3adb4ecb3e96525d02959d0a942446b6b96a3ba607cc498db852",
+        "ela_teacher.py": "ba7953da69eb5b006f3f4afb95bdd6c5cc595dbe4e11307e5363624b61043748",
+        "grade4_student.py": "5ced6e629e130518ff3b017668094d97e728f5df94b77e8433e5a4f2ab70985c",
+        "grade5_student.py": "d580b4c3a845120d03ec0d442b7a6a4b711dc68766abbd16ea2976f7569dc8e7",
+        "item_map.py": "ae68b55fc46d7c4304dce9f1502d6c8ae159549b0adcaa188a96686e074d3bb7",
+        "release.py": "c0bd81545a95e540d31e9f8e3e6279aeb524b8989ca4edd953df28b95054ffb5",
+        "review_catalog.py": "8463c3c150e150331836b3a1ba90da95b64b19c2e458ef6ec8a500fd5a1b0be6",
+        "run_benchmark.py": "c7a7c9a11e5b363b4ef1fffd5db7d937e7a123738835aa8055d658eba408bf8a",
+        "source_render.py": "54ad336b49bb05a110a3d075205dbcede1ee132e5261ec123204ab848bf478c2",
+        "teacher_key.py": "ec2b722ac12bec20c9579f7af6902cfb43fd424ebd4935307035ffc4db97191a",
+        "verification.py": "e31302ca61abbfb65cd6675ff4cd149cfc73de260277f948a60874d8257f6de1"
+      },
+      "reviewed_revision": "436ed79afaee9c006c23204c1a73dae33a70af11",
+      "renderer_version": "2.1",
+      "student_page_pixels": [
+        "7a6a7e69ef370475916a0454801a349890570d206f114d1786b9d61ffd503281",
+        "154f40ef69602461eff4f9e48422dc6b33498e96a40485d3695065c28e95a91f",
+        "f2b9f97ff256635c295fd1a7ddd701d2668815e0f6938080525d46f3c88711d2"
+      ],
+      "teacher_page_pixels": [
+        "6eba0911157a28234d30756a845f45e937a692de84ff7f9bc49bac120ec0eb99"
+      ],
+      "academic_review": "PASS",
+      "source_fidelity": "PASS",
+      "visual_review": "PASS",
+      "evidence": [
+        {
+          "path": "outputs/iteration-27-review-closure.md",
+          "sha256": "2e2ec1840b52a4ac94611a39efb2ac257a3029ecd3451f4811d8956378f4bc4f"
+        },
+        {
+          "path": "outputs/iteration-27-artifact-audit.json",
+          "sha256": "3da9f06976a086f3438349c3757644981170ec7c1058075eb5895e835ac9311e"
+        },
+        {
+          "path": "outputs/iteration-27-golden-comparison.json",
+          "sha256": "66abd5abc435cc36f66a2900a8528a7a6583f1c820a691a5ec24b73af8c30d42"
+        },
+        {
+          "path": "outputs/iteration-27-golden-text-differences.txt",
+          "sha256": "674631a42e67ce94ab4f52ae3199d36c336edd8ad53a04c465760fa6abe65e27"
+        },
+        {
+          "path": "outputs/grade5-scoring-review.md",
+          "sha256": "0db904bbfdd54245ee704f36866f4a0430db2cf369e74a5040022fcd5f3f6105"
+        },
+        {
+          "path": "outputs/math-official-scoring-evidence.json",
+          "sha256": "efbba6176db802218bdfcecb60b039ce9c56c2342f7defaa47d6b8ac1204a74c"
+        },
+        {
+          "path": "outputs/grade5-source-comparison.md",
+          "sha256": "360e5a81a15d66bc18363c6fbbd479f82c393fa7f1650dd505af33146832172e"
+        },
+        {
+          "path": "outputs/grade5-print-layout-review.md",
+          "sha256": "4531af9188fee81086982802205a3b2eb42263347f61231b5cafbc0915d229c0"
+        }
+      ]
+    },
+    "ny2025_ela_grade6": {
+      "reviewer": "Codex source/academic/visual review; isolated authorized ELA prediction review additionally recorded",
+      "method": "Independent item solutions, official scoring comparison, native text/source vector review, golden comparison and inspection of all rendered pages",
+      "source_sha256": "734c8ac722ece5fe182bcd36652c8ae8617124eccf03b6de16ae71c3244907ea",
+      "student_manifest_sha256": "c5a08b0002105f705f40f0db5bd0e008898df0e0512de354c09551b27bedc89c",
+      "teacher_manifest_sha256": "d66e0284663440cbdd64006aeb07a2e05bfc85c10d73a5662a60e2c1d8d6e131",
+      "implementation_hashes": {
+        "__init__.py": "2f7160bde1e8af02610234978f8021fca3dbe86ee0bd3478391b20f674451716",
+        "ela_student.py": "666100c0eeee3adb4ecb3e96525d02959d0a942446b6b96a3ba607cc498db852",
+        "ela_teacher.py": "ba7953da69eb5b006f3f4afb95bdd6c5cc595dbe4e11307e5363624b61043748",
+        "grade4_student.py": "5ced6e629e130518ff3b017668094d97e728f5df94b77e8433e5a4f2ab70985c",
+        "grade5_student.py": "d580b4c3a845120d03ec0d442b7a6a4b711dc68766abbd16ea2976f7569dc8e7",
+        "item_map.py": "ae68b55fc46d7c4304dce9f1502d6c8ae159549b0adcaa188a96686e074d3bb7",
+        "release.py": "c0bd81545a95e540d31e9f8e3e6279aeb524b8989ca4edd953df28b95054ffb5",
+        "review_catalog.py": "8463c3c150e150331836b3a1ba90da95b64b19c2e458ef6ec8a500fd5a1b0be6",
+        "run_benchmark.py": "c7a7c9a11e5b363b4ef1fffd5db7d937e7a123738835aa8055d658eba408bf8a",
+        "source_render.py": "54ad336b49bb05a110a3d075205dbcede1ee132e5261ec123204ab848bf478c2",
+        "teacher_key.py": "ec2b722ac12bec20c9579f7af6902cfb43fd424ebd4935307035ffc4db97191a",
+        "verification.py": "e31302ca61abbfb65cd6675ff4cd149cfc73de260277f948a60874d8257f6de1"
+      },
+      "reviewed_revision": "436ed79afaee9c006c23204c1a73dae33a70af11",
+      "renderer_version": "2.1",
+      "student_page_pixels": [
+        "8626fb9ffa9f2f5fd4c7e6376141e3204f5c5de8984f948cf7a0932aa5ecf44d",
+        "a9fef326f71543dc4f1bae75ddf0247186192383139b764af635958085dc980c",
+        "f2edbe12355cdb0914efb5ed6018762673afe522f44f8d82fa3587de36f66908",
+        "edc9ba0000f4cfb4b966026fde4315a1df68aedaa8deb6b28d7c624eeac0cd3e"
+      ],
+      "teacher_page_pixels": [
+        "0e173ab69f02a53ef8f526eb5071ba455434362917f8f778c53ff12060eddd2e",
+        "aa11f216bec6ff1b0da99e3e8f09ca22695dc11b5fcb72d8bc19e4fab86247aa"
+      ],
+      "academic_review": "PASS",
+      "source_fidelity": "PASS",
+      "visual_review": "PASS",
+      "evidence": [
+        {
+          "path": "outputs/iteration-27-review-closure.md",
+          "sha256": "2e2ec1840b52a4ac94611a39efb2ac257a3029ecd3451f4811d8956378f4bc4f"
+        },
+        {
+          "path": "outputs/iteration-27-artifact-audit.json",
+          "sha256": "3da9f06976a086f3438349c3757644981170ec7c1058075eb5895e835ac9311e"
+        },
+        {
+          "path": "outputs/iteration-27-golden-comparison.json",
+          "sha256": "66abd5abc435cc36f66a2900a8528a7a6583f1c820a691a5ec24b73af8c30d42"
+        },
+        {
+          "path": "outputs/iteration-27-golden-text-differences.txt",
+          "sha256": "674631a42e67ce94ab4f52ae3199d36c336edd8ad53a04c465760fa6abe65e27"
+        },
+        {
+          "path": "outputs/ela-academic-review.md",
+          "sha256": "002968e624590187f84c6dc9e25b913d2d3ad767a2522c6207c06475dc01ddf1"
+        },
+        {
+          "path": "outputs/ela-source-transcription-review.md",
+          "sha256": "15d3276d79226eb3bbd5fa5ce84f5cef420d7ec06b31632765697e05f9ed534e"
+        },
+        {
+          "path": "outputs/ela-official-scoring-evidence.json",
+          "sha256": "51756b17a89686434e93012e27fb8f74e9b7fd6dbf0715517fa83a5963d93a18"
+        },
+        {
+          "path": "outputs/ela-blind-review.json",
+          "sha256": "79f127065b45bac39487e932744823349c1d7fc425481677c0217a935f2a80a4"
+        },
+        {
+          "path": "outputs/ela-blind-reconciliation.json",
+          "sha256": "e808133389e4d80834f70e30a398a69938d5e6724dfb677ba2e4b50fa3c7e7b0"
+        }
+      ]
+    }
+  }
+}

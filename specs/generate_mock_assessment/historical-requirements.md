@@ -21,3 +21,9 @@ Student layout is four Letter portrait pages: two-column passage 1; cipher illus
 The Grade 4 count discrepancy, Grade 5 Q40 correction, Grade 4 crop/prompt corrections and official alternate responses, ELA whitespace limitation, and unresolved Library/Drive identity are explicit deviations or recovery gaps. None of the supplied handoffs includes artifact-specific final human approval. Historical acceptance identity, original RunSpecs, full source-fidelity and academic verification remain open.
 
 The original source PDFs and selected IDs are fingerprinted in outputs/historical-source-item-maps.json. Drive artifact identities are in outputs/historical-inventory.json. Official scoring locations are in outputs/math-official-scoring-evidence.json. This requirements recovery does not certify regenerated outputs.
+
+## Recovery closure, iteration 27
+
+The canonical golden-assets.json now identifies and fingerprints all three source PDFs and six recovered final review PDFs, with on-demand restoration from pinned Git objects. The user explicitly designated the recovered ELA Drive worksheet/key as the authoritative golden pair. Original Library byte identity is unverified; it is no longer a reference-selection blocker. This designation supplies no production approval.
+
+The saved fixture RunSpecs are reconstructed, source-bound reproductions of the supplied historical scope, not recovered originals. Their fixed counts and selections were verified against the original item maps. Grade 4's actual 28-item scope supersedes the inconsistent 29-item handoff headline and illustrative configuration example. Complete academic/source/visual closure, official scoring alignment and intentional golden differences are in outputs/iteration-27-review-closure.md and its linked evidence. Broad diagnostic/custom/generated modes remain deferred by the unchanged approved registry.

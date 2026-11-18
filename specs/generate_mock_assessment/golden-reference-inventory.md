@@ -14,3 +14,7 @@ Drive metadata discovered; final approval, bytes and content not yet independent
 | NY ELA 2024 grade 6 source | 1Vf486qZ1cuAQsqTRcivnP_mjyD6uIShE |
 
 ELA final selected passages, worksheet and key remain unresolved. Recover approval evidence, exact source, selections, original official scoring and fingerprints before freezing golden runs. October Math batch is a candidate, not certified latest.
+
+## Recovered final reference selection
+
+See golden-assets.json for the canonical six final review PDF identities, SHA-256 values and recoverable pinned Git objects. The Math Grade 4 corrected REVIEW pair and Grade 5 delivered pair are recovered. The user explicitly selected the recovered ELA Drive pair as its authoritative golden; original Library byte identity remains unverified. All three original sources and exact selections are recovered. Earlier unresolved-selection notes above are historical. Reconstructed RunSpecs and completed review evidence are committed alongside the checkpoint. No golden designation constitutes production approval.

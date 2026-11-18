@@ -1,0 +1,37 @@
+# Final historical benchmark quality review
+
+Reviewed code 436ed79. Artifact identities and every page's pixel fingerprints are in iteration-27-artifact-audit.json. The final Grade 4 Name/Date placement was re-rendered and all four pages were inspected again. All other page bodies are identical to the just-inspected final27-a renderings.
+
+## Academic and scoring
+
+All 70 items were independently solved or reviewed in grade4-academic-review.md, grade5-scoring-review.md and ela-academic-review.md. All 50 rendered MC keys match the official item map and all 20 CR credit values match. The rendered Math solutions contain the independently computed full-credit answers. They retain the historical worked-solution format rather than reproducing entire official partial-credit scoring guides. The official scoring references and exemplar page locations are recorded in math-official-scoring-evidence.json and ela-official-scoring-evidence.json.
+
+Grade 4 Q36 was additionally measured from original vector ray endpoints: vertex (381.21698,252.89442), upper endpoint (340.74399,120.51343), left endpoint (242.78699,252.89442). The dot-product angle is 73.0000 degrees, independently supporting 73 degrees. The key preserves official tolerance 68-78 degrees. Q38 accepts both right and isosceles. Grade 5 Q40 has 35 tiles, each 1/4 square foot, giving 8 3/4 square feet. Grade 5 Q44 revenue 225 minus cost 121.50 gives 103.50 dollars profit.
+
+The user authorized an isolated ELA reviewer supplied only official passages/questions. Its initial predictions and responses remain immutable in ela-blind-review.json. Eleven of twelve initial MC predictions matched. Q8/source22 was reconciled separately in ela-blind-reconciliation.json: B follows the explicit classroom comparison; C overstates differences as lacking necessary conveniences. The reviewer classified its initial choice as an error, with no equally supported alternative after scrutiny. The teacher explanation was repaired. Both independent CR responses and the final two labeled MTS model responses support the required inference with two relevant passage details and align with the official 2-credit exemplars. Initial disagreement is retained as repair evidence, not hidden as a perfect first pass.
+
+## Source fidelity
+
+All 56 Math item regions retain every native source word after repairing source fi/fl encoding. Original figures remain PDF vector crops. Formula paths transcribed as inline slash fractions/operators were separately compared against source renderings and retain the same values, units, operations and four answer alternatives. All selected item identities occur once in source order. Student PDFs contain questions and response areas without teacher answers. Full Grade 4 Q41/Q43 prompts, Q26/Q34 crops and Grade 5 labels are intact.
+
+ELA has both complete passages, all 23 numbered paragraphs, three Purple section headings, four Local Legacies headings, twelve MC questions/four choices each, two 2-credit CR questions with five rules each and the original cipher illustration. Native source question text is extracted directly; raster-only passage pages were visually transcribed and checked against the official PDF. Correct source wording supersedes the historical golden's transcription errors, as itemized in ela-source-transcription-review.md. Straight punctuation, line wrapping, column breaks and inline Math fractions are presentation transformations. No substantive item, choice, scoring requirement or figure was removed or changed.
+
+## Every-page presentation review
+
+All 15 pages were rendered and inspected: Grade 4 student pages 1-4 plus key page 1; Grade 5 student pages 1-3 plus key page 1; ELA student pages 1-4 plus key pages 1-2. No blank pages, clipping, overlapping item blocks, missing diagram labels or answer leakage were observed. Letter portrait size, page counts, ordered atomic placements and native-text checks are independently verified by verify_mock_artifacts.py. Math placement bounds are at most 754 points; ELA questions and response rules remain inside the page body. Headers/footers are outside those bounds.
+
+All nine Grade 4 vector crops use 75%. Grade 5 uses 75% for Q3/Q9/Q39/Q40 and the historical 70% exception for Q43. Fourteen Math crops meet 6-point minimum visible-ink clearance: measured Grade 4 minimum 6.38 points, Grade 5 minimum 7.50 points. Detailed measurements are in grade4-figure-clearance.json and grade5-print-layout-review.md. Embedding transforms preserve aspect ratios. Math-specific clearance/scaling rules do not silently apply to the ELA illustration. ELA's cipher image was enlarged relative to the golden and its caption retypeset legibly; both complete image and caption were inspected.
+
+Math prompt/choice text is 9.2/9 points, matching or improving the golden profiles. Math key body is 10 points. ELA passage body 9.6 and question body 9.1 points improve the predominantly 7.5-9 point golden text. ELA key body 8.2 points improves its 7.5-point golden. At rendered print dimensions the text, notation, captions and labels remain readable. A physical printer/student usability study was not performed and is not claimed.
+
+Forward packing reduces the original source papers to 4 and 3 Math pages while retaining response space. Grade 4 Q26 uses full width; Q42-44 remain together on page 4 per the established profile. That page's remaining right column is intentional working space within the four-page golden constraint. Grade 5's three pages distribute questions more evenly than the golden's 13+13+2 split. ELA retains its required passage/question page separation; larger source-faithful typography uses more of the previously sparse passage pages. No forced scaling below minima or deletion was used to meet page counts.
+
+## Golden identity and differences
+
+The two corrected Math pairs are the recovered delivered/staged references. The user explicitly selected the recovered ELA Drive pair as the authoritative regression reference. Original Library byte identity remains unknown and is unnecessary to that explicit selection. This designation approves a reference only. It grants no production release approval.
+
+All six golden fingerprints, item inventories and page counts match the designated registry. iteration-27-golden-comparison.json records positions, fonts and structural differences. iteration-27-golden-text-differences.txt retains complete page-text diffs for all six documents. Differences comprise reflow, MTS identity fields/page numbers, equivalent notation, improved writing areas, official Math scoring corrections, restored official ELA wording/headings, larger cipher image/caption and the reconciled Q8 explanation. Educational content and assessment scope are preserved; source errors in historical artifacts are corrected. No blocking quality regression remains in these three reviewed profiles. This review supersedes earlier open quality notes for the same profiles, while preserving their historical evidence.
+
+## Scope and release
+
+Verification applies to these three fixed source-bound benchmark profiles. Broad diagnostic/custom/generated modes remain the two explicitly deferred criteria. Unknown or changed source/manifest/code/renderer/page pixels must retain NOT_VERIFIED status. Golden renders never publish. Local/Drive release tests use temporary stores and mocked transport. No production publication or final human acceptance has occurred. Artifact-specific human approval and exact approved hashes remain mandatory before release.
