@@ -2,7 +2,7 @@
 
 **2 / 76 (3%) mandatory criteria verified**
 
-**Status NOT_DONE** · Iteration 23 · audited code revision `2c59606b7f5c9cc09069e432022d52f23f59759e`
+**Status NOT_DONE** · Iteration 24 · audited code revision `2c59606b7f5c9cc09069e432022d52f23f59759e`
 
 The acceptance count is separate from the test count. V01.01 and V01.02 pass for requirements-source recovery and authority/scope classification only; this does not establish implementation, educational correctness, or release readiness.
 
@@ -21,23 +21,24 @@ The acceptance count is separate from the test count. V01.01 and V01.02 pass for
 
 - Recovered and fingerprinted approved Mock Assessment and Math/ELA requirement sources. Weekly Practice defaults are explicitly excluded. ELA detailed requirements remain proposed/incomplete and no ELA subject design document was found.
 - Latest clean full suite: **262 passed**. An earlier full-suite run had one Weekly bypass integration failure; the isolated test and clean full-suite rerun passed. The first failure's cause was not captured; test-written transaction fixtures were restored.
-- Grade 4 candidate: four pages, 28 ordered regions, full-width Q26, and matching page 3/4 groups and response-line counts versus the recovered golden. Page 1/2 grouping, page furniture, and question-label typography still differ; no visual-equivalence claim is made.
-- ELA's 13-page source-control manifest is not a final student candidate. Source fidelity, independent review, and historical equivalence remain NOT_VERIFIED.
+- Grade 4 candidate evidence records four pages, 28 ordered regions, full-width Q26, and matching page 3/4 groups and response-line counts versus the recovered golden. Page 1/2 grouping, page furniture, and question-label typography still differ; no visual-equivalence claim is made.
+- Iteration 24 found copyright/permission notices in the selected NYSED sources and no source-specific authorization record in the scoped project materials. No candidate was generated in that iteration.
 - No production publication occurred.
 
 ## Next steps
 
-1. Build criterion-level implementation/evidence traceability and keep unsupported criteria NOT_VERIFIED.
-2. Produce an ELA candidate from the official source, including raster-only pages 10 and 16, and compare it with the delivered golden.
-3. Repair the recorded Grade 4 golden differences and repeat the complete page-by-page comparison.
-4. Run both CLI production paths. Obtain qualified independent academic/source review; human approval is required before publication.
+1. Provide written authorization, a license, or another documented rights basis covering reproduction, reformatting, local storage, and the intended distribution of the selected NYSED content.
+2. While rights are pending, complete non-content criterion traceability and product-neutral architecture/synthetic-fixture checks; keep source-dependent criteria NOT_VERIFIED.
+3. After authorization, build and compare the ELA candidate and repair/recompare the Grade 4 candidate.
+4. Obtain qualified independent academic/source review; human approval is required before publication.
 
 ## Blockers and boundaries
 
-- A qualified independent reviewer is required for academic/source acceptance; self-review is insufficient.
-- Artifact-specific human approval is absent, so production publication is not authorized.
+- **Source rights:** blocks new source-derived ELA/Grade 4 candidate PDFs and content-parity acceptance until authorization is documented. This is not a legal determination.
+- **Independent review:** required for academic/source acceptance; self-review is insufficient.
+- **Human publication approval:** absent, so production publication is not authorized.
 - Do not use proposed Weekly ELA requirements as approved Mock Assessment policy.
 
 [Verification report](verification-report.md) · [Machine-readable criteria](verification-report.json) · [Canonical checkpoint](../specs/generate_mock_assessment/implementation-checkpoint.json)
 
-**Latest evidence:** [requirements recovery](iteration-23-requirements-recovery.json) · [Grade 4 comparison](iteration-23-grade4-render-evidence.json) · [tests](iteration-23-tests.txt) · [open defects](iteration-23-defects.json)
+**Latest evidence:** [source-rights check](iteration-24-source-rights-check.json) · [requirements recovery](iteration-23-requirements-recovery.json) · [Grade 4 comparison](iteration-23-grade4-render-evidence.json) · [tests](iteration-23-tests.txt) · [open defects](iteration-23-defects.json)

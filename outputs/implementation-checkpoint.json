@@ -1,6 +1,6 @@
 {
   "status": "NOT_DONE",
-  "iteration": 23,
+  "iteration": 24,
   "baseline_revision": "728596db0ec7deedc087b9e509da14701b7d088d",
   "criteria": [
     {
@@ -317,12 +317,13 @@
     }
   ],
   "next": [
-    "Build the criterion-level implementation/evidence trace for all 76 mandatory criteria; identify exact passing paths and keep unsupported rows NOT_VERIFIED.",
-    "Build a source-derived ELA student candidate from the official PDF, reconstruct raster-only source pages 10 and 16 from that source, and compare the full candidate with the historical delivered golden.",
-    "Repair the recorded Grade 4 golden differences in page 1/2 item grouping, all-page headers/page numbers/student fields, and boxed question-label typography; regenerate and compare all pages and page-four utilization while preserving full-width Q26.",
-    "Run the ELA and Grade 4 CLI production-path checks. Obtain qualified independent academic/source review and human approval before any production publication."
+    "Obtain and record written authorization, a license, or another documented rights basis covering the intended reproduction, reformatting, local storage, and distribution of the selected NYSED content. Do not generate or revise source-derived candidate PDFs until this is resolved.",
+    "While rights are pending, complete non-content criterion traceability and product-neutral architecture/synthetic-fixture checks; keep all source-dependent criteria NOT_VERIFIED.",
+    "After authorization, build and compare the source-derived ELA candidate (including raster-only source pages 10 and 16), then repair and fully compare the recorded Grade 4 golden differences.",
+    "Obtain qualified independent academic/source review and artifact-specific human approval before any production publication."
   ],
   "blockers": [
+    "The selected NYSED ELA and Grade 4 Math source PDFs contain copyright/permission notices, and no source-specific authorization record was located in the scoped project materials. This blocks new source-derived ELA and Grade 4 candidate PDFs and content-parity acceptance until a documented rights basis is supplied; see outputs/iteration-24-source-rights-check.json.",
     "A qualified independent reviewer must review the Grade 4 and ELA candidate answers, source selections, and scoring/rubric alignment; self-review cannot satisfy the independent-review criteria. This prevents V03 academic acceptance and dependent source-fidelity acceptance until review evidence is recorded.",
     "Artifact-specific human final approval is absent from the handoffs. This prevents production publication only; no publication is authorized without that approval.",
     "The detailed ELA requirements remain proposed/incomplete and no ELA subject design document was found; do not treat weekly ELA materials as approved Mock Assessment policy."
@@ -362,6 +363,7 @@
     "outputs/iteration-23-requirements-recovery.json",
     "outputs/iteration-23-defects.json",
     "outputs/iteration-23-grade4-render-evidence.json",
-    "outputs/iteration-23-tests.txt"
+    "outputs/iteration-23-tests.txt",
+    "outputs/iteration-24-source-rights-check.json"
   ]
 }

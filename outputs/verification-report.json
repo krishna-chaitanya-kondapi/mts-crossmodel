@@ -1,6 +1,6 @@
 {
   "status": "NOT_DONE",
-  "iteration": 23,
+  "iteration": 24,
   "date": "2026-11-18",
   "revision": "2c59606b7f5c9cc09069e432022d52f23f59759e",
   "registry_sha256": "c70cf4b237e712c11943ed16ac5a479a9310c65a6d1fd284baddb23d956f0aa4",
@@ -67,13 +67,18 @@
       "id": "MA-008",
       "finding": "The first Iteration 23 full-suite run had one Weekly bypass integration failure (261 passed); the isolated test passed and a clean full-suite rerun passed 262 tests. The initial failure's cause was not captured.",
       "affected": "Repeatability evidence for Weekly integration behavior"
+    },
+    {
+      "id": "MA-009",
+      "finding": "The selected NYSED ELA and Grade 4 Math source PDFs contain copyright/permission notices, but no source-specific authorization record was located in the scoped project materials.",
+      "affected": "Creation of new source-derived ELA/Grade 4 candidates and content-parity acceptance for V02.04, V04.* and V06.*"
     }
   ],
   "next": [
-    "Build the criterion-level implementation/evidence trace for all 76 mandatory criteria; identify exact passing paths and keep unsupported rows NOT_VERIFIED.",
-    "Build a source-derived ELA student candidate from the official PDF, reconstruct raster-only source pages 10 and 16 from that source, and compare the full candidate with the historical delivered golden.",
-    "Repair the recorded Grade 4 golden differences in page 1/2 item grouping, all-page headers/page numbers/student fields, and boxed question-label typography; regenerate and compare all pages and page-four utilization while preserving full-width Q26.",
-    "Run the ELA and Grade 4 CLI production-path checks. Obtain qualified independent academic/source review and human approval before any production publication."
+    "Obtain and record written authorization, a license, or another documented rights basis covering the intended reproduction, reformatting, local storage, and distribution of the selected NYSED content; do not generate or revise source-derived candidates until resolved.",
+    "While rights are pending, complete non-content criterion traceability and product-neutral architecture/synthetic-fixture checks; keep source-dependent criteria NOT_VERIFIED.",
+    "After authorization, build and compare the source-derived ELA candidate (including raster-only source pages 10 and 16), then repair and fully compare the recorded Grade 4 golden differences.",
+    "Obtain qualified independent academic/source review and artifact-specific human approval before any production publication."
   ],
   "pending_mandatory": [
     "V01.03",
@@ -862,5 +867,18 @@
       "sha256": "42164d3fa25adb149e9adf4300e91077683511c11cf34f0661d6cd460a278eaa",
       "note": "The first full run had 261 passed and one Weekly bypass integration failure. The isolated test passed, then a clean full-suite rerun passed 262 tests. The first failure's cause was not captured; test-written transaction fixtures were restored."
     }
+  },
+  "iteration_24_source_rights": {
+    "evidence": "iteration-24-source-rights-check.json",
+    "sha256": "a3a678d1b84d42f1d2abc43e8c9107b24446ec2cd52d4865702f3ff4690e7464",
+    "status": "BLOCKED_PENDING_AUTHORIZATION",
+    "candidate_generation_performed": false,
+    "sources_checked": 3,
+    "source_notice_pages": {
+      "ela": [7, 24],
+      "grade4_math": [5, 19],
+      "grade4_scoring": [2]
+    },
+    "scope": "Metadata and rights-notice indicators only; no source content reproduced."
   }
 }

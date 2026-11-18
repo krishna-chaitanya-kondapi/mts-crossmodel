@@ -14,7 +14,7 @@ Code lives in src/mts/products/mock_assessment and scripts/generate_mock_assessm
 
 Historical sources and references have Drive identities in outputs/historical-inventory.json and specs/generate_mock_assessment/golden-reference-inventory.md. Official Math scoring source URLs and hashes are in outputs/math-official-scoring-evidence.json. Exact source item mappings are in outputs/historical-source-item-maps.json.
 
-Large PDFs, local drafts and scratch scripts stay in the development workspace. On a new machine retrieve necessary assets using the recorded identities and verify their hashes. Missing assets block only the dependent rendering or content checks. Do not infer PASS from missing evidence.
+Large PDFs, local drafts and scratch scripts stay in the development workspace. On a new machine retrieve necessary assets using the recorded identities and verify their hashes. Missing assets block only the dependent rendering or content checks. Do not infer PASS from missing evidence. Before reproducing or reformatting NYSED content, verify and record the rights basis; Iteration 24 found copyright/permission notices on the selected source PDFs and no source-specific authorization record in the scoped project materials.
 
 Small renderer manifests are in specs/generate_mock_assessment/fixtures. Use explicit CLI arguments to point to local sources and output locations. ELA student generation remains an unfinished local trial; the 13-page source-control manifest is not a final candidate. Its source transcription and raster-only pages must be completed against NYSED and compared with the delivered golden.
 
