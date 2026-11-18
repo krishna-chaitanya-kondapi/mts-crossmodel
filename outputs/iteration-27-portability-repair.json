@@ -1,0 +1,11 @@
+{
+  "finding": "Older evidence working copies had CRLF while committed blobs contained LF. Exact-byte gate withheld Math review PASS in a fresh clone.",
+  "repair": "Restore those evidence files to their existing canonical committed bytes, refresh catalog fingerprints and repeat clean-checkout execution. outputs/.gitattributes preserves evidence bytes thereafter.",
+  "files": [
+    "outputs/grade4-figure-clearance.json",
+    "outputs/grade5-print-layout-review.md",
+    "outputs/grade5-scoring-review.md",
+    "outputs/grade5-source-comparison.md",
+    "outputs/math-official-scoring-evidence.json"
+  ]
+}

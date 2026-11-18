@@ -59,11 +59,11 @@
         },
         {
           "path": "outputs/math-official-scoring-evidence.json",
-          "sha256": "efbba6176db802218bdfcecb60b039ce9c56c2342f7defaa47d6b8ac1204a74c"
+          "sha256": "261bc7a290d82d5e1cadaefd318595eaa5000252081b4c23f6987b192ee27b21"
         },
         {
           "path": "outputs/grade4-figure-clearance.json",
-          "sha256": "aee63ddd0b18fc67853cc55f14448ec18de2537ff0f8972fe342638104a19aa6"
+          "sha256": "8dd4d7442d55cc2080319d0ab721f59ead48d674534d24e782a1e74096770939"
         }
       ]
     },
@@ -119,19 +119,19 @@
         },
         {
           "path": "outputs/grade5-scoring-review.md",
-          "sha256": "0db904bbfdd54245ee704f36866f4a0430db2cf369e74a5040022fcd5f3f6105"
+          "sha256": "1adf252cb65868a92afda7d034174bc9e87a7bd8f36a574a9f3824efdff9a75f"
         },
         {
           "path": "outputs/math-official-scoring-evidence.json",
-          "sha256": "efbba6176db802218bdfcecb60b039ce9c56c2342f7defaa47d6b8ac1204a74c"
+          "sha256": "261bc7a290d82d5e1cadaefd318595eaa5000252081b4c23f6987b192ee27b21"
         },
         {
           "path": "outputs/grade5-source-comparison.md",
-          "sha256": "360e5a81a15d66bc18363c6fbbd479f82c393fa7f1650dd505af33146832172e"
+          "sha256": "65620857dd95a5eac8f7c284a8952f1a3405a491ba1cdaa5596d9a5309f9c2ea"
         },
         {
           "path": "outputs/grade5-print-layout-review.md",
-          "sha256": "4531af9188fee81086982802205a3b2eb42263347f61231b5cafbc0915d229c0"
+          "sha256": "28a7d346119f2a609a685979694ad1c70e18028e9f164bb7807a497184688a17"
         }
       ]
     },
