@@ -95,7 +95,7 @@
         },
         {
           "path": "outputs/historical-source-item-maps.json",
-          "sha256": "1a3f0ce2be7de3058f80c0bd2ada10c142877a00f081e364146d7c8b542ab60a"
+          "sha256": "355f8ae1b926032745b6a54efc27ab07710d2778a5106fc5ad017781696ca5cb"
         },
         {
           "path": "outputs/iteration-27-isolation-audit.json",
@@ -195,7 +195,7 @@
       "evidence": [
         {
           "path": "workflows/generate-mock-assessment.md",
-          "sha256": "b3fbc9358efff32e9804b58a10d7d46d64a049daa38c2fd88239005050139bbc"
+          "sha256": "2167018e434c2e769bfe3bb74e7b076b030794a8c9c016d5728250f139a55138"
         },
         {
           "path": "outputs/iteration-27-isolation-audit.json",
@@ -427,7 +427,7 @@
         },
         {
           "path": "workflows/generate-mock-assessment.md",
-          "sha256": "b3fbc9358efff32e9804b58a10d7d46d64a049daa38c2fd88239005050139bbc"
+          "sha256": "2167018e434c2e769bfe3bb74e7b076b030794a8c9c016d5728250f139a55138"
         }
       ]
     },
@@ -614,7 +614,7 @@
       "evidence": [
         {
           "path": "scripts/verify_mock_artifacts.py",
-          "sha256": "c0b79eee8c95f9b01039bc5aeaf3dbbf346e67ad099f1132123eed97f27bec88"
+          "sha256": "e721d57ccf673967d8ea64a5af8872a55909b025d3d5d107b7d48d5fba3f1f17"
         },
         {
           "path": "outputs/iteration-27-final-artifact-audit.json",
@@ -622,7 +622,7 @@
         },
         {
           "path": "outputs/historical-source-item-maps.json",
-          "sha256": "1a3f0ce2be7de3058f80c0bd2ada10c142877a00f081e364146d7c8b542ab60a"
+          "sha256": "355f8ae1b926032745b6a54efc27ab07710d2778a5106fc5ad017781696ca5cb"
         }
       ]
     },
@@ -691,7 +691,7 @@
         },
         {
           "path": "outputs/historical-source-item-maps.json",
-          "sha256": "1a3f0ce2be7de3058f80c0bd2ada10c142877a00f081e364146d7c8b542ab60a"
+          "sha256": "355f8ae1b926032745b6a54efc27ab07710d2778a5106fc5ad017781696ca5cb"
         },
         {
           "path": "outputs/iteration-27-review-closure.md",
@@ -1651,7 +1651,7 @@
       "evidence": [
         {
           "path": "workflows/generate-mock-assessment.md",
-          "sha256": "b3fbc9358efff32e9804b58a10d7d46d64a049daa38c2fd88239005050139bbc"
+          "sha256": "2167018e434c2e769bfe3bb74e7b076b030794a8c9c016d5728250f139a55138"
         },
         {
           "path": "specs/generate_mock_assessment/historical-requirements.md",
@@ -2001,7 +2001,7 @@
         },
         {
           "path": "workflows/generate-mock-assessment.md",
-          "sha256": "b3fbc9358efff32e9804b58a10d7d46d64a049daa38c2fd88239005050139bbc"
+          "sha256": "2167018e434c2e769bfe3bb74e7b076b030794a8c9c016d5728250f139a55138"
         }
       ]
     },
