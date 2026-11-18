@@ -6,7 +6,7 @@ Run from the repository root:
 
 Read AGENTS.md, constitution.md, specs/generate_mock_assessment/implementation-checkpoint.json, definition-of-done.md, acceptance-criteria.json, and docs/software-factory/verification-driven-execution.md. Read outputs/verification-report.md and outputs/dashboard.md for human-readable state. The canonical checkpoint owns the next actions and criterion status.
 
-Continue the existing implementation. Update the canonical checkpoint, relevant evidence, reports and dashboard after each logical milestone, then commit and push the development branch. Run python scripts/checkpoint_mock_assessment.py to validate checkpoint structure. This wrapper reads existing state and generates no worksheets.
+Continue the existing implementation. Update the canonical checkpoint, relevant evidence, reports and dashboard after each logical milestone, then commit and push the same branch. Run python scripts/checkpoint_mock_assessment.py to validate checkpoint structure. This wrapper reads existing state and generates no worksheets.
 
 ## Current dependencies
 
