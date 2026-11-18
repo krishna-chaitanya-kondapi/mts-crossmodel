@@ -1,10 +1,10 @@
 {
   "status": "NOT_DONE",
-  "iteration": 22,
+  "iteration": 23,
   "date": "2026-11-18",
-  "revision": "a67dd2e91f3f9c8ecf47bc9252a29fde8f7a865e",
+  "revision": "3bc0e43f13e418d5eafc267dbab55d43d5e54bea",
   "registry_sha256": "c70cf4b237e712c11943ed16ac5a479a9310c65a6d1fd284baddb23d956f0aa4",
-  "mandatory_pass": 0,
+  "mandatory_pass": 10,
   "mandatory_total": 76,
   "baseline_tests": {
     "command": "python -m pytest tests -q",
@@ -59,14 +59,9 @@
     "Run the ELA and Grade 4 production-path fixtures, capture revision-bound structural and visual evidence, and continue requirement-to-evidence tracing without promoting unsupported criteria."
   ],
   "pending_mandatory": [
-    "V01.01",
-    "V01.02",
     "V01.03",
-    "V01.04",
-    "V01.05",
     "V01.06",
     "V01.07",
-    "V02.01",
     "V02.04",
     "V02.05",
     "V02.06",
@@ -120,20 +115,15 @@
     "V07.03",
     "V07.04",
     "V07.05",
-    "V07.06",
     "V07.07",
     "V07.08",
     "V07.09",
     "V07.10",
-    "ARCH.01",
     "ARCH.02",
     "ARCH.03",
-    "ARCH.04",
     "ARCH.05",
     "ARCH.06",
     "ARCH.07",
-    "ARCH.08",
-    "ARCH.09",
     "ARCH.10"
   ],
   "criteria": [
@@ -141,15 +131,33 @@
       "id": "V01.01",
       "mandatory": true,
       "requirement": "Recover Math requirements",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "status": "PASS",
+      "evidence": [
+        {
+          "path": "specs/generate_mock_assessment/historical-requirements.md",
+          "sha256": "d97ed849ab475ed5a3315343cad6f72e273558b286e8418def64b1de021010f0"
+        }
+      ],
+      "expected": "Recover Math requirements",
+      "actual": "Grade 4 and Grade 5 selections, counts, layout limits and corrections consolidated from supplied handoffs.",
+      "method": "Checkpoint review of recovered requirements, source identities, import audit and applicable regression tests.",
+      "reviewer": "Codex iteration 23 criterion review"
     },
     {
       "id": "V01.02",
       "mandatory": true,
       "requirement": "Recover ELA requirements",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "status": "PASS",
+      "evidence": [
+        {
+          "path": "specs/generate_mock_assessment/historical-requirements.md",
+          "sha256": "d97ed849ab475ed5a3315343cad6f72e273558b286e8418def64b1de021010f0"
+        }
+      ],
+      "expected": "Recover ELA requirements",
+      "actual": "Grade 6 passage clusters, 14-item mapping, answer sequence, YPQA and layout requirements consolidated.",
+      "method": "Checkpoint review of recovered requirements, source identities, import audit and applicable regression tests.",
+      "reviewer": "Codex iteration 23 criterion review"
     },
     {
       "id": "V01.03",
@@ -162,15 +170,37 @@
       "id": "V01.04",
       "mandatory": true,
       "requirement": "Identify original sources",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "status": "PASS",
+      "evidence": [
+        {
+          "path": "outputs/iteration-23-audit.json",
+          "sha256": "e32372cf3f30c089d1ed49f68490a9819a111d2d643cc2da275aa16a5e9b4a76"
+        },
+        {
+          "path": "outputs/historical-source-item-maps.json",
+          "sha256": "1a3f0ce2be7de3058f80c0bd2ada10c142877a00f081e364146d7c8b542ab60a"
+        }
+      ],
+      "expected": "Identify original sources",
+      "actual": "All three official source PDF fingerprints match the selected-item manifests.",
+      "method": "Checkpoint review of recovered requirements, source identities, import audit and applicable regression tests.",
+      "reviewer": "Codex iteration 23 criterion review"
     },
     {
       "id": "V01.05",
       "mandatory": true,
       "requirement": "Capture corrections and exceptions",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "status": "PASS",
+      "evidence": [
+        {
+          "path": "specs/generate_mock_assessment/historical-requirements.md",
+          "sha256": "d97ed849ab475ed5a3315343cad6f72e273558b286e8418def64b1de021010f0"
+        }
+      ],
+      "expected": "Capture corrections and exceptions",
+      "actual": "Count discrepancy, Q40 correction, Grade 4 crop/prompt and scoring corrections, ELA whitespace and identity gaps documented.",
+      "method": "Checkpoint review of recovered requirements, source identities, import audit and applicable regression tests.",
+      "reviewer": "Codex iteration 23 criterion review"
     },
     {
       "id": "V01.06",
@@ -190,8 +220,17 @@
       "id": "V02.01",
       "mandatory": true,
       "requirement": "Dedicated workflow exists",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "status": "PASS",
+      "evidence": [
+        {
+          "path": "workflows/generate-mock-assessment.md",
+          "sha256": "480e6b397631823c516c9056958c88027b834c086430f4982eeae34fa657e1ac"
+        }
+      ],
+      "expected": "Dedicated workflow exists",
+      "actual": "Dedicated workflow documents its lifecycle, CLI, verification and release boundary.",
+      "method": "Checkpoint review of recovered requirements, source identities, import audit and applicable regression tests.",
+      "reviewer": "Codex iteration 23 criterion review"
     },
     {
       "id": "V02.02",
@@ -582,8 +621,21 @@
       "id": "V07.06",
       "mandatory": true,
       "requirement": "Weekly regression unaffected",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "status": "PASS",
+      "evidence": [
+        {
+          "path": "outputs/iteration-23-tests.txt",
+          "sha256": "7a1af773b2510ab476ef6ee7178627efa7291a350b3c09094942a3152b7f490d"
+        },
+        {
+          "path": "outputs/iteration-23-audit.json",
+          "sha256": "e32372cf3f30c089d1ed49f68490a9819a111d2d643cc2da275aa16a5e9b4a76"
+        }
+      ],
+      "expected": "Weekly regression unaffected",
+      "actual": "Current complete suite, including Weekly Practice coverage, passed 257 tests.",
+      "method": "Checkpoint review of recovered requirements, source identities, import audit and applicable regression tests.",
+      "reviewer": "Codex iteration 23 criterion review"
     },
     {
       "id": "V07.07",
@@ -617,8 +669,17 @@
       "id": "ARCH.01",
       "mandatory": true,
       "requirement": "Dedicated executable entry point",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "status": "PASS",
+      "evidence": [
+        {
+          "path": "outputs/iteration-23-audit.json",
+          "sha256": "e32372cf3f30c089d1ed49f68490a9819a111d2d643cc2da275aa16a5e9b4a76"
+        }
+      ],
+      "expected": "Dedicated executable entry point",
+      "actual": "Standalone generate_mock_assessment.py --help returned zero.",
+      "method": "Checkpoint review of recovered requirements, source identities, import audit and applicable regression tests.",
+      "reviewer": "Codex iteration 23 criterion review"
     },
     {
       "id": "ARCH.02",
@@ -638,8 +699,17 @@
       "id": "ARCH.04",
       "mandatory": true,
       "requirement": "No weekly curriculum or generation dependency",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "status": "PASS",
+      "evidence": [
+        {
+          "path": "outputs/iteration-23-audit.json",
+          "sha256": "e32372cf3f30c089d1ed49f68490a9819a111d2d643cc2da275aa16a5e9b4a76"
+        }
+      ],
+      "expected": "No weekly curriculum or generation dependency",
+      "actual": "Reviewed all product and CLI imports; no subject, weekly or curriculum import found.",
+      "method": "Checkpoint review of recovered requirements, source identities, import audit and applicable regression tests.",
+      "reviewer": "Codex iteration 23 criterion review"
     },
     {
       "id": "ARCH.05",
@@ -666,15 +736,41 @@
       "id": "ARCH.08",
       "mandatory": true,
       "requirement": "Weekly implementation unaffected",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "status": "PASS",
+      "evidence": [
+        {
+          "path": "outputs/iteration-23-audit.json",
+          "sha256": "e32372cf3f30c089d1ed49f68490a9819a111d2d643cc2da275aa16a5e9b4a76"
+        },
+        {
+          "path": "outputs/iteration-23-tests.txt",
+          "sha256": "7a1af773b2510ab476ef6ee7178627efa7291a350b3c09094942a3152b7f490d"
+        }
+      ],
+      "expected": "Weekly implementation unaffected",
+      "actual": "Diff from original baseline has no changes in subject implementation or subject configuration; all 257 tests passed.",
+      "method": "Checkpoint review of recovered requirements, source identities, import audit and applicable regression tests.",
+      "reviewer": "Codex iteration 23 criterion review"
     },
     {
       "id": "ARCH.09",
       "mandatory": true,
       "requirement": "Assessment policies do not alter weekly behavior",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "status": "PASS",
+      "evidence": [
+        {
+          "path": "outputs/iteration-23-audit.json",
+          "sha256": "e32372cf3f30c089d1ed49f68490a9819a111d2d643cc2da275aa16a5e9b4a76"
+        },
+        {
+          "path": "outputs/iteration-23-tests.txt",
+          "sha256": "7a1af773b2510ab476ef6ee7178627efa7291a350b3c09094942a3152b7f490d"
+        }
+      ],
+      "expected": "Assessment policies do not alter weekly behavior",
+      "actual": "Assessment-specific profiles stay in product code and fixtures; no subject configuration changes and regression suite passes.",
+      "method": "Checkpoint review of recovered requirements, source identities, import audit and applicable regression tests.",
+      "reviewer": "Codex iteration 23 criterion review"
     },
     {
       "id": "ARCH.10",
@@ -712,9 +808,9 @@
     }
   },
   "iteration_tests": {
-    "evidence": "iteration-22-tests.txt",
     "passed": 257,
-    "failed": 0
+    "failed": 0,
+    "evidence": "outputs/iteration-23-tests.txt"
   },
   "layout_trial": {
     "status": "FAIL",
@@ -803,5 +899,6 @@
     "official_mc": 12,
     "sha256": "208ecc4a93d4f41e38f030617322f6b98b35eee7cf01f7e066d40f3c7a0b5c51",
     "matches_teacher_golden_answers": true
-  }
+  },
+  "verification_scope": "The target code revision is immutable. This report records reviewed criteria for that revision; later dependent code changes require revalidation."
 }

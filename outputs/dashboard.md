@@ -1,36 +1,36 @@
 # Mock Assessment dashboard
 
-**0 / 76 (0%) mandatory criteria verified**  
-**Status NOT_DONE** Â· Iteration 22
+**10 / 76 mandatory criteria verified (13.2%)**
+**Status NOT_DONE** · Iteration 23
 
-Percentages count criteria recorded as PASS in the verification report. Implementation trials and unit tests are shown below because they provide progress evidence before acceptance.
+Percentages count mandatory criteria that passed the evidence gate for the recorded code revision.
 
-| Category | Verified |
-|---|---:|
-| Requirements and traceability | 0 / 7 (0%) |
-| Workflow and deliverables | 0 / 9 (0%) |
-| Academic correctness | 0 / 7 (0%) |
-| Source fidelity | 0 / 8 (0%) |
-| Print and visual quality | 0 / 13 (0%) |
-| Historical regression | 0 / 12 (0%) |
-| Operations and repeatability | 0 / 10 (0%) |
-| Architecture and isolation | 0 / 10 (0%) |
+| Category | Verified | Percentage |
+|---|---:|---:|
+| Requirements and traceability | 4 / 7 | 57.1% |
+| Workflow and deliverables | 1 / 9 | 11.1% |
+| Academic correctness | 0 / 7 | 0.0% |
+| Source fidelity | 0 / 8 | 0.0% |
+| Print and visual quality | 0 / 13 | 0.0% |
+| Historical regression | 0 / 12 | 0.0% |
+| Operations and repeatability | 1 / 10 | 10.0% |
+| Architecture and isolation | 4 / 10 | 40.0% |
 
-## Work completed
+## Current outcome
 
-- Historical sources and official item mappings recovered for Grade 4 Math, Grade 5 Math, and Grade 6 ELA. The mappings cover 70 questions.
-- Latest full suite: 257 passed, including Weekly Practice. Test-written transaction fixtures were restored.
-- Repaired and visually reviewed the two-page ELA teacher-key candidate; all 12 MC answers match the historical key text. Independent answer/rubric review and readability parity remain NOT_VERIFIED.
-- Added the ELA student CLI route using the hash-bound source renderer; its route test uses a synthetic manifest only.
-- Grade 4 remains four pages with 28 ordered regions, full-width Q26, and Q42â€“44 on page four. The teacher-key candidate remains one page.
-- The Grade 5 vector rendering trial placed 28 regions on 8 pages. The historical ceiling is 4 pages. Large source crops still dominate page use.
+Requirements recovery, original source identity, the dedicated entry point, dependency isolation and Weekly Practice regression now have criterion-specific evidence.
+Final golden identity, academic correctness, full generation and visual/source equivalence remain open.
 
-## Next steps
+Grade 5 has three student pages and one key page. Grade 4 has four student pages and one key page. ELA teacher reflow has two pages; the official-source student manifest is pending.
 
-Create and verify an official-source-derived ELA student manifest against the delivered golden, including raster-only passage pages. Complete Grade 4 item-level academic/source review, retrieve the historical student golden, and document page-four utilization. Do not mark any criterion PASS without criterion-specific, revision-bound evidence or publish without human approval.
+The current full test suite passed 257 tests.
 
-**Your action** None required for development and testing.
+## Next action
 
-[Verification report](verification-report.md) Â· [Machine-readable criteria](verification-report.json) Â· [Layout evidence](grade5-layout-trial-evidence.json)
+Replace the ELA student trial dependency on the historical transcript with a verified canonical passage and question manifest derived from the official source, including raster pages 10 and 16.
 
-**Latest work** See [iteration 22 evidence](iteration-22-render-evidence.json), [test output](iteration-22-tests.txt), and the [verification report](verification-report.md). The latest candidate outputs remain local review artifacts; 0 / 76 mandatory criteria are verified.
+**Your action** None required for implementation.
+
+[Criterion report](verification-report.md) · [Requirements recovered](../specs/generate_mock_assessment/historical-requirements.md) · [Evidence gate](iteration-23-gate.json)
+
+Code revision tested and reviewed: 3bc0e43f13e418d5eafc267dbab55d43d5e54bea. The report commit records evidence for this target.
