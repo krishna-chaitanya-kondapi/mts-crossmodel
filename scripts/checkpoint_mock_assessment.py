@@ -1,14 +1,20 @@
 """Validate the canonical Mock Assessment checkpoint without copying artifacts."""
+
 import json
 from pathlib import Path
+import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 
 
 def main():
     spec = ROOT / "specs/generate_mock_assessment"
-    state = json.loads((spec / "implementation-checkpoint.json").read_text(encoding="utf-8-sig"))
-    registry = json.loads((spec / "acceptance-criteria.json").read_text(encoding="utf-8-sig"))
+    state = json.loads(
+        (spec / "implementation-checkpoint.json").read_text(encoding="utf-8-sig")
+    )
+    registry = json.loads(
+        (spec / "acceptance-criteria.json").read_text(encoding="utf-8-sig")
+    )
     required = {row["id"] for row in registry["criteria"]}
     ids = [row["id"] for row in state["criteria"]]
     if len(ids) != len(set(ids)) or set(ids) != required:
@@ -16,9 +22,31 @@ def main():
     if not state.get("next"):
         raise SystemExit("Checkpoint needs exact next actions")
     if state["status"] != "NOT_DONE":
-        raise SystemExit("Completion requires the full revision-bound verification gate")
+        sys.path.insert(0, str(ROOT / "src"))
+        from mts.products.mock_assessment.verification import digest, evaluate
+
+        report = json.loads(
+            (ROOT / "outputs/verification-report.json").read_text(encoding="utf-8-sig")
+        )
+        gate = evaluate(
+            registry,
+            report,
+            ROOT,
+            state.get("audited_revision"),
+            digest(spec / "acceptance-criteria.json"),
+        )
+        if (
+            state["status"] != "READY_FOR_ACCEPTANCE"
+            or gate["status"] != state["status"]
+            or gate["criteria"] != state["criteria"]
+        ):
+            raise SystemExit(
+                "Completion requires the full revision-bound verification gate"
+            )
     print(f"Valid checkpoint: iteration {state['iteration']}, {len(ids)} criteria")
-    print("Commit the canonical checkpoint, changed code, and relevant evidence together.")
+    print(
+        "Commit the canonical checkpoint, changed code, and relevant evidence together."
+    )
 
 
 if __name__ == "__main__":

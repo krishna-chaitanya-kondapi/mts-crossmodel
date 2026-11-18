@@ -132,3 +132,29 @@ def test_mid_publication_failure_restores_prior_set(approved_run, monkeypatch):
     assert prior.read_bytes() == b"prior approved version"
     assert not (destination / "mock-verified-teacher.pdf").exists()
     assert not (destination / ".mts-publication.lock").exists()
+
+
+def test_failed_local_rollback_retains_approved_backup(approved_run, monkeypatch):
+    run, review, approval, gate, destination = approved_run
+    destination.mkdir()
+    prior = destination / "mock-verified-student.pdf"
+    prior.write_bytes(b"prior approved version")
+    approval["replace_hashes"] = {prior.name: sha256(prior.read_bytes()).hexdigest()}
+    real_replace = neutral.os.replace
+    calls = 0
+
+    def persistent_failure(before, after):
+        nonlocal calls
+        calls += 1
+        if calls >= 2:
+            raise OSError("persistent destination failure")
+        return real_replace(before, after)
+
+    monkeypatch.setattr(neutral.os, "replace", persistent_failure)
+    with pytest.raises(RuntimeError, match="backups retained"):
+        publish_approved_assessment(run, review, approval, gate, destination)
+    backups = list(destination.glob(".release-*/*.previous"))
+    assert len(backups) == 1
+    assert backups[0].read_bytes() == b"prior approved version"
+    assert not (destination / "mock-verified-teacher.pdf").exists()
+    assert not (destination / ".mts-publication.lock").exists()

@@ -36,10 +36,9 @@ def publish_verified_files(files, destination, *, expected_hashes, replace_hashe
         for name in files:
             if name in baseline and replace_hashes.get(name) != baseline[name]:
                 raise ValueError(f"Replacement of {name} needs its prior fingerprint")
-        with tempfile.TemporaryDirectory(
-            prefix=".release-", dir=destination
-        ) as staging:
-            stage = Path(staging)
+        stage = Path(tempfile.mkdtemp(prefix=".release-", dir=destination))
+        preserve_backups = False
+        try:
             for name, source in files.items():
                 shutil.copy2(source, stage / name)
                 if (
@@ -68,13 +67,22 @@ def publish_verified_files(files, destination, *, expected_hashes, replace_hashe
                         != expected
                     ):
                         raise ValueError(f"Unrelated approved file changed: {name}")
-            except Exception:
-                for target, backup in reversed(replaced):
-                    if backup.exists():
-                        os.replace(backup, target)
-                    else:
-                        target.unlink()
+            except Exception as failure:
+                try:
+                    for target, backup in reversed(replaced):
+                        if backup.exists():
+                            os.replace(backup, target)
+                        else:
+                            target.unlink()
+                except Exception as recovery_error:
+                    preserve_backups = True
+                    raise RuntimeError(
+                        f"Local publication needs recovery; prior approved backups retained in {stage}: {recovery_error}"
+                    ) from failure
                 raise
+        finally:
+            if not preserve_backups:
+                shutil.rmtree(stage)
         return {
             "published": dict(expected_hashes),
             "preserved": {n: h for n, h in baseline.items() if n not in files},
