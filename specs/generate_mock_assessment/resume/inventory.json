@@ -1,0 +1,427 @@
+{
+  "status": "NOT_DONE",
+  "base_revision": "52bac0bfbbb27cb87037f4123ad86fb8b9ba16da",
+  "revision_note": "Base revision precedes the checkpoint commit. File hashes identify this snapshot.",
+  "files": [
+    {
+      "path": "scripts/checkpoint_mock_assessment.py",
+      "sha256": "4e70da213c0370250ffc7a21ebcca074e5b4160f1c9ed8bd5d197bf192f3821a"
+    },
+    {
+      "path": "scripts/generate_mock_assessment.py",
+      "sha256": "980b576fed1956615bf2404ed7ed5b2872fb4bef98bca61afa15423a0830a859"
+    },
+    {
+      "path": "scripts/resume_mock_assessment.py",
+      "sha256": "ab1c402cf54129a6ec1d979dff82cd4a7437aca58e6bcb6ccd5651bdf2d22d22"
+    },
+    {
+      "path": "specs/generate_mock_assessment/implementation-checkpoint.json",
+      "sha256": "a5e44acd0550c3dda4c980ef40d805ed432c27a00b8003cd982df88c082d9495"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/.gitattributes",
+      "sha256": "836dd8293f5d2973c09baed2a72b34c7a08742e6d49500a56ac0cfcd4d872518"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/evidence/baseline-test-written-paths.txt",
+      "sha256": "8d19a9bbbc74b741214a3e09af6f53527ff1122ee08f61113fe03d236d713e0f"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/evidence/baseline-tests.txt",
+      "sha256": "b83006c867a72bd56aabae4c94c0378e4edaaee5d539d26e3df4e366bbe62462"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/evidence/CONTINUE-WITH-COPILOT.md",
+      "sha256": "03bce0b2f461a0fccef8b515809aca939b45e6f6c18a0e3647c1af6d315378da"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/evidence/dashboard.md",
+      "sha256": "921f7788bf54dde379508430f3129b62a16cd1668235a61ad561adc16ab9364d"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/evidence/ela-student-trial-evidence.json",
+      "sha256": "c1316095fae35ba38bbe5cc7a2a4c1542555ffc94422c67bf3a68c2e3b1123ab"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/evidence/ela-teacher-review.md",
+      "sha256": "79bda7ec4c64de7e63a404d26ff437e8fb490a934dcac35ad5dd4692dcbeeb29"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/evidence/ela-teacher-review.pdf",
+      "sha256": "5a2c2097b3cba75c947b3a955ed3a6d68d33975dfa99ca19b1163da1e845ed5f"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/evidence/grade4-component-regions.json",
+      "sha256": "c8e60c32465aaa28020ffa42992273718fa636152e8c9e599d2eb062bd6d9daa"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/evidence/grade4-component-trial-evidence.json",
+      "sha256": "bacfe731b26fb3d1a93a36995ea053482d9303cfe3c810f3b1e77580806861bb"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/evidence/grade4-figure-clearance.json",
+      "sha256": "aee63ddd0b18fc67853cc55f14448ec18de2537ff0f8972fe342638104a19aa6"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/evidence/grade4-placements.json",
+      "sha256": "af6e640bd39f4b82ed0ad44b16ad8f268999891790f08e94e739500cde998cb7"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/evidence/grade4-reflow-evidence.json",
+      "sha256": "2ef52d024db25b14160115c61a27fa00686b1ea2ab7ce2d8cb84190bd1357014"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/evidence/grade4-student-review.pdf",
+      "sha256": "d0e7afedcb1300fefe96088bf61d8210249d5f6161bdb198917795c01ee09303"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/evidence/grade4-teacher-review.pdf",
+      "sha256": "2c6653b541593be7791f211a9630199eaa1e52ee4c0d1cfaef74f9515a931e7d"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/evidence/grade5-component-regions.json",
+      "sha256": "c0d4cdca920fc4b105899a78a01767abe1daca9501e14810bc65bbc98c3a1f23"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/evidence/grade5-component-trial-evidence.json",
+      "sha256": "15d8306e43802f29729e8bda595b9a29d24f69cae98ab130e83d38a12259e5f6"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/evidence/grade5-golden-comparison.json",
+      "sha256": "a4694f8b988aa30d83b776b0878ab069addf20abf706a1dd75a3c3c30f181881"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/evidence/grade5-historical-implementation-audit.md",
+      "sha256": "410762090cdc68ac8e00aa83d9ff89d46d4a3bf35beb6243a4b9879801ddd7d3"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/evidence/grade5-layout-trial-evidence.json",
+      "sha256": "e9087c995217d2ffab1c17e3a24d384674043961552dfb843f2174867cad64b3"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/evidence/grade5-placements.json",
+      "sha256": "b41533ae112e068b3e13ca4d753860022325bbfeec839f96ee033cad28bc112e"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/evidence/grade5-print-layout-review.md",
+      "sha256": "6991b9b01998da33b88a3de6bf5685572bd97676f4da8aeb73f15133ba19181f"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/evidence/grade5-reflow-evidence.json",
+      "sha256": "ccc300a4784e61795eb8fd9d59118888fbfa497df670441205cd942e4ca97445"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/evidence/grade5-scoring-review.md",
+      "sha256": "49cad62d926b27ab952b649735e55af7f02dee86912d7b664305b2974e343d6c"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/evidence/grade5-source-comparison.md",
+      "sha256": "15e9c792f1de9485fbacfc3e2de262aaa02537a70c5ad6f1e173e8cbd6439375"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/evidence/grade5-source-regions.json",
+      "sha256": "81966dfeaf6e022ea9768e238afcb0f880f30203b1d2e07097c587a0bbc5495f"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/evidence/grade5-student-review.pdf",
+      "sha256": "6ef7100b121ad1551a8a05bc62228ebef678f7a81419e0aad6b2d9de12c018ee"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/evidence/grade5-teacher-review.pdf",
+      "sha256": "78131c2c45657a4923dcc6f743ecc4252002837ca758dca88dd5737b691bdf5a"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/evidence/historical-inventory.json",
+      "sha256": "8a1ddd852e737b7b64bff9a1d0c8638c2b53899c70199a1ace1b09993a708509"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/evidence/historical-pdf-sha256.json",
+      "sha256": "ce3739cf64579febe5189abfed87b35a31973c1c7f615453fc355d2c191430a3"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/evidence/historical-source-item-maps.json",
+      "sha256": "1a3f0ce2be7de3058f80c0bd2ada10c142877a00f081e364146d7c8b542ab60a"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/evidence/implementation-checkpoint.json",
+      "sha256": "a5e44acd0550c3dda4c980ef40d805ed432c27a00b8003cd982df88c082d9495"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/evidence/iteration-10-teacher-key-test.txt",
+      "sha256": "b7d7598e2f82264a2bcf3a0b4fa0efe04df55f5adb82d460c117a3f03c310c1f"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/evidence/iteration-10-tests.txt",
+      "sha256": "07b49e2162c2ff1e2079aedf7d45f37ff89e115bf8e1b5af38cd564c649baca4"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/evidence/iteration-12-layout-test.txt",
+      "sha256": "8ef1aff4d5f335117201cc7d52b08c33bcfda412b43f2d04edce8105ccc8a3cf"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/evidence/iteration-16-layout-test.txt",
+      "sha256": "f235550fbc1ccf388f63b9a28b33ede08fc7f65175a46e71ffd293ed5059c2d7"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/evidence/iteration-18-grade4-layout.txt",
+      "sha256": "c4b8442016d22575e143d8066089bdec046e71d6404e92efbe7074777a5da5ff"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/evidence/iteration-19-grade4-checks.txt",
+      "sha256": "0cddebaa903bf59260d80deb895c2aaafe2bd72aaef317c02530ab839919d3af"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/evidence/iteration-3-test-written-paths.txt",
+      "sha256": "8d19a9bbbc74b741214a3e09af6f53527ff1122ee08f61113fe03d236d713e0f"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/evidence/iteration-3-tests.txt",
+      "sha256": "650e7086fc7659d6dbca438d61b9a60435ccc906ed01316fd98c902e3f263332"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/evidence/iteration-5-layout-test.txt",
+      "sha256": "80cf1df89910035e72bac2720a2d771b0412ac49fd598bc6bc13da2f917d998b"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/evidence/iteration-8-layout-test.txt",
+      "sha256": "79d43c836d05c5437489d7f0274361b61ee0ae22576f2e534419a9ea25407058"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/evidence/iteration-9-layout-test.txt",
+      "sha256": "10b4518df011257ed23e90b16782e3efba91bb80fac6525525503f259581e1c9"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/evidence/math-official-scoring-evidence.json",
+      "sha256": "efbba6176db802218bdfcecb60b039ce9c56c2342f7defaa47d6b8ac1204a74c"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/evidence/mock-assessment-tests.txt",
+      "sha256": "970efc2f0d5a492ec060e6ae73d5db8fdc4baf44a8cd3598099dfc4cdf10f8fb"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/evidence/takeover-tests.txt",
+      "sha256": "3d3984e687a60797e9f3e269388fcf616c8a6e1e975735206f39e845c1fb124a"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/evidence/verification-report.json",
+      "sha256": "7192e5be077dc11ee52f26f30ef5ff19618ab421e016104882c14aa10efc0ad6"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/evidence/verification-report.md",
+      "sha256": "5ac73048dcadd782802ce170cae69b0c44904a101b48c3d6615df92f37741a70"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/inputs/ela-teacher-manifest.json",
+      "sha256": "70be54a433488c05722ef4ee03acc8f35423aa4fea49a229cbac1a5038cbfbb7"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/inputs/golden/MTS-ELA-RC-6thGrade-WeeklyWorksheet-2026-09-28-KEY.pdf",
+      "sha256": "5a744c0f2b5ea742ba1bcafa9f383c2812f08e0e870eb8e7e627e7b7770a01f2"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/inputs/golden/MTS-ELA-RC-6thGrade-WeeklyWorksheet-2026-09-28-KEY.txt",
+      "sha256": "564e2ff85dcb8a74bf5ad06914d55da3db8df801bd047aeb386dcb026f3ce1d9"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/inputs/golden/MTS-ELA-RC-6thGrade-WeeklyWorksheet-2026-09-28.pdf",
+      "sha256": "1f3688f5141837ffb037cc97fd64399d6a752d6624465f209b12c406f994a8b9"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/inputs/golden/MTS-ELA-RC-6thGrade-WeeklyWorksheet-2026-09-28.txt",
+      "sha256": "811eb65f467b1792e1c5d31483802f63945bd2b5d50aa5c0e3378f65569f371d"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/inputs/golden/MTS-NY-Math-Grade4-2024-Answer-Key-REVIEW.pdf",
+      "sha256": "cb5eff9f5a872647f4ff3c28975834e52ad40587a1c13db9cf18756f7e82c246"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/inputs/golden/MTS-NY-Math-Grade4-2024-Worksheet-REVIEW.pdf",
+      "sha256": "e01b89daed4d3719c9b0d63035b0239ef87e58f0cf759de7d2466f448445d107"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/inputs/golden/MTS-NY-Math-Grade5-2024-Answer-Key.pdf",
+      "sha256": "8b053a6158a96d0d5dcfefe1ddafd555c5c92d02118ca079e6b399041abc6f64"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/inputs/golden/MTS-NY-Math-Grade5-2024-Answer-Key.txt",
+      "sha256": "b80cf82a984afa0f026a4432608719ff082f3984c53a270199b37024f34d0361"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/inputs/golden/MTS-NY-Math-Grade5-2024-Worksheet.pdf",
+      "sha256": "9834833933a068b02d704591bb3a7b1e7936c41b813871166ac00848aa10b05f"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/inputs/golden/MTS-NY-Math-Grade5-2024-Worksheet.txt",
+      "sha256": "682ee3425e820fbf7fd5d3abe986bdd7ba47c193e0c1d8d3d561bea22557cbbd"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/inputs/golden/MTS-NY-Math-Grade6-2024-Answer-Key.pdf",
+      "sha256": "353f8a6fe0eb3c8e7da9940b81bbbbab8e7d26d4747720cad49f0dfccfcfdbc6"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/inputs/golden/MTS-NY-Math-Grade6-2024-Answer-Key.txt",
+      "sha256": "a19da5b564364954961f9cf3e3289c6d09707a24878229b281390225661ee676"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/inputs/golden/MTS-NY-Math-Grade6-2024-Mock-Test.pdf",
+      "sha256": "0355d5497eaa23fb11c022c23f9ed8f597bdbd96bb1dab295665f483ef97d1ad"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/inputs/golden/MTS-NY-Math-Grade6-2024-Mock-Test.txt",
+      "sha256": "9308d37a2f2ec67130e127b2b2f8ab5a561fe74a442aefd5910475e8879b1bbe"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/inputs/golden/NY_ELA_Grade6_2024_Released_Test_Questions.pdf",
+      "sha256": "bbca99ab7905cc388417360ea69d905bf85fbe8231a561f6007cbe5ba77c9bdf"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/inputs/golden/NY_ELA_Grade6_2024_Released_Test_Questions.txt",
+      "sha256": "1770341946b74226e2955e108350e64c272ba87e03daa6b765835f60f0dc5406"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/inputs/golden/NY_ELA_Grade6_2025_Released_Test_Questions.pdf",
+      "sha256": "734c8ac722ece5fe182bcd36652c8ae8617124eccf03b6de16ae71c3244907ea"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/inputs/golden/NY_ELA_Grade6_2025_Released_Test_Questions.txt",
+      "sha256": "7ab81d17499bd78e966892a1bbd1e114496445314fc57e2e768af7ea1cd7eb36"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/inputs/golden/NY_Math_Grade4_2024_Released_Test_Questions.pdf",
+      "sha256": "88351089919b18dfc2f3dc5d64809d20aadd68d56a1dc38841a3387354b8c0f6"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/inputs/golden/NY_Math_Grade5_2024_Released_Test_Questions.pdf",
+      "sha256": "96bc4dca01185cda99056c98391ac85d41ecf7595b2b3ec29f7595b7e7b91f93"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/inputs/golden/NY_Math_Grade5_2024_Released_Test_Questions.txt",
+      "sha256": "d4279fca825c984d5d946e057e48db6eaad0f439f503fbac619c5313b51f8ad7"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/inputs/golden/NY_Math_Grade6_2024_Released_Test_Questions.pdf",
+      "sha256": "864f848eb5e47e9f38c98cdb43944a191228f9f8b6cf698c3e33ff7d616e9c56"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/inputs/golden/NY_Math_Grade6_2024_Released_Test_Questions.txt",
+      "sha256": "5259dda72aa2d8a3ee0b579c34eb66e35cd00828cb73d4734ab130a0454e33d5"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/inputs/golden/NYSED-2024-Math-G4-Scoring.pdf",
+      "sha256": "544cfb6001940f43c3accfcace125056934186fc161d416a52d8884692c4c80c"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/inputs/golden/NYSED-2024-Math-G4-Scoring.txt",
+      "sha256": "3143bb64802e345ba0d515ec462d241f169e19b449bf5e22a53586d464cc8f02"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/inputs/golden/NYSED-2024-Math-G5-Scoring.pdf",
+      "sha256": "7c210482e8dd089d6d056569886064e406023e7edba933766d37f9a424c6eb5c"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/inputs/golden/NYSED-2024-Math-G5-Scoring.txt",
+      "sha256": "17e2e93a5dced77d1717dbd4786007351c3f7d12769a3d1794af5df646099077"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/inputs/grade4-student-manifest.json",
+      "sha256": "63729797f1ac6a5434bc62f599c41ab5cad15a9f1b6ab485eeb06758fbb1e46a"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/inputs/grade4-teacher-manifest.json",
+      "sha256": "8d53f7fa2779ab98d275ea6f00375609ab49f564690d5d4b449f62f9c54f386f"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/inputs/grade5-student-manifest.json",
+      "sha256": "e27e3f51f4687e9432c8b3ec0bba83a980db7d2222dfadf514091cd36dee654d"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/inputs/grade5-teacher-manifest.json",
+      "sha256": "9aa3115e7edbf7f36cd7648c4c26485ef66d5c6262f7b3d2806c0425f72c8884"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/README.md",
+      "sha256": "335c9505aabf62199b2a6b295c1b46e7625cdd949d0b05c490f502fac40ed296"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/requirements.txt",
+      "sha256": "bbdbab5626298fc0f2042902fe91cd899a527d0135ce0bc6290ebbceab098b8c"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/scripts/audit_item_maps.py",
+      "sha256": "bbf98c51a865bb4a7cbd1874038fbcf08bd376837e91069e555fe767081f5c68"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/scripts/build_grade4_components.py",
+      "sha256": "8814d7714ab010ab2c4e234cea6400055686c7f9edc0a918de50e0dbba64faf1"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/scripts/build_grade5_components.py",
+      "sha256": "2ea6f19bfe3fd5cf89f3f0ca4078a6df6e5e32f1eb9acf8e1bb2b706170b9223"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/scripts/build_grade5_regions.py",
+      "sha256": "9e195805dc27645c0552fe807e911c19a2f3940dfbd2ce8576e188483fe39dcc"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/scripts/compare_grade5_golden.py",
+      "sha256": "92d6ce0810e7a62eea5eeef04712315bdfc4d0b66f05ae78d236be233ca9c0e2"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/scripts/ela_student_trial.py",
+      "sha256": "4543aae6d36555e3b4831a901ff711ed2dea61ea3c66db50bcb5e99acd2bb8d1"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/scripts/grade4_reflow_trial.py",
+      "sha256": "3837f9c80a9bb0a9d15bfa57d4022df72bd543ce2032f9b8f78a6dd915855199"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/scripts/grade5_reflow_trial.py",
+      "sha256": "aa5514f2d1ac82e9e83510af4a46c3282a2415b1f785dfca68d3eb099bb9dfe1"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/scripts/recover_ela_teacher.py",
+      "sha256": "97fd39301d232bf8d389425f182a98dd3a45a83cd7363307cee2fa10056a1d32"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/scripts/test_columns.py",
+      "sha256": "3cef03226630fcad16bc0b8f83e397edbf2d712baddc95c81147ecd8087e8f9e"
+    },
+    {
+      "path": "specs/generate_mock_assessment/resume/START_HERE.md",
+      "sha256": "95bc443752c2a3b016471f8598e677dc466582719504be0647879f216b6ded19"
+    },
+    {
+      "path": "src/mts/products/mock_assessment/__init__.py",
+      "sha256": "5656cb5e95f1e7544987ff19c95aa9467b528ae7242198e7d4befa260c52c099"
+    },
+    {
+      "path": "src/mts/products/mock_assessment/ela_teacher.py",
+      "sha256": "817f98c2a24755168e065e01dd21a7d0fd7d623df41a7e7076549a7023e303d0"
+    },
+    {
+      "path": "src/mts/products/mock_assessment/grade4_student.py",
+      "sha256": "2a2424188482506f5b26d001f8a92bec925eeb49df4fa2b7edcd8aa21a0fe7bd"
+    },
+    {
+      "path": "src/mts/products/mock_assessment/grade5_student.py",
+      "sha256": "3610b954678342c0ce4a4d2fb284bb5a5311c68f7d2c8edc538abf416d8337b5"
+    },
+    {
+      "path": "src/mts/products/mock_assessment/item_map.py",
+      "sha256": "4fb2474e2cee8b416abd439bf691ad1cff8774fae84103a7306a6818abf7d7a6"
+    },
+    {
+      "path": "src/mts/products/mock_assessment/source_render.py",
+      "sha256": "699998f8f28fcadc081fd33d54acd694439524b1b0a93dbe358309d0119ca1d2"
+    },
+    {
+      "path": "src/mts/products/mock_assessment/teacher_key.py",
+      "sha256": "d54a3330906272aa565c3c2edd68890f00bd9b0d45643d2e1e17e1ddb3954e2d"
+    },
+    {
+      "path": "src/mts/products/mock_assessment/verification.py",
+      "sha256": "a5f07e747335c348d99abadbe70b124bc71be9df924397e2d2a894740abeb40b"
+    }
+  ]
+}

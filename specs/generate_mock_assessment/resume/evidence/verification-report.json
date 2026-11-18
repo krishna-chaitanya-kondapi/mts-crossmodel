@@ -1,0 +1,792 @@
+{
+  "status": "NOT_DONE",
+  "iteration": 21,
+  "date": "2026-11-18",
+  "revision": "52bac0bfbbb27cb87037f4123ad86fb8b9ba16da",
+  "registry_sha256": "c70cf4b237e712c11943ed16ac5a479a9310c65a6d1fd284baddb23d956f0aa4",
+  "mandatory_pass": 0,
+  "mandatory_total": 76,
+  "baseline_tests": {
+    "command": "python -m pytest tests -q",
+    "passed": 243,
+    "failed": 0,
+    "evidence": "baseline-tests.txt"
+  },
+  "historical_inventory": "historical-inventory.json",
+  "historical_regressions_executed": 0,
+  "generation_implementation_changes": [
+    "Added isolated NYSED item-map parser and focused tests; matched three historical selections to official source IDs, keys, credit values and standards.",
+    "Added hash-bound vector crop rendering and a Grade 5 extraction trial.",
+    "Added forward two-column placement for narrow vector regions with full-width fallback. Grade 5 source crops still require component extraction.",
+    "Added atomic multi-part vector placement; Grade 5 diagnostic trial reached eight pages after compacting response regions.",
+    "Added dedicated teacher-key CLI mode with validated item and worked-solution parity.",
+    "Added dedicated Grade 5 student CLI with historical source fingerprint, item ordering and page-cap checks."
+  ],
+  "production_publications": 0,
+  "defects": [
+    {
+      "id": "MA-001",
+      "finding": "The dedicated CLI evaluates evidence only. Source extraction, RunSpec validation, generation and rendering are absent.",
+      "affected": "V02, V03, V04, V05, V06, V07 and architecture execution criteria"
+    },
+    {
+      "id": "MA-002",
+      "finding": "Historical worksheet/key candidates and released question papers are available. Artifact-specific approval, official scoring alignment, and exact historical RunSpecs remain unverified.",
+      "affected": "V01 and V06"
+    },
+    {
+      "id": "MA-003",
+      "finding": "Baseline tests rewrite tracked Weekly Practice transaction fixtures in place. The changes were recorded and restored in the task-owned clone.",
+      "affected": "Repeatability of local verification"
+    }
+  ],
+  "next": [
+    "Repair ELA teacher typography and improve key readability against the two-page golden. Verify source passage transcription and all choices, then integrate student generation into CLI.",
+    "Complete independent Grade 4 academic/fidelity review and improve fourth-page utilization while preserving Q26 full width.",
+    "Apply the measured renderer to the Grade 4 and ELA fixtures with their respective policies and rerun all regression tests."
+  ],
+  "pending_mandatory": [
+    "V01.01",
+    "V01.02",
+    "V01.03",
+    "V01.04",
+    "V01.05",
+    "V01.06",
+    "V01.07",
+    "V02.01",
+    "V02.04",
+    "V02.05",
+    "V02.06",
+    "V02.07",
+    "V02.08",
+    "V02.09",
+    "V02.10",
+    "V02.11",
+    "V03.01",
+    "V03.02",
+    "V03.03",
+    "V03.04",
+    "V03.05",
+    "V03.06",
+    "V03.07",
+    "V04.01",
+    "V04.02",
+    "V04.03",
+    "V04.04",
+    "V04.05",
+    "V04.06",
+    "V04.07",
+    "V04.08",
+    "V05.01",
+    "V05.02",
+    "V05.03",
+    "V05.04",
+    "V05.05",
+    "V05.06",
+    "V05.07",
+    "V05.08",
+    "V05.09",
+    "V05.10",
+    "V05.11",
+    "V05.12",
+    "V05.13",
+    "V06.01",
+    "V06.02",
+    "V06.03",
+    "V06.04",
+    "V06.05",
+    "V06.06",
+    "V06.07",
+    "V06.08",
+    "V06.09",
+    "V06.10",
+    "V06.11",
+    "V06.12",
+    "V07.01",
+    "V07.02",
+    "V07.03",
+    "V07.04",
+    "V07.05",
+    "V07.06",
+    "V07.07",
+    "V07.08",
+    "V07.09",
+    "V07.10",
+    "ARCH.01",
+    "ARCH.02",
+    "ARCH.03",
+    "ARCH.04",
+    "ARCH.05",
+    "ARCH.06",
+    "ARCH.07",
+    "ARCH.08",
+    "ARCH.09",
+    "ARCH.10"
+  ],
+  "criteria": [
+    {
+      "id": "V01.01",
+      "mandatory": true,
+      "requirement": "Recover Math requirements",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V01.02",
+      "mandatory": true,
+      "requirement": "Recover ELA requirements",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V01.03",
+      "mandatory": true,
+      "requirement": "Identify final worksheets and keys",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V01.04",
+      "mandatory": true,
+      "requirement": "Identify original sources",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V01.05",
+      "mandatory": true,
+      "requirement": "Capture corrections and exceptions",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V01.06",
+      "mandatory": true,
+      "requirement": "Trace mandatory requirements to implementation and evidence",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V01.07",
+      "mandatory": true,
+      "requirement": "Resolve mandatory requirement gaps",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V02.01",
+      "mandatory": true,
+      "requirement": "Dedicated workflow exists",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V02.02",
+      "mandatory": false,
+      "requirement": "Support Benchmark and Diagnostic",
+      "status": "NOT_APPLICABLE",
+      "evidence": []
+    },
+    {
+      "id": "V02.03",
+      "mandatory": false,
+      "requirement": "Support Full Mini and Custom",
+      "status": "NOT_APPLICABLE",
+      "evidence": []
+    },
+    {
+      "id": "V02.04",
+      "mandatory": true,
+      "requirement": "Source-based generation works",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V02.05",
+      "mandatory": true,
+      "requirement": "Math and ELA branches work",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V02.06",
+      "mandatory": true,
+      "requirement": "Validated RunSpec PDF and JSON",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V02.07",
+      "mandatory": true,
+      "requirement": "Student PDF",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V02.08",
+      "mandatory": true,
+      "requirement": "Separate teacher PDF",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V02.09",
+      "mandatory": true,
+      "requirement": "Automatic verification",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V02.10",
+      "mandatory": true,
+      "requirement": "Approval gates enforced",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V02.11",
+      "mandatory": true,
+      "requirement": "Reuse applicable shared capabilities",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V03.01",
+      "mandatory": true,
+      "requirement": "Independently verify every Math answer",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V03.02",
+      "mandatory": true,
+      "requirement": "Independently verify every ELA answer",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V03.03",
+      "mandatory": true,
+      "requirement": "Verify all MCQ choices",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V03.04",
+      "mandatory": true,
+      "requirement": "Verify constructed responses and scoring",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V03.05",
+      "mandatory": true,
+      "requirement": "Verify ELA references",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V03.06",
+      "mandatory": true,
+      "requirement": "Question-key correspondence",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V03.07",
+      "mandatory": true,
+      "requirement": "Zero academic defects",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V04.01",
+      "mandatory": true,
+      "requirement": "Preserve required source questions",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V04.02",
+      "mandatory": true,
+      "requirement": "Preserve required passages",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V04.03",
+      "mandatory": true,
+      "requirement": "Preserve choices except approved corrections",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V04.04",
+      "mandatory": true,
+      "requirement": "Preserve figures",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V04.05",
+      "mandatory": true,
+      "requirement": "Preserve math notation",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V04.06",
+      "mandatory": true,
+      "requirement": "Preserve instructions",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V04.07",
+      "mandatory": true,
+      "requirement": "Document deviations",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V04.08",
+      "mandatory": true,
+      "requirement": "Zero unauthorized deviations",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V05.01",
+      "mandatory": true,
+      "requirement": "Approved paper and orientation",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V05.02",
+      "mandatory": true,
+      "requirement": "Student pagination",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V05.03",
+      "mandatory": true,
+      "requirement": "Preferred scaling where feasible",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V05.04",
+      "mandatory": true,
+      "requirement": "Minimum scale",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V05.05",
+      "mandatory": true,
+      "requirement": "Minimum clearance",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V05.06",
+      "mandatory": true,
+      "requirement": "Zero split questions",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V05.07",
+      "mandatory": true,
+      "requirement": "Zero clipping or overlap",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V05.08",
+      "mandatory": true,
+      "requirement": "Zero missing labels",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V05.09",
+      "mandatory": true,
+      "requirement": "Sequential numbering and reading order",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V05.10",
+      "mandatory": true,
+      "requirement": "Optimize whitespace",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V05.11",
+      "mandatory": true,
+      "requirement": "Inspect every page",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V05.12",
+      "mandatory": true,
+      "requirement": "Key pagination",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V05.13",
+      "mandatory": true,
+      "requirement": "Print readability",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V06.01",
+      "mandatory": true,
+      "requirement": "Identify final Math golden reference",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V06.02",
+      "mandatory": true,
+      "requirement": "Identify final ELA golden reference",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V06.03",
+      "mandatory": true,
+      "requirement": "Math golden RunSpec",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V06.04",
+      "mandatory": true,
+      "requirement": "ELA golden RunSpec",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V06.05",
+      "mandatory": true,
+      "requirement": "Reproduce Math benchmark",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V06.06",
+      "mandatory": true,
+      "requirement": "Reproduce ELA benchmark",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V06.07",
+      "mandatory": true,
+      "requirement": "Content and selection parity",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V06.08",
+      "mandatory": true,
+      "requirement": "Key and scoring parity",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V06.09",
+      "mandatory": true,
+      "requirement": "Scaling pagination and figure parity",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V06.10",
+      "mandatory": true,
+      "requirement": "Equivalent or improved readability",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V06.11",
+      "mandatory": true,
+      "requirement": "Document all differences",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V06.12",
+      "mandatory": true,
+      "requirement": "Zero blocking regression differences",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V07.01",
+      "mandatory": true,
+      "requirement": "Independent invocation without chat context",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V07.02",
+      "mandatory": true,
+      "requirement": "Repository configuration and policies",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V07.03",
+      "mandatory": true,
+      "requirement": "Estimated and actual runtime",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V07.04",
+      "mandatory": true,
+      "requirement": "Persist evidence",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V07.05",
+      "mandatory": true,
+      "requirement": "Repair and escalation tests",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V07.06",
+      "mandatory": true,
+      "requirement": "Weekly regression unaffected",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V07.07",
+      "mandatory": true,
+      "requirement": "Output conventions",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V07.08",
+      "mandatory": true,
+      "requirement": "PrintReady approval",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V07.09",
+      "mandatory": true,
+      "requirement": "Portability review",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "V07.10",
+      "mandatory": true,
+      "requirement": "Repeatability",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "ARCH.01",
+      "mandatory": true,
+      "requirement": "Dedicated executable entry point",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "ARCH.02",
+      "mandatory": true,
+      "requirement": "Independent orchestration",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "ARCH.03",
+      "mandatory": true,
+      "requirement": "Independent configuration",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "ARCH.04",
+      "mandatory": true,
+      "requirement": "No weekly curriculum or generation dependency",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "ARCH.05",
+      "mandatory": true,
+      "requirement": "Shared capabilities via reusable interfaces",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "ARCH.06",
+      "mandatory": true,
+      "requirement": "Independent execution",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "ARCH.07",
+      "mandatory": true,
+      "requirement": "Dedicated tests and golden regressions",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "ARCH.08",
+      "mandatory": true,
+      "requirement": "Weekly implementation unaffected",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "ARCH.09",
+      "mandatory": true,
+      "requirement": "Assessment policies do not alter weekly behavior",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    },
+    {
+      "id": "ARCH.10",
+      "mandatory": true,
+      "requirement": "Coordinated PrintReady preserves other approved artifacts",
+      "status": "NOT_VERIFIED",
+      "evidence": []
+    }
+  ],
+  "handoff_evidence": {
+    "item_maps": "historical-source-item-maps.json",
+    "grade4": {
+      "worksheet_drive_id": "1OKfwI8SjrU4zMvbXIV7VrABMWrJXz6-T",
+      "key_drive_id": "1sUBGq_nlxJsjYzpT2Ig5JI9bCnKf0cmK",
+      "source_drive_id": "13T-IY0FHGBYQc9jCL7A8Nat6oBOetFtD",
+      "worksheet_pages": 4,
+      "key_pages": 1,
+      "historical_status": "STAGED_FOR_REVIEW",
+      "count_discrepancy": "Handoff headline reports 29 items and 10 CR. Listed IDs, the official source item map, and the staged key show 28 items, including 9 CR."
+    },
+    "grade5": {
+      "historical_status": "DELIVERED",
+      "correction": "Q40 has 35 half-foot square tiles, for 8 3/4 square feet."
+    },
+    "ela": {
+      "historical_status": "DELIVERED",
+      "student_library_id": "libfile_dfcd2e3aa84c81919748c5af363c62a1",
+      "key_library_id": "libfile_7c2c790bd454819182f6de84610d266a",
+      "drive_library_identity": "Byte identity has not been established.",
+      "source_passages": [
+        "Cracking Code Purple",
+        "Excerpt from New York: Local Legacies"
+      ],
+      "known_delivered_defect": "Trailing whitespace on pages 1 and 3."
+    }
+  },
+  "iteration_tests": {
+    "evidence": "iteration-10-tests.txt",
+    "passed": 248,
+    "failed": 0
+  },
+  "layout_trial": {
+    "status": "FAIL",
+    "actual_pages": 8,
+    "evidence": "grade5-component-trial-evidence.json",
+    "maximum_pages": 4,
+    "regions": 28
+  },
+  "reflow_trial": {
+    "fidelity": "NOT_VERIFIED",
+    "regions": 28,
+    "structural_checks": "PASS",
+    "pages": 4,
+    "evidence": "grade5-reflow-evidence.json",
+    "maximum_pages": 4,
+    "visual_review": {
+      "notes": "Targeted notation, Q33 D, Q43 key and printed answer labels render. Complete original-to-output source comparison and rubric review pending.",
+      "status": "PARTIAL",
+      "pages_reviewed": 4
+    }
+  },
+  "grade5_teacher_key": {
+    "evidence": "iteration-10-teacher-key-test.txt",
+    "sha256": "c56b59547289ce39689552a8039e6fe42ee0ba3cac21b4eff4ee57a3dc88bda4",
+    "rubric_alignment": "FULL_CREDIT_EXEMPLARS_MATCH_9_OF_9",
+    "worked_solutions": 9,
+    "artifact": "grade5-teacher-review.pdf",
+    "official_mc_answers": 19,
+    "pages": 1,
+    "visual_review": "PASS"
+  },
+  "grade5_paired_regression": {
+    "status": "PARTIAL",
+    "golden": "Final delivered Math Grade 5 2024 worksheet and answer key",
+    "evidence": "grade5-golden-comparison.json"
+  },
+  "math_scoring_sources": "math-official-scoring-evidence.json",
+  "grade4_teacher_key": {
+    "sha256": "d6b25f78ef25c2b9e69f3735e32d79a82d42b4c40f56a66a36e1d249ed41d482",
+    "visual_inspection": "PASS",
+    "status": "STRUCTURAL_PASS",
+    "academic_status": "FULL_CREDIT_EXEMPLARS_COMPARED_9_OF_9",
+    "pages": 1
+  },
+  "grade5_source_comparison": {
+    "notation_items": 13,
+    "evidence": "grade5-source-comparison.md",
+    "items": 28,
+    "response_rules_restored": 9
+  },
+  "grade5_print_review": {
+    "response_rule_spacing_pt": 12,
+    "artifact": "grade5-student-review.pdf",
+    "evidence": "grade5-print-layout-review.md",
+    "pages": 3,
+    "sha256": "4318e4cda042dbc0ad5cfc0c362d0aeb80461784bd6292e2953575ac8b9655b4",
+    "min_clearance_pt": 7.5,
+    "figures_measured": 5
+  },
+  "grade4_student_trial": {
+    "golden_pages": 4,
+    "regions": 28,
+    "status": "CLI_STRUCTURAL_PASS",
+    "maximum_pages": 4,
+    "full_width_question": 26,
+    "evidence": "grade4-reflow-evidence.json",
+    "pages": 4,
+    "source_fidelity": "NOT_VERIFIED",
+    "artifact": "grade4-student-review.pdf",
+    "sha256": "302d7cee7afe9796d2ed7428863cb3f83ee895d0b00955dac6b34f96c26058ba",
+    "minimum_measured_clearance_pt": 6.38
+  },
+  "ela_student_trial": {
+    "pages": 4,
+    "evidence": "ela-student-trial-evidence.json",
+    "items": 14,
+    "status": "STRUCTURAL_PASS",
+    "golden_pages": 4
+  },
+  "ela_teacher_trial": {
+    "independent_answer_review": "NOT_VERIFIED",
+    "mts_model_responses": 2,
+    "status": "STRUCTURAL_PASS",
+    "evidence": "ela-teacher-review.md",
+    "pages": 2,
+    "official_mc": 12
+  }
+}

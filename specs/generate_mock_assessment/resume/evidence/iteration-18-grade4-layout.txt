@@ -1,0 +1,1 @@
+PASS: four pages, 28 atomic regions, full-width Q26, and three repaired formulas or operands.

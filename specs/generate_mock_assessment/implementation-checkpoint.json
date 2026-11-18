@@ -1,6 +1,6 @@
 {
   "status": "NOT_DONE",
-  "iteration": 1,
+  "iteration": 21,
   "baseline_revision": "728596db0ec7deedc087b9e509da14701b7d088d",
   "criteria": [
     {
@@ -317,13 +317,44 @@
     }
   ],
   "next": [
-    "Audit exact golden artifacts and recover ELA final",
-    "Build independently invokable source-based composition and rendering",
-    "Run historical regressions and independent QA",
-    "Run existing weekly regression tests"
+    "Repair ELA teacher typography and improve key readability against the two-page golden. Verify source passage transcription and all choices, then integrate student generation into CLI.",
+    "Complete independent Grade 4 academic/fidelity review and improve fourth-page utilization while preserving Q26 full width.",
+    "Apply the measured renderer to the Grade 4 and ELA fixtures with their respective policies and rerun all regression tests."
   ],
   "blockers": [
-    "ELA golden output not identified",
-    "Historical PDF content and approvals not verified"
+    "Historical artifact-specific final approval absent from handoffs",
+    "Student and teacher rendering and independent QA remain open"
+  ],
+  "audited_revision": "52bac0bfbbb27cb87037f4123ad86fb8b9ba16da",
+  "evidence": [
+    "outputs/verification-report.json",
+    "outputs/baseline-tests.txt",
+    "outputs/historical-inventory.json",
+    "outputs/historical-source-item-maps.json",
+    "outputs/iteration-3-tests.txt",
+    "outputs/grade5-source-regions.json",
+    "outputs/grade5-layout-trial-evidence.json",
+    "outputs/grade5-component-trial-evidence.json",
+    "outputs/grade5-historical-implementation-audit.md",
+    "outputs/grade5-reflow-evidence.json",
+    "outputs/iteration-8-layout-test.txt",
+    "outputs/iteration-9-layout-test.txt",
+    "outputs/grade5-scoring-review.md",
+    "outputs/iteration-10-teacher-key-test.txt",
+    "outputs/iteration-10-tests.txt",
+    "outputs/grade5-golden-comparison.json",
+    "outputs/iteration-12-layout-test.txt",
+    "outputs/math-official-scoring-evidence.json",
+    "outputs/grade5-source-comparison.md",
+    "outputs/grade5-print-layout-review.md",
+    "outputs/iteration-16-layout-test.txt",
+    "outputs/grade4-component-trial-evidence.json",
+    "outputs/grade4-teacher-review.pdf",
+    "outputs/grade4-reflow-evidence.json",
+    "outputs/iteration-18-grade4-layout.txt",
+    "outputs/grade4-figure-clearance.json",
+    "outputs/iteration-19-grade4-checks.txt",
+    "outputs/ela-student-trial-evidence.json",
+    "outputs/ela-teacher-review.md"
   ]
 }

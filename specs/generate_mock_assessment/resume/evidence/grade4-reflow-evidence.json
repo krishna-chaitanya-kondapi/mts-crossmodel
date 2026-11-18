@@ -1,0 +1,204 @@
+{
+  "pages": 4,
+  "maximum_pages": 4,
+  "placements": [
+    {
+      "item": 1,
+      "page": 1,
+      "column": 1,
+      "y": 62,
+      "height": 86.5
+    },
+    {
+      "item": 2,
+      "page": 1,
+      "column": 1,
+      "y": 148.5,
+      "height": 75.0
+    },
+    {
+      "item": 7,
+      "page": 1,
+      "column": 1,
+      "y": 223.5,
+      "height": 236.0
+    },
+    {
+      "item": 10,
+      "page": 1,
+      "column": 1,
+      "y": 459.5,
+      "height": 251.25
+    },
+    {
+      "item": 11,
+      "page": 1,
+      "column": 2,
+      "y": 62,
+      "height": 75.0
+    },
+    {
+      "item": 12,
+      "page": 1,
+      "column": 2,
+      "y": 137.0,
+      "height": 86.5
+    },
+    {
+      "item": 15,
+      "page": 1,
+      "column": 2,
+      "y": 223.5,
+      "height": 98.0
+    },
+    {
+      "item": 16,
+      "page": 1,
+      "column": 2,
+      "y": 321.5,
+      "height": 75.0
+    },
+    {
+      "item": 22,
+      "page": 1,
+      "column": 2,
+      "y": 396.5,
+      "height": 86.5
+    },
+    {
+      "item": 23,
+      "page": 1,
+      "column": 2,
+      "y": 483.0,
+      "height": 75.0
+    },
+    {
+      "item": 24,
+      "page": 1,
+      "column": 2,
+      "y": 558.0,
+      "height": 75.0
+    },
+    {
+      "item": 26,
+      "page": 2,
+      "column": "full",
+      "y": 62,
+      "height": 154.4712371826172
+    },
+    {
+      "item": 29,
+      "page": 2,
+      "column": 1,
+      "y": 216.4712371826172,
+      "height": 75.0
+    },
+    {
+      "item": 30,
+      "page": 2,
+      "column": 1,
+      "y": 291.4712371826172,
+      "height": 86.5
+    },
+    {
+      "item": 31,
+      "page": 2,
+      "column": 1,
+      "y": 377.9712371826172,
+      "height": 166.5
+    },
+    {
+      "item": 32,
+      "page": 2,
+      "column": 1,
+      "y": 544.4712371826172,
+      "height": 109.5
+    },
+    {
+      "item": 33,
+      "page": 2,
+      "column": 1,
+      "y": 653.9712371826172,
+      "height": 75.0
+    },
+    {
+      "item": 34,
+      "page": 2,
+      "column": 2,
+      "y": 216.4712371826172,
+      "height": 182.0
+    },
+    {
+      "item": 35,
+      "page": 2,
+      "column": 2,
+      "y": 398.4712371826172,
+      "height": 75.0
+    },
+    {
+      "item": 36,
+      "page": 2,
+      "column": 2,
+      "y": 473.4712371826172,
+      "height": 265.0
+    },
+    {
+      "item": 37,
+      "page": 3,
+      "column": 1,
+      "y": 62,
+      "height": 77.0
+    },
+    {
+      "item": 38,
+      "page": 3,
+      "column": 1,
+      "y": 139.0,
+      "height": 219.0
+    },
+    {
+      "item": 39,
+      "page": 3,
+      "column": 1,
+      "y": 358.0,
+      "height": 126.5
+    },
+    {
+      "item": 40,
+      "page": 3,
+      "column": 1,
+      "y": 484.5,
+      "height": 138.0
+    },
+    {
+      "item": 41,
+      "page": 3,
+      "column": 2,
+      "y": 62,
+      "height": 239.0
+    },
+    {
+      "item": 42,
+      "page": 3,
+      "column": 2,
+      "y": 301.0,
+      "height": 126.5
+    },
+    {
+      "item": 43,
+      "page": 3,
+      "column": 2,
+      "y": 427.5,
+      "height": 238.0
+    },
+    {
+      "item": 44,
+      "page": 4,
+      "column": 1,
+      "y": 62,
+      "height": 138.0
+    }
+  ],
+  "source_fidelity": "NOT_VERIFIED",
+  "golden": "MTS-NY-Math-Grade4-2024-Worksheet-REVIEW.pdf"
+}

@@ -1,0 +1,17 @@
+WARN `--no-project` was provided, but no project was found
+
+=================================== ERRORS ====================================
+___________ ERROR collecting tests/mock_assessment/test_item_map.py ___________
+ImportError while importing test module 'C:\Users\Krishna Chaitanya\Documents\Codex\2026-11-18\mts-autonomous-mock-assessment-implementation-repository\work\mts-crossmodel\tests\mock_assessment\test_item_map.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+..\..\..\..\..\..\AppData\Roaming\uv\python\cpython-3.14-windows-x86_64-none\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\mock_assessment\test_item_map.py:4: in <module>
+    from mts.products.mock_assessment.item_map import select_items
+E   ModuleNotFoundError: No module named 'mts'
+=========================== short test summary info ===========================
+ERROR tests/mock_assessment/test_item_map.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+1 error in 0.38s

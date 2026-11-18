@@ -1,0 +1,40 @@
+MTS NY MATH - GRADE 6 - 2024 | ANSWER KEY
+
+Multiple-choice answers
+ 2 B                                26 B
+ 3 D                                28 C
+ 4 C                                29 B
+11 B                               31 A
+14 D                               32 B
+15 D                               33 C
+18 B                               34 C
+20 C                               35 D
+22 B                               36 A
+23 D
+
+Constructed-response solutions
+37    10 units. A = (-6, 6) and D = (4, 6); 4 - (-6) = 10.
+
+38    136. Since n/8 = 17, n = 17 x 8 = 136.
+
+39    3/4 gallon. The ratio 6:8 simplifies to 3:4, so 1 blue gallon needs 3/4 orange gallon.
+
+40    33.75 cm^2. Rectangle: 9 x 5 = 45. Unshaded triangle: (1/2)(5)(4.5) = 11.25. Shaded = 45 - 11.25.
+
+41   The claim is incorrect. 3(3 + 5x) = 9 + 15x, not 6 + 8x.
+
+42    c = 2.75t means each ticket costs $2.75. t is independent; c is dependent because total cost changes with tickets bought.
+
+43    No. The GCF is 8, because 8 divides both 24 and 40 and no greater common factor does.
+
+44    64 = 4^3. The prism is 4 units by 4 units by 4 units, so V = 4 x 4 x 4 = 64.
+
+45    4 units. School = (3, 2), house = (3, 6); same x-coordinate, so 6 - 2 = 4.
+
+46    $48. Rex saves $9/month -> $144 in 16 months. Nero saves $12/month -> $192. Difference = $48.
+
+
+
+
+
+Source: 2024 NYS Grade 6 Mathematics Released Questions. Answers independently checked.

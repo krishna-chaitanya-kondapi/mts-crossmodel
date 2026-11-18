@@ -1,0 +1,1 @@
+Four pages and six targeted text assertions passed.

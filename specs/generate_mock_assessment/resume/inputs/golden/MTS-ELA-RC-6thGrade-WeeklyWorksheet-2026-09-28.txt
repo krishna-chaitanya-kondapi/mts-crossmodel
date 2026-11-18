@@ -1,0 +1,203 @@
+     MTS  | Grade 6                Reading              September 23, 2026      Name: __________________
+
+                MTS ELA MOCK TEST
+                     Read each passage carefully. Answer every question using evidence from the text.
+
+                                        PASSAGE 1
+                     Cracking Code Purple
+                                                   by Anna Ouchchy
+
+1 On a warm afternoon in September 1940, a young woman sat at her  How the System Worked
+desk on the second floor of the Munitions Building in Washington,                                                                8 Here is how the Purple code and other Japanese diplomatic codes
+D.C. Her hazel eyes peered through rimless eyeglasses at strings of                                                                worked. The Japanese encoded a message using a special device called
+letters and numbers. She had been looking at symbols like these for                                                                   a cipher machine. Then they ratcheted the message forward. A U.S.
+more than a year and they still didn’t make sense.                                                                        radio station intercepted the message and sent it to Washington. There,
+2 All of a sudden, something jumped out at her, and she became very    the cryptanalysts went to work. When they had cracked the entire code,
+still. Al Small, her co-worker, noticed her concentration and walked     they built a machine just like the Japanese cipher machine and used it
+over. The woman shared her discovery and they went to fetch their       to decode other messages. Finally, translators turned these messages
+boss, Frank Rowlett. Another man joined them. All three crowded        into English.
+around the woman’s desk as she pointed out how some symbols stood                                                                9 A coded message consisted of a pattern of numbers and letters. It
+at a certain interval from one another.                                                               might look something like this: 78232 RSECO. Each symbol stood for
+3 Rowlett jumped up and down. Small dashed around the room         a letter, but the letter it stood for changed as the machine moved
+excitedly. Their cries of “That’s it!” “Whoopee!” “Hooray!” broke the   forward. Each time this happened, a symbol would come to stand for
+silence of the room, which was usually as quiet as a library. To         something different, which made the code incredibly difficult to solve.
+celebrate, the team sent out for Coca-Colas. It was the first one the                                                                10 The cryptanalysts had to do a lot of guessing and checking their
+woman had ever tasted.                                                                        guesses. For example, they knew that many Japanese diplomatic
+The Purple Solution                                           messages began with the Japanese words “I have the honor to inform
+4 The woman’s name was Genevieve Grotjan and she was a code      Your Excellency,” so they tried that combination of letters first.
+breaker, or cryptanalyst, with the U.S. Army’s Signal Intelligence      Making Magic
+Service (SIS). Many cryptanalysts were people who studied how                                                                11 Soon after Grotjan’s discovery, the SIS and U.S. Navy built a
+languages worked. Some were mathematicians. Grotjan had wanted to                                                                    Purple cipher machine just like the decoding machines used in
+be a math teacher.                                                                   Japanese embassies. With it, the United States could read Japan’s most
+5 At the time, Grotjan was one of just a few women working at the       secret diplomatic messages and learn what the Japanese were doing
+highest levels of code breaking. Her discovery involved a complicated   and planning during the war. These translated messages soon became
+Japanese diplomatic code nicknamed Purple. Japanese codes were      known as “magic” and were sent to high-ranking government officials,
+often named after colors.                                               including President Franklin D. Roosevelt.
+6 In 1940, World War II was raging in Europe, North Africa, and Asia.  12 Grotjan was modest about her discovery. “Maybe I was just lucky
+The United Kingdom and France were fighting against Germany and     in getting the right series of papers. I was elated up to a point but I
+Italy. Japan had invaded China, and in September 1940 Japan signed a   didn’t think ‘This is it!’ because there was so much more to do.”
+pact to join forces with Germany and Italy.                            Others celebrated it. A government committee said, “Magic
+7 The United States had not entered the war, but relations with Japan    contributed enormously to the defeat of the enemy, greatly shortened
+were becoming more and more strained. To “listen to” secret Japanese   the war, and saved many thousands of lives.”
+communications, the United States used a complex system to intercept
+the communications and break the codes.
+
+
+
+
+
+                                   MTS ELA Mock Test  • Grade 6  • 1
+
+                                                    Questions 1–7
+
+                                                         Use the passage and illustration. Choose the best answer.
+
+
+
+
+
+1. How does the author introduce the idea that the Purple code   2. What is the purpose for including the information in
+finally began to be understood?                              paragraphs 5 through 7 in the article?
+A by indicating that many mathematicians were working on the messages    A to illustrate the relationship between different countries
+B by explaining how a person noticed something interesting about the      B to indicate a common naming method for codes
+   symbols                                          C to indicate the importance of understanding secret messages
+C by indicating that the messages were created by a special machine      D to illustrate the reasons why a global conflict occurred
+D by explaining how a system was used to obtain signals from other
+   countries
+
+3. Which claim by the author is best supported by evidence in    4. What does the information in paragraphs 8 and 9 mainly
+the article?                                                            illustrate?
+A “Many cryptanalysts were people who studied how languages worked.”    A how coded messages were created using a special machine
+   (paragraph 4)                                       B why understanding coded messages was a difficult process
+B  “. . . Grotjan was one of just a few women working at the highest levels of   C why cryptanalysts made guesses about coded messages
+  code breaking.” (paragraph 5)                             D how coded messages were translated into a different language
+C “The United States had not entered the war, but relations with Japan were
+  becoming more and more strained.” (paragraph 7)
+D  “. . . the United States used a complex system to intercept the
+   communications and break the codes.” (paragraph 7)
+
+5. How does paragraph 11 strengthen the author’s central         6. What is the purpose of the illustration in the article?
+claim?                                            A to show a device used to read coded messages
+A by explaining the value of decoded messages to the U.S. government     B to explain how messages were coded
+B by referring to the places where coded messages originated           C to show an example of a coded message
+C by describing how U.S. agencies built a cipher machine             D to explain why some messages were coded
+D by indicating the name given to messages obtained from cipher machines
+
+7. Which detail from the article best reveals the importance of
+Grotjan’s discovery?
+A “Their cries of ‘That’s it!’ ‘Whoopee!’ ‘Hooray!’ broke the silence of the
+   room, which was usually as quiet as a library.” (paragraph 3)
+B “Each symbol stood for a letter, but the letter it stood for changed as the
+  machine moved forward.” (paragraph 9)
+C  “. . . the SIS and U.S. Navy built a Purple cipher machine just like the
+   decoding machines used in Japanese embassies.” (paragraph 11)
+D  “. . . Magic contributed enormously to the defeat of the enemy, greatly
+   shortened the war, and saved many thousands of lives.” (paragraph 12)
+
+
+
+
+
+                                   MTS ELA Mock Test  • Grade 6  • 2
+
+                                        PASSAGE 2
+              Excerpt from New York: Local Legacies
+                                               by the Library of Congress
+
+Context: A legacy is a place or tradition from the past that continues into the present. New York has several important legacies that help people learn
+                                              about and remember the history of the state.
+
+One-Room Schoolhouse: A Local Legacy                 Montauk Point Lighthouse Museum: A Local Legacy
+1 Would you like to experience what going to school was like in the late    7 You may think that lighthouses are interesting to look at, and they are.
+1800s? To start with, imagine everyone in school sharing only one teacher   But they also serve a very useful purpose.
+and one classroom.                                                8 Lighthouses guide ships sailing near a coast. They are built in different
+2 In the 19th and early 20th centuries, most American students attended a    kinds of places: important locations on a coast, harbor entrances, islands,
+one-room schoolhouse. A single teacher would typically have students in    rocky ledges or reefs, and even in the water. They project strong beacons of
+the first through eighth grades, and she taught them all. The number of        light at night so ships can see them. Lighthouses help ships identify their
+students varied from six to 40 or more. The youngest children sat in the       locations, warn them of danger, and serve as a marker of nearby land.
+front, while the oldest students sat in the back. The teacher usually taught    9 The Montauk Point Lighthouse on Long Island, New York, is more than
+reading, writing, arithmetic, history, and geography. Students memorized    200 years old. Built in 1796, it is the oldest lighthouse in the state. It has
+and recited their lessons.                                               guided whaling ships, fishing boats, steamships, submarines, and sailboats
+3 The classroom of a one-room schoolhouse probably looked much like      for many years and continues to do so today. The tower is more than 110
+your own. The teacher’s desk may have been on a raised platform at the       feet tall, and a person has to climb 137 steps to get to the top. But the
+front of the room, however, and there would have been a wood-burning     Montauk Point Lighthouse is not just a tower. Attached to it is a house in
+stove since there was no other source of heat. The bathroom would have     which the lighthouse keeper lived with his family and assistants. Since the
+been outside in an outhouse.                                                      light on top of the tower was automated in 1987, the lighthouse no longer
+4 In Honeoye Falls, New York, there is a one-room schoolhouse where      needs a keeper. . . .
+kids today can experience what it was like to be students in the late 19th    Immigrant Life in New York: A Local Legacy
+century. For a week during the summer, they wear 19th century clothes and  10 From the 1850s through the early 1900s, thousands of immigrants
+learn the way children learned more than a hundred years ago. . . .                                                                              arrived in the United States and lived in New York City. They first came
+Rochester, New York’s Lilac Festival: A Local Legacy         from Ireland and Germany and later from Italy, Eastern Europe, and China,
+5 The Netherlands is known for its tulips. Rochester, New York, is known   among other places. Because most immigrants were poor when they
+for another type of flower—the lilac.                                           arrived, they often lived on the Lower East Side of Manhattan, where rents
+                                                                                 for the crowded apartment buildings, called tenements, were low.
+6 There are more than 500 varieties of lilacs and more than 1,200 lilac
+bushes at Highland Park. In 1888, the world’s largest nursery, Ellwanger &  11 The Lower East Side Tenement Museum is in a building that used to be
+Barry, owned by George Ellwanger and Patrick Barry, gave Highland Park   a tenement and it tells the story of immigrants in the City. It was built in the
+to the people of Rochester. It was beautifully landscaped with trees and      1860s and could house 20 families, four on each floor. Each apartment had
+shrubs and was the first municipal arboretum in the United States. An        only three rooms: a living or “front” room, a kitchen, and a tiny bedroom.
+arboretum is a place where trees, shrubs, and plants are specially grown      Often seven or more people lived in each apartment. Not only was the
+and cultivated. The park’s collection of lilacs originally started with 20      tenement crowded, but also, until 1905, there were no bathrooms inside the
+varieties in 1892. Since 1898, Rochester has held a Lilac Festival every       building. Residents also did not have electric power until after 1918. . . .
+May. The first event attracted 3,000 visitors; now more than 500,000
+people come to see the lilacs and other flowering trees and shrubs. . . .
+
+
+
+
+
+                                   MTS ELA Mock Test  • Grade 6  • 3
+
+                            Questions 8–14
+
+8. What important idea do the authors develop in paragraph 3?   9. Read this sentence from paragraph 4.
+A Classrooms should continue to be updated.                                    “In Honeoye Falls, New York, there is a one-room schoolhouse where
+B Some modern schools have a connection to the past.                      kids today can experience what it was like to be students in the late 19th
+C Older buildings often lacked necessary conveniences.                      century.”
+D Methods of teaching can change over the years.                 Why is this detail important to the article?
+                                                 A  It highlights the general popularity of historical attractions.
+                                                 B  It indicates that students are often interested in the history of education.
+                                                 C  It suggests the importance of preserving historical buildings.
+                                                 D  It shows that a connection can be made with students from another time.
+
+10. Traditions allow people to both honor the past and           11. In paragraph 9, what is the main way the authors indicate
+celebrate the present. Which detail from paragraph 6 best        the importance of the Montauk Point Lighthouse?
+represents this idea?                                 A by referring to its status as the oldest lighthouse in the state
+A “There are more than 500 varieties of lilacs and more than 1,200 lilac     B by describing how the lighthouse still provides assistance to ships
+   bushes . . .”                                        C by explaining that the lighthouse now uses an automatic beacon
+B  “It was beautifully landscaped with trees and shrubs . . .”             D by mentioning the house attached to the lighthouse where families lived
+C “The park’s collection of lilacs originally started with 20 varieties in 1892.”
+D “Since 1898, Rochester has held a Lilac Festival every May.”
+
+12. How do the authors develop the idea of “legacy” in the
+article?
+A by explaining the history that inspired traditions
+B by providing a chronological sequence of events
+C by contrasting various celebrations in the state
+D by referring to the dates when festivals began
+
+
+13. This question is worth 2 credits.
+According to New York: Local Legacies, why are lighthouses important to the history of New York? Use two details from the article to support your
+response.
+________________________________________________________________________________________________________________
+________________________________________________________________________________________________________________
+________________________________________________________________________________________________________________
+________________________________________________________________________________________________________________
+________________________________________________________________________________________________________________
+
+
+14. This question is worth 2 credits.
+In New York: Local Legacies, how does paragraph 6 help develop a central idea of the article? Use two details from the article to support your
+response.
+________________________________________________________________________________________________________________
+________________________________________________________________________________________________________________
+________________________________________________________________________________________________________________
+________________________________________________________________________________________________________________
+________________________________________________________________________________________________________________
+
+
+
+
+
+                                   MTS ELA Mock Test  • Grade 6  • 4
