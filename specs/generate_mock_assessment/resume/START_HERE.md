@@ -31,3 +31,9 @@ Run an independent local review pair from a committed fixture:
 The runner validates exact profile, selection counts, paper/page limits, source fingerprint and local-review scope. It writes RunSpec JSON/PDF under 01-PreRun, student and teacher PDFs under 02-Run, and structural checks, input/output fingerprints and runtime under 03-PostRun. Each phase is dated by the instructional Monday and scoped by run ID.
 
 Completed identities are preserved on retries. Concurrent execution of the same identity is locked. A failure while moving staged phases rolls back only directories created by the failed run. Initial runtime estimates are engineering estimates; the run log records measured active duration. Academic, source and visual quality retain explicit review-required status until separate evidence is recorded.
+
+## Release boundary
+
+The release API and CLI require a complete development evidence gate, per-run academic/source/visual/structural PASS records, and a human final-release receipt binding both exact PDF hashes. The local publication coordinator serializes the flat destination, verifies readback and preserves unrelated approved files. Replacing a named file also requires its previous fingerprint. Failure during a multi-file replacement restores the prior set.
+
+These checks are tested against temporary local folders. Cloud Drive publication integration and actual production publication remain separate. The current incomplete development gate blocks release.

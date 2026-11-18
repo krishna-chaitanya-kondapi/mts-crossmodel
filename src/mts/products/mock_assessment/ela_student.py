@@ -92,13 +92,16 @@ def render_ela_student(source_path, manifest, destination):
             if index == 0:
                 figure = manifest["cipher"]
                 page.show_pdf_page(
-                    pymupdf.Rect(222, 46, 390, 202),
+                    pymupdf.Rect(224, 46, 388, 236),
                     source,
                     figure["source_page"] - 1,
                     clip=pymupdf.Rect(figure["bounds"]),
                 )
-                write_questions(page, questions[:4], 38, 224)
-                write_questions(page, questions[4:7], 318, 224)
+                caption = manifest["cipher"]["caption"]
+                caption_width = font.text_length(caption, fontsize=8.5)
+                page.insert_text(((612 - caption_width) / 2, 251), caption, fontsize=8.5)
+                write_questions(page, questions[:4], 38, 270)
+                write_questions(page, questions[4:7], 318, 270)
             else:
                 y = max(
                     write_questions(page, questions[7:10], 38, 65),

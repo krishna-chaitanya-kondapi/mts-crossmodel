@@ -19,7 +19,7 @@ def historical_profile(tmp_path):
     with pymupdf.open() as pdf:
         for number in range(1, 22):
             page = pdf.new_page(width=612, height=792)
-            page.insert_text((180, 320), f"Source figure {number}")
+            page.insert_text((240, 320), f"Source figure {number}")
         pdf.save(source)
     manifest = json.loads(
         (

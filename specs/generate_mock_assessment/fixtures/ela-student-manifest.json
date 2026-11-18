@@ -225,11 +225,12 @@
   "cipher": {
     "source_page": 10,
     "bounds": [
-      162,
+      200,
       293,
-      452,
-      562
-    ]
+      412,
+      538
+    ],
+    "caption": "A cipher machine similar to the one described in the article."
   },
   "verification": "Source-derived text, with manually transcribed raster pages. Full fidelity review pending."
 }

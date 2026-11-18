@@ -135,7 +135,8 @@ with pymupdf.open(SOURCE) as doc:
             },
         ],
         "questions": qs,
-        "cipher": {"source_page": 10, "bounds": [162, 293, 452, 562]},
+        "cipher": {"source_page": 10, "bounds": [200, 293, 412, 538],
+            "caption": "A cipher machine similar to the one described in the article."},
         "verification": "Source-derived text, with manually transcribed raster pages. Full fidelity review pending.",
     }
     dest = ROOT / "specs/generate_mock_assessment/fixtures/ela-student-manifest.json"
