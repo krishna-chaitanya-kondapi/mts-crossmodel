@@ -90,8 +90,13 @@ manifest, then writes a student PDF and placement JSON:
     python scripts/generate_mock_assessment.py ela-student --source <source.pdf> --manifest <regions.json> --output <student.pdf> --placements <placements.json>
 
 The command is integration-tested with a synthetic source. A source-verified ELA student manifest
-and its historical four-page reproduction are still open. The Grade 4 Math fixture explicitly starts
-its final item group at Q42 to use the fourth page; Q26 remains a full-width block. The ELA teacher
+and its historical four-page reproduction are still open. The Grade 4 Math fixture starts page three
+at Q36 and page four at Q41, with Q43 starting the second column, to preserve the historical question
+groups; Q26 remains a full-width block and Q2/Q22 retain their stacked fraction expressions as source
+crops. The current four-page candidate preserves the Grade 4 page-three/page-four groups and response
+line counts, but it still differs from the golden in page-one/page-two grouping, all-page headers,
+page numbers, and question-label typography. Visual parity remains NOT_VERIFIED.
+The ELA teacher
 mode renders the recovered YPQA review manifest only. Neither mode approves or publishes artifacts.
 
 ## Implementation priorities

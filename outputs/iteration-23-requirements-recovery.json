@@ -1,0 +1,127 @@
+{
+  "iteration": 23,
+  "purpose": "Recover and classify subject requirements; this is not evidence that every requirement is implemented or passed.",
+  "approved_mock_assessment_contract": [
+    {
+      "path": "specs/generate_mock_assessment/definition-of-done.md",
+      "sha256": "5ffb1fed16589e3b6d089adc933562eda9813cac14639d1f753500983897dd8b",
+      "authority": "Approved November 18, 2026",
+      "scope": "Initial milestone: reproduce historical source-based Math and ELA benchmarks."
+    },
+    {
+      "path": "specs/generate_mock_assessment/acceptance-criteria.json",
+      "sha256": "c70cf4b237e712c11943ed16ac5a479a9310c65a6d1fd284baddb23d956f0aa4",
+      "authority": "Approved registry referenced by the Definition of Done",
+      "scope": "78 criteria, 76 mandatory."
+    },
+    {
+      "path": "specs/generate_mock_assessment/configuration.md",
+      "sha256": "123e50a20e09d520fba49b6ce48e02960a277d7ce96501283765ad5878df9cf3",
+      "authority": "Mock Assessment presentation and run dimensions",
+      "scope": "Mock Assessment-specific configuration guidance; conversation-derived values remain hypotheses until original artifacts are verified."
+    },
+    {
+      "path": "specs/generate_mock_assessment/verification.md",
+      "sha256": "d702779b695da10122991b79bb285f9adefd661ee46432a5439d4f75bcc5e2cc",
+      "authority": "Mock Assessment verification gates",
+      "scope": "Content, structural, visual, and human release gates."
+    },
+    {
+      "path": "specs/generate_mock_assessment/README.md",
+      "sha256": "b14a731acce10299d6388d6e935f3f37c46e7e70149046d069ad2a8fdd5babfb",
+      "authority": "Proposed target specification; not treated as an approved requirements baseline",
+      "scope": "Architecture, workflow, and current local render routes."
+    }
+  ],
+  "subjects": {
+    "math": {
+      "recovery_status": "RECOVERED",
+      "sources": [
+        {
+          "path": "specs/generate_math_worksheets/01. intent/requirements.md",
+          "sha256": "830bd8baa19c6c1b5d0df0df3488bf31434b39244f9c3ba1121a295f14e26667",
+          "authority": "Canonical Math worksheet requirements v1.5",
+          "scope": "Contains both assessment-relevant verification requirements and weekly workflow requirements."
+        },
+        {
+          "path": "docs/subjects/math/requirements.md",
+          "sha256": "7e705621065bb9973329a9095a5dc53f2fa43d10f1df5e38d0408078253a4b49",
+          "authority": "Math subject requirements",
+          "scope": "Answer recomputation, ambiguity/sufficiency, grade appropriateness, notation, and diagrams."
+        },
+        {
+          "path": "docs/subjects/math/design.md",
+          "sha256": "584edb498912b80e1f54d5efab47958c32eee2466968e64d23bcc937b5c13864",
+          "authority": "Subject design context",
+          "scope": "Weekly Math design; not imported as Mock Assessment workflow."
+        },
+        {
+          "path": "data/config/subjects/math.yaml",
+          "sha256": "59b084f5ef7702dfe7216fa371552877b190630f38f3f08993ad3d6e02cf5035",
+          "authority": "Math subject configuration",
+          "scope": "Weekly Math defaults; not imported as Mock Assessment configuration."
+        },
+        {
+          "path": "specs/generate_math_worksheets/03. design/design.md",
+          "sha256": "7e2360d96c74c950a295550d74ee77bc3a1a81718a381626ed4909146308fa06",
+          "authority": "Proposed for M4 design review",
+          "scope": "Weekly worksheet design context only."
+        }
+      ],
+      "boundary": "Use the approved Mock Assessment Definition of Done and registry for assessment obligations. Do not inherit weekly curriculum, question-mix, publication, or presentation defaults."
+    },
+    "ela": {
+      "recovery_status": "RECOVERED_WITH_OPEN_APPROVAL_GAPS",
+      "sources": [
+        {
+          "path": "docs/subjects/ela/requirements.md",
+          "sha256": "4c487d28d3c0b67c1a2b45b95690fa8220c5099c7e7adf890df9606ecb22d20f",
+          "authority": "ELA subject requirements",
+          "scope": "Passage support, inference evidence, distractors, grammar corrections, and response guidance."
+        },
+        {
+          "path": "specs/generate_ela_worksheets/01. intent/factory-prep/MTS-ELA-requirements.md",
+          "sha256": "84435070934ae143ed1e1d637e3efedd298826d7bc168c3036cec9778733a7e2",
+          "authority": "Version 0.1; R1 proposed for human review; R2-R5 pending",
+          "scope": "Detailed ELA weekly requirements; status is disclosed and not treated as approved Mock Assessment policy."
+        },
+        {
+          "path": "specs/generate_ela_worksheets/01. intent/factory-prep/mts-PRODUCT.md",
+          "sha256": "69af4a9e0f295b7e3e083dfe7f45e5d4b4d92f34571e5b6139d2b6bef8fde102",
+          "authority": "Approved ELA product baseline",
+          "scope": "ELA product context; it does not replace the Mock Assessment registry."
+        },
+        {
+          "path": "data/config/subjects/ela.yaml",
+          "sha256": "e7b69fbb3f925279ff53d236ee063a63871c937081a39f71021ffa41ce132eb0",
+          "authority": "ELA subject configuration",
+          "scope": "Weekly ELA defaults; not imported as Mock Assessment configuration."
+        }
+      ],
+      "boundary": "The approved Mock Assessment Definition of Done and registry govern assessment-specific obligations. ELA weekly settings do not become mock-assessment defaults.",
+      "gaps": [
+        "The detailed ELA requirements document is proposed/incomplete (R1 proposed; R2-R5 pending).",
+        "No ELA subject design document was found under docs/subjects/ela or specs/generate_ela_worksheets."
+      ]
+    }
+  },
+  "criterion_results": [
+    {
+      "id": "V01.01",
+      "status": "PASS",
+      "expected": "Recover Math requirements and identify their authority and scope.",
+      "actual": "The canonical Math requirements, subject constraints, and related design/configuration sources were recovered and fingerprinted. Weekly behavior is explicitly excluded from the Mock Assessment contract."
+    },
+    {
+      "id": "V01.02",
+      "status": "PASS",
+      "expected": "Recover ELA requirements and identify their authority and scope.",
+      "actual": "ELA subject requirements and product sources were recovered and fingerprinted. The detailed ELA requirements' proposed/incomplete status and missing subject design are recorded as open gaps; no approval or implementation claim is made."
+    }
+  ],
+  "non_claims": [
+    "Requirement recovery does not prove implementation, testing, source fidelity, academic correctness, or release readiness.",
+    "V01.06 and V01.07 remain NOT_VERIFIED until a complete requirement-to-implementation/evidence trace and gap disposition exist.",
+    "The 0/76 report value is a mandatory acceptance-criterion count, not a unit-test count."
+  ]
+}

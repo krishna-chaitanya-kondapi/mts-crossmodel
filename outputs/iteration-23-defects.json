@@ -1,0 +1,46 @@
+{
+  "iteration": 23,
+  "status": "OPEN",
+  "items": [
+    {
+      "id": "REQ-ELA-01",
+      "severity": "BLOCKING_FOR_REQUIREMENT_COMPLETENESS",
+      "status": "OPEN",
+      "finding": "Detailed ELA requirements are version 0.1 with R1 proposed for human review and R2-R5 pending.",
+      "impact": "Requirement source recovery is complete, but no claim is made that the detailed ELA baseline is fully approved or complete.",
+      "next_action": "Use only the approved Mock Assessment registry for this milestone; request an approved ELA requirements baseline before treating proposed weekly rules as governing."
+    },
+    {
+      "id": "REQ-ELA-02",
+      "severity": "OPEN",
+      "status": "OPEN",
+      "finding": "No ELA subject design document was found under docs/subjects/ela or specs/generate_ela_worksheets.",
+      "impact": "Subject-specific design traceability for ELA cannot be asserted.",
+      "next_action": "Record an approved ELA design source or keep affected design/traceability criteria NOT_VERIFIED."
+    },
+    {
+      "id": "TRACE-01",
+      "severity": "BLOCKING_FOR_ACCEPTANCE",
+      "status": "OPEN",
+      "finding": "The 76 mandatory criteria do not yet have a complete criterion-to-implementation-and-evidence trace.",
+      "impact": "V01.06 and V01.07 remain NOT_VERIFIED; the machine acceptance count remains far below completion.",
+      "next_action": "Build and verify the criterion-level trace, preserving NOT_VERIFIED wherever evidence is absent."
+    },
+    {
+      "id": "GOLDEN-G4-01",
+      "severity": "BLOCKING_FOR_GRADE4_HISTORICAL_ACCEPTANCE",
+      "status": "OPEN",
+      "finding": "The Grade 4 historical student golden was recovered locally (SHA-256 e01b89daed4d3719c9b0d63035b0239ef87e58f0cf759de7d2466f448445d107), but the candidate differs in page 1/2 item grouping, all-page header/page-number treatment, and question-label typography.",
+      "impact": "Four-page structure and page 3/4 groups match, but historical visual equivalence and page-four utilization cannot be accepted.",
+      "next_action": "Repair only the recorded candidate-versus-golden differences, regenerate, and repeat the full-page comparison; retain the golden identity in revision-bound evidence."
+    },
+    {
+      "id": "TEST-REPEAT-01",
+      "severity": "OPEN",
+      "status": "OBSERVED_ONCE",
+      "finding": "The first full-suite run had one failure in the Weekly bypass integration test (261 passed); the isolated test then passed, and a clean full-suite rerun passed 262 tests. The initial failure's cause was not captured.",
+      "impact": "One clean full-suite pass is recorded, but repeatability of that Weekly integration sample is not fully established.",
+      "next_action": "Retain the successful rerun evidence and investigate only if the failure recurs; restore test-written transaction fixtures after every run."
+    }
+  ]
+}

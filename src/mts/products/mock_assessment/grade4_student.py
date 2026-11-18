@@ -14,6 +14,11 @@ FIGURES = {
     31: (75, 171), 34: (324, 410), 36: (98, 338), 38: (98, 246),
     41: (114, 258), 43: (98, 236),
 }
+SOURCE_EXPRESSIONS = {
+    2: (pdf.Rect(108, 280, 150, 314), 0.9),
+    22: (pdf.Rect(106, 389, 162, 423), 0.85),
+}
+RESPONSE_RULES = {36: 1, 37: 2, 38: 1, 39: 4, 40: 4, 41: 3, 42: 3, 43: 3, 44: 5}
 VECTOR_CHOICES = {
     2: ("3", "9", "12", "16"), 7: ("90 - 20 = ?", "90 - 70 = ?", "180 - 70 = ?", "180 - 110 = ?"),
     11: ("1/12", "4/12", "6/12", "8/12"), 15: ("56/10", "15/10", "56/70", "8/70"),
@@ -24,8 +29,8 @@ VECTOR_CHOICES = {
     35: ("1 + 1 + 2/3 + 2/3", "6/6 + 6/6 + 2/6 + 1/6 + 1/6", "1 + 1 + 3/3 + 1/3", "6/6 + 6/6 + 1/6 + 1/6 + 1/6"),
 }
 STEMS = {
-    2: "What value makes the equation shown below true? 3/4 = 9/?",
-    22: "What is the value of the expression shown below? 4 1/4 - 2 2/4",
+    2: "What value makes the equation shown below true?",
+    22: "What is the value of the expression shown below?",
     11: "Which fraction can be added to 4/12 to equal 1 whole?",
     15: "Allison is training for a race. She runs 8/10 mile each day. Which fraction is equivalent to the number of miles Allison runs in 7 days?",
     16: "What is the value of 102 ÷ 6?",
@@ -53,6 +58,7 @@ def choices_and_text(source, region, font):
             inserted = True
         text = " ".join(block[4].strip().replace("Ā", "fi").replace("ā", "fl").split())
         choice = re.match(r"^([A-D])(?:$|\s+(.+))", text) if question < 36 else None
+        restored_stem = False
         if choice and (question in VECTOR_CHOICES or choice[2] and not choice[2][0].islower()):
             label = choice[1]
             body = VECTOR_CHOICES[question]["ABCD".index(label)] if question in VECTOR_CHOICES else choice[2]
@@ -65,16 +71,21 @@ def choices_and_text(source, region, font):
                     continue
                 text = STEMS[question]
                 restored = True
+                restored_stem = True
             if question == 34:
                 text = text.replace("product of and .", "product of 35 and 43.")
             if text.startswith("Answer"):
                 parts.append(("space", None, 25))
                 text = text.replace("Answer", "Answer __________", 1)
         parts.extend(("text", line, size) for line in wrap(text, 252, size, font))
+        if restored_stem and question in SOURCE_EXPRESSIONS:
+            parts.append(("crop", *SOURCE_EXPRESSIONS[question]))
     if figure and not inserted:
         parts.append(("crop", pdf.Rect(92 if question == 31 else 135, figure[0], 435 if question == 31 else 478, figure[1]), 0.75))
-    if question >= 36 and not any(kind == "space" for kind, _, _ in parts):
-        parts.append(("space", None, 40))
+    if question in RESPONSE_RULES:
+        if not any(kind == "space" for kind, _, _ in parts):
+            parts.append(("space", None, 8))
+        parts.extend(("rule", None, 12) for _ in range(RESPONSE_RULES[question]))
     return parts
 
 
@@ -88,6 +99,14 @@ def _validated_page_breaks(value, selection):
     return value
 
 
+def _insert_page_heading(page, title, include_student_fields=False, include_title=True):
+    if include_title:
+        page.insert_text((30, 36), title, fontsize=11)
+    if include_student_fields:
+        page.insert_text((30, 55), "Name: __________________________", fontsize=9)
+        page.insert_text((320, 55), "Date: ______________", fontsize=9)
+
+
 def render_grade4_student(source_path, manifest, destination):
     """Render the approved source selection with Q26 in a full-width band."""
     source_bytes = Path(source_path).read_bytes()
@@ -98,6 +117,7 @@ def render_grade4_student(source_path, manifest, destination):
     if [region["id"] for region in regions] != selection:
         raise ValueError("Region sequence does not match the historical Grade 4 selection")
     page_break_before = _validated_page_breaks(manifest.get("page_break_before", []), selection)
+    column_break_before = _validated_page_breaks(manifest.get("column_break_before", []), selection)
     font = pdf.Font("helv")
     with pdf.open(stream=source_bytes, filetype="pdf") as source, pdf.open() as output:
         placements = []
@@ -111,9 +131,21 @@ def render_grade4_student(source_path, manifest, destination):
                 if len(output) >= 4:
                     raise ValueError("Grade 4 student worksheet exceeds four pages")
                 page = output.new_page(width=612, height=792)
-                page.insert_text((30, 36), manifest["title"], fontsize=11)
+                include_heading = len(output) in (1, 4)
+                _insert_page_heading(
+                    page,
+                    manifest["title"],
+                    include_student_fields=include_heading,
+                    include_title=include_heading,
+                )
                 column = 0
                 y = left_bottom = band_top = 62
+            if region["id"] in column_break_before:
+                if column != 0:
+                    raise ValueError("A Grade 4 column break must start in the first column")
+                left_bottom = y
+                column = 1
+                y = band_top
             source_index = region["source_page"] - 1
             parts = choices_and_text(source[source_index], region, font)
             full_width = region["id"] == 26
@@ -129,11 +161,18 @@ def render_grade4_student(source_path, manifest, destination):
                 if len(output) >= 4:
                     raise ValueError("Grade 4 student worksheet exceeds four pages")
                 page = output.new_page(width=612, height=792)
-                page.insert_text((30, 36), manifest["title"], fontsize=11)
+                include_heading = len(output) in (1, 4)
+                _insert_page_heading(
+                    page,
+                    manifest["title"],
+                    include_student_fields=include_heading,
+                    include_title=include_heading,
+                )
                 column = 0
                 y = left_bottom = band_top = 62
             x = 30 if full_width or column == 0 else 316
             placements.append(dict(item=region["id"], page=len(output), column="full" if full_width else column + 1, y=y, height=amount))
+            line_width = 546 if full_width else 252
             for kind, value, size in parts:
                 if kind == "text":
                     page.insert_text((x, y + size), value, fontsize=size)
@@ -142,6 +181,9 @@ def render_grade4_student(source_path, manifest, destination):
                     target = pdf.Rect(x, y + 4, x + value.width * size, y + 4 + value.height * size)
                     page.show_pdf_page(target, source, source_index, clip=value)
                     y += value.height * size + 8
+                elif kind == "rule":
+                    page.draw_line((x, y + size - 2), (x + line_width, y + size - 2), width=0.5)
+                    y += size
                 else:
                     y += size
             y += 6

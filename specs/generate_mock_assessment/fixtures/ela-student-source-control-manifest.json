@@ -1,0 +1,21 @@
+{
+  "title": "Grade 6 ELA | NYSED 2025 | Source control",
+  "source_sha256": "734c8ac722ece5fe182bcd36652c8ae8617124eccf03b6de16ae71c3244907ea",
+  "scale": 0.7,
+  "maximum_pages": 13,
+  "regions": [
+    { "id": 9, "source_page": 9, "bounds": [0, 0, 612, 792] },
+    { "id": 10, "source_page": 10, "bounds": [0, 0, 612, 792] },
+    { "id": 11, "source_page": 11, "bounds": [0, 0, 612, 792] },
+    { "id": 12, "source_page": 12, "bounds": [0, 0, 612, 792] },
+    { "id": 13, "source_page": 13, "bounds": [0, 0, 612, 792] },
+    { "id": 14, "source_page": 14, "bounds": [0, 0, 612, 792] },
+    { "id": 15, "source_page": 15, "bounds": [0, 0, 612, 792] },
+    { "id": 16, "source_page": 16, "bounds": [0, 0, 612, 792] },
+    { "id": 17, "source_page": 17, "bounds": [0, 0, 612, 792] },
+    { "id": 18, "source_page": 18, "bounds": [0, 0, 612, 792] },
+    { "id": 19, "source_page": 19, "bounds": [0, 0, 612, 792] },
+    { "id": 20, "source_page": 20, "bounds": [0, 0, 612, 792] },
+    { "id": 21, "source_page": 21, "bounds": [0, 0, 612, 792] }
+  ]
+}
