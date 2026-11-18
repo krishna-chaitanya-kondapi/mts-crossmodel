@@ -11,6 +11,20 @@ from mts.products.mock_assessment.teacher_key import render_teacher_key
 from mts.infrastructure.file_system.atomic_writer import write_json
 
 def main():
+    if len(sys.argv) > 1 and sys.argv[1] == "ela-student":
+        from mts.products.mock_assessment.source_render import render_student
+
+        parser = argparse.ArgumentParser(description="Render a source-bound ELA student PDF")
+        parser.add_argument("--source", type=Path, required=True)
+        parser.add_argument("--manifest", type=Path, required=True)
+        parser.add_argument("--output", type=Path, required=True)
+        parser.add_argument("--placements", type=Path, required=True)
+        args = parser.parse_args(sys.argv[2:])
+        manifest = json.loads(args.manifest.read_text(encoding="utf-8-sig"))
+        placements = render_student(args.source, manifest, args.output)
+        write_json(args.placements, {"placements": placements})
+        return 0
+
     if len(sys.argv) > 1 and sys.argv[1] == "ela-teacher":
         from mts.products.mock_assessment.ela_teacher import render_ela_teacher
 

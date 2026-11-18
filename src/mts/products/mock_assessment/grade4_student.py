@@ -78,6 +78,16 @@ def choices_and_text(source, region, font):
     return parts
 
 
+def _validated_page_breaks(value, selection):
+    if (
+        not isinstance(value, list)
+        or any(type(item) is not int or item not in selection for item in value)
+        or len(value) != len(set(value))
+    ):
+        raise ValueError("Grade 4 page breaks must reference unique selected item IDs")
+    return value
+
+
 def render_grade4_student(source_path, manifest, destination):
     """Render the approved source selection with Q26 in a full-width band."""
     source_bytes = Path(source_path).read_bytes()
@@ -87,6 +97,7 @@ def render_grade4_student(source_path, manifest, destination):
     selection = [1, 2, 7, 10, 11, 12, 15, 16, 22, 23, 24, 26, 29, *range(30, 45)]
     if [region["id"] for region in regions] != selection:
         raise ValueError("Region sequence does not match the historical Grade 4 selection")
+    page_break_before = _validated_page_breaks(manifest.get("page_break_before", []), selection)
     font = pdf.Font("helv")
     with pdf.open(stream=source_bytes, filetype="pdf") as source, pdf.open() as output:
         placements = []
@@ -94,6 +105,15 @@ def render_grade4_student(source_path, manifest, destination):
         column = 1
         y = 760
         for region in regions:
+            if region["id"] in page_break_before:
+                if not output:
+                    raise ValueError("A Grade 4 page break cannot precede the first output page")
+                if len(output) >= 4:
+                    raise ValueError("Grade 4 student worksheet exceeds four pages")
+                page = output.new_page(width=612, height=792)
+                page.insert_text((30, 36), manifest["title"], fontsize=11)
+                column = 0
+                y = left_bottom = band_top = 62
             source_index = region["source_page"] - 1
             parts = choices_and_text(source[source_index], region, font)
             full_width = region["id"] == 26

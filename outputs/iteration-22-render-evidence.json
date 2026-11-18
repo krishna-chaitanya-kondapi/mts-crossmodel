@@ -1,0 +1,89 @@
+{
+  "iteration": 22,
+  "status": "STRUCTURAL_EVIDENCE_ONLY",
+  "local_artifact_root": "%TEMP%\\mock-assessment-iteration22",
+  "environment": {
+    "python_interpreter": ".venv\\Scripts\\python.exe",
+    "pymupdf_import": "pymupdf",
+    "pymupdf_version": "2.1",
+    "dependency_requirement": "PyMuPDF>=1.26,<3.0"
+  },
+  "tests": {
+    "command": ".venv\\Scripts\\python.exe -m pytest tests -q",
+    "passed": 257,
+    "failed": 0,
+    "evidence": "iteration-22-tests.txt",
+    "weekly_fixture_side_effects": "Tracked data/transactions changes were restored after the run."
+  },
+  "ela_teacher": {
+    "source": {
+      "artifact": "ela-source.pdf",
+      "sha256": "734c8ac722ece5fe182bcd36652c8ae8617124eccf03b6de16ae71c3244907ea"
+    },
+    "golden": {
+      "artifact": "ela-teacher-golden.pdf",
+      "sha256": "5a744c0f2b5ea742ba1bcafa9f383c2812f08e0e870eb8e7e627e7b7770a01f2",
+      "pages": 2
+    },
+    "candidate": {
+      "artifact": "ela-teacher-final.pdf",
+      "sha256": "208ecc4a93d4f41e38f030617322f6b98b35eee7cf01f7e066d40f3c7a0b5c51",
+      "pages": 2,
+      "official_multiple_choice_answers": 12,
+      "answers_match_golden_text": true,
+      "labeled_model_responses": 2,
+      "visual_review_images": [
+        "ela-teacher-final-1.png",
+        "ela-teacher-final-2.png"
+      ]
+    },
+    "limitations": [
+      "Independent blind answer prediction is NOT_VERIFIED.",
+      "Official short-response rubric alignment is NOT_VERIFIED.",
+      "Equivalent print readability is NOT_VERIFIED."
+    ]
+  },
+  "grade4_math": {
+    "official_source": {
+      "artifact": "grade4-source.pdf",
+      "sha256": "88351089919b18dfc2f3dc5d64809d20aadd68d56a1dc38841a3387354b8c0f6",
+      "matches_manifest": true
+    },
+    "official_scoring_source": {
+      "artifact": "grade4-scoring.pdf",
+      "sha256": "544cfb6001940f43c3accfcace125056934186fc161d416a52d8884692c4c80c"
+    },
+    "student_candidate": {
+      "artifact": "grade4-after.pdf",
+      "sha256": "faac0cbaf4b9d4cebee4843181c76a4d59b68ae09847f1a917ef689e707f8dd3",
+      "pages": 4,
+      "ordered_regions": 28,
+      "question_26": "full-width",
+      "questions_42_to_44": "page 4",
+      "visual_review_images": [
+        "grade4-after-1.png",
+        "grade4-after-2.png",
+        "grade4-after-3.png",
+        "grade4-after-4.png"
+      ]
+    },
+    "teacher_key_candidate": {
+      "artifact": "grade4-teacher-after.pdf",
+      "sha256": "fc8d015bacc65ead68c01b831a0bd62890f53dd35a4b06683eae65c622e949bd",
+      "pages": 1,
+      "multiple_choice_answers": 19,
+      "constructed_response_labels": 9
+    },
+    "limitations": [
+      "Independent academic and source-fidelity review is NOT_VERIFIED.",
+      "Historical Grade 4 worksheet golden was not retrieved for byte-level comparison.",
+      "Fourth-page utilization and full historical layout parity are NOT_VERIFIED."
+    ]
+  },
+  "acceptance": {
+    "mandatory_criteria_passed": 0,
+    "mandatory_criteria_total": 76,
+    "production_publications": 0,
+    "human_approval_required_before_publication": true
+  }
+}

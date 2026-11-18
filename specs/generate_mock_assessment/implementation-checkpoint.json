@@ -1,6 +1,6 @@
 {
   "status": "NOT_DONE",
-  "iteration": 21,
+  "iteration": 22,
   "baseline_revision": "728596db0ec7deedc087b9e509da14701b7d088d",
   "criteria": [
     {
@@ -317,13 +317,14 @@
     }
   ],
   "next": [
-    "Repair ELA teacher typography and improve key readability against the two-page golden. Verify source passage transcription and all choices, then integrate student generation into CLI.",
-    "Complete independent Grade 4 academic/fidelity review and improve fourth-page utilization while preserving Q26 full width.",
-    "Apply the measured renderer to the Grade 4 and ELA fixtures with their respective policies and rerun all regression tests."
+    "Create a source-derived ELA student manifest from the official source; compare all selected passages, raster-only pages, questions, choices, figures, and instructions to the delivered student golden. Keep source fidelity NOT_VERIFIED until each comparison is recorded.",
+    "Complete Grade 4 item-by-item academic and source-fidelity review against the official source and scoring materials; retrieve the historical student golden and document page-four utilization while preserving Q26 full width.",
+    "Run the ELA and Grade 4 production-path fixtures, capture revision-bound structural and visual evidence, and continue requirement-to-evidence tracing without promoting unsupported criteria."
   ],
   "blockers": [
-    "Historical artifact-specific final approval absent from handoffs",
-    "Student and teacher rendering and independent QA remain open"
+    "A qualified independent reviewer must review the Grade 4 and ELA candidate answers, source selections, and scoring/rubric alignment; self-review cannot satisfy the independent-review criteria. This prevents V03 academic acceptance and dependent source-fidelity acceptance until review evidence is recorded.",
+    "Artifact-specific human final approval is absent from the handoffs. This prevents production publication only; no publication is authorized without that approval.",
+    "A source-derived ELA student manifest and complete student-golden comparison are still absent."
   ],
   "audited_revision": "52bac0bfbbb27cb87037f4123ad86fb8b9ba16da",
   "evidence": [
@@ -349,12 +350,13 @@
     "outputs/grade5-print-layout-review.md",
     "outputs/iteration-16-layout-test.txt",
     "outputs/grade4-component-trial-evidence.json",
-    "outputs/grade4-teacher-review.pdf",
     "outputs/grade4-reflow-evidence.json",
     "outputs/iteration-18-grade4-layout.txt",
     "outputs/grade4-figure-clearance.json",
     "outputs/iteration-19-grade4-checks.txt",
     "outputs/ela-student-trial-evidence.json",
-    "outputs/ela-teacher-review.md"
+    "outputs/ela-teacher-review.md",
+    "outputs/iteration-22-tests.txt",
+    "outputs/iteration-22-render-evidence.json"
   ]
 }

@@ -81,8 +81,21 @@ Keep working manifests/source evidence in designated working/evidence locations.
 
 Capture estimated/actual active runtime, human wait, phase/step, retries, status and evidence from initialization; missing metrics are unknown. Inner loop: generate, verify, repair, reverify. Outer loop: retrospective, root cause, improvement, regression, next RunSpec.
 
+## Current local review CLI
+
+The standalone render modes are development tools, not the complete assessment workflow and not a
+publication path. The ELA student mode accepts an explicit source PDF and hash-bound source-region
+manifest, then writes a student PDF and placement JSON:
+
+    python scripts/generate_mock_assessment.py ela-student --source <source.pdf> --manifest <regions.json> --output <student.pdf> --placements <placements.json>
+
+The command is integration-tested with a synthetic source. A source-verified ELA student manifest
+and its historical four-page reproduction are still open. The Grade 4 Math fixture explicitly starts
+its final item group at Q42 to use the fourth page; Q26 remains a full-width block. The ELA teacher
+mode renders the recovered YPQA review manifest only. Neither mode approves or publishes artifacts.
+
 ## Implementation priorities
 
 P0: finalize contracts (blueprint, canonical item manifest, RunSpec extension), align existing subject mock-test capabilities and reusable presentation engine. P1: regression test historical Math and ELA source-based runs, then generated/hybrid modes. P2: scoring analytics and student learning feedback, with validated scoring and appropriate privacy controls.
 
-No production implementation is implied. Historical ELA typography/margins/line spacing still need recovery; AI-generated/hybrid modes and shared profile registry need validation.
+Historical ELA student typography/margins/line spacing, AI-generated/hybrid modes and the shared profile registry still need validation.

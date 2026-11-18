@@ -1,6 +1,6 @@
 {
   "status": "NOT_DONE",
-  "iteration": 21,
+  "iteration": 22,
   "date": "2026-11-18",
   "revision": "52bac0bfbbb27cb87037f4123ad86fb8b9ba16da",
   "registry_sha256": "c70cf4b237e712c11943ed16ac5a479a9310c65a6d1fd284baddb23d956f0aa4",
@@ -20,13 +20,16 @@
     "Added forward two-column placement for narrow vector regions with full-width fallback. Grade 5 source crops still require component extraction.",
     "Added atomic multi-part vector placement; Grade 5 diagnostic trial reached eight pages after compacting response regions.",
     "Added dedicated teacher-key CLI mode with validated item and worked-solution parity.",
-    "Added dedicated Grade 5 student CLI with historical source fingerprint, item ordering and page-cap checks."
+    "Added dedicated Grade 5 student CLI with historical source fingerprint, item ordering and page-cap checks.",
+    "Repaired ELA teacher-key typography and punctuation fallback while preserving the twelve official answers and two labeled MTS model responses.",
+    "Added an ELA student CLI route through the hash-bound source renderer; the route is tested with a synthetic manifest, not a source-faithful ELA fixture.",
+    "Added a Grade 4 page-break policy before Q42 to keep Q42-Q44 together on page four while preserving full-width Q26."
   ],
   "production_publications": 0,
   "defects": [
     {
       "id": "MA-001",
-      "finding": "The dedicated CLI evaluates evidence only. Source extraction, RunSpec validation, generation and rendering are absent.",
+      "finding": "The CLI now has local review rendering routes, but the end-to-end product workflow still lacks complete RunSpec selection and validation, requirement-driven generation, and automatic verification and approval gates.",
       "affected": "V02, V03, V04, V05, V06, V07 and architecture execution criteria"
     },
     {
@@ -38,12 +41,22 @@
       "id": "MA-003",
       "finding": "Baseline tests rewrite tracked Weekly Practice transaction fixtures in place. The changes were recorded and restored in the task-owned clone.",
       "affected": "Repeatability of local verification"
+    },
+    {
+      "id": "MA-004",
+      "finding": "The ELA student CLI route has only been exercised with a synthetic manifest. A source-derived manifest and complete passage, question, choice, and figure fidelity review are still missing.",
+      "affected": "V02.04, V02.05, V04, V05 and V06"
+    },
+    {
+      "id": "MA-005",
+      "finding": "Grade 4 has structural layout evidence, but an independent academic/source-fidelity review, historical worksheet golden comparison, and acceptance of fourth-page utilization remain open.",
+      "affected": "V03, V04, V05 and V06"
     }
   ],
   "next": [
-    "Repair ELA teacher typography and improve key readability against the two-page golden. Verify source passage transcription and all choices, then integrate student generation into CLI.",
-    "Complete independent Grade 4 academic/fidelity review and improve fourth-page utilization while preserving Q26 full width.",
-    "Apply the measured renderer to the Grade 4 and ELA fixtures with their respective policies and rerun all regression tests."
+    "Create a source-derived ELA student manifest from the official source; compare all selected passages, raster-only pages, questions, choices, figures, and instructions to the delivered student golden. Keep source fidelity NOT_VERIFIED until each comparison is recorded.",
+    "Complete Grade 4 item-by-item academic and source-fidelity review against the official source and scoring materials; retrieve the historical student golden and document page-four utilization while preserving Q26 full width.",
+    "Run the ELA and Grade 4 production-path fixtures, capture revision-bound structural and visual evidence, and continue requirement-to-evidence tracing without promoting unsupported criteria."
   ],
   "pending_mandatory": [
     "V01.01",
@@ -699,8 +712,8 @@
     }
   },
   "iteration_tests": {
-    "evidence": "iteration-10-tests.txt",
-    "passed": 248,
+    "evidence": "iteration-22-tests.txt",
+    "passed": 257,
     "failed": 0
   },
   "layout_trial": {
@@ -767,11 +780,11 @@
     "status": "CLI_STRUCTURAL_PASS",
     "maximum_pages": 4,
     "full_width_question": 26,
-    "evidence": "grade4-reflow-evidence.json",
+    "evidence": "iteration-22-render-evidence.json",
     "pages": 4,
     "source_fidelity": "NOT_VERIFIED",
-    "artifact": "grade4-student-review.pdf",
-    "sha256": "302d7cee7afe9796d2ed7428863cb3f83ee895d0b00955dac6b34f96c26058ba",
+    "artifact": "%TEMP%\\mock-assessment-iteration22\\grade4-after.pdf",
+    "sha256": "faac0cbaf4b9d4cebee4843181c76a4d59b68ae09847f1a917ef689e707f8dd3",
     "minimum_measured_clearance_pt": 6.38
   },
   "ela_student_trial": {
@@ -785,8 +798,10 @@
     "independent_answer_review": "NOT_VERIFIED",
     "mts_model_responses": 2,
     "status": "STRUCTURAL_PASS",
-    "evidence": "ela-teacher-review.md",
+    "evidence": "iteration-22-render-evidence.json",
     "pages": 2,
-    "official_mc": 12
+    "official_mc": 12,
+    "sha256": "208ecc4a93d4f41e38f030617322f6b98b35eee7cf01f7e066d40f3c7a0b5c51",
+    "matches_teacher_golden_answers": true
   }
 }

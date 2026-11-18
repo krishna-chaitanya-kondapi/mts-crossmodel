@@ -2,6 +2,9 @@
   "source_sha256": "88351089919b18dfc2f3dc5d64809d20aadd68d56a1dc38841a3387354b8c0f6",
   "title": "Grade 4 Mathematics | NYSED 2024 | Student review copy",
   "scale": 0.75,
+  "page_break_before": [
+    42
+  ],
   "regions": [
     {
       "id": 1,

@@ -1,6 +1,6 @@
 # Mock Assessment verification report
 
-**NOT_DONE.** Iteration 3. All 76 mandatory criteria remain open in the verification gate.
+**NOT_DONE.** Iteration 22. All 76 mandatory criteria remain open in the verification gate.
 
 ## Historical evidence
 
@@ -91,4 +91,16 @@ Mapped ELA passages to source pages 9–11 and 15–17, and the questions to sou
 
 ## Iteration 21
 
-Recovered the historical YPQA text into a canonical manifest and rendered it through the CLI. Two pages, twelve official letters and two labeled model responses passed structural checks. Both pages were inspected. Smaller text and punctuation fallback require repair before readability parity can pass. See the [teacher review](ela-teacher-review.md).
+Recovered the historical YPQA text into a canonical manifest and rendered it through the CLI. Two pages, twelve official letters and two labeled model responses passed structural checks. Both pages were inspected. Smaller text and punctuation fallback required repair before readability parity could pass. See the [teacher review](ela-teacher-review.md).
+
+## Iteration 22
+
+Installed the declared PyMuPDF dependency into the selected `.venv` and confirmed Pylance resolves `pymupdf` there. The complete suite passed: 257 tests. The suite rewrote tracked Weekly Practice transaction fixtures; those test side effects were restored. See [test output](iteration-22-tests.txt).
+
+Repaired ELA teacher-key typography and punctuation fallback. The two-page candidate contains all twelve official multiple-choice answers and both labeled MTS model responses; its SHA-256 is `208ecc4a93d4f41e38f030617322f6b98b35eee7cf01f7e066d40f3c7a0b5c51`. Its answers match the two-page historical key text. Equivalent print readability, independent answer prediction, and rubric alignment remain NOT_VERIFIED.
+
+Added an ELA student CLI route through the hash-bound source renderer and a synthetic-manifest route test. This does not establish a source-faithful ELA student output: an official-source-derived manifest and comparison of passages, questions, choices, figures, and instructions remain missing.
+
+Applied the Grade 4 Q42 page break. The candidate is four pages with 28 ordered regions, full-width Q26, and Q42–44 on page four; SHA-256 `faac0cbaf4b9d4cebee4843181c76a4d59b68ae09847f1a917ef689e707f8dd3`. The one-page teacher-key candidate has SHA-256 `fc8d015bacc65ead68c01b831a0bd62890f53dd35a4b06683eae65c622e949bd`. Both candidates were visually inspected. These are local review artifacts under `%TEMP%\\mock-assessment-iteration22`; actual paths, source identities, and structural checks are in [iteration 22 render evidence](iteration-22-render-evidence.json). Independent academic/source-fidelity review, historical student-golden comparison, and acceptance of fourth-page utilization remain open.
+
+No acceptance criterion is promoted: **0 / 76 mandatory criteria verified**. No production publication occurred. The checkpoint remains NOT_DONE; historical approval, independent review, source fidelity, and broad end-to-end workflow evidence are unresolved.
