@@ -1,1 +1,0 @@
-PASS: four Letter pages, 28 ordered placements, no placeholder strings, and no overlapping measured blocks

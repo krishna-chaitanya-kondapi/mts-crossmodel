@@ -1,0 +1,586 @@
+[
+  {
+    "run_id": "math-grade4-2024",
+    "source_filename": "NY_Math_Grade4_2024_Released_Test_Questions.pdf",
+    "source_sha256": "88351089919b18dfc2f3dc5d64809d20aadd68d56a1dc38841a3387354b8c0f6",
+    "item_map_pdf_page": 34,
+    "items": [
+      {
+        "source_number": 1,
+        "type": "multiple_choice",
+        "official_key": "D",
+        "points": 1,
+        "standard": "NGLS.Math.Content.NY-4.OA.2",
+        "output_number": 1
+      },
+      {
+        "source_number": 2,
+        "type": "multiple_choice",
+        "official_key": "C",
+        "points": 1,
+        "standard": "NGLS.Math.Content.NY-4.NF.1",
+        "output_number": 2
+      },
+      {
+        "source_number": 7,
+        "type": "multiple_choice",
+        "official_key": "C",
+        "points": 1,
+        "standard": "NGLS.Math.Content.NY-4.MD.7",
+        "output_number": 7
+      },
+      {
+        "source_number": 10,
+        "type": "multiple_choice",
+        "official_key": "A",
+        "points": 1,
+        "standard": "NGLS.Math.Content.NY-4.G.1",
+        "output_number": 10
+      },
+      {
+        "source_number": 11,
+        "type": "multiple_choice",
+        "official_key": "D",
+        "points": 1,
+        "standard": "NGLS.Math.Content.NY-4.NF.3a",
+        "output_number": 11
+      },
+      {
+        "source_number": 12,
+        "type": "multiple_choice",
+        "official_key": "B",
+        "points": 1,
+        "standard": "NGLS.Math.Content.NY-4.NBT.3",
+        "output_number": 12
+      },
+      {
+        "source_number": 15,
+        "type": "multiple_choice",
+        "official_key": "A",
+        "points": 1,
+        "standard": "NGLS.Math.Content.NY-4.NF.4c",
+        "output_number": 15
+      },
+      {
+        "source_number": 16,
+        "type": "multiple_choice",
+        "official_key": "B",
+        "points": 1,
+        "standard": "NGLS.Math.Content.NY-4.NBT.6",
+        "output_number": 16
+      },
+      {
+        "source_number": 22,
+        "type": "multiple_choice",
+        "official_key": "B",
+        "points": 1,
+        "standard": "NGLS.Math.Content.NY-4.NF.3c",
+        "output_number": 22
+      },
+      {
+        "source_number": 23,
+        "type": "multiple_choice",
+        "official_key": "B",
+        "points": 1,
+        "standard": "NGLS.Math.Content.NY-4.NBT.1",
+        "output_number": 23
+      },
+      {
+        "source_number": 24,
+        "type": "multiple_choice",
+        "official_key": "A",
+        "points": 1,
+        "standard": "NGLS.Math.Content.NY-4.NF.4b",
+        "output_number": 24
+      },
+      {
+        "source_number": 26,
+        "type": "multiple_choice",
+        "official_key": "B",
+        "points": 1,
+        "standard": "NGLS.Math.Content.NY-4.G.2c",
+        "output_number": 26
+      },
+      {
+        "source_number": 29,
+        "type": "multiple_choice",
+        "official_key": "C",
+        "points": 1,
+        "standard": "NGLS.Math.Content.NY-4.NBT.5",
+        "output_number": 29
+      },
+      {
+        "source_number": 30,
+        "type": "multiple_choice",
+        "official_key": "B",
+        "points": 1,
+        "standard": "NGLS.Math.Content.NY-4.MD.3",
+        "output_number": 30
+      },
+      {
+        "source_number": 31,
+        "type": "multiple_choice",
+        "official_key": "D",
+        "points": 1,
+        "standard": "NGLS.Math.Content.NY-4.G.3",
+        "output_number": 31
+      },
+      {
+        "source_number": 32,
+        "type": "multiple_choice",
+        "official_key": "C",
+        "points": 1,
+        "standard": "NGLS.Math.Content.NY-4.OA.3a",
+        "output_number": 32
+      },
+      {
+        "source_number": 33,
+        "type": "multiple_choice",
+        "official_key": "D",
+        "points": 1,
+        "standard": "NGLS.Math.Content.NY-4.NF.2",
+        "output_number": 33
+      },
+      {
+        "source_number": 34,
+        "type": "multiple_choice",
+        "official_key": "A",
+        "points": 1,
+        "standard": "NGLS.Math.Content.NY-4.NBT.5",
+        "output_number": 34
+      },
+      {
+        "source_number": 35,
+        "type": "multiple_choice",
+        "official_key": "B",
+        "points": 1,
+        "standard": "NGLS.Math.Content.NY-4.NF.3b",
+        "output_number": 35
+      },
+      {
+        "source_number": 36,
+        "type": "constructed_response",
+        "official_key": null,
+        "points": 1,
+        "standard": "NGLS.Math.Content.NY-4.MD.6",
+        "output_number": 36
+      },
+      {
+        "source_number": 37,
+        "type": "constructed_response",
+        "official_key": null,
+        "points": 1,
+        "standard": "NGLS.Math.Content.NY-4.OA.4",
+        "output_number": 37
+      },
+      {
+        "source_number": 38,
+        "type": "constructed_response",
+        "official_key": null,
+        "points": 1,
+        "standard": "NGLS.Math.Content.NY-4.G.2a",
+        "output_number": 38
+      },
+      {
+        "source_number": 39,
+        "type": "constructed_response",
+        "official_key": null,
+        "points": 2,
+        "standard": "NGLS.Math.Content.NY-4.NBT.6",
+        "output_number": 39
+      },
+      {
+        "source_number": 40,
+        "type": "constructed_response",
+        "official_key": null,
+        "points": 2,
+        "standard": "NGLS.Math.Content.NY-4.NBT.2b",
+        "output_number": 40
+      },
+      {
+        "source_number": 41,
+        "type": "constructed_response",
+        "official_key": null,
+        "points": 2,
+        "standard": "NGLS.Math.Content.NY-4.MD.4",
+        "output_number": 41
+      },
+      {
+        "source_number": 42,
+        "type": "constructed_response",
+        "official_key": null,
+        "points": 2,
+        "standard": "NGLS.Math.Content.NY-4.NF.4a",
+        "output_number": 42
+      },
+      {
+        "source_number": 43,
+        "type": "constructed_response",
+        "official_key": null,
+        "points": 2,
+        "standard": "NGLS.Math.Content.NY-4.G.1",
+        "output_number": 43
+      },
+      {
+        "source_number": 44,
+        "type": "constructed_response",
+        "official_key": null,
+        "points": 3,
+        "standard": "NGLS.Math.Content.NY-4.OA.3b",
+        "output_number": 44
+      }
+    ]
+  },
+  {
+    "run_id": "math-grade5-2024",
+    "source_filename": "NY_Math_Grade5_2024_Released_Test_Questions.pdf",
+    "source_sha256": "96bc4dca01185cda99056c98391ac85d41ecf7595b2b3ec29f7595b7e7b91f93",
+    "item_map_pdf_page": 32,
+    "items": [
+      {
+        "source_number": 1,
+        "type": "multiple_choice",
+        "official_key": "D",
+        "points": 1,
+        "standard": "NGLS.Math.Content.NY-5.NBT.7",
+        "output_number": 1
+      },
+      {
+        "source_number": 2,
+        "type": "multiple_choice",
+        "official_key": "C",
+        "points": 1,
+        "standard": "NGLS.Math.Content.NY-5.NF.4a",
+        "output_number": 2
+      },
+      {
+        "source_number": 3,
+        "type": "multiple_choice",
+        "official_key": "D",
+        "points": 1,
+        "standard": "NGLS.Math.Content.NY-5.MD.3a",
+        "output_number": 3
+      },
+      {
+        "source_number": 4,
+        "type": "multiple_choice",
+        "official_key": "D",
+        "points": 1,
+        "standard": "NGLS.Math.Content.NY-5.NBT.4",
+        "output_number": 4
+      },
+      {
+        "source_number": 7,
+        "type": "multiple_choice",
+        "official_key": "D",
+        "points": 1,
+        "standard": "NGLS.Math.Content.NY-5.NF.3",
+        "output_number": 7
+      },
+      {
+        "source_number": 9,
+        "type": "multiple_choice",
+        "official_key": "C",
+        "points": 1,
+        "standard": "NGLS.Math.Content.NY-5.MD.5c",
+        "output_number": 9
+      },
+      {
+        "source_number": 10,
+        "type": "multiple_choice",
+        "official_key": "D",
+        "points": 1,
+        "standard": "NGLS.Math.Content.NY-5.NF.7c",
+        "output_number": 10
+      },
+      {
+        "source_number": 12,
+        "type": "multiple_choice",
+        "official_key": "B",
+        "points": 1,
+        "standard": "NGLS.Math.Content.NY-4.MD.2a",
+        "output_number": 12
+      },
+      {
+        "source_number": 15,
+        "type": "multiple_choice",
+        "official_key": "B",
+        "points": 1,
+        "standard": "NGLS.Math.Content.NY-5.NBT.6",
+        "output_number": 15
+      },
+      {
+        "source_number": 16,
+        "type": "multiple_choice",
+        "official_key": "C",
+        "points": 1,
+        "standard": "NGLS.Math.Content.NY-5.NBT.3b",
+        "output_number": 16
+      },
+      {
+        "source_number": 19,
+        "type": "multiple_choice",
+        "official_key": "B",
+        "points": 1,
+        "standard": "NGLS.Math.Content.NY-5.G.3",
+        "output_number": 19
+      },
+      {
+        "source_number": 27,
+        "type": "multiple_choice",
+        "official_key": "A",
+        "points": 1,
+        "standard": "NGLS.Math.Content.NY-5.NF.7a",
+        "output_number": 27
+      },
+      {
+        "source_number": 28,
+        "type": "multiple_choice",
+        "official_key": "A",
+        "points": 1,
+        "standard": "NGLS.Math.Content.NY-5.NF.2",
+        "output_number": 28
+      },
+      {
+        "source_number": 30,
+        "type": "multiple_choice",
+        "official_key": "C",
+        "points": 1,
+        "standard": "NGLS.Math.Content.NY-5.NF.4b",
+        "output_number": 30
+      },
+      {
+        "source_number": 31,
+        "type": "multiple_choice",
+        "official_key": "C",
+        "points": 1,
+        "standard": "NGLS.Math.Content.NY-5.NBT.7",
+        "output_number": 31
+      },
+      {
+        "source_number": 32,
+        "type": "multiple_choice",
+        "official_key": "C",
+        "points": 1,
+        "standard": "NGLS.Math.Content.NY-5.NF.1",
+        "output_number": 32
+      },
+      {
+        "source_number": 33,
+        "type": "multiple_choice",
+        "official_key": "B",
+        "points": 1,
+        "standard": "NGLS.Math.Content.NY-5.G.4",
+        "output_number": 33
+      },
+      {
+        "source_number": 34,
+        "type": "multiple_choice",
+        "official_key": "D",
+        "points": 1,
+        "standard": "NGLS.Math.Content.NY-5.NF.2",
+        "output_number": 34
+      },
+      {
+        "source_number": 35,
+        "type": "multiple_choice",
+        "official_key": "C",
+        "points": 1,
+        "standard": "NGLS.Math.Content.NY-5.MD.1",
+        "output_number": 35
+      },
+      {
+        "source_number": 36,
+        "type": "constructed_response",
+        "official_key": null,
+        "points": 1,
+        "standard": "NGLS.Math.Content.NY-5.MD.5a",
+        "output_number": 36
+      },
+      {
+        "source_number": 37,
+        "type": "constructed_response",
+        "official_key": null,
+        "points": 1,
+        "standard": "NGLS.Math.Content.NY-5.NF.6",
+        "output_number": 37
+      },
+      {
+        "source_number": 38,
+        "type": "constructed_response",
+        "official_key": null,
+        "points": 1,
+        "standard": "NGLS.Math.Content.NY-5.NBT.6",
+        "output_number": 38
+      },
+      {
+        "source_number": 39,
+        "type": "constructed_response",
+        "official_key": null,
+        "points": 2,
+        "standard": "NGLS.Math.Content.NY-5.MD.2",
+        "output_number": 39
+      },
+      {
+        "source_number": 40,
+        "type": "constructed_response",
+        "official_key": null,
+        "points": 2,
+        "standard": "NGLS.Math.Content.NY-5.NF.4b",
+        "output_number": 40
+      },
+      {
+        "source_number": 41,
+        "type": "constructed_response",
+        "official_key": null,
+        "points": 2,
+        "standard": "NGLS.Math.Content.NY-5.NF.5a",
+        "output_number": 41
+      },
+      {
+        "source_number": 42,
+        "type": "constructed_response",
+        "official_key": null,
+        "points": 2,
+        "standard": "NGLS.Math.Content.NY-5.NBT.3a",
+        "output_number": 42
+      },
+      {
+        "source_number": 43,
+        "type": "constructed_response",
+        "official_key": null,
+        "points": 2,
+        "standard": "NGLS.Math.Content.NY-5.MD.5a",
+        "output_number": 43
+      },
+      {
+        "source_number": 44,
+        "type": "constructed_response",
+        "official_key": null,
+        "points": 3,
+        "standard": "NGLS.Math.Content.NY-5.NBT.7",
+        "output_number": 44
+      }
+    ]
+  },
+  {
+    "run_id": "ela-grade6-2025",
+    "source_filename": "NY_ELA_Grade6_2025_Released_Test_Questions.pdf",
+    "source_sha256": "734c8ac722ece5fe182bcd36652c8ae8617124eccf03b6de16ae71c3244907ea",
+    "item_map_pdf_page": 43,
+    "items": [
+      {
+        "source_number": 8,
+        "type": "multiple_choice",
+        "official_key": "B",
+        "points": 1,
+        "standard": "NGLS.ELA.Content.NY-6.R.3",
+        "output_number": 1
+      },
+      {
+        "source_number": 9,
+        "type": "multiple_choice",
+        "official_key": "C",
+        "points": 1,
+        "standard": "NGLS.ELA.Content.NY-6.R.6",
+        "output_number": 2
+      },
+      {
+        "source_number": 10,
+        "type": "multiple_choice",
+        "official_key": "D",
+        "points": 1,
+        "standard": "NGLS.ELA.Content.NY-6.R.8",
+        "output_number": 3
+      },
+      {
+        "source_number": 11,
+        "type": "multiple_choice",
+        "official_key": "B",
+        "points": 1,
+        "standard": "NGLS.ELA.Content.NY-6.R.3",
+        "output_number": 4
+      },
+      {
+        "source_number": 12,
+        "type": "multiple_choice",
+        "official_key": "A",
+        "points": 1,
+        "standard": "NGLS.ELA.Content.NY-6.R.8",
+        "output_number": 5
+      },
+      {
+        "source_number": 13,
+        "type": "multiple_choice",
+        "official_key": "A",
+        "points": 1,
+        "standard": "NGLS.ELA.Content.NY-6.R.7",
+        "output_number": 6
+      },
+      {
+        "source_number": 14,
+        "type": "multiple_choice",
+        "official_key": "D",
+        "points": 1,
+        "standard": "NGLS.ELA.Content.NY-6.R.3",
+        "output_number": 7
+      },
+      {
+        "source_number": 22,
+        "type": "multiple_choice",
+        "official_key": "B",
+        "points": 1,
+        "standard": "NGLS.ELA.Content.NY-6.R.2",
+        "output_number": 8
+      },
+      {
+        "source_number": 23,
+        "type": "multiple_choice",
+        "official_key": "D",
+        "points": 1,
+        "standard": "NGLS.ELA.Content.NY-6.R.3",
+        "output_number": 9
+      },
+      {
+        "source_number": 24,
+        "type": "multiple_choice",
+        "official_key": "D",
+        "points": 1,
+        "standard": "NGLS.ELA.Content.NY-6.R.9",
+        "output_number": 10
+      },
+      {
+        "source_number": 25,
+        "type": "multiple_choice",
+        "official_key": "B",
+        "points": 1,
+        "standard": "NGLS.ELA.Content.NY-6.R.3",
+        "output_number": 11
+      },
+      {
+        "source_number": 26,
+        "type": "multiple_choice",
+        "official_key": "A",
+        "points": 1,
+        "standard": "NGLS.ELA.Content.NY-6.R.3",
+        "output_number": 12
+      },
+      {
+        "source_number": 27,
+        "type": "constructed_response",
+        "official_key": null,
+        "points": 2,
+        "standard": "NGLS.ELA.Content.NY-6.R.2",
+        "output_number": 13
+      },
+      {
+        "source_number": 28,
+        "type": "constructed_response",
+        "official_key": null,
+        "points": 2,
+        "standard": "NGLS.ELA.Content.NY-6.R.2",
+        "output_number": 14
+      }
+    ]
+  }
+]

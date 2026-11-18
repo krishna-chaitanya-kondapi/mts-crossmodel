@@ -1,0 +1,2 @@
+WARN `--no-project` was provided, but no project was found
+PASS: right column begins below full-width content; all regions fit on one page.

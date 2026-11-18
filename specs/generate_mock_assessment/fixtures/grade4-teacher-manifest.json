@@ -1,0 +1,241 @@
+{
+  "solutions": {
+    "36": "73 degrees. Accept measurements within 5 degrees of 73 degrees (68 to 78 degrees).",
+    "37": "1, 3, 7, and 21. The factor pairs are 1 x 21 and 3 x 7.",
+    "38": "Accept either right triangles or isosceles triangles. Both descriptions apply.",
+    "39": "18 soccer balls. Dividing 170 by 9 gives 18 with 8 dollars remaining.",
+    "40": "4,699 = 4,000 + 600 + 90 + 9. 4,780 = 4,000 + 700 + 80. Equal thousands and fewer hundreds make 4,699 smaller.",
+    "41": "5 3/4 hours. Add 3/4 + 1 1/2 + 1 1/2 + 2.",
+    "42": "Expression B. A evaluates to 1/2 and B evaluates to 2 1/2.",
+    "43": "AD and BC are parallel. They are opposite sides of the rhombus and stay the same distance apart.",
+    "44": "15 racks. There are 11 x 12 = 132 chairs. Fourteen racks hold 126, so a fifteenth holds the remaining six."
+  },
+  "items": [
+    {
+      "source_number": 1,
+      "type": "multiple_choice",
+      "official_key": "D",
+      "points": 1,
+      "standard": "NGLS.Math.Content.NY-4.OA.2",
+      "output_number": 1
+    },
+    {
+      "source_number": 2,
+      "type": "multiple_choice",
+      "official_key": "C",
+      "points": 1,
+      "standard": "NGLS.Math.Content.NY-4.NF.1",
+      "output_number": 2
+    },
+    {
+      "source_number": 7,
+      "type": "multiple_choice",
+      "official_key": "C",
+      "points": 1,
+      "standard": "NGLS.Math.Content.NY-4.MD.7",
+      "output_number": 7
+    },
+    {
+      "source_number": 10,
+      "type": "multiple_choice",
+      "official_key": "A",
+      "points": 1,
+      "standard": "NGLS.Math.Content.NY-4.G.1",
+      "output_number": 10
+    },
+    {
+      "source_number": 11,
+      "type": "multiple_choice",
+      "official_key": "D",
+      "points": 1,
+      "standard": "NGLS.Math.Content.NY-4.NF.3a",
+      "output_number": 11
+    },
+    {
+      "source_number": 12,
+      "type": "multiple_choice",
+      "official_key": "B",
+      "points": 1,
+      "standard": "NGLS.Math.Content.NY-4.NBT.3",
+      "output_number": 12
+    },
+    {
+      "source_number": 15,
+      "type": "multiple_choice",
+      "official_key": "A",
+      "points": 1,
+      "standard": "NGLS.Math.Content.NY-4.NF.4c",
+      "output_number": 15
+    },
+    {
+      "source_number": 16,
+      "type": "multiple_choice",
+      "official_key": "B",
+      "points": 1,
+      "standard": "NGLS.Math.Content.NY-4.NBT.6",
+      "output_number": 16
+    },
+    {
+      "source_number": 22,
+      "type": "multiple_choice",
+      "official_key": "B",
+      "points": 1,
+      "standard": "NGLS.Math.Content.NY-4.NF.3c",
+      "output_number": 22
+    },
+    {
+      "source_number": 23,
+      "type": "multiple_choice",
+      "official_key": "B",
+      "points": 1,
+      "standard": "NGLS.Math.Content.NY-4.NBT.1",
+      "output_number": 23
+    },
+    {
+      "source_number": 24,
+      "type": "multiple_choice",
+      "official_key": "A",
+      "points": 1,
+      "standard": "NGLS.Math.Content.NY-4.NF.4b",
+      "output_number": 24
+    },
+    {
+      "source_number": 26,
+      "type": "multiple_choice",
+      "official_key": "B",
+      "points": 1,
+      "standard": "NGLS.Math.Content.NY-4.G.2c",
+      "output_number": 26
+    },
+    {
+      "source_number": 29,
+      "type": "multiple_choice",
+      "official_key": "C",
+      "points": 1,
+      "standard": "NGLS.Math.Content.NY-4.NBT.5",
+      "output_number": 29
+    },
+    {
+      "source_number": 30,
+      "type": "multiple_choice",
+      "official_key": "B",
+      "points": 1,
+      "standard": "NGLS.Math.Content.NY-4.MD.3",
+      "output_number": 30
+    },
+    {
+      "source_number": 31,
+      "type": "multiple_choice",
+      "official_key": "D",
+      "points": 1,
+      "standard": "NGLS.Math.Content.NY-4.G.3",
+      "output_number": 31
+    },
+    {
+      "source_number": 32,
+      "type": "multiple_choice",
+      "official_key": "C",
+      "points": 1,
+      "standard": "NGLS.Math.Content.NY-4.OA.3a",
+      "output_number": 32
+    },
+    {
+      "source_number": 33,
+      "type": "multiple_choice",
+      "official_key": "D",
+      "points": 1,
+      "standard": "NGLS.Math.Content.NY-4.NF.2",
+      "output_number": 33
+    },
+    {
+      "source_number": 34,
+      "type": "multiple_choice",
+      "official_key": "A",
+      "points": 1,
+      "standard": "NGLS.Math.Content.NY-4.NBT.5",
+      "output_number": 34
+    },
+    {
+      "source_number": 35,
+      "type": "multiple_choice",
+      "official_key": "B",
+      "points": 1,
+      "standard": "NGLS.Math.Content.NY-4.NF.3b",
+      "output_number": 35
+    },
+    {
+      "source_number": 36,
+      "type": "constructed_response",
+      "official_key": null,
+      "points": 1,
+      "standard": "NGLS.Math.Content.NY-4.MD.6",
+      "output_number": 36
+    },
+    {
+      "source_number": 37,
+      "type": "constructed_response",
+      "official_key": null,
+      "points": 1,
+      "standard": "NGLS.Math.Content.NY-4.OA.4",
+      "output_number": 37
+    },
+    {
+      "source_number": 38,
+      "type": "constructed_response",
+      "official_key": null,
+      "points": 1,
+      "standard": "NGLS.Math.Content.NY-4.G.2a",
+      "output_number": 38
+    },
+    {
+      "source_number": 39,
+      "type": "constructed_response",
+      "official_key": null,
+      "points": 2,
+      "standard": "NGLS.Math.Content.NY-4.NBT.6",
+      "output_number": 39
+    },
+    {
+      "source_number": 40,
+      "type": "constructed_response",
+      "official_key": null,
+      "points": 2,
+      "standard": "NGLS.Math.Content.NY-4.NBT.2b",
+      "output_number": 40
+    },
+    {
+      "source_number": 41,
+      "type": "constructed_response",
+      "official_key": null,
+      "points": 2,
+      "standard": "NGLS.Math.Content.NY-4.MD.4",
+      "output_number": 41
+    },
+    {
+      "source_number": 42,
+      "type": "constructed_response",
+      "official_key": null,
+      "points": 2,
+      "standard": "NGLS.Math.Content.NY-4.NF.4a",
+      "output_number": 42
+    },
+    {
+      "source_number": 43,
+      "type": "constructed_response",
+      "official_key": null,
+      "points": 2,
+      "standard": "NGLS.Math.Content.NY-4.G.1",
+      "output_number": 43
+    },
+    {
+      "source_number": 44,
+      "type": "constructed_response",
+      "official_key": null,
+      "points": 3,
+      "standard": "NGLS.Math.Content.NY-4.OA.3b",
+      "output_number": 44
+    }
+  ],
+  "title": "Grade 4 Mathematics | NYSED 2024",
+  "source_sha256": "88351089919b18dfc2f3dc5d64809d20aadd68d56a1dc38841a3387354b8c0f6"
+}
