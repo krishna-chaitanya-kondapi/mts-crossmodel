@@ -11,6 +11,19 @@ from mts.products.mock_assessment.teacher_key import render_teacher_key
 from mts.infrastructure.file_system.atomic_writer import write_json
 
 def main():
+    if len(sys.argv) > 1 and sys.argv[1] == "run":
+        from mts.products.mock_assessment.run_benchmark import run_benchmark
+
+        parser = argparse.ArgumentParser(description="Execute a saved historical benchmark RunSpec")
+        parser.add_argument("--runspec", type=Path, required=True)
+        parser.add_argument("--source-root", type=Path, required=True)
+        parser.add_argument("--output-root", type=Path, required=True)
+        args = parser.parse_args(sys.argv[2:])
+        result = run_benchmark(args.runspec, args.source_root, args.output_root,
+                               REPO / "specs/generate_mock_assessment/fixtures")
+        print(result["status"])
+        return 0
+
     if len(sys.argv) > 1 and sys.argv[1] == "ela-student":
         from mts.products.mock_assessment.source_render import render_student
 

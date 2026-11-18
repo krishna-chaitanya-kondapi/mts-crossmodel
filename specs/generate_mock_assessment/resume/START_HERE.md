@@ -21,3 +21,13 @@ Small renderer manifests are in specs/generate_mock_assessment/fixtures. Use exp
 ## Copilot prompt
 
 Continue Mock Assessment from the canonical checkpoint. Follow this guide and the approved Definition of Done. Implement, test and repair until all 76 mandatory criteria pass with sufficient revision-bound evidence or an external blocker prevents progress. Keep Weekly Practice independent. Persist code, evidence and exact next actions at each checkpoint. Production publication requires human approval.
+
+## Execute a saved benchmark RunSpec
+
+Run an independent local review pair from a committed fixture:
+
+    python scripts/generate_mock_assessment.py run --runspec specs/generate_mock_assessment/fixtures/ny2025_ela_grade6-runspec.json --source-root <source-directory> --output-root <review-output-directory>
+
+The runner validates exact profile, selection counts, paper/page limits, source fingerprint and local-review scope. It writes RunSpec JSON/PDF under 01-PreRun, student and teacher PDFs under 02-Run, and structural checks, input/output fingerprints and runtime under 03-PostRun. Each phase is dated by the instructional Monday and scoped by run ID.
+
+Completed identities are preserved on retries. Concurrent execution of the same identity is locked. A failure while moving staged phases rolls back only directories created by the failed run. Initial runtime estimates are engineering estimates; the run log records measured active duration. Academic, source and visual quality retain explicit review-required status until separate evidence is recorded.
