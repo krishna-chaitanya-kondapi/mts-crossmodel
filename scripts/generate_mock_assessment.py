@@ -21,7 +21,11 @@ def main():
         parser.add_argument("--placements", type=Path, required=True)
         args = parser.parse_args(sys.argv[2:])
         manifest = json.loads(args.manifest.read_text(encoding="utf-8-sig"))
-        placements = render_student(args.source, manifest, args.output)
+        if manifest.get("profile") == "ela_grade6_ny2025":
+            from mts.products.mock_assessment.ela_student import render_ela_student
+            placements = render_ela_student(args.source, manifest, args.output)
+        else:
+            placements = render_student(args.source, manifest, args.output)
         write_json(args.placements, {"placements": placements})
         return 0
 
