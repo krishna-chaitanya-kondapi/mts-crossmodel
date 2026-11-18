@@ -7,6 +7,7 @@ import os
 from pathlib import Path
 import re
 import shutil
+import subprocess
 import tempfile
 from time import perf_counter
 
@@ -178,6 +179,20 @@ def run_benchmark(spec_path, source_root, output_root, fixtures):
     )
     if student_manifest["source_sha256"] != spec["source_sha256"]:
         raise ValueError("Student manifest and RunSpec source fingerprints differ")
+    repository = Path(__file__).resolve().parents[4]
+    try:
+        revision = subprocess.check_output(
+            ["git", "rev-parse", "HEAD"],
+            cwd=repository,
+            text=True,
+            stderr=subprocess.DEVNULL,
+        ).strip()
+    except (OSError, subprocess.CalledProcessError):
+        revision = None
+    implementation_hashes = {
+        path.name: sha256(path.read_bytes()).hexdigest()
+        for path in sorted(Path(__file__).parent.glob("*.py"))
+    }
     root = Path(output_root).resolve()
     root.mkdir(parents=True, exist_ok=True)
     phases = ["01-PreRun", "02-Run", "03-PostRun"]
@@ -236,6 +251,8 @@ def run_benchmark(spec_path, source_root, output_root, fixtures):
                     raise ValueError("Question placement count failed")
                 result = {
                     "status": "REVIEW_REQUIRED",
+                    "execution_revision": revision,
+                    "implementation_hashes": implementation_hashes,
                     "run_id": spec["run_id"],
                     "profile": profile,
                     "student_pages": len(pupils),
