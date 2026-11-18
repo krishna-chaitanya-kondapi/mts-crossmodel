@@ -326,7 +326,7 @@
     "Artifact-specific human final approval is absent from the handoffs. This prevents production publication only; no publication is authorized without that approval.",
     "A source-derived ELA student manifest and complete student-golden comparison are still absent."
   ],
-  "audited_revision": "52bac0bfbbb27cb87037f4123ad86fb8b9ba16da",
+  "audited_revision": "a67dd2e91f3f9c8ecf47bc9252a29fde8f7a865e",
   "evidence": [
     "outputs/verification-report.json",
     "outputs/baseline-tests.txt",
