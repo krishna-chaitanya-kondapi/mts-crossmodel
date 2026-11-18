@@ -1,6 +1,6 @@
 {
   "status": "NOT_DONE",
-  "iteration": 24,
+  "iteration": 25,
   "baseline_revision": "728596db0ec7deedc087b9e509da14701b7d088d",
   "criteria": [
     {
@@ -56,17 +56,17 @@
     {
       "id": "V02.04",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V02.05",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V02.06",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V02.07",
@@ -306,17 +306,17 @@
     {
       "id": "V07.03",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V07.04",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V07.05",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V07.06",
@@ -326,7 +326,7 @@
     {
       "id": "V07.07",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V07.08",
@@ -341,7 +341,7 @@
     {
       "id": "V07.10",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "ARCH.01",
@@ -351,7 +351,7 @@
     {
       "id": "ARCH.02",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "ARCH.03",
@@ -395,15 +395,15 @@
     }
   ],
   "next": [
-    "Add validated RunSpec JSON/PDF and local paired-run orchestration with structural verification and failure-safe staging.",
-    "Complete Grade 4 academic/source review and ELA evidence, distractor and scoring review. Resolve the recorded historical-source text differences.",
-    "Verify full scaling, fidelity, figures, readability and regression parity for the exact final artifacts."
+    "Complete independent Grade 4 and ELA academic, distractor and rubric reviews with question-specific evidence.",
+    "Resolve full source-to-output wording, illustration scaling, paragraph references and golden discrepancies; inspect all final pages.",
+    "Complete approval/release coordination tests and criterion-level traceability, then run the final evidence gate."
   ],
   "blockers": [
     "Golden/source discrepancies and complete academic/visual review remain open implementation and verification work.",
     "Final human approval is required for production publication."
   ],
-  "audited_revision": "d47fd21fd51eba7b3c1ffe940ca5021ef22ba612",
+  "audited_revision": "494547190b5195c3e6f5d0d13956ddefd07536f2",
   "evidence": [
     "outputs/verification-report.json",
     "outputs/baseline-tests.txt",
@@ -442,6 +442,11 @@
     "outputs/iteration-24-regression-structure.json",
     "outputs/iteration-24-tests.txt",
     "outputs/iteration-24-gate.json",
-    "outputs/ela-source-transcription-review.md"
+    "outputs/ela-source-transcription-review.md",
+    "outputs/iteration-25-runspec-evidence.json",
+    "outputs/iteration-25-repeatability.json",
+    "outputs/iteration-25-tests.txt",
+    "outputs/iteration-25-audit.json",
+    "outputs/iteration-25-gate.json"
   ]
 }

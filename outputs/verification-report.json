@@ -1,10 +1,10 @@
 {
   "status": "NOT_DONE",
-  "iteration": 24,
+  "iteration": 25,
   "date": "2026-11-18",
-  "revision": "d47fd21fd51eba7b3c1ffe940ca5021ef22ba612",
+  "revision": "494547190b5195c3e6f5d0d13956ddefd07536f2",
   "registry_sha256": "c70cf4b237e712c11943ed16ac5a479a9310c65a6d1fd284baddb23d956f0aa4",
-  "mandatory_pass": 18,
+  "mandatory_pass": 27,
   "mandatory_total": 76,
   "baseline_tests": {
     "command": "python -m pytest tests -q",
@@ -54,17 +54,14 @@
     }
   ],
   "next": [
-    "Add validated RunSpec JSON/PDF and local paired-run orchestration with structural verification and failure-safe staging.",
-    "Complete Grade 4 academic/source review and ELA evidence, distractor and scoring review. Resolve the recorded historical-source text differences.",
-    "Verify full scaling, fidelity, figures, readability and regression parity for the exact final artifacts."
+    "Complete independent Grade 4 and ELA academic, distractor and rubric reviews with question-specific evidence.",
+    "Resolve full source-to-output wording, illustration scaling, paragraph references and golden discrepancies; inspect all final pages.",
+    "Complete approval/release coordination tests and criterion-level traceability, then run the final evidence gate."
   ],
   "pending_mandatory": [
     "V01.03",
     "V01.06",
     "V01.07",
-    "V02.04",
-    "V02.05",
-    "V02.06",
     "V02.09",
     "V02.10",
     "V02.11",
@@ -106,14 +103,8 @@
     "V06.11",
     "V06.12",
     "V07.02",
-    "V07.03",
-    "V07.04",
-    "V07.05",
-    "V07.07",
     "V07.08",
     "V07.09",
-    "V07.10",
-    "ARCH.02",
     "ARCH.05",
     "ARCH.07",
     "ARCH.10"
@@ -165,8 +156,8 @@
       "status": "PASS",
       "evidence": [
         {
-          "path": "outputs/iteration-24-audit.json",
-          "sha256": "7cba7448d2d861c1b1556ce181c39b47b630da334de26ab556ccb379d3806bd3"
+          "path": "outputs/iteration-25-audit.json",
+          "sha256": "bb0b65e514bb6f941e2bce319c1a94c236c2e8df947162a8885f6d9746413bb4"
         },
         {
           "path": "outputs/historical-source-item-maps.json",
@@ -242,22 +233,85 @@
       "id": "V02.04",
       "mandatory": true,
       "requirement": "Source-based generation works",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "status": "PASS",
+      "evidence": [
+        {
+          "path": "outputs/iteration-25-runspec-evidence.json",
+          "sha256": "e1c56f73232176a99f75d3f9b3cf8e30c03d50756dc1abb66fe8cb31b6ec4529"
+        },
+        {
+          "path": "outputs/iteration-25-repeatability.json",
+          "sha256": "c4561ea95dd0259958120a799437c33314cde643f7b06c05d0cac5517715df20"
+        },
+        {
+          "path": "outputs/iteration-25-tests.txt",
+          "sha256": "5e588202b466e07a868ddb3156c918bc79ffc52b9974141287f2599827be64a9"
+        },
+        {
+          "path": "outputs/iteration-25-audit.json",
+          "sha256": "bb0b65e514bb6f941e2bce319c1a94c236c2e8df947162a8885f6d9746413bb4"
+        }
+      ],
+      "expected": "Source-based generation works",
+      "actual": "Three fixed historical profiles validated source hashes and rendered local student/teacher sets from source-bound manifests. Full academic/fidelity acceptance remains separate.",
+      "method": "Execute all three validated RunSpecs twice, inspect RunSpec summaries and compare rendered outputs; run complete regression suite including failure/retry tests.",
+      "reviewer": "Codex iteration 25 run-orchestration review"
     },
     {
       "id": "V02.05",
       "mandatory": true,
       "requirement": "Math and ELA branches work",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "status": "PASS",
+      "evidence": [
+        {
+          "path": "outputs/iteration-25-runspec-evidence.json",
+          "sha256": "e1c56f73232176a99f75d3f9b3cf8e30c03d50756dc1abb66fe8cb31b6ec4529"
+        },
+        {
+          "path": "outputs/iteration-25-repeatability.json",
+          "sha256": "c4561ea95dd0259958120a799437c33314cde643f7b06c05d0cac5517715df20"
+        },
+        {
+          "path": "outputs/iteration-25-tests.txt",
+          "sha256": "5e588202b466e07a868ddb3156c918bc79ffc52b9974141287f2599827be64a9"
+        },
+        {
+          "path": "outputs/iteration-25-audit.json",
+          "sha256": "bb0b65e514bb6f941e2bce319c1a94c236c2e8df947162a8885f6d9746413bb4"
+        }
+      ],
+      "expected": "Math and ELA branches work",
+      "actual": "The Math Grade 4, Math Grade 5 and ELA Grade 6 RunSpecs each completed their product branch.",
+      "method": "Execute all three validated RunSpecs twice, inspect RunSpec summaries and compare rendered outputs; run complete regression suite including failure/retry tests.",
+      "reviewer": "Codex iteration 25 run-orchestration review"
     },
     {
       "id": "V02.06",
       "mandatory": true,
       "requirement": "Validated RunSpec PDF and JSON",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "status": "PASS",
+      "evidence": [
+        {
+          "path": "outputs/iteration-25-runspec-evidence.json",
+          "sha256": "e1c56f73232176a99f75d3f9b3cf8e30c03d50756dc1abb66fe8cb31b6ec4529"
+        },
+        {
+          "path": "outputs/iteration-25-repeatability.json",
+          "sha256": "c4561ea95dd0259958120a799437c33314cde643f7b06c05d0cac5517715df20"
+        },
+        {
+          "path": "outputs/iteration-25-tests.txt",
+          "sha256": "5e588202b466e07a868ddb3156c918bc79ffc52b9974141287f2599827be64a9"
+        },
+        {
+          "path": "outputs/iteration-25-audit.json",
+          "sha256": "bb0b65e514bb6f941e2bce319c1a94c236c2e8df947162a8885f6d9746413bb4"
+        }
+      ],
+      "expected": "Validated RunSpec PDF and JSON",
+      "actual": "All three saved RunSpecs passed strict profile/blueprint/date/source/presentation validation and generated matching one-page PDF summaries, visually inspected.",
+      "method": "Execute all three validated RunSpecs twice, inspect RunSpec summaries and compare rendered outputs; run complete regression suite including failure/retry tests.",
+      "reviewer": "Codex iteration 25 run-orchestration review"
     },
     {
       "id": "V02.07",
@@ -266,12 +320,12 @@
       "status": "PASS",
       "evidence": [
         {
-          "path": "outputs/iteration-24-regression-structure.json",
-          "sha256": "3fb9e224d74bc23531df49eb41c56606ada771d14cac4ae017265f97f9c27b68"
+          "path": "outputs/iteration-25-runspec-evidence.json",
+          "sha256": "e1c56f73232176a99f75d3f9b3cf8e30c03d50756dc1abb66fe8cb31b6ec4529"
         },
         {
-          "path": "outputs/iteration-24-audit.json",
-          "sha256": "7cba7448d2d861c1b1556ce181c39b47b630da334de26ab556ccb379d3806bd3"
+          "path": "outputs/iteration-25-audit.json",
+          "sha256": "bb0b65e514bb6f941e2bce319c1a94c236c2e8df947162a8885f6d9746413bb4"
         }
       ],
       "expected": "Student PDF",
@@ -286,12 +340,12 @@
       "status": "PASS",
       "evidence": [
         {
-          "path": "outputs/iteration-24-regression-structure.json",
-          "sha256": "3fb9e224d74bc23531df49eb41c56606ada771d14cac4ae017265f97f9c27b68"
+          "path": "outputs/iteration-25-runspec-evidence.json",
+          "sha256": "e1c56f73232176a99f75d3f9b3cf8e30c03d50756dc1abb66fe8cb31b6ec4529"
         },
         {
-          "path": "outputs/iteration-24-audit.json",
-          "sha256": "7cba7448d2d861c1b1556ce181c39b47b630da334de26ab556ccb379d3806bd3"
+          "path": "outputs/iteration-25-audit.json",
+          "sha256": "bb0b65e514bb6f941e2bce319c1a94c236c2e8df947162a8885f6d9746413bb4"
         }
       ],
       "expected": "Separate teacher PDF",
@@ -432,12 +486,12 @@
       "status": "PASS",
       "evidence": [
         {
-          "path": "outputs/iteration-24-regression-structure.json",
-          "sha256": "3fb9e224d74bc23531df49eb41c56606ada771d14cac4ae017265f97f9c27b68"
+          "path": "outputs/iteration-25-runspec-evidence.json",
+          "sha256": "e1c56f73232176a99f75d3f9b3cf8e30c03d50756dc1abb66fe8cb31b6ec4529"
         },
         {
-          "path": "outputs/iteration-24-audit.json",
-          "sha256": "7cba7448d2d861c1b1556ce181c39b47b630da334de26ab556ccb379d3806bd3"
+          "path": "outputs/iteration-25-audit.json",
+          "sha256": "bb0b65e514bb6f941e2bce319c1a94c236c2e8df947162a8885f6d9746413bb4"
         }
       ],
       "expected": "Approved paper and orientation",
@@ -452,12 +506,12 @@
       "status": "PASS",
       "evidence": [
         {
-          "path": "outputs/iteration-24-regression-structure.json",
-          "sha256": "3fb9e224d74bc23531df49eb41c56606ada771d14cac4ae017265f97f9c27b68"
+          "path": "outputs/iteration-25-runspec-evidence.json",
+          "sha256": "e1c56f73232176a99f75d3f9b3cf8e30c03d50756dc1abb66fe8cb31b6ec4529"
         },
         {
-          "path": "outputs/iteration-24-audit.json",
-          "sha256": "7cba7448d2d861c1b1556ce181c39b47b630da334de26ab556ccb379d3806bd3"
+          "path": "outputs/iteration-25-audit.json",
+          "sha256": "bb0b65e514bb6f941e2bce319c1a94c236c2e8df947162a8885f6d9746413bb4"
         }
       ],
       "expected": "Student pagination",
@@ -535,12 +589,12 @@
       "status": "PASS",
       "evidence": [
         {
-          "path": "outputs/iteration-24-regression-structure.json",
-          "sha256": "3fb9e224d74bc23531df49eb41c56606ada771d14cac4ae017265f97f9c27b68"
+          "path": "outputs/iteration-25-runspec-evidence.json",
+          "sha256": "e1c56f73232176a99f75d3f9b3cf8e30c03d50756dc1abb66fe8cb31b6ec4529"
         },
         {
-          "path": "outputs/iteration-24-audit.json",
-          "sha256": "7cba7448d2d861c1b1556ce181c39b47b630da334de26ab556ccb379d3806bd3"
+          "path": "outputs/iteration-25-audit.json",
+          "sha256": "bb0b65e514bb6f941e2bce319c1a94c236c2e8df947162a8885f6d9746413bb4"
         }
       ],
       "expected": "Key pagination",
@@ -646,12 +700,12 @@
       "status": "PASS",
       "evidence": [
         {
-          "path": "outputs/iteration-24-regression-structure.json",
-          "sha256": "3fb9e224d74bc23531df49eb41c56606ada771d14cac4ae017265f97f9c27b68"
+          "path": "outputs/iteration-25-runspec-evidence.json",
+          "sha256": "e1c56f73232176a99f75d3f9b3cf8e30c03d50756dc1abb66fe8cb31b6ec4529"
         },
         {
-          "path": "outputs/iteration-24-audit.json",
-          "sha256": "7cba7448d2d861c1b1556ce181c39b47b630da334de26ab556ccb379d3806bd3"
+          "path": "outputs/iteration-25-audit.json",
+          "sha256": "bb0b65e514bb6f941e2bce319c1a94c236c2e8df947162a8885f6d9746413bb4"
         }
       ],
       "expected": "Independent invocation without chat context",
@@ -670,22 +724,85 @@
       "id": "V07.03",
       "mandatory": true,
       "requirement": "Estimated and actual runtime",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "status": "PASS",
+      "evidence": [
+        {
+          "path": "outputs/iteration-25-runspec-evidence.json",
+          "sha256": "e1c56f73232176a99f75d3f9b3cf8e30c03d50756dc1abb66fe8cb31b6ec4529"
+        },
+        {
+          "path": "outputs/iteration-25-repeatability.json",
+          "sha256": "c4561ea95dd0259958120a799437c33314cde643f7b06c05d0cac5517715df20"
+        },
+        {
+          "path": "outputs/iteration-25-tests.txt",
+          "sha256": "5e588202b466e07a868ddb3156c918bc79ffc52b9974141287f2599827be64a9"
+        },
+        {
+          "path": "outputs/iteration-25-audit.json",
+          "sha256": "bb0b65e514bb6f941e2bce319c1a94c236c2e8df947162a8885f6d9746413bb4"
+        }
+      ],
+      "expected": "Estimated and actual runtime",
+      "actual": "All three logs capture a five-second initial engineering estimate with basis and measured active/rendering durations.",
+      "method": "Execute all three validated RunSpecs twice, inspect RunSpec summaries and compare rendered outputs; run complete regression suite including failure/retry tests.",
+      "reviewer": "Codex iteration 25 run-orchestration review"
     },
     {
       "id": "V07.04",
       "mandatory": true,
       "requirement": "Persist evidence",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "status": "PASS",
+      "evidence": [
+        {
+          "path": "outputs/iteration-25-runspec-evidence.json",
+          "sha256": "e1c56f73232176a99f75d3f9b3cf8e30c03d50756dc1abb66fe8cb31b6ec4529"
+        },
+        {
+          "path": "outputs/iteration-25-repeatability.json",
+          "sha256": "c4561ea95dd0259958120a799437c33314cde643f7b06c05d0cac5517715df20"
+        },
+        {
+          "path": "outputs/iteration-25-tests.txt",
+          "sha256": "5e588202b466e07a868ddb3156c918bc79ffc52b9974141287f2599827be64a9"
+        },
+        {
+          "path": "outputs/iteration-25-audit.json",
+          "sha256": "bb0b65e514bb6f941e2bce319c1a94c236c2e8df947162a8885f6d9746413bb4"
+        }
+      ],
+      "expected": "Persist evidence",
+      "actual": "Run logs persist exact input/artifact hashes, code revision and implementation hashes with structural and open-review states.",
+      "method": "Execute all three validated RunSpecs twice, inspect RunSpec summaries and compare rendered outputs; run complete regression suite including failure/retry tests.",
+      "reviewer": "Codex iteration 25 run-orchestration review"
     },
     {
       "id": "V07.05",
       "mandatory": true,
       "requirement": "Repair and escalation tests",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "status": "PASS",
+      "evidence": [
+        {
+          "path": "outputs/iteration-25-runspec-evidence.json",
+          "sha256": "e1c56f73232176a99f75d3f9b3cf8e30c03d50756dc1abb66fe8cb31b6ec4529"
+        },
+        {
+          "path": "outputs/iteration-25-repeatability.json",
+          "sha256": "c4561ea95dd0259958120a799437c33314cde643f7b06c05d0cac5517715df20"
+        },
+        {
+          "path": "outputs/iteration-25-tests.txt",
+          "sha256": "5e588202b466e07a868ddb3156c918bc79ffc52b9974141287f2599827be64a9"
+        },
+        {
+          "path": "outputs/iteration-25-audit.json",
+          "sha256": "bb0b65e514bb6f941e2bce319c1a94c236c2e8df947162a8885f6d9746413bb4"
+        }
+      ],
+      "expected": "Repair and escalation tests",
+      "actual": "Tests reject invalid specs, preserve completed identities, enforce concurrent identity locks, and prove rollback/retry after an injected second-phase move failure.",
+      "method": "Execute all three validated RunSpecs twice, inspect RunSpec summaries and compare rendered outputs; run complete regression suite including failure/retry tests.",
+      "reviewer": "Codex iteration 25 run-orchestration review"
     },
     {
       "id": "V07.06",
@@ -694,12 +811,12 @@
       "status": "PASS",
       "evidence": [
         {
-          "path": "outputs/iteration-24-tests.txt",
-          "sha256": "fd73463d24fa8c51144bea845230aab1a6aee81a4c39aab460b6cca5da1ac0e4"
+          "path": "outputs/iteration-25-tests.txt",
+          "sha256": "5e588202b466e07a868ddb3156c918bc79ffc52b9974141287f2599827be64a9"
         },
         {
-          "path": "outputs/iteration-24-audit.json",
-          "sha256": "7cba7448d2d861c1b1556ce181c39b47b630da334de26ab556ccb379d3806bd3"
+          "path": "outputs/iteration-25-audit.json",
+          "sha256": "bb0b65e514bb6f941e2bce319c1a94c236c2e8df947162a8885f6d9746413bb4"
         }
       ],
       "expected": "Weekly regression unaffected",
@@ -711,8 +828,29 @@
       "id": "V07.07",
       "mandatory": true,
       "requirement": "Output conventions",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "status": "PASS",
+      "evidence": [
+        {
+          "path": "outputs/iteration-25-runspec-evidence.json",
+          "sha256": "e1c56f73232176a99f75d3f9b3cf8e30c03d50756dc1abb66fe8cb31b6ec4529"
+        },
+        {
+          "path": "outputs/iteration-25-repeatability.json",
+          "sha256": "c4561ea95dd0259958120a799437c33314cde643f7b06c05d0cac5517715df20"
+        },
+        {
+          "path": "outputs/iteration-25-tests.txt",
+          "sha256": "5e588202b466e07a868ddb3156c918bc79ffc52b9974141287f2599827be64a9"
+        },
+        {
+          "path": "outputs/iteration-25-audit.json",
+          "sha256": "bb0b65e514bb6f941e2bce319c1a94c236c2e8df947162a8885f6d9746413bb4"
+        }
+      ],
+      "expected": "Output conventions",
+      "actual": "All three RunSpec runs use 01-PreRun, 02-Run, and 03-PostRun, instructional Mondays and run identities; 02-Run contains student and teacher PDFs.",
+      "method": "Execute all three validated RunSpecs twice, inspect RunSpec summaries and compare rendered outputs; run complete regression suite including failure/retry tests.",
+      "reviewer": "Codex iteration 25 run-orchestration review"
     },
     {
       "id": "V07.08",
@@ -732,8 +870,29 @@
       "id": "V07.10",
       "mandatory": true,
       "requirement": "Repeatability",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "status": "PASS",
+      "evidence": [
+        {
+          "path": "outputs/iteration-25-runspec-evidence.json",
+          "sha256": "e1c56f73232176a99f75d3f9b3cf8e30c03d50756dc1abb66fe8cb31b6ec4529"
+        },
+        {
+          "path": "outputs/iteration-25-repeatability.json",
+          "sha256": "c4561ea95dd0259958120a799437c33314cde643f7b06c05d0cac5517715df20"
+        },
+        {
+          "path": "outputs/iteration-25-tests.txt",
+          "sha256": "5e588202b466e07a868ddb3156c918bc79ffc52b9974141287f2599827be64a9"
+        },
+        {
+          "path": "outputs/iteration-25-audit.json",
+          "sha256": "bb0b65e514bb6f941e2bce319c1a94c236c2e8df947162a8885f6d9746413bb4"
+        }
+      ],
+      "expected": "Repeatability",
+      "actual": "Two independent executions with identical sources and RunSpecs reproduced identical text, page counts and rendered pixels across nine PDFs.",
+      "method": "Execute all three validated RunSpecs twice, inspect RunSpec summaries and compare rendered outputs; run complete regression suite including failure/retry tests.",
+      "reviewer": "Codex iteration 25 run-orchestration review"
     },
     {
       "id": "ARCH.01",
@@ -742,8 +901,8 @@
       "status": "PASS",
       "evidence": [
         {
-          "path": "outputs/iteration-24-audit.json",
-          "sha256": "7cba7448d2d861c1b1556ce181c39b47b630da334de26ab556ccb379d3806bd3"
+          "path": "outputs/iteration-25-audit.json",
+          "sha256": "bb0b65e514bb6f941e2bce319c1a94c236c2e8df947162a8885f6d9746413bb4"
         }
       ],
       "expected": "Dedicated executable entry point",
@@ -755,8 +914,29 @@
       "id": "ARCH.02",
       "mandatory": true,
       "requirement": "Independent orchestration",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "status": "PASS",
+      "evidence": [
+        {
+          "path": "outputs/iteration-25-runspec-evidence.json",
+          "sha256": "e1c56f73232176a99f75d3f9b3cf8e30c03d50756dc1abb66fe8cb31b6ec4529"
+        },
+        {
+          "path": "outputs/iteration-25-repeatability.json",
+          "sha256": "c4561ea95dd0259958120a799437c33314cde643f7b06c05d0cac5517715df20"
+        },
+        {
+          "path": "outputs/iteration-25-tests.txt",
+          "sha256": "5e588202b466e07a868ddb3156c918bc79ffc52b9974141287f2599827be64a9"
+        },
+        {
+          "path": "outputs/iteration-25-audit.json",
+          "sha256": "bb0b65e514bb6f941e2bce319c1a94c236c2e8df947162a8885f6d9746413bb4"
+        }
+      ],
+      "expected": "Independent orchestration",
+      "actual": "The dedicated RunSpec runner performs source validation, separate subject dispatch, phase staging and local verification without weekly orchestration.",
+      "method": "Execute all three validated RunSpecs twice, inspect RunSpec summaries and compare rendered outputs; run complete regression suite including failure/retry tests.",
+      "reviewer": "Codex iteration 25 run-orchestration review"
     },
     {
       "id": "ARCH.03",
@@ -765,12 +945,12 @@
       "status": "PASS",
       "evidence": [
         {
-          "path": "outputs/iteration-24-regression-structure.json",
-          "sha256": "3fb9e224d74bc23531df49eb41c56606ada771d14cac4ae017265f97f9c27b68"
+          "path": "outputs/iteration-25-runspec-evidence.json",
+          "sha256": "e1c56f73232176a99f75d3f9b3cf8e30c03d50756dc1abb66fe8cb31b6ec4529"
         },
         {
-          "path": "outputs/iteration-24-audit.json",
-          "sha256": "7cba7448d2d861c1b1556ce181c39b47b630da334de26ab556ccb379d3806bd3"
+          "path": "outputs/iteration-25-audit.json",
+          "sha256": "bb0b65e514bb6f941e2bce319c1a94c236c2e8df947162a8885f6d9746413bb4"
         }
       ],
       "expected": "Independent configuration",
@@ -785,8 +965,8 @@
       "status": "PASS",
       "evidence": [
         {
-          "path": "outputs/iteration-24-audit.json",
-          "sha256": "7cba7448d2d861c1b1556ce181c39b47b630da334de26ab556ccb379d3806bd3"
+          "path": "outputs/iteration-25-audit.json",
+          "sha256": "bb0b65e514bb6f941e2bce319c1a94c236c2e8df947162a8885f6d9746413bb4"
         }
       ],
       "expected": "No weekly curriculum or generation dependency",
@@ -808,12 +988,12 @@
       "status": "PASS",
       "evidence": [
         {
-          "path": "outputs/iteration-24-regression-structure.json",
-          "sha256": "3fb9e224d74bc23531df49eb41c56606ada771d14cac4ae017265f97f9c27b68"
+          "path": "outputs/iteration-25-runspec-evidence.json",
+          "sha256": "e1c56f73232176a99f75d3f9b3cf8e30c03d50756dc1abb66fe8cb31b6ec4529"
         },
         {
-          "path": "outputs/iteration-24-audit.json",
-          "sha256": "7cba7448d2d861c1b1556ce181c39b47b630da334de26ab556ccb379d3806bd3"
+          "path": "outputs/iteration-25-audit.json",
+          "sha256": "bb0b65e514bb6f941e2bce319c1a94c236c2e8df947162a8885f6d9746413bb4"
         }
       ],
       "expected": "Independent execution",
@@ -835,12 +1015,12 @@
       "status": "PASS",
       "evidence": [
         {
-          "path": "outputs/iteration-24-audit.json",
-          "sha256": "7cba7448d2d861c1b1556ce181c39b47b630da334de26ab556ccb379d3806bd3"
+          "path": "outputs/iteration-25-audit.json",
+          "sha256": "bb0b65e514bb6f941e2bce319c1a94c236c2e8df947162a8885f6d9746413bb4"
         },
         {
-          "path": "outputs/iteration-24-tests.txt",
-          "sha256": "fd73463d24fa8c51144bea845230aab1a6aee81a4c39aab460b6cca5da1ac0e4"
+          "path": "outputs/iteration-25-tests.txt",
+          "sha256": "5e588202b466e07a868ddb3156c918bc79ffc52b9974141287f2599827be64a9"
         }
       ],
       "expected": "Weekly implementation unaffected",
@@ -855,12 +1035,12 @@
       "status": "PASS",
       "evidence": [
         {
-          "path": "outputs/iteration-24-audit.json",
-          "sha256": "7cba7448d2d861c1b1556ce181c39b47b630da334de26ab556ccb379d3806bd3"
+          "path": "outputs/iteration-25-audit.json",
+          "sha256": "bb0b65e514bb6f941e2bce319c1a94c236c2e8df947162a8885f6d9746413bb4"
         },
         {
-          "path": "outputs/iteration-24-tests.txt",
-          "sha256": "fd73463d24fa8c51144bea845230aab1a6aee81a4c39aab460b6cca5da1ac0e4"
+          "path": "outputs/iteration-25-tests.txt",
+          "sha256": "5e588202b466e07a868ddb3156c918bc79ffc52b9974141287f2599827be64a9"
         }
       ],
       "expected": "Assessment policies do not alter weekly behavior",
@@ -904,9 +1084,9 @@
     }
   },
   "iteration_tests": {
-    "passed": 261,
+    "passed": 269,
     "failed": 0,
-    "evidence": "outputs/iteration-24-tests.txt"
+    "evidence": "outputs/iteration-25-tests.txt"
   },
   "layout_trial": {
     "status": "FAIL",
@@ -998,9 +1178,10 @@
   },
   "verification_scope": "The target code revision is immutable. This report records reviewed criteria for that revision; later dependent code changes require revalidation.",
   "current_outcomes": [
-    "All three student/teacher pairs generated through the dedicated CLI.",
-    "Grade 4 page counts 4+1, Grade 5 3+1, ELA 4+2.",
-    "ELA student generation reads official-source text and reviewed raster-page transcriptions; historical wording differences are documented.",
-    "261 tests passed. Academic and full source/golden-equivalence criteria remain open."
+    "All three source-bound benchmark pairs execute from validated saved RunSpecs.",
+    "RunSpec PDF/JSON, student/teacher PDFs, runtime, hashes and structural checks are staged in phase folders.",
+    "269 tests passed, including invalid-spec, retry, concurrency and rollback coverage.",
+    "Two executions matched all nine PDFs by rendered pixels and extracted text.",
+    "Full academic, fidelity, visual and golden parity checks remain open."
   ]
 }

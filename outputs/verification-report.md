@@ -1,21 +1,23 @@
 # Mock Assessment verification report
 
-**NOT_DONE** · Iteration 24 · **18 / 76 mandatory criteria verified (23.7%)**
+**NOT_DONE** · Iteration 25 · **27 / 76 verified (35.5%)**
 
-Target code revision d47fd21fd51eba7b3c1ffe940ca5021ef22ba612. The unchanged evidence gate validates 18 mandatory criteria. All 261 tests passed. Fifty-eight mandatory criteria remain open.
+Target code revision 494547190b5195c3e6f5d0d13956ddefd07536f2. Forty-nine mandatory criteria remain open.
 
-The official-source ELA student profile is integrated into the CLI. The canonical manifest contains 23 numbered paragraphs and 14 questions. The renderer never opens a golden PDF. Native source text is combined with reviewed transcriptions of raster pages 10 and 16. See [source transcription review](ela-source-transcription-review.md) for differences from the delivered reference.
+All three profiles now run from validated saved RunSpecs. Each produces a RunSpec JSON and one-page PDF, paired student and teacher PDFs, and structural/runtime/fingerprint records in phase folders. Source fingerprints, fixed selection counts, instructional Monday, local-review scope and paper/page constraints are checked before output.
 
-All three benchmark pairs ran through the CLI. Their student/teacher page counts are Grade 4 4+1, Grade 5 3+1, and ELA 4+2. Six PDFs reopened with Letter portrait dimensions. Ordered placements matched all selections.
+Runtime estimates are explicitly initial engineering estimates of five seconds. Measured active times were about 0.38 seconds for Grade 4, 0.43 for Grade 5 and 0.77 for ELA in the initial measured run; repeated runs record their own durations.
 
-## Acceptance scope
+All 269 tests passed. Tests exercise rejected invalid specs, duplicate run preservation, concurrency locks and rollback/retry following an injected phase-move failure. Two complete executions reproduced all nine PDFs by page count, extracted text and rendered pixels.
 
-The eight newly passing criteria establish student and separate teacher PDFs, paper/orientation, student and key pagination, independent invocation/execution, and independent configuration. The original ten requirements, workflow and isolation criteria were revalidated for this code revision. Passing pagination does not establish academic quality, source fidelity or equivalent readability.
+## Current academic and fidelity gaps
 
-## Remaining work
+Academic, source-fidelity and complete golden-equivalence acceptance remains open. [ELA source review](ela-source-transcription-review.md) records wording differences against the delivered reference. Grade 4 and ELA need independent question-level reasoning and rubric records. All final pages need consolidated visual evidence bound to their final files.
 
-1. Add validated RunSpec JSON/PDF and local paired-run orchestration with structural verification and failure-safe staging.
-2. Complete Grade 4 academic/source review and ELA evidence, distractor and scoring review. Resolve the recorded historical-source text differences.
-3. Verify full scaling, fidelity, figures, readability and regression parity for the exact final artifacts.
+## Exact next actions
 
-[Gate result](iteration-24-gate.json) · [Paired regression evidence](iteration-24-regression-structure.json) · [Test log](iteration-24-tests.txt)
+1. Complete independent Grade 4 and ELA academic, distractor and rubric reviews with question-specific evidence.
+2. Resolve full source-to-output wording, illustration scaling, paragraph references and golden discrepancies; inspect all final pages.
+3. Complete approval/release coordination tests and criterion-level traceability, then run the final evidence gate.
+
+[Run evidence](iteration-25-runspec-evidence.json) · [Repeatability](iteration-25-repeatability.json) · [Tests](iteration-25-tests.txt) · [Gate](iteration-25-gate.json)

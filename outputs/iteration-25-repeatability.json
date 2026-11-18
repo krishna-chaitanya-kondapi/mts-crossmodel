@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "pdfs_compared": 9,
+  "files": [
+    "01-PreRun\\2026-09-21\\ny2025_ela_grade6-review\\runspec.pdf",
+    "01-PreRun\\2026-09-28\\ny2024_math_grade4-review\\runspec.pdf",
+    "01-PreRun\\2026-09-28\\ny2024_math_grade5-review\\runspec.pdf",
+    "02-Run\\2026-09-21\\ny2025_ela_grade6-review\\student.pdf",
+    "02-Run\\2026-09-21\\ny2025_ela_grade6-review\\teacher.pdf",
+    "02-Run\\2026-09-28\\ny2024_math_grade4-review\\student.pdf",
+    "02-Run\\2026-09-28\\ny2024_math_grade4-review\\teacher.pdf",
+    "02-Run\\2026-09-28\\ny2024_math_grade5-review\\student.pdf",
+    "02-Run\\2026-09-28\\ny2024_math_grade5-review\\teacher.pdf"
+  ],
+  "method": "Two independent output roots using identical RunSpecs and sources. All page counts, extracted text and pixel arrays match.",
+  "limits": "PDF serialization identifiers and measured runtimes may differ."
+}

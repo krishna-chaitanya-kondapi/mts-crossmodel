@@ -1,0 +1,615 @@
+[
+  {
+    "status": "REVIEW_REQUIRED",
+    "execution_revision": "494547190b5195c3e6f5d0d13956ddefd07536f2",
+    "implementation_hashes": {
+      "__init__.py": "5656cb5e95f1e7544987ff19c95aa9467b528ae7242198e7d4befa260c52c099",
+      "ela_student.py": "ce645ed15e20ce5b85d39a675055296796a09130f9f1c024313b3531498a52ab",
+      "ela_teacher.py": "1db3bf0bf2fcbb404f228e19b1f9b4512be2ebc1cb8881aca26d5721f56d6ec7",
+      "grade4_student.py": "dffac69ff2cfcdd6082ff46cc32f6dccf672bf786d8dab46877ac7ccaf618662",
+      "grade5_student.py": "3610b954678342c0ce4a4d2fb284bb5a5311c68f7d2c8edc538abf416d8337b5",
+      "item_map.py": "4fb2474e2cee8b416abd439bf691ad1cff8774fae84103a7306a6818abf7d7a6",
+      "run_benchmark.py": "2761a06276bc2a687bb0d1e08b18a0b94c8c2615f9cdced1d754e51b10163c13",
+      "source_render.py": "699998f8f28fcadc081fd33d54acd694439524b1b0a93dbe358309d0119ca1d2",
+      "teacher_key.py": "d54a3330906272aa565c3c2edd68890f00bd9b0d45643d2e1e17e1ddb3954e2d",
+      "verification.py": "a5f07e747335c348d99abadbe70b124bc71be9df924397e2d2a894740abeb40b"
+    },
+    "run_id": "ny2025_ela_grade6-review",
+    "profile": "ny2025_ela_grade6",
+    "student_pages": 4,
+    "teacher_pages": 2,
+    "structural_checks": "PASS",
+    "academic_review": "NOT_VERIFIED",
+    "source_fidelity": "NOT_VERIFIED",
+    "visual_review": "NOT_VERIFIED",
+    "production_publications": 0,
+    "estimated_runtime_seconds": 5,
+    "rendering_seconds": 0.6473359000083292,
+    "actual_active_seconds": 0.7823738000006415,
+    "placements": [
+      {
+        "number": 1,
+        "source_number": 8,
+        "page": 2,
+        "top": 224,
+        "bottom": 349.00000000000017
+      },
+      {
+        "number": 2,
+        "source_number": 9,
+        "page": 2,
+        "top": 349.00000000000017,
+        "bottom": 440.70000000000033
+      },
+      {
+        "number": 3,
+        "source_number": 10,
+        "page": 2,
+        "top": 440.70000000000033,
+        "bottom": 576.8000000000005
+      },
+      {
+        "number": 4,
+        "source_number": 11,
+        "page": 2,
+        "top": 576.8000000000005,
+        "bottom": 679.6000000000007
+      },
+      {
+        "number": 5,
+        "source_number": 12,
+        "page": 2,
+        "top": 224,
+        "bottom": 326.8000000000001
+      },
+      {
+        "number": 6,
+        "source_number": 13,
+        "page": 2,
+        "top": 326.8000000000001,
+        "bottom": 396.30000000000024
+      },
+      {
+        "number": 7,
+        "source_number": 14,
+        "page": 2,
+        "top": 396.30000000000024,
+        "bottom": 554.6000000000005
+      },
+      {
+        "number": 8,
+        "source_number": 22,
+        "page": 4,
+        "top": 65,
+        "bottom": 145.59999999999997
+      },
+      {
+        "number": 9,
+        "source_number": 23,
+        "page": 4,
+        "top": 145.59999999999997,
+        "bottom": 294.79999999999995
+      },
+      {
+        "number": 10,
+        "source_number": 24,
+        "page": 4,
+        "top": 294.79999999999995,
+        "bottom": 419.8000000000002
+      },
+      {
+        "number": 11,
+        "source_number": 25,
+        "page": 4,
+        "top": 65,
+        "bottom": 178.89999999999995
+      },
+      {
+        "number": 12,
+        "source_number": 26,
+        "page": 4,
+        "top": 178.89999999999995,
+        "bottom": 259.4999999999999
+      },
+      {
+        "number": 13,
+        "source_number": 27,
+        "page": 4,
+        "top": 429.8000000000002,
+        "bottom": 543.1000000000003
+      },
+      {
+        "number": 14,
+        "source_number": 28,
+        "page": 4,
+        "top": 553.1000000000003,
+        "bottom": 666.4000000000003
+      }
+    ],
+    "artifacts": {
+      "student.pdf": "3204ffb8b6611f5f0cc00bf163bccdc35de494bde2cb20a830eb27c90d1bfec9",
+      "teacher.pdf": "030b3509fd823d9c52829fe5cee5cca6fe1dace28058a40d0220680cb5821faa",
+      "runspec.pdf": "97eabbbedf883a0cca91159b9a89a3bfe19d3982c14d1d047eec152e92693b7c",
+      "runspec.json": "3c66a01dae6951c0175f450bc8ff7c82eccbbdd356d3aefb1b84d541fbe503be"
+    },
+    "input_hashes": {
+      "source": "734c8ac722ece5fe182bcd36652c8ae8617124eccf03b6de16ae71c3244907ea",
+      "student_manifest": "d16890964b32ab2effef7a00521a28b4f6f9da143965081c7bd78bc9f6df0e0c",
+      "teacher_manifest": "70be54a433488c05722ef4ee03acc8f35423aa4fea49a229cbac1a5038cbfbb7"
+    }
+  },
+  {
+    "status": "REVIEW_REQUIRED",
+    "execution_revision": "494547190b5195c3e6f5d0d13956ddefd07536f2",
+    "implementation_hashes": {
+      "__init__.py": "5656cb5e95f1e7544987ff19c95aa9467b528ae7242198e7d4befa260c52c099",
+      "ela_student.py": "ce645ed15e20ce5b85d39a675055296796a09130f9f1c024313b3531498a52ab",
+      "ela_teacher.py": "1db3bf0bf2fcbb404f228e19b1f9b4512be2ebc1cb8881aca26d5721f56d6ec7",
+      "grade4_student.py": "dffac69ff2cfcdd6082ff46cc32f6dccf672bf786d8dab46877ac7ccaf618662",
+      "grade5_student.py": "3610b954678342c0ce4a4d2fb284bb5a5311c68f7d2c8edc538abf416d8337b5",
+      "item_map.py": "4fb2474e2cee8b416abd439bf691ad1cff8774fae84103a7306a6818abf7d7a6",
+      "run_benchmark.py": "2761a06276bc2a687bb0d1e08b18a0b94c8c2615f9cdced1d754e51b10163c13",
+      "source_render.py": "699998f8f28fcadc081fd33d54acd694439524b1b0a93dbe358309d0119ca1d2",
+      "teacher_key.py": "d54a3330906272aa565c3c2edd68890f00bd9b0d45643d2e1e17e1ddb3954e2d",
+      "verification.py": "a5f07e747335c348d99abadbe70b124bc71be9df924397e2d2a894740abeb40b"
+    },
+    "run_id": "ny2024_math_grade4-review",
+    "profile": "ny2024_math_grade4",
+    "student_pages": 4,
+    "teacher_pages": 1,
+    "structural_checks": "PASS",
+    "academic_review": "NOT_VERIFIED",
+    "source_fidelity": "NOT_VERIFIED",
+    "visual_review": "NOT_VERIFIED",
+    "production_publications": 0,
+    "estimated_runtime_seconds": 5,
+    "rendering_seconds": 0.2892862000007881,
+    "actual_active_seconds": 0.43047089999890886,
+    "placements": [
+      {
+        "item": 1,
+        "page": 1,
+        "column": 1,
+        "y": 62,
+        "height": 86.5
+      },
+      {
+        "item": 2,
+        "page": 1,
+        "column": 1,
+        "y": 148.5,
+        "height": 75.0
+      },
+      {
+        "item": 7,
+        "page": 1,
+        "column": 1,
+        "y": 223.5,
+        "height": 236.0
+      },
+      {
+        "item": 10,
+        "page": 1,
+        "column": 1,
+        "y": 459.5,
+        "height": 251.25
+      },
+      {
+        "item": 11,
+        "page": 1,
+        "column": 2,
+        "y": 62,
+        "height": 75.0
+      },
+      {
+        "item": 12,
+        "page": 1,
+        "column": 2,
+        "y": 137.0,
+        "height": 86.5
+      },
+      {
+        "item": 15,
+        "page": 1,
+        "column": 2,
+        "y": 223.5,
+        "height": 98.0
+      },
+      {
+        "item": 16,
+        "page": 1,
+        "column": 2,
+        "y": 321.5,
+        "height": 75.0
+      },
+      {
+        "item": 22,
+        "page": 1,
+        "column": 2,
+        "y": 396.5,
+        "height": 86.5
+      },
+      {
+        "item": 23,
+        "page": 1,
+        "column": 2,
+        "y": 483.0,
+        "height": 75.0
+      },
+      {
+        "item": 24,
+        "page": 1,
+        "column": 2,
+        "y": 558.0,
+        "height": 75.0
+      },
+      {
+        "item": 26,
+        "page": 2,
+        "column": "full",
+        "y": 62,
+        "height": 154.4712371826172
+      },
+      {
+        "item": 29,
+        "page": 2,
+        "column": 1,
+        "y": 216.4712371826172,
+        "height": 75.0
+      },
+      {
+        "item": 30,
+        "page": 2,
+        "column": 1,
+        "y": 291.4712371826172,
+        "height": 86.5
+      },
+      {
+        "item": 31,
+        "page": 2,
+        "column": 1,
+        "y": 377.9712371826172,
+        "height": 166.5
+      },
+      {
+        "item": 32,
+        "page": 2,
+        "column": 1,
+        "y": 544.4712371826172,
+        "height": 109.5
+      },
+      {
+        "item": 33,
+        "page": 2,
+        "column": 1,
+        "y": 653.9712371826172,
+        "height": 75.0
+      },
+      {
+        "item": 34,
+        "page": 2,
+        "column": 2,
+        "y": 216.4712371826172,
+        "height": 182.0
+      },
+      {
+        "item": 35,
+        "page": 2,
+        "column": 2,
+        "y": 398.4712371826172,
+        "height": 75.0
+      },
+      {
+        "item": 36,
+        "page": 2,
+        "column": 2,
+        "y": 473.4712371826172,
+        "height": 265.0
+      },
+      {
+        "item": 37,
+        "page": 3,
+        "column": 1,
+        "y": 62,
+        "height": 77.0
+      },
+      {
+        "item": 38,
+        "page": 3,
+        "column": 1,
+        "y": 139.0,
+        "height": 219.0
+      },
+      {
+        "item": 39,
+        "page": 3,
+        "column": 1,
+        "y": 358.0,
+        "height": 126.5
+      },
+      {
+        "item": 40,
+        "page": 3,
+        "column": 1,
+        "y": 484.5,
+        "height": 138.0
+      },
+      {
+        "item": 41,
+        "page": 3,
+        "column": 2,
+        "y": 62,
+        "height": 239.0
+      },
+      {
+        "item": 42,
+        "page": 4,
+        "column": 1,
+        "y": 62,
+        "height": 126.5
+      },
+      {
+        "item": 43,
+        "page": 4,
+        "column": 1,
+        "y": 188.5,
+        "height": 238.0
+      },
+      {
+        "item": 44,
+        "page": 4,
+        "column": 1,
+        "y": 426.5,
+        "height": 138.0
+      }
+    ],
+    "artifacts": {
+      "student.pdf": "85b96c6b499d06839096287e6dec61fc4cb1b312823c79b2614540c9d2c39b57",
+      "teacher.pdf": "1d38afacfc87ec23739fa45294e81bbdec5a9f0c695ac98cd4b88035ce5ef735",
+      "runspec.pdf": "b7725119d27512e7bc6d23452f11b7e622476f4ca88d3925d4641bfb31f09634",
+      "runspec.json": "53a2b4775e7d4694c578f15c3822bbbbf87a22cf2a144f053ec87863abaeec2c"
+    },
+    "input_hashes": {
+      "source": "88351089919b18dfc2f3dc5d64809d20aadd68d56a1dc38841a3387354b8c0f6",
+      "student_manifest": "ffe0bb61e3af61ec02f005df999ec06a60dd54f55e1be32692bbd69c2cfa5ac2",
+      "teacher_manifest": "8d53f7fa2779ab98d275ea6f00375609ab49f564690d5d4b449f62f9c54f386f"
+    }
+  },
+  {
+    "status": "REVIEW_REQUIRED",
+    "execution_revision": "494547190b5195c3e6f5d0d13956ddefd07536f2",
+    "implementation_hashes": {
+      "__init__.py": "5656cb5e95f1e7544987ff19c95aa9467b528ae7242198e7d4befa260c52c099",
+      "ela_student.py": "ce645ed15e20ce5b85d39a675055296796a09130f9f1c024313b3531498a52ab",
+      "ela_teacher.py": "1db3bf0bf2fcbb404f228e19b1f9b4512be2ebc1cb8881aca26d5721f56d6ec7",
+      "grade4_student.py": "dffac69ff2cfcdd6082ff46cc32f6dccf672bf786d8dab46877ac7ccaf618662",
+      "grade5_student.py": "3610b954678342c0ce4a4d2fb284bb5a5311c68f7d2c8edc538abf416d8337b5",
+      "item_map.py": "4fb2474e2cee8b416abd439bf691ad1cff8774fae84103a7306a6818abf7d7a6",
+      "run_benchmark.py": "2761a06276bc2a687bb0d1e08b18a0b94c8c2615f9cdced1d754e51b10163c13",
+      "source_render.py": "699998f8f28fcadc081fd33d54acd694439524b1b0a93dbe358309d0119ca1d2",
+      "teacher_key.py": "d54a3330906272aa565c3c2edd68890f00bd9b0d45643d2e1e17e1ddb3954e2d",
+      "verification.py": "a5f07e747335c348d99abadbe70b124bc71be9df924397e2d2a894740abeb40b"
+    },
+    "run_id": "ny2024_math_grade5-review",
+    "profile": "ny2024_math_grade5",
+    "student_pages": 3,
+    "teacher_pages": 1,
+    "structural_checks": "PASS",
+    "academic_review": "NOT_VERIFIED",
+    "source_fidelity": "NOT_VERIFIED",
+    "visual_review": "NOT_VERIFIED",
+    "production_publications": 0,
+    "estimated_runtime_seconds": 5,
+    "rendering_seconds": 0.3933617000002414,
+    "actual_active_seconds": 0.537747299997136,
+    "placements": [
+      {
+        "id": 1,
+        "page": 1,
+        "column": 1,
+        "y": 64,
+        "height": 98.0
+      },
+      {
+        "id": 2,
+        "page": 1,
+        "column": 1,
+        "y": 162.0,
+        "height": 75.0
+      },
+      {
+        "id": 3,
+        "page": 1,
+        "column": 1,
+        "y": 237.0,
+        "height": 181.75
+      },
+      {
+        "id": 4,
+        "page": 1,
+        "column": 1,
+        "y": 418.75,
+        "height": 75.0
+      },
+      {
+        "id": 7,
+        "page": 1,
+        "column": 1,
+        "y": 493.75,
+        "height": 98.0
+      },
+      {
+        "id": 9,
+        "page": 1,
+        "column": 2,
+        "y": 64,
+        "height": 270.5
+      },
+      {
+        "id": 10,
+        "page": 1,
+        "column": 2,
+        "y": 334.5,
+        "height": 98.0
+      },
+      {
+        "id": 12,
+        "page": 1,
+        "column": 2,
+        "y": 432.5,
+        "height": 98.0
+      },
+      {
+        "id": 15,
+        "page": 1,
+        "column": 2,
+        "y": 530.5,
+        "height": 132.5
+      },
+      {
+        "id": 16,
+        "page": 1,
+        "column": 2,
+        "y": 663.0,
+        "height": 75.0
+      },
+      {
+        "id": 19,
+        "page": 2,
+        "column": 1,
+        "y": 64,
+        "height": 132.5
+      },
+      {
+        "id": 27,
+        "page": 2,
+        "column": 1,
+        "y": 196.5,
+        "height": 75.0
+      },
+      {
+        "id": 28,
+        "page": 2,
+        "column": 1,
+        "y": 271.5,
+        "height": 98.0
+      },
+      {
+        "id": 30,
+        "page": 2,
+        "column": 1,
+        "y": 369.5,
+        "height": 86.5
+      },
+      {
+        "id": 31,
+        "page": 2,
+        "column": 1,
+        "y": 456.0,
+        "height": 98.0
+      },
+      {
+        "id": 32,
+        "page": 2,
+        "column": 1,
+        "y": 554.0,
+        "height": 86.5
+      },
+      {
+        "id": 33,
+        "page": 2,
+        "column": 1,
+        "y": 640.5,
+        "height": 98.0
+      },
+      {
+        "id": 34,
+        "page": 2,
+        "column": 2,
+        "y": 64,
+        "height": 109.5
+      },
+      {
+        "id": 35,
+        "page": 2,
+        "column": 2,
+        "y": 173.5,
+        "height": 86.5
+      },
+      {
+        "id": 36,
+        "page": 2,
+        "column": 2,
+        "y": 260.0,
+        "height": 164.5
+      },
+      {
+        "id": 37,
+        "page": 2,
+        "column": 2,
+        "y": 424.5,
+        "height": 130.0
+      },
+      {
+        "id": 38,
+        "page": 2,
+        "column": 2,
+        "y": 554.5,
+        "height": 107.0
+      },
+      {
+        "id": 39,
+        "page": 3,
+        "column": 1,
+        "y": 64,
+        "height": 302.0
+      },
+      {
+        "id": 40,
+        "page": 3,
+        "column": 1,
+        "y": 366.0,
+        "height": 258.5
+      },
+      {
+        "id": 41,
+        "page": 3,
+        "column": 1,
+        "y": 624.5,
+        "height": 114.0
+      },
+      {
+        "id": 42,
+        "page": 3,
+        "column": 2,
+        "y": 64,
+        "height": 148.5
+      },
+      {
+        "id": 43,
+        "page": 3,
+        "column": 2,
+        "y": 212.5,
+        "height": 274.79999999999995
+      },
+      {
+        "id": 44,
+        "page": 3,
+        "column": 2,
+        "y": 487.29999999999995,
+        "height": 141.5
+      }
+    ],
+    "artifacts": {
+      "student.pdf": "468c731911bb959571fcdde9c0fdd41059c056d067bd6bc078e71c194bd03c40",
+      "teacher.pdf": "ac61fdca877c4b81553a179287c1c12627ef87684ee17d53399fc406cc5583fc",
+      "runspec.pdf": "5e7f993aa0004f5aded15c51e4321bff7a16cf6927ae77f0c11fd05bfefd64cd",
+      "runspec.json": "5af297aba7ac5827b9ad3f71f2072428fd1eb9d55781fe3bb10d1def0f5cb774"
+    },
+    "input_hashes": {
+      "source": "96bc4dca01185cda99056c98391ac85d41ecf7595b2b3ec29f7595b7e7b91f93",
+      "student_manifest": "e27e3f51f4687e9432c8b3ec0bba83a980db7d2222dfadf514091cd36dee654d",
+      "teacher_manifest": "9aa3115e7edbf7f36cd7648c4c26485ef66d5c6262f7b3d2806c0425f72c8884"
+    }
+  }
+]
