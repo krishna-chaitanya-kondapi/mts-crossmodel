@@ -1,10 +1,10 @@
 # Generate mock assessment
 
-**Status:** Proposed target specification, 2026-11-18. Consolidates earlier Math/ELA benchmark and diagnostic workflows and the latest conversation decisions. Historical details are conversation-derived, not independently audited against all original PDFs or code.
+**Status:** The initial three-profile historical source-based benchmark milestone is verified: 76/76 mandatory criteria. The revised swimlane reflects that implemented scope and the pending human release boundary. Broader diagnostic, custom, generated and hybrid capabilities described below remain target specifications. See [the verification report](../../outputs/verification-report.md).
 
 ![End-to-end swimlane](./end-to-end-swimlane.svg)
 
-[Open scalable swimlane](./end-to-end-swimlane.svg) | [Configuration and presentation](./configuration.md) | [Verification and regression](./verification.md)
+[Open scalable swimlane](./end-to-end-swimlane.svg) | [Diagram guide](./end-to-end-swimlane.md) | [Configuration and presentation](./configuration.md) | [Verification and regression](./verification.md)
 
 ## Purpose and architecture
 
@@ -81,18 +81,15 @@ Keep working manifests/source evidence in designated working/evidence locations.
 
 Capture estimated/actual active runtime, human wait, phase/step, retries, status and evidence from initialization; missing metrics are unknown. Inner loop: generate, verify, repair, reverify. Outer loop: retrospective, root cause, improvement, regression, next RunSpec.
 
-## Current local review CLI
+## Implemented benchmark execution
 
-The standalone render modes are development tools, not the complete assessment workflow and not a
-publication path. The ELA student mode accepts an explicit source PDF and hash-bound source-region
-manifest, then writes a student PDF and placement JSON:
+The independent runner supports the three frozen historical source-based profiles:
 
-    python scripts/generate_mock_assessment.py ela-student --source <source.pdf> --manifest <regions.json> --output <student.pdf> --placements <placements.json>
+    python scripts/generate_mock_assessment.py run --runspec specs/generate_mock_assessment/fixtures/ny2025_ela_grade6-runspec.json --source-root <sources> --output-root <review-root>
 
-The command is integration-tested with a synthetic source. A source-verified ELA student manifest
-and its historical four-page reproduction are still open. The Grade 4 Math fixture explicitly starts
-its final item group at Q42 to use the fourth page; Q26 remains a full-width block. The ELA teacher
-mode renders the recovered YPQA review manifest only. Neither mode approves or publishes artifacts.
+The analogous Math profiles are ny2024_math_grade4 and ny2024_math_grade5. Validation, source-bound rendering, structural checks, runtime/evidence persistence and exact-match review carryforward are implemented. Fresh academic/source/visual reviews are agent-driven and must be recorded before a changed or unknown candidate can pass. Release additionally requires complete matching development evidence and human approval of the exact student/key PDFs.
+
+See [the implemented workflow](../../workflows/generate-mock-assessment.md), [diagram guide](end-to-end-swimlane.md), [dashboard](../../outputs/dashboard.md) and [takeover guide](resume/START_HERE.md). The broader feature priorities below do not change the verified initial milestone's scope.
 
 ## Implementation priorities
 

@@ -1,1 +1,202 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1460" role="img" aria-label="Mock assessment end-to-end swimlane"><defs><marker id="a" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0L7 3.5L0 7Z" fill="#64748b"/></marker><marker id="r" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0L7 3.5L0 7Z" fill="#b45309"/></marker></defs><rect width="1200" height="1460" fill="#fff"/><g font-family="Arial,sans-serif"><text x="20" y="28" font-size="20" font-weight="bold" fill="#17365b">MTS | Generate mock assessment — proposed target process</text><rect x="101" y="42" width="180" height="1400" rx="5" fill="#f8fafc" stroke="#dbe3ed"/><rect x="101" y="42" width="180" height="32" rx="4" fill="#294c70"/><text x="191" y="62" fill="white" text-anchor="middle" font-size="13">Human</text><rect x="283" y="42" width="180" height="1400" rx="5" fill="#f1f5f9" stroke="#dbe3ed"/><rect x="283" y="42" width="180" height="32" rx="4" fill="#294c70"/><text x="373" y="62" fill="white" text-anchor="middle" font-size="13">AI / LLM</text><rect x="465" y="42" width="180" height="1400" rx="5" fill="#f8fafc" stroke="#dbe3ed"/><rect x="465" y="42" width="180" height="32" rx="4" fill="#294c70"/><text x="555" y="62" fill="white" text-anchor="middle" font-size="13">Harness</text><rect x="647" y="42" width="180" height="1400" rx="5" fill="#f1f5f9" stroke="#dbe3ed"/><rect x="647" y="42" width="180" height="32" rx="4" fill="#294c70"/><text x="737" y="62" fill="white" text-anchor="middle" font-size="13">Code / tools</text><rect x="829" y="42" width="180" height="1400" rx="5" fill="#f8fafc" stroke="#dbe3ed"/><rect x="829" y="42" width="180" height="32" rx="4" fill="#294c70"/><text x="919" y="62" fill="white" text-anchor="middle" font-size="13">Storage / knowledge</text><rect x="1011" y="42" width="180" height="1400" rx="5" fill="#f1f5f9" stroke="#dbe3ed"/><rect x="1011" y="42" width="180" height="32" rx="4" fill="#294c70"/><text x="1101" y="62" fill="white" text-anchor="middle" font-size="13">External automation</text><rect x="12" y="80" width="80" height="414" rx="6" fill="#dbeafe"/><text transform="translate(52 287) rotate(-90)" text-anchor="middle" font-size="15" font-weight="bold" fill="#334155">01 PreRun</text><rect x="12" y="510" width="80" height="607" rx="6" fill="#d1fae5"/><text transform="translate(52 813.5) rotate(-90)" text-anchor="middle" font-size="15" font-weight="bold" fill="#334155">02 Run</text><rect x="12" y="1130" width="80" height="310" rx="6" fill="#ede9fe"/><text transform="translate(52 1285) rotate(-90)" text-anchor="middle" font-size="15" font-weight="bold" fill="#334155">03 PostRun</text><path d="M191 127 V136 H555 V145" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#a)"/><path d="M555 187 V196 H919 V205" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#a)"/><path d="M919 247 V256 H373 V265" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#a)"/><path d="M373 307 V316 H737 V325" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#a)"/><path d="M737 367 V376 H555 V385" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#a)"/><path d="M555 427 V436 H191 V445" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#a)"/><path d="M191 487 V506 H555 V525" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#a)"/><path d="M555 567 V576 H373 V585" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#a)"/><path d="M373 627 V636 H919 V645" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#a)"/><path d="M919 687 V696 H373 V705" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#a)"/><path d="M373 747 V756 H737 V765" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#a)"/><path d="M737 807 V816 H555 V825" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#a)"/><path d="M555 867 V876 H737 V885" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#a)"/><path d="M737 927 V936 H737 V945" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#a)"/><path d="M737 987 V996 H373 V1005" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#a)"/><path d="M373 1047 V1056 H555 V1065" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#a)"/><path d="M555 1107 V1126 H191 V1145" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#a)"/><path d="M191 1187 V1196 H737 V1205" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#a)"/><path d="M737 1247 V1256 H919 V1265" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#a)"/><path d="M919 1307 V1316 H1101 V1325" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#a)"/><path d="M919 1307 V1375 H373 V1385" stroke="#64748b" fill="none" marker-end="url(#a)"/><rect x="106" y="85" width="170" height="42" rx="6" fill="#e0edf8" stroke="#537a9f"/><text x="191" y="110" font-size="11" text-anchor="middle" fill="#172b44">Request assessment</text><rect x="470" y="145" width="170" height="42" rx="6" fill="#e0edf8" stroke="#537a9f"/><text x="555" y="170" font-size="11" text-anchor="middle" fill="#172b44">Initialize / load context</text><rect x="834" y="205" width="170" height="42" rx="6" fill="#e0edf8" stroke="#537a9f"/><text x="919" y="230" font-size="11" text-anchor="middle" fill="#172b44">Standards, sources, history</text><rect x="288" y="265" width="170" height="42" rx="6" fill="#e0edf8" stroke="#537a9f"/><text x="373" y="290" font-size="11" text-anchor="middle" fill="#172b44">Resolve dimensions / blueprint</text><rect x="652" y="325" width="170" height="42" rx="6" fill="#e0edf8" stroke="#537a9f"/><text x="737" y="350" font-size="11" text-anchor="middle" fill="#172b44">Source inventory / preflight</text><rect x="470" y="385" width="170" height="42" rx="6" fill="#e0edf8" stroke="#537a9f"/><text x="555" y="410" font-size="11" text-anchor="middle" fill="#172b44">Assemble RunSpec + estimate</text><rect x="106" y="445" width="170" height="42" rx="6" fill="#fef3c7" stroke="#b45309"/><text x="191" y="470" font-size="11" text-anchor="middle" fill="#172b44">G1: approve RunSpec</text><rect x="470" y="525" width="170" height="42" rx="6" fill="#e0edf8" stroke="#537a9f"/><text x="555" y="550" font-size="11" text-anchor="middle" fill="#172b44">Dispatch approved scope</text><rect x="288" y="585" width="170" height="42" rx="6" fill="#e0edf8" stroke="#537a9f"/><text x="373" y="610" font-size="11" text-anchor="middle" fill="#172b44">Select / generate items + keys</text><rect x="834" y="645" width="170" height="42" rx="6" fill="#e0edf8" stroke="#537a9f"/><text x="919" y="670" font-size="11" text-anchor="middle" fill="#172b44">Canonical manifests</text><rect x="288" y="705" width="170" height="42" rx="6" fill="#e0edf8" stroke="#537a9f"/><text x="373" y="730" font-size="11" text-anchor="middle" fill="#172b44">Independent semantic review</text><rect x="652" y="765" width="170" height="42" rx="6" fill="#e0edf8" stroke="#537a9f"/><text x="737" y="790" font-size="11" text-anchor="middle" fill="#172b44">Recompute / objective checks</text><rect x="470" y="825" width="170" height="42" rx="6" fill="#fef3c7" stroke="#b45309"/><text x="555" y="850" font-size="11" text-anchor="middle" fill="#172b44">Q1: content gate</text><rect x="652" y="885" width="170" height="42" rx="6" fill="#e0edf8" stroke="#537a9f"/><text x="737" y="910" font-size="11" text-anchor="middle" fill="#172b44">Pack, scale, render PDFs</text><rect x="652" y="945" width="170" height="42" rx="6" fill="#fef3c7" stroke="#b45309"/><text x="737" y="970" font-size="11" text-anchor="middle" fill="#172b44">Q2: structural QA</text><rect x="288" y="1005" width="170" height="42" rx="6" fill="#fef3c7" stroke="#b45309"/><text x="373" y="1030" font-size="11" text-anchor="middle" fill="#172b44">Q3: visual QA</text><rect x="470" y="1065" width="170" height="42" rx="6" fill="#e0edf8" stroke="#537a9f"/><text x="555" y="1090" font-size="11" text-anchor="middle" fill="#172b44">Stage verified candidate</text><rect x="106" y="1145" width="170" height="42" rx="6" fill="#fef3c7" stroke="#b45309"/><text x="191" y="1170" font-size="11" text-anchor="middle" fill="#172b44">G2: approve release</text><rect x="652" y="1205" width="170" height="42" rx="6" fill="#e0edf8" stroke="#537a9f"/><text x="737" y="1230" font-size="11" text-anchor="middle" fill="#172b44">Publish / readback</text><rect x="834" y="1265" width="170" height="42" rx="6" fill="#e0edf8" stroke="#537a9f"/><text x="919" y="1290" font-size="11" text-anchor="middle" fill="#172b44">Archive / PrintReady / logs</text><rect x="1016" y="1325" width="170" height="42" rx="6" fill="#e0edf8" stroke="#537a9f"/><text x="1101" y="1350" font-size="11" text-anchor="middle" fill="#172b44">Independent printing</text><rect x="288" y="1385" width="170" height="42" rx="6" fill="#e0edf8" stroke="#537a9f"/><text x="373" y="1410" font-size="11" text-anchor="middle" fill="#172b44">Retrospective / improvement</text><path d="M106 466 H99 V286 H288" stroke="#b45309" stroke-width="1.4" stroke-dasharray="5 4" fill="none" marker-end="url(#r)"/><text x="97" y="460" text-anchor="end" font-size="10" fill="#92400e">Reject</text><path d="M470 846 H463 V606 H288" stroke="#b45309" stroke-width="1.4" stroke-dasharray="5 4" fill="none" marker-end="url(#r)"/><text x="461" y="840" text-anchor="end" font-size="10" fill="#92400e">Repair items</text><path d="M288 1026 H281 V906 H652" stroke="#b45309" stroke-width="1.4" stroke-dasharray="5 4" fill="none" marker-end="url(#r)"/><text x="279" y="1020" text-anchor="end" font-size="10" fill="#92400e">Re-render</text><path d="M106 1166 H99 V1026 H288" stroke="#b45309" stroke-width="1.4" stroke-dasharray="5 4" fill="none" marker-end="url(#r)"/><text x="97" y="1160" text-anchor="end" font-size="10" fill="#92400e">Reject / reverify</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="2560" viewBox="0 0 1680 2560" role="img" aria-label="Implemented MTS Mock Assessment end-to-end process flow with six responsibility swimlanes">
+<title>MTS Mock Assessment — implemented end-to-end workflow</title>
+<desc>Six vertical lanes show human, AI, orchestrator, code, storage and external printing responsibilities across PreRun, Run and PostRun. Exact reviewed baselines may reuse completed reviews. Otherwise fresh review and repair are required. All mandatory criteria and explicit human approval precede production release.</desc>
+<rect width="1680" height="2560" fill="#fff"/><g font-family="Arial, Helvetica, sans-serif">
+<text x="28" y="41" font-size="29" fill="#17365b" text-anchor="start" font-weight="bold">MTS | Mock Assessment — end-to-end process flow</text>
+<text x="28" y="72" font-size="18" fill="#17365b" text-anchor="start" font-weight="normal">Implemented historical source-based benchmarks · Math Grades 4/5 + ELA Grade 6</text>
+<text x="1652" y="72" font-size="16" fill="#64748b" text-anchor="end" font-weight="normal">Checkpoint 27 | 18 Nov 2026</text>
+<text x="1652" y="101" font-size="16" fill="#166534" text-anchor="end" font-weight="normal">76/76 mandatory verified · current position: human review · no production publication</text>
+<rect x="100" y="118" width="250" height="2335" rx="6" fill="#f8fafc" stroke="#dbe3ed"/>
+<rect x="100" y="118" width="250" height="40" rx="5" fill="#294c70"/>
+<text x="225" y="144" font-size="18" fill="white" text-anchor="middle" font-weight="normal">Human</text>
+<rect x="362" y="118" width="250" height="2335" rx="6" fill="#f1f5f9" stroke="#dbe3ed"/>
+<rect x="362" y="118" width="250" height="40" rx="5" fill="#294c70"/>
+<text x="487" y="144" font-size="18" fill="white" text-anchor="middle" font-weight="normal">AI / review agent</text>
+<rect x="624" y="118" width="250" height="2335" rx="6" fill="#f8fafc" stroke="#dbe3ed"/>
+<rect x="624" y="118" width="250" height="40" rx="5" fill="#294c70"/>
+<text x="749" y="144" font-size="18" fill="white" text-anchor="middle" font-weight="normal">Harness / orchestrator</text>
+<rect x="886" y="118" width="250" height="2335" rx="6" fill="#f1f5f9" stroke="#dbe3ed"/>
+<rect x="886" y="118" width="250" height="40" rx="5" fill="#294c70"/>
+<text x="1011" y="144" font-size="18" fill="white" text-anchor="middle" font-weight="normal">Code / PDF tools</text>
+<rect x="1148" y="118" width="250" height="2335" rx="6" fill="#f8fafc" stroke="#dbe3ed"/>
+<rect x="1148" y="118" width="250" height="40" rx="5" fill="#294c70"/>
+<text x="1273" y="144" font-size="18" fill="white" text-anchor="middle" font-weight="normal">Storage / evidence</text>
+<rect x="1410" y="118" width="250" height="2335" rx="6" fill="#f1f5f9" stroke="#dbe3ed"/>
+<rect x="1410" y="118" width="250" height="40" rx="5" fill="#294c70"/>
+<text x="1535" y="144" font-size="18" fill="white" text-anchor="middle" font-weight="normal">External automation</text>
+<rect x="16" y="175" width="64" height="570" rx="7" fill="#dbeafe"/>
+<text transform="translate(55 460.0) rotate(-90)" font-size="21" text-anchor="middle" font-weight="bold" fill="#334155">01 PreRun</text>
+<rect x="16" y="770" width="64" height="760" rx="7" fill="#d1fae5"/>
+<text transform="translate(55 1150.0) rotate(-90)" font-size="21" text-anchor="middle" font-weight="bold" fill="#334155">02 Run</text>
+<rect x="16" y="1555" width="64" height="898" rx="7" fill="#ede9fe"/>
+<text transform="translate(55 2004.0) rotate(-90)" font-size="21" text-anchor="middle" font-weight="bold" fill="#334155">03 PostRun</text>
+<polyline points="225,245 225,260.0 749,260.0 749,275" fill="none" stroke="#64748b" stroke-width="2.2" stroke-linejoin="round"/>
+<polygon points="749,275 744,265 754,265" fill="#64748b"/>
+<polyline points="749,345 749,360.0 1273,360.0 1273,375" fill="none" stroke="#64748b" stroke-width="2.2" stroke-linejoin="round"/>
+<polygon points="1273,375 1268,365 1278,365" fill="#64748b"/>
+<polyline points="1273,445 1273,460.0 1011,460.0 1011,475" fill="none" stroke="#64748b" stroke-width="2.2" stroke-linejoin="round"/>
+<polygon points="1011,475 1006,465 1016,465" fill="#64748b"/>
+<polyline points="1011,545 1011,560.0 749,560.0 749,575" fill="none" stroke="#64748b" stroke-width="2.2" stroke-linejoin="round"/>
+<polygon points="749,575 744,565 754,565" fill="#64748b"/>
+<polyline points="749,645 749,655.0 1273,655.0 1273,665" fill="none" stroke="#64748b" stroke-width="2.2" stroke-linejoin="round"/>
+<polygon points="1273,665 1268,655 1278,655" fill="#64748b"/>
+<polyline points="1273,735 1273,760.0 1011,760.0 1011,785" fill="none" stroke="#64748b" stroke-width="2.2" stroke-linejoin="round"/>
+<polygon points="1011,785 1006,775 1016,775" fill="#64748b"/>
+<polyline points="1011,855 1011,885" fill="none" stroke="#64748b" stroke-width="2.2" stroke-linejoin="round"/>
+<polygon points="1011,885 1006,875 1016,875" fill="#64748b"/>
+<polyline points="1011,955 1011,969.5 749,969.5 749,984" fill="none" stroke="#64748b" stroke-width="2.2" stroke-linejoin="round"/>
+<polygon points="749,984 744,974 754,974" fill="#64748b"/>
+<polyline points="640,1030 487,1030 487,1120" fill="none" stroke="#64748b" stroke-width="2.2" stroke-linejoin="round"/>
+<polygon points="487,1120 482,1110 492,1110" fill="#64748b"/>
+<rect x="469.5" y="999" width="121.0" height="21" rx="4" fill="#fff"/>
+<text x="530" y="1014" font-size="14" fill="#64748b" text-anchor="middle" font-weight="normal">No exact match</text>
+<polyline points="858,1030 1273,1030 1273,1120" fill="none" stroke="#64748b" stroke-width="2.2" stroke-linejoin="round"/>
+<polygon points="1273,1120 1268,1110 1278,1110" fill="#64748b"/>
+<rect x="1045.75" y="999" width="98.5" height="21" rx="4" fill="#fff"/>
+<text x="1095" y="1014" font-size="14" fill="#64748b" text-anchor="middle" font-weight="normal">Exact match</text>
+<polyline points="487,1190 487,1210 749,1210 749,1339" fill="none" stroke="#64748b" stroke-width="2.2" stroke-linejoin="round"/>
+<polygon points="749,1339 744,1329 754,1329" fill="#64748b"/>
+<polyline points="1273,1190 1273,1385 858,1385" fill="none" stroke="#64748b" stroke-width="2.2" stroke-linejoin="round"/>
+<polygon points="858,1385 868,1380 868,1390" fill="#64748b"/>
+<rect x="1009.5" y="1353" width="181.0" height="21" rx="4" fill="#fff"/>
+<text x="1100" y="1368" font-size="14" fill="#166534" text-anchor="middle" font-weight="normal">Reviewed baseline PASS</text>
+<polyline points="640,1385 620,1385 620,1270 596,1270" fill="none" stroke="#b45309" stroke-width="2.2" stroke-linejoin="round" stroke-dasharray="7 5"/>
+<polygon points="596,1270 606,1265 606,1275" fill="#b45309"/>
+<rect x="597.0" y="1341" width="46.0" height="21" rx="4" fill="#fff"/>
+<text x="620" y="1356" font-size="14" fill="#b45309" text-anchor="middle" font-weight="normal">Fail</text>
+<polyline points="378,1270 94,1270 94,768 1011,768 1011,785" fill="none" stroke="#b45309" stroke-width="2.2" stroke-linejoin="round" stroke-dasharray="7 5"/>
+<polygon points="1011,785 1006,775 1016,775" fill="#b45309"/>
+<rect x="346.75" y="742" width="278.5" height="21" rx="4" fill="#fff"/>
+<text x="486" y="757" font-size="14" fill="#b45309" text-anchor="middle" font-weight="normal">Repair loop: render and check again</text>
+<polyline points="749,1431 749,1440.5 1273,1440.5 1273,1450" fill="none" stroke="#64748b" stroke-width="2.2" stroke-linejoin="round"/>
+<polygon points="1273,1450 1268,1440 1278,1440" fill="#64748b"/>
+<text x="771" y="1433.5" font-size="14" fill="#17365b" text-anchor="start" font-weight="normal">Pass</text>
+<polyline points="1273,1520 1273,1542.0 749,1542.0 749,1564" fill="none" stroke="#64748b" stroke-width="2.2" stroke-linejoin="round"/>
+<polygon points="749,1564 744,1554 754,1554" fill="#64748b"/>
+<polyline points="858,1610 1164,1610" fill="none" stroke="#b45309" stroke-width="2.2" stroke-linejoin="round" stroke-dasharray="7 5"/>
+<polygon points="1164,1610 1154,1605 1154,1615" fill="#b45309"/>
+<rect x="905.75" y="1579" width="188.5" height="21" rx="4" fill="#fff"/>
+<text x="1000" y="1594" font-size="14" fill="#b45309" text-anchor="middle" font-weight="normal">Fail / missing evidence</text>
+<polyline points="749,1656 749,1690" fill="none" stroke="#64748b" stroke-width="2.2" stroke-linejoin="round"/>
+<polygon points="749,1690 744,1680 754,1680" fill="#64748b"/>
+<text x="771" y="1666.0" font-size="14" fill="#17365b" text-anchor="start" font-weight="normal">Pass</text>
+<polyline points="749,1760 749,1777.0 225,1777.0 225,1794" fill="none" stroke="#64748b" stroke-width="2.2" stroke-linejoin="round"/>
+<polygon points="225,1794 220,1784 230,1784" fill="#64748b"/>
+<polyline points="334,1840 356,1840 356,1270 378,1270" fill="none" stroke="#b45309" stroke-width="2.2" stroke-linejoin="round" stroke-dasharray="7 5"/>
+<polygon points="378,1270 368,1265 368,1275" fill="#b45309"/>
+<rect x="282.25" y="1675" width="143.5" height="21" rx="4" fill="#fff"/>
+<text x="354" y="1690" font-size="14" fill="#b45309" text-anchor="middle" font-weight="normal">Changes requested</text>
+<polyline points="225,1886 225,1900.0 1011,1900.0 1011,1914" fill="none" stroke="#64748b" stroke-width="2.2" stroke-linejoin="round"/>
+<polygon points="1011,1914 1006,1904 1016,1904" fill="#64748b"/>
+<rect x="597.0" y="1877" width="286.0" height="21" rx="4" fill="#fff"/>
+<text x="740" y="1892" font-size="14" fill="#166534" text-anchor="middle" font-weight="normal">Explicit approval of both PDF hashes</text>
+<polyline points="1120,1960 1142,1960 1142,1648 1273,1648 1273,1645" fill="none" stroke="#b45309" stroke-width="2.2" stroke-linejoin="round" stroke-dasharray="7 5"/>
+<polygon points="1273,1645 1268,1655 1278,1655" fill="#b45309"/>
+<rect x="1163.25" y="1885" width="113.5" height="21" rx="4" fill="#fff"/>
+<text x="1220" y="1900" font-size="14" fill="#b45309" text-anchor="middle" font-weight="normal">Invalid: stop</text>
+<polyline points="1011,2006 1011,2040" fill="none" stroke="#64748b" stroke-width="2.2" stroke-linejoin="round"/>
+<polygon points="1011,2040 1006,2030 1016,2030" fill="#64748b"/>
+<text x="1033" y="2016.0" font-size="14" fill="#17365b" text-anchor="start" font-weight="normal">Valid</text>
+<polyline points="1120,2075 1164,2075" fill="none" stroke="#b45309" stroke-width="2.2" stroke-linejoin="round" stroke-dasharray="7 5"/>
+<polygon points="1164,2075 1154,2070 1154,2080" fill="#b45309"/>
+<polyline points="1011,2110 1011,2132.5 1273,2132.5 1273,2155" fill="none" stroke="#64748b" stroke-width="2.2" stroke-linejoin="round"/>
+<polygon points="1273,2155 1268,2145 1278,2145" fill="#64748b"/>
+<text x="1033" y="2125.5" font-size="14" fill="#17365b" text-anchor="start" font-weight="normal">Verified</text>
+<polyline points="1273,2225 1273,2247.5 1535,2247.5 1535,2270" fill="none" stroke="#64748b" stroke-width="2.2" stroke-linejoin="round"/>
+<polygon points="1535,2270 1530,2260 1540,2260" fill="#64748b"/>
+<polyline points="1273,2225 1273,2370" fill="none" stroke="#64748b" stroke-width="2.2" stroke-linejoin="round"/>
+<polygon points="1273,2370 1268,2360 1278,2360" fill="#64748b"/>
+<polyline points="1164,2405 596,2405" fill="none" stroke="#64748b" stroke-width="2.2" stroke-linejoin="round"/>
+<polygon points="596,2405 606,2400 606,2410" fill="#64748b"/>
+<polyline points="1120,510 1668,510 1668,1610 1382,1610" fill="none" stroke="#b45309" stroke-width="2.2" stroke-linejoin="round" stroke-dasharray="7 5"/>
+<polygon points="1382,1610 1392,1605 1392,1615" fill="#b45309"/>
+<rect x="1379.5" y="478" width="271.0" height="21" rx="4" fill="#fff"/>
+<text x="1515" y="493" font-size="14" fill="#b45309" text-anchor="middle" font-weight="normal">Invalid source / unsupported scope</text>
+<rect x="116" y="175" width="218" height="70" rx="7" fill="#e0edf8" stroke="#537a9f" stroke-width="1.6"/>
+<text x="225" y="205" font-size="16" fill="#17365b" text-anchor="middle" font-weight="bold">Approved scope</text>
+<text x="225" y="228" font-size="16" fill="#17365b" text-anchor="middle" font-weight="normal">Math G4/G5 or ELA G6</text>
+<rect x="640" y="275" width="218" height="70" rx="7" fill="#e0edf8" stroke="#537a9f" stroke-width="1.6"/>
+<text x="749" y="305" font-size="16" fill="#17365b" text-anchor="middle" font-weight="bold">Initialize or resume</text>
+<text x="749" y="328" font-size="16" fill="#17365b" text-anchor="middle" font-weight="normal">checkpoint + saved profile</text>
+<rect x="1164" y="375" width="218" height="70" rx="7" fill="#e0edf8" stroke="#537a9f" stroke-width="1.6"/>
+<text x="1273" y="405" font-size="15.233950020119927" fill="#17365b" text-anchor="middle" font-weight="bold">Original sources + goldens</text>
+<text x="1273" y="428" font-size="16" fill="#17365b" text-anchor="middle" font-weight="normal">restore only when needed</text>
+<rect x="902" y="475" width="218" height="70" rx="7" fill="#e0edf8" stroke="#537a9f" stroke-width="1.6"/>
+<text x="1011" y="505" font-size="15.30054651643281" fill="#17365b" text-anchor="middle" font-weight="bold">Validate source + blueprint</text>
+<text x="1011" y="528" font-size="16" fill="#17365b" text-anchor="middle" font-weight="normal">selection, dates, print limits</text>
+<rect x="640" y="575" width="218" height="70" rx="7" fill="#e0edf8" stroke="#537a9f" stroke-width="1.6"/>
+<text x="749" y="605" font-size="16" fill="#17365b" text-anchor="middle" font-weight="bold">Validate saved RunSpec</text>
+<text x="749" y="628" font-size="16" fill="#17365b" text-anchor="middle" font-weight="normal">record runtime estimate</text>
+<rect x="1164" y="665" width="218" height="70" rx="7" fill="#eef2ff" stroke="#7185ad" stroke-width="1.6"/>
+<text x="1273" y="695" font-size="16" fill="#17365b" text-anchor="middle" font-weight="bold">01-PreRun</text>
+<text x="1273" y="718" font-size="16" fill="#17365b" text-anchor="middle" font-weight="normal">RunSpec JSON + PDF</text>
+<rect x="902" y="785" width="218" height="70" rx="7" fill="#e0edf8" stroke="#537a9f" stroke-width="1.6"/>
+<text x="1011" y="815" font-size="16" fill="#17365b" text-anchor="middle" font-weight="bold">Generate student + key</text>
+<text x="1011" y="838" font-size="15.005359152119862" fill="#17365b" text-anchor="middle" font-weight="normal">dedicated Math / ELA profiles</text>
+<rect x="902" y="885" width="218" height="70" rx="7" fill="#e0edf8" stroke="#537a9f" stroke-width="1.6"/>
+<text x="1011" y="915" font-size="16" fill="#17365b" text-anchor="middle" font-weight="bold">Fresh structural checks</text>
+<text x="1011" y="938" font-size="16" fill="#17365b" text-anchor="middle" font-weight="normal">items, keys, bounds, pages</text>
+<polygon points="749,984 858,1030 749,1076 640,1030" fill="#fef3c7" stroke="#b45309" stroke-width="1.7"/>
+<text x="749" y="1025" font-size="14" fill="#17365b" text-anchor="middle" font-weight="normal">Exact baseline</text>
+<text x="749" y="1047" font-size="14" fill="#17365b" text-anchor="middle" font-weight="normal">match?</text>
+<rect x="378" y="1120" width="218" height="70" rx="7" fill="#e0edf8" stroke="#537a9f" stroke-width="1.6"/>
+<text x="487" y="1150" font-size="15.887168740373157" fill="#17365b" text-anchor="middle" font-weight="bold">Fresh independent review</text>
+<text x="487" y="1173" font-size="15.332864040592224" fill="#17365b" text-anchor="middle" font-weight="normal">answers, source, every page</text>
+<rect x="1164" y="1120" width="218" height="70" rx="7" fill="#dcfce7" stroke="#4d9470" stroke-width="1.6"/>
+<text x="1273" y="1150" font-size="16" fill="#17365b" text-anchor="middle" font-weight="bold">Reuse completed reviews</text>
+<text x="1273" y="1173" font-size="16" fill="#17365b" text-anchor="middle" font-weight="normal">only with intact exact proof</text>
+<rect x="378" y="1235" width="218" height="70" rx="7" fill="#fff1e6" stroke="#b45309" stroke-width="1.6"/>
+<text x="487" y="1265" font-size="16" fill="#17365b" text-anchor="middle" font-weight="bold">Repair content or layout</text>
+<text x="487" y="1288" font-size="16" fill="#17365b" text-anchor="middle" font-weight="normal">re-render and reverify</text>
+<polygon points="749,1339 858,1385 749,1431 640,1385" fill="#fef3c7" stroke="#b45309" stroke-width="1.7"/>
+<text x="749" y="1380" font-size="14" fill="#17365b" text-anchor="middle" font-weight="normal">Per-run quality</text>
+<text x="749" y="1402" font-size="14" fill="#17365b" text-anchor="middle" font-weight="normal">all PASS?</text>
+<rect x="1164" y="1450" width="218" height="70" rx="7" fill="#eef2ff" stroke="#7185ad" stroke-width="1.6"/>
+<text x="1273" y="1480" font-size="15.539522744620703" fill="#17365b" text-anchor="middle" font-weight="bold">02-Run PDFs / 03-PostRun</text>
+<text x="1273" y="1503" font-size="15.399120140280338" fill="#17365b" text-anchor="middle" font-weight="normal">QA, hashes, runtime, run log</text>
+<polygon points="749,1564 858,1610 749,1656 640,1610" fill="#fef3c7" stroke="#b45309" stroke-width="1.7"/>
+<text x="749" y="1605" font-size="14" fill="#17365b" text-anchor="middle" font-weight="normal">76 criteria PASS</text>
+<text x="749" y="1627" font-size="14" fill="#17365b" text-anchor="middle" font-weight="normal">revision valid?</text>
+<rect x="1164" y="1575" width="218" height="70" rx="7" fill="#fff1e6" stroke="#b45309" stroke-width="1.6"/>
+<text x="1273" y="1605" font-size="16" fill="#17365b" text-anchor="middle" font-weight="bold">NOT_DONE checkpoint</text>
+<text x="1273" y="1628" font-size="14.909478272098243" fill="#17365b" text-anchor="middle" font-weight="normal">evidence + exact next actions</text>
+<rect x="640" y="1690" width="218" height="70" rx="7" fill="#dcfce7" stroke="#4d9470" stroke-width="1.6"/>
+<text x="749" y="1720" font-size="16" fill="#17365b" text-anchor="middle" font-weight="bold">Ready for acceptance</text>
+<text x="749" y="1743" font-size="16" fill="#17365b" text-anchor="middle" font-weight="normal">report + review package</text>
+<polygon points="225,1794 334,1840 225,1886 116,1840" fill="#fef3c7" stroke="#1d4ed8" stroke-width="3.5"/>
+<text x="225" y="1835" font-size="14" fill="#17365b" text-anchor="middle" font-weight="bold">Human approval</text>
+<text x="225" y="1857" font-size="14" fill="#17365b" text-anchor="middle" font-weight="bold">Exact student + key?</text>
+<polygon points="1011,1914 1120,1960 1011,2006 902,1960" fill="#fef3c7" stroke="#b45309" stroke-width="1.7"/>
+<text x="1011" y="1955" font-size="14" fill="#17365b" text-anchor="middle" font-weight="normal">Approval + hashes</text>
+<text x="1011" y="1977" font-size="14" fill="#17365b" text-anchor="middle" font-weight="normal">quality valid?</text>
+<rect x="902" y="2040" width="218" height="70" rx="7" fill="#e0edf8" stroke="#537a9f" stroke-width="1.6"/>
+<text x="1011" y="2070" font-size="16" fill="#17365b" text-anchor="middle" font-weight="bold">Stage, archive, publish</text>
+<text x="1011" y="2093" font-size="16" fill="#17365b" text-anchor="middle" font-weight="normal">preserve others + readback</text>
+<rect x="1164" y="2040" width="218" height="70" rx="7" fill="#fff1e6" stroke="#b45309" stroke-width="1.6"/>
+<text x="1273" y="2070" font-size="16" fill="#17365b" text-anchor="middle" font-weight="bold">Failure: restore prior set</text>
+<text x="1273" y="2093" font-size="15.332864040592224" fill="#17365b" text-anchor="middle" font-weight="normal">retain durable recovery proof</text>
+<rect x="1164" y="2155" width="218" height="70" rx="7" fill="#dcfce7" stroke="#4d9470" stroke-width="1.6"/>
+<text x="1273" y="2185" font-size="16" fill="#17365b" text-anchor="middle" font-weight="bold">Verified PrintReady set</text>
+<text x="1273" y="2208" font-size="16" fill="#17365b" text-anchor="middle" font-weight="normal">publication receipt saved</text>
+<rect x="1426" y="2270" width="218" height="70" rx="7" fill="#f8fafc" stroke="#64748b" stroke-width="1.6" stroke-dasharray="6 4"/>
+<text x="1535" y="2300" font-size="16" fill="#17365b" text-anchor="middle" font-weight="bold">Existing external printing</text>
+<text x="1535" y="2323" font-size="15.534596273106773" fill="#17365b" text-anchor="middle" font-weight="normal">independent of this workflow</text>
+<rect x="378" y="2370" width="218" height="70" rx="7" fill="#e0edf8" stroke="#537a9f" stroke-width="1.6"/>
+<text x="487" y="2400" font-size="16" fill="#17365b" text-anchor="middle" font-weight="bold">Retrospective / improve</text>
+<text x="487" y="2423" font-size="16" fill="#17365b" text-anchor="middle" font-weight="normal">feed the next approved run</text>
+<rect x="1164" y="2370" width="218" height="70" rx="7" fill="#eef2ff" stroke="#7185ad" stroke-width="1.6"/>
+<text x="1273" y="2400" font-size="16" fill="#17365b" text-anchor="middle" font-weight="bold">Archive + checkpoint</text>
+<text x="1273" y="2423" font-size="16" fill="#17365b" text-anchor="middle" font-weight="normal">GitHub / Copilot takeover</text>
+<text x="225" y="274" font-size="13" fill="#64748b" text-anchor="middle" font-weight="normal">Current scope already authorized</text>
+<text x="1535" y="710" font-size="15" fill="#475569" text-anchor="middle" font-weight="normal">Every structural check runs again.</text>
+<text x="1535" y="738" font-size="15" fill="#475569" text-anchor="middle" font-weight="normal">Fresh semantic / visual review</text>
+<text x="1535" y="763" font-size="15" fill="#475569" text-anchor="middle" font-weight="normal">is agent-driven when needed.</text>
+<text x="1535" y="1117" font-size="15" fill="#475569" text-anchor="middle" font-weight="normal">Exact match means source,</text>
+<text x="1535" y="1140" font-size="15" fill="#475569" text-anchor="middle" font-weight="normal">canonical manifests, code,</text>
+<text x="1535" y="1163" font-size="15" fill="#475569" text-anchor="middle" font-weight="normal">renderer, all page pixels</text>
+<text x="1535" y="1186" font-size="15" fill="#475569" text-anchor="middle" font-weight="normal">and evidence hashes match.</text>
+<text x="225" y="1945" font-size="14" fill="#1d4ed8" text-anchor="middle" font-weight="bold">CURRENT: awaiting human review</text>
+<text x="838" y="2488" font-size="16" fill="#475569" text-anchor="middle" font-weight="normal">Blue: activity   ·   Amber diamond: gate   ·   Green: verified result   ·   Amber return arrows: repair / stop / recovery</text>
+<text x="838" y="2516" font-size="16" fill="#475569" text-anchor="middle" font-weight="normal">Weekly Practice stays independent. Broader diagnostic, custom and generated modes remain deferred.</text>
+<text x="838" y="2543" font-size="15" fill="#475569" text-anchor="middle" font-weight="normal">No production release without artifact-specific human approval. Printing remains external; live Drive publication has not been performed.</text>
+</g></svg>
