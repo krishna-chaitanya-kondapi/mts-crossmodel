@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "reference_decisions": {
+    "ela6": "User explicitly selected the recovered Drive pair as authoritative golden on 2026-11-18. Original Library byte identity remains unverified and is no longer the selected reference.",
+    "math5": "Final delivered Grade 5 2024 pair identified by the user handoff; names, three/one pages and corrected Q40 verified.",
+    "math4": "Final corrected staged-review pair from the user handoff, retained as an additional regression reference."
+  },
+  "production_approval": "Not granted by reference selection.",
+  "assets": [
+    {
+      "run": "math4",
+      "kind": "source",
+      "filename": "NY_Math_Grade4_2024_Released_Test_Questions.pdf",
+      "sha256": "88351089919b18dfc2f3dc5d64809d20aadd68d56a1dc38841a3387354b8c0f6",
+      "git_commit": "546367d2d19ee5c7d831dde6630249a331c2c81c",
+      "git_path": "specs/generate_mock_assessment/resume/inputs/golden/NY_Math_Grade4_2024_Released_Test_Questions.pdf",
+      "role": "official_source"
+    },
+    {
+      "run": "math5",
+      "kind": "source",
+      "filename": "NY_Math_Grade5_2024_Released_Test_Questions.pdf",
+      "sha256": "96bc4dca01185cda99056c98391ac85d41ecf7595b2b3ec29f7595b7e7b91f93",
+      "git_commit": "546367d2d19ee5c7d831dde6630249a331c2c81c",
+      "git_path": "specs/generate_mock_assessment/resume/inputs/golden/NY_Math_Grade5_2024_Released_Test_Questions.pdf",
+      "role": "official_source"
+    },
+    {
+      "run": "ela6",
+      "kind": "source",
+      "filename": "NY_ELA_Grade6_2025_Released_Test_Questions.pdf",
+      "sha256": "734c8ac722ece5fe182bcd36652c8ae8617124eccf03b6de16ae71c3244907ea",
+      "git_commit": "546367d2d19ee5c7d831dde6630249a331c2c81c",
+      "git_path": "specs/generate_mock_assessment/resume/inputs/golden/NY_ELA_Grade6_2025_Released_Test_Questions.pdf",
+      "role": "official_source"
+    },
+    {
+      "run": "math4",
+      "kind": "golden",
+      "filename": "MTS-NY-Math-Grade4-2024-Worksheet-REVIEW.pdf",
+      "sha256": "e01b89daed4d3719c9b0d63035b0239ef87e58f0cf759de7d2466f448445d107",
+      "git_commit": "546367d2d19ee5c7d831dde6630249a331c2c81c",
+      "git_path": "specs/generate_mock_assessment/resume/inputs/golden/MTS-NY-Math-Grade4-2024-Worksheet-REVIEW.pdf",
+      "role": "staged_review_reference"
+    },
+    {
+      "run": "math4",
+      "kind": "golden",
+      "filename": "MTS-NY-Math-Grade4-2024-Answer-Key-REVIEW.pdf",
+      "sha256": "cb5eff9f5a872647f4ff3c28975834e52ad40587a1c13db9cf18756f7e82c246",
+      "git_commit": "546367d2d19ee5c7d831dde6630249a331c2c81c",
+      "git_path": "specs/generate_mock_assessment/resume/inputs/golden/MTS-NY-Math-Grade4-2024-Answer-Key-REVIEW.pdf",
+      "role": "staged_review_reference"
+    },
+    {
+      "run": "math5",
+      "kind": "golden",
+      "filename": "MTS-NY-Math-Grade5-2024-Worksheet.pdf",
+      "sha256": "9834833933a068b02d704591bb3a7b1e7936c41b813871166ac00848aa10b05f",
+      "git_commit": "546367d2d19ee5c7d831dde6630249a331c2c81c",
+      "git_path": "specs/generate_mock_assessment/resume/inputs/golden/MTS-NY-Math-Grade5-2024-Worksheet.pdf",
+      "role": "delivered_golden"
+    },
+    {
+      "run": "math5",
+      "kind": "golden",
+      "filename": "MTS-NY-Math-Grade5-2024-Answer-Key.pdf",
+      "sha256": "8b053a6158a96d0d5dcfefe1ddafd555c5c92d02118ca079e6b399041abc6f64",
+      "git_commit": "546367d2d19ee5c7d831dde6630249a331c2c81c",
+      "git_path": "specs/generate_mock_assessment/resume/inputs/golden/MTS-NY-Math-Grade5-2024-Answer-Key.pdf",
+      "role": "delivered_golden"
+    },
+    {
+      "run": "ela6",
+      "kind": "golden",
+      "filename": "MTS-ELA-RC-6thGrade-WeeklyWorksheet-2026-09-28.pdf",
+      "sha256": "1f3688f5141837ffb037cc97fd64399d6a752d6624465f209b12c406f994a8b9",
+      "git_commit": "546367d2d19ee5c7d831dde6630249a331c2c81c",
+      "git_path": "specs/generate_mock_assessment/resume/inputs/golden/MTS-ELA-RC-6thGrade-WeeklyWorksheet-2026-09-28.pdf",
+      "role": "user_designated_golden"
+    },
+    {
+      "run": "ela6",
+      "kind": "golden",
+      "filename": "MTS-ELA-RC-6thGrade-WeeklyWorksheet-2026-09-28-KEY.pdf",
+      "sha256": "5a744c0f2b5ea742ba1bcafa9f383c2812f08e0e870eb8e7e627e7b7770a01f2",
+      "git_commit": "546367d2d19ee5c7d831dde6630249a331c2c81c",
+      "git_path": "specs/generate_mock_assessment/resume/inputs/golden/MTS-ELA-RC-6thGrade-WeeklyWorksheet-2026-09-28-KEY.pdf",
+      "role": "user_designated_golden"
+    }
+  ]
+}

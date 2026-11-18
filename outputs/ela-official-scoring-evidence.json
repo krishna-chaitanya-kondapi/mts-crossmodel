@@ -1,0 +1,21 @@
+{
+  "source_url": "https://www.nysedregents.org/ei/ela/2025/2025-scoring-materials-ela-g6.pdf",
+  "sha256": "e9e4ddde7f803082e715927e145276dcfee8380b66c4becc5b3223cc7191ca87",
+  "source_question_27": {
+    "exemplar_pdf_page": 8,
+    "full_credit_annotation_pages": [
+      9,
+      10,
+      11
+    ]
+  },
+  "source_question_28": {
+    "exemplar_pdf_page": 17,
+    "full_credit_annotation_pages": [
+      18,
+      19,
+      20
+    ]
+  },
+  "review": "MTS inferences and support align with full-credit annotations; separate blind MC prediction remains open."
+}

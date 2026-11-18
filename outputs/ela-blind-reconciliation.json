@@ -1,0 +1,15 @@
+{
+  "original_question": 22,
+  "output_question": 8,
+  "initial_blind_prediction": "C",
+  "official_answer_supplied_after_initial_save": "B",
+  "reconciled_best_answer": "B",
+  "classification": "reviewer error",
+  "confidence": 0.94,
+  "source_consulted": "Previously read source-only PDF paragraph 3 and paragraphs 1-4 context; no additional answer sources consulted.",
+  "B_evaluation": "B is defensible as the best answer. Paragraph 3 begins by directly comparing the one-room classroom with the reader's own classroom: it probably looked much like your own. This explicit comparison establishes continuity between modern schools and the past. The following descriptions identify historical differences within that shared classroom setting. Paragraphs 1-2 introduce the historical school; paragraph 4 extends the past-present connection through a surviving schoolhouse that children can experience today.",
+  "C_evaluation": "C is plausible at first because paragraph 3 mentions a wood-burning stove and an outdoor outhouse. However, the paragraph does not say the old building lacked necessary conveniences. It had a source of heat and a bathroom, albeit in forms and locations unlike those common today. C converts differences in facilities into an evaluative claim about lacking necessary conveniences and generalizes from a schoolroom to older buildings. It also underweights the opening direct comparison with the present.",
+  "why_initial_reasoning_failed": "The blind review overweighted the vivid stove and outhouse details and paraphrased them as missing modern conveniences. The actual option says necessary conveniences, a stronger and less supported claim. It also overlooked the organizing role of the first sentence.",
+  "ambiguity_assessment": "B is broadly worded and paragraph 3 includes real contrasts, so C is a credible distractor. Nevertheless, B follows an explicit textual comparison while C requires an unsupported judgment. The item does not retain a second equally supported best answer; no source defect is identified.",
+  "initial_artifacts_preserved": true
+}

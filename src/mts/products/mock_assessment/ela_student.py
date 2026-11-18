@@ -74,7 +74,12 @@ def render_ela_student(source_path, manifest, destination):
                 (38, 42), f'Passage {index+1} | {passage["title"]}', fontsize=14
             )
             page.insert_text((38, 59), f'By {passage["author"]}', fontsize=10)
-            start = 85
+            page.insert_text(
+                (38, 75),
+                "Name: __________________________  Date: ______________",
+                fontsize=9,
+            )
+            start = 100
             if passage.get("context"):
                 start = write(page, [passage["context"]], 38, start, 530)
             columns = [[], []]
@@ -88,7 +93,9 @@ def render_ela_student(source_path, manifest, destination):
             for col, blocks in enumerate(columns):
                 write(page, blocks, 38 if col == 0 else 318, start)
             page = output.new_page(width=612, height=792)
-            page.insert_text((38, 38), f"Passage {index+1} | Questions", fontsize=13)
+            page.insert_text(
+                (38, 38), f"MTS ELA | Passage {index+1} | Questions", fontsize=13
+            )
             if index == 0:
                 figure = manifest["cipher"]
                 page.show_pdf_page(
@@ -99,7 +106,9 @@ def render_ela_student(source_path, manifest, destination):
                 )
                 caption = manifest["cipher"]["caption"]
                 caption_width = font.text_length(caption, fontsize=8.5)
-                page.insert_text(((612 - caption_width) / 2, 251), caption, fontsize=8.5)
+                page.insert_text(
+                    ((612 - caption_width) / 2, 251), caption, fontsize=8.5
+                )
                 write_questions(page, questions[:4], 38, 270)
                 write_questions(page, questions[4:7], 318, 270)
             else:
@@ -136,5 +145,9 @@ def render_ela_student(source_path, manifest, destination):
                             "bottom": y,
                         }
                     )
+        for index, rendered_page in enumerate(output, 1):
+            rendered_page.insert_text(
+                (250, 776), f"MTS ELA | {index} / {len(output)}", fontsize=8
+            )
         output.save(destination, garbage=4, deflate=True)
     return placements

@@ -18,6 +18,11 @@ from .ela_teacher import render_ela_teacher
 from .grade4_student import render_grade4_student
 from .grade5_student import render_grade5_student
 from .teacher_key import render_teacher_key
+from .review_catalog import (
+    match_frozen_review,
+    manifest_fingerprint,
+    implementation_fingerprints,
+)
 
 PROFILES = {
     "ny2024_math_grade4": (
@@ -189,16 +194,15 @@ def run_benchmark(spec_path, source_root, output_root, fixtures):
         ).strip()
     except (OSError, subprocess.CalledProcessError):
         revision = None
-    implementation_hashes = {
-        path.name: sha256(path.read_bytes()).hexdigest()
-        for path in sorted(Path(__file__).parent.glob("*.py"))
-    }
+    implementation_hashes = implementation_fingerprints(Path(__file__).parent)
     root = Path(output_root).resolve()
     root.mkdir(parents=True, exist_ok=True)
     phases = ["01-PreRun", "02-Run", "03-PostRun"]
     targets = [
         root / phase / spec["instructional_monday"] / spec["run_id"] for phase in phases
     ]
+    if any(not target.resolve().is_relative_to(root) for target in targets):
+        raise ValueError("Run phase destination escapes its configured output root")
     lock = root / f'.{spec["run_id"]}.lock'
     descriptor = os.open(lock, os.O_CREAT | os.O_EXCL | os.O_WRONLY)
     os.close(descriptor)
@@ -277,20 +281,43 @@ def run_benchmark(spec_path, source_root, output_root, fixtures):
                     },
                     "input_hashes": {
                         "source": spec["source_sha256"],
-                        "student_manifest": sha256(
+                        "student_manifest": manifest_fingerprint(student_manifest),
+                        "student_manifest_file_sha256": sha256(
                             (Path(fixtures) / student_fixture).read_bytes()
                         ).hexdigest(),
-                        "teacher_manifest": sha256(
+                        "teacher_manifest": manifest_fingerprint(teacher_manifest),
+                        "teacher_manifest_file_sha256": sha256(
                             (Path(fixtures) / teacher_fixture).read_bytes()
                         ).hexdigest(),
                     },
                 }
+            quality = match_frozen_review(
+                profile,
+                fixtures,
+                source_sha256=spec["source_sha256"],
+                student_manifest_sha256=result["input_hashes"]["student_manifest"],
+                teacher_manifest_sha256=result["input_hashes"]["teacher_manifest"],
+                implementation_hashes=implementation_hashes,
+                student=student,
+                teacher=teacher,
+            )
+            result.update(quality)
+            if all(
+                result[field] == "PASS"
+                for field in ("academic_review", "source_fidelity", "visual_review")
+            ):
+                result["status"] = "READY_FOR_HUMAN_ACCEPTANCE"
             (post / "runlog.json").write_bytes(
                 (json.dumps(result, indent=2) + "\n").encode()
             )
-            (post / "review.md").write_bytes(
-                b"# Mock Assessment review\n\nStructural checks passed. Academic, source and visual reviews remain open.\n"
+            review_text = (
+                "# Mock Assessment review\n\n"
+                f"Status {result['status']}. Structural checks passed.\n\n"
+                f"Academic {result['academic_review']}, source {result['source_fidelity']}, "
+                f"visual {result['visual_review']}.\n"
+                "Production publication requires explicit human final approval.\n"
             )
+            (post / "review.md").write_bytes(review_text.encode())
             for folder, target in zip((pre, run, post), targets):
                 target.parent.mkdir(parents=True, exist_ok=True)
                 os.rename(folder, target)

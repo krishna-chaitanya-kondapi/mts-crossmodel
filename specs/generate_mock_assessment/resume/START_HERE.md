@@ -37,3 +37,12 @@ Completed identities are preserved on retries. Concurrent execution of the same 
 The release API and CLI require a complete development evidence gate, per-run academic/source/visual/structural PASS records, and a human final-release receipt binding both exact PDF hashes. The local publication coordinator serializes the flat destination, verifies readback and preserves unrelated approved files. Replacing a named file also requires its previous fingerprint. Failure during a multi-file replacement restores the prior set.
 
 These checks are tested against temporary local folders. Cloud Drive publication integration and actual production publication remain separate. The current incomplete development gate blocks release.
+
+## Restore benchmark assets only when needed
+
+The lightweight resume command reads state without copying assets. Source PDFs and designated golden PDFs can be restored individually by category from their pinned historical Git objects:
+
+    python scripts/restore_mock_assets.py --kind source --destination work/golden
+    python scripts/restore_mock_assets.py --kind golden --destination work/golden
+
+Each restored file must match golden-assets.json. A shallow checkout may first need the fetch command printed by the helper. The historic bulk files remain in Git history; this process adds no duplicate binary snapshots to the current tree.
