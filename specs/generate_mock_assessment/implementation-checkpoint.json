@@ -1,6 +1,6 @@
 {
   "status": "NOT_DONE",
-  "iteration": 23,
+  "iteration": 24,
   "baseline_revision": "728596db0ec7deedc087b9e509da14701b7d088d",
   "criteria": [
     {
@@ -71,12 +71,12 @@
     {
       "id": "V02.07",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V02.08",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V02.09",
@@ -171,12 +171,12 @@
     {
       "id": "V05.01",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V05.02",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V05.03",
@@ -226,7 +226,7 @@
     {
       "id": "V05.12",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V05.13",
@@ -296,7 +296,7 @@
     {
       "id": "V07.01",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V07.02",
@@ -356,7 +356,7 @@
     {
       "id": "ARCH.03",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "ARCH.04",
@@ -371,7 +371,7 @@
     {
       "id": "ARCH.06",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "ARCH.07",
@@ -395,15 +395,15 @@
     }
   ],
   "next": [
-    "Replace the ELA student trial dependency on the historical transcript with a verified canonical passage and question manifest derived from the official source, including raster pages 10 and 16.",
-    "Complete Grade 4 academic and source-fidelity review and source-to-output item mapping.",
-    "Implement validated RunSpec and paired-run evidence orchestration, then verify remaining criteria against the final code revision."
+    "Add validated RunSpec JSON/PDF and local paired-run orchestration with structural verification and failure-safe staging.",
+    "Complete Grade 4 academic/source review and ELA evidence, distractor and scoring review. Resolve the recorded historical-source text differences.",
+    "Verify full scaling, fidelity, figures, readability and regression parity for the exact final artifacts."
   ],
   "blockers": [
-    "ELA official-source student transcription and golden identity verification remain open implementation tasks.",
-    "Artifact-specific final approval is absent; production publication requires human approval."
+    "Golden/source discrepancies and complete academic/visual review remain open implementation and verification work.",
+    "Final human approval is required for production publication."
   ],
-  "audited_revision": "3bc0e43f13e418d5eafc267dbab55d43d5e54bea",
+  "audited_revision": "d47fd21fd51eba7b3c1ffe940ca5021ef22ba612",
   "evidence": [
     "outputs/verification-report.json",
     "outputs/baseline-tests.txt",
@@ -438,8 +438,10 @@
     "outputs/iteration-23-audit.json",
     "outputs/iteration-23-tests.txt",
     "outputs/iteration-23-gate.json",
-    "outputs/iteration-23-audit.json",
-    "outputs/iteration-23-tests.txt",
-    "outputs/iteration-23-gate.json"
+    "outputs/iteration-24-audit.json",
+    "outputs/iteration-24-regression-structure.json",
+    "outputs/iteration-24-tests.txt",
+    "outputs/iteration-24-gate.json",
+    "outputs/ela-source-transcription-review.md"
   ]
 }

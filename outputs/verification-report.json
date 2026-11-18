@@ -1,10 +1,10 @@
 {
   "status": "NOT_DONE",
-  "iteration": 23,
+  "iteration": 24,
   "date": "2026-11-18",
-  "revision": "3bc0e43f13e418d5eafc267dbab55d43d5e54bea",
+  "revision": "d47fd21fd51eba7b3c1ffe940ca5021ef22ba612",
   "registry_sha256": "c70cf4b237e712c11943ed16ac5a479a9310c65a6d1fd284baddb23d956f0aa4",
-  "mandatory_pass": 10,
+  "mandatory_pass": 18,
   "mandatory_total": 76,
   "baseline_tests": {
     "command": "python -m pytest tests -q",
@@ -13,7 +13,7 @@
     "evidence": "baseline-tests.txt"
   },
   "historical_inventory": "historical-inventory.json",
-  "historical_regressions_executed": 0,
+  "historical_regressions_executed": 3,
   "generation_implementation_changes": [
     "Added isolated NYSED item-map parser and focused tests; matched three historical selections to official source IDs, keys, credit values and standards.",
     "Added hash-bound vector crop rendering and a Grade 5 extraction trial.",
@@ -54,9 +54,9 @@
     }
   ],
   "next": [
-    "Create a source-derived ELA student manifest from the official source; compare all selected passages, raster-only pages, questions, choices, figures, and instructions to the delivered student golden. Keep source fidelity NOT_VERIFIED until each comparison is recorded.",
-    "Complete Grade 4 item-by-item academic and source-fidelity review against the official source and scoring materials; retrieve the historical student golden and document page-four utilization while preserving Q26 full width.",
-    "Run the ELA and Grade 4 production-path fixtures, capture revision-bound structural and visual evidence, and continue requirement-to-evidence tracing without promoting unsupported criteria."
+    "Add validated RunSpec JSON/PDF and local paired-run orchestration with structural verification and failure-safe staging.",
+    "Complete Grade 4 academic/source review and ELA evidence, distractor and scoring review. Resolve the recorded historical-source text differences.",
+    "Verify full scaling, fidelity, figures, readability and regression parity for the exact final artifacts."
   ],
   "pending_mandatory": [
     "V01.03",
@@ -65,8 +65,6 @@
     "V02.04",
     "V02.05",
     "V02.06",
-    "V02.07",
-    "V02.08",
     "V02.09",
     "V02.10",
     "V02.11",
@@ -85,8 +83,6 @@
     "V04.06",
     "V04.07",
     "V04.08",
-    "V05.01",
-    "V05.02",
     "V05.03",
     "V05.04",
     "V05.05",
@@ -96,7 +92,6 @@
     "V05.09",
     "V05.10",
     "V05.11",
-    "V05.12",
     "V05.13",
     "V06.01",
     "V06.02",
@@ -110,7 +105,6 @@
     "V06.10",
     "V06.11",
     "V06.12",
-    "V07.01",
     "V07.02",
     "V07.03",
     "V07.04",
@@ -120,9 +114,7 @@
     "V07.09",
     "V07.10",
     "ARCH.02",
-    "ARCH.03",
     "ARCH.05",
-    "ARCH.06",
     "ARCH.07",
     "ARCH.10"
   ],
@@ -173,8 +165,8 @@
       "status": "PASS",
       "evidence": [
         {
-          "path": "outputs/iteration-23-audit.json",
-          "sha256": "1cf52acd3d6c88fe076075c306dc1b0c1d54783f01f30c355653a412588a415f"
+          "path": "outputs/iteration-24-audit.json",
+          "sha256": "7cba7448d2d861c1b1556ce181c39b47b630da334de26ab556ccb379d3806bd3"
         },
         {
           "path": "outputs/historical-source-item-maps.json",
@@ -271,15 +263,41 @@
       "id": "V02.07",
       "mandatory": true,
       "requirement": "Student PDF",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "status": "PASS",
+      "evidence": [
+        {
+          "path": "outputs/iteration-24-regression-structure.json",
+          "sha256": "3fb9e224d74bc23531df49eb41c56606ada771d14cac4ae017265f97f9c27b68"
+        },
+        {
+          "path": "outputs/iteration-24-audit.json",
+          "sha256": "7cba7448d2d861c1b1556ce181c39b47b630da334de26ab556ccb379d3806bd3"
+        }
+      ],
+      "expected": "Student PDF",
+      "actual": "All three benchmark student PDFs generated through the CLI and reopened.",
+      "method": "Execute all three benchmark pairs and inspect paper, page counts, ordering and separate artifacts; review product fixtures and import evidence.",
+      "reviewer": "Codex iteration 24 structural review"
     },
     {
       "id": "V02.08",
       "mandatory": true,
       "requirement": "Separate teacher PDF",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "status": "PASS",
+      "evidence": [
+        {
+          "path": "outputs/iteration-24-regression-structure.json",
+          "sha256": "3fb9e224d74bc23531df49eb41c56606ada771d14cac4ae017265f97f9c27b68"
+        },
+        {
+          "path": "outputs/iteration-24-audit.json",
+          "sha256": "7cba7448d2d861c1b1556ce181c39b47b630da334de26ab556ccb379d3806bd3"
+        }
+      ],
+      "expected": "Separate teacher PDF",
+      "actual": "All three teacher PDFs generated separately from the corresponding student PDFs.",
+      "method": "Execute all three benchmark pairs and inspect paper, page counts, ordering and separate artifacts; review product fixtures and import evidence.",
+      "reviewer": "Codex iteration 24 structural review"
     },
     {
       "id": "V02.09",
@@ -411,15 +429,41 @@
       "id": "V05.01",
       "mandatory": true,
       "requirement": "Approved paper and orientation",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "status": "PASS",
+      "evidence": [
+        {
+          "path": "outputs/iteration-24-regression-structure.json",
+          "sha256": "3fb9e224d74bc23531df49eb41c56606ada771d14cac4ae017265f97f9c27b68"
+        },
+        {
+          "path": "outputs/iteration-24-audit.json",
+          "sha256": "7cba7448d2d861c1b1556ce181c39b47b630da334de26ab556ccb379d3806bd3"
+        }
+      ],
+      "expected": "Approved paper and orientation",
+      "actual": "All six regenerated PDFs use Letter portrait dimensions.",
+      "method": "Execute all three benchmark pairs and inspect paper, page counts, ordering and separate artifacts; review product fixtures and import evidence.",
+      "reviewer": "Codex iteration 24 structural review"
     },
     {
       "id": "V05.02",
       "mandatory": true,
       "requirement": "Student pagination",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "status": "PASS",
+      "evidence": [
+        {
+          "path": "outputs/iteration-24-regression-structure.json",
+          "sha256": "3fb9e224d74bc23531df49eb41c56606ada771d14cac4ae017265f97f9c27b68"
+        },
+        {
+          "path": "outputs/iteration-24-audit.json",
+          "sha256": "7cba7448d2d861c1b1556ce181c39b47b630da334de26ab556ccb379d3806bd3"
+        }
+      ],
+      "expected": "Student pagination",
+      "actual": "Student page counts are Grade 4 four, Grade 5 three and ELA four, within all historical page limits.",
+      "method": "Execute all three benchmark pairs and inspect paper, page counts, ordering and separate artifacts; review product fixtures and import evidence.",
+      "reviewer": "Codex iteration 24 structural review"
     },
     {
       "id": "V05.03",
@@ -488,8 +532,21 @@
       "id": "V05.12",
       "mandatory": true,
       "requirement": "Key pagination",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "status": "PASS",
+      "evidence": [
+        {
+          "path": "outputs/iteration-24-regression-structure.json",
+          "sha256": "3fb9e224d74bc23531df49eb41c56606ada771d14cac4ae017265f97f9c27b68"
+        },
+        {
+          "path": "outputs/iteration-24-audit.json",
+          "sha256": "7cba7448d2d861c1b1556ce181c39b47b630da334de26ab556ccb379d3806bd3"
+        }
+      ],
+      "expected": "Key pagination",
+      "actual": "Teacher page counts are Grade 4 one, Grade 5 one and ELA two, matching historical targets.",
+      "method": "Execute all three benchmark pairs and inspect paper, page counts, ordering and separate artifacts; review product fixtures and import evidence.",
+      "reviewer": "Codex iteration 24 structural review"
     },
     {
       "id": "V05.13",
@@ -586,8 +643,21 @@
       "id": "V07.01",
       "mandatory": true,
       "requirement": "Independent invocation without chat context",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "status": "PASS",
+      "evidence": [
+        {
+          "path": "outputs/iteration-24-regression-structure.json",
+          "sha256": "3fb9e224d74bc23531df49eb41c56606ada771d14cac4ae017265f97f9c27b68"
+        },
+        {
+          "path": "outputs/iteration-24-audit.json",
+          "sha256": "7cba7448d2d861c1b1556ce181c39b47b630da334de26ab556ccb379d3806bd3"
+        }
+      ],
+      "expected": "Independent invocation without chat context",
+      "actual": "Three benchmark pairs invoked from saved manifests and explicit source paths by the regression script.",
+      "method": "Execute all three benchmark pairs and inspect paper, page counts, ordering and separate artifacts; review product fixtures and import evidence.",
+      "reviewer": "Codex iteration 24 structural review"
     },
     {
       "id": "V07.02",
@@ -624,12 +694,12 @@
       "status": "PASS",
       "evidence": [
         {
-          "path": "outputs/iteration-23-tests.txt",
-          "sha256": "77681437082a852df8b3661124239af226aad0c117c52745de76036f6730b29f"
+          "path": "outputs/iteration-24-tests.txt",
+          "sha256": "fd73463d24fa8c51144bea845230aab1a6aee81a4c39aab460b6cca5da1ac0e4"
         },
         {
-          "path": "outputs/iteration-23-audit.json",
-          "sha256": "1cf52acd3d6c88fe076075c306dc1b0c1d54783f01f30c355653a412588a415f"
+          "path": "outputs/iteration-24-audit.json",
+          "sha256": "7cba7448d2d861c1b1556ce181c39b47b630da334de26ab556ccb379d3806bd3"
         }
       ],
       "expected": "Weekly regression unaffected",
@@ -672,8 +742,8 @@
       "status": "PASS",
       "evidence": [
         {
-          "path": "outputs/iteration-23-audit.json",
-          "sha256": "1cf52acd3d6c88fe076075c306dc1b0c1d54783f01f30c355653a412588a415f"
+          "path": "outputs/iteration-24-audit.json",
+          "sha256": "7cba7448d2d861c1b1556ce181c39b47b630da334de26ab556ccb379d3806bd3"
         }
       ],
       "expected": "Dedicated executable entry point",
@@ -692,8 +762,21 @@
       "id": "ARCH.03",
       "mandatory": true,
       "requirement": "Independent configuration",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "status": "PASS",
+      "evidence": [
+        {
+          "path": "outputs/iteration-24-regression-structure.json",
+          "sha256": "3fb9e224d74bc23531df49eb41c56606ada771d14cac4ae017265f97f9c27b68"
+        },
+        {
+          "path": "outputs/iteration-24-audit.json",
+          "sha256": "7cba7448d2d861c1b1556ce181c39b47b630da334de26ab556ccb379d3806bd3"
+        }
+      ],
+      "expected": "Independent configuration",
+      "actual": "Assessment fixtures supply independent source selections, text, scoring and layout parameters; no weekly configuration changes.",
+      "method": "Execute all three benchmark pairs and inspect paper, page counts, ordering and separate artifacts; review product fixtures and import evidence.",
+      "reviewer": "Codex iteration 24 structural review"
     },
     {
       "id": "ARCH.04",
@@ -702,8 +785,8 @@
       "status": "PASS",
       "evidence": [
         {
-          "path": "outputs/iteration-23-audit.json",
-          "sha256": "1cf52acd3d6c88fe076075c306dc1b0c1d54783f01f30c355653a412588a415f"
+          "path": "outputs/iteration-24-audit.json",
+          "sha256": "7cba7448d2d861c1b1556ce181c39b47b630da334de26ab556ccb379d3806bd3"
         }
       ],
       "expected": "No weekly curriculum or generation dependency",
@@ -722,8 +805,21 @@
       "id": "ARCH.06",
       "mandatory": true,
       "requirement": "Independent execution",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "status": "PASS",
+      "evidence": [
+        {
+          "path": "outputs/iteration-24-regression-structure.json",
+          "sha256": "3fb9e224d74bc23531df49eb41c56606ada771d14cac4ae017265f97f9c27b68"
+        },
+        {
+          "path": "outputs/iteration-24-audit.json",
+          "sha256": "7cba7448d2d861c1b1556ce181c39b47b630da334de26ab556ccb379d3806bd3"
+        }
+      ],
+      "expected": "Independent execution",
+      "actual": "Three benchmark pairs executed through the dedicated CLI without weekly workflow invocation.",
+      "method": "Execute all three benchmark pairs and inspect paper, page counts, ordering and separate artifacts; review product fixtures and import evidence.",
+      "reviewer": "Codex iteration 24 structural review"
     },
     {
       "id": "ARCH.07",
@@ -739,12 +835,12 @@
       "status": "PASS",
       "evidence": [
         {
-          "path": "outputs/iteration-23-audit.json",
-          "sha256": "1cf52acd3d6c88fe076075c306dc1b0c1d54783f01f30c355653a412588a415f"
+          "path": "outputs/iteration-24-audit.json",
+          "sha256": "7cba7448d2d861c1b1556ce181c39b47b630da334de26ab556ccb379d3806bd3"
         },
         {
-          "path": "outputs/iteration-23-tests.txt",
-          "sha256": "77681437082a852df8b3661124239af226aad0c117c52745de76036f6730b29f"
+          "path": "outputs/iteration-24-tests.txt",
+          "sha256": "fd73463d24fa8c51144bea845230aab1a6aee81a4c39aab460b6cca5da1ac0e4"
         }
       ],
       "expected": "Weekly implementation unaffected",
@@ -759,12 +855,12 @@
       "status": "PASS",
       "evidence": [
         {
-          "path": "outputs/iteration-23-audit.json",
-          "sha256": "1cf52acd3d6c88fe076075c306dc1b0c1d54783f01f30c355653a412588a415f"
+          "path": "outputs/iteration-24-audit.json",
+          "sha256": "7cba7448d2d861c1b1556ce181c39b47b630da334de26ab556ccb379d3806bd3"
         },
         {
-          "path": "outputs/iteration-23-tests.txt",
-          "sha256": "77681437082a852df8b3661124239af226aad0c117c52745de76036f6730b29f"
+          "path": "outputs/iteration-24-tests.txt",
+          "sha256": "fd73463d24fa8c51144bea845230aab1a6aee81a4c39aab460b6cca5da1ac0e4"
         }
       ],
       "expected": "Assessment policies do not alter weekly behavior",
@@ -808,9 +904,9 @@
     }
   },
   "iteration_tests": {
-    "passed": 257,
+    "passed": 261,
     "failed": 0,
-    "evidence": "outputs/iteration-23-tests.txt"
+    "evidence": "outputs/iteration-24-tests.txt"
   },
   "layout_trial": {
     "status": "FAIL",
@@ -900,5 +996,11 @@
     "sha256": "208ecc4a93d4f41e38f030617322f6b98b35eee7cf01f7e066d40f3c7a0b5c51",
     "matches_teacher_golden_answers": true
   },
-  "verification_scope": "The target code revision is immutable. This report records reviewed criteria for that revision; later dependent code changes require revalidation."
+  "verification_scope": "The target code revision is immutable. This report records reviewed criteria for that revision; later dependent code changes require revalidation.",
+  "current_outcomes": [
+    "All three student/teacher pairs generated through the dedicated CLI.",
+    "Grade 4 page counts 4+1, Grade 5 3+1, ELA 4+2.",
+    "ELA student generation reads official-source text and reviewed raster-page transcriptions; historical wording differences are documented.",
+    "261 tests passed. Academic and full source/golden-equivalence criteria remain open."
+  ]
 }

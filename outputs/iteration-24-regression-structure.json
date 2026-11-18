@@ -1,0 +1,183 @@
+{
+  "revision": "d47fd21fd51eba7b3c1ffe940ca5021ef22ba612",
+  "status": "STRUCTURAL_PASS",
+  "scope": "Executed three student/teacher pairs; pagination, paper, order and artifact fingerprints.",
+  "limitations": "Academic, full source and visual/golden equivalence require separate evidence.",
+  "runs": [
+    {
+      "run": "grade4",
+      "student_pages": 4,
+      "student_ceiling": 4,
+      "teacher_pages": 1,
+      "teacher_target": 1,
+      "items": [
+        1,
+        2,
+        7,
+        10,
+        11,
+        12,
+        15,
+        16,
+        22,
+        23,
+        24,
+        26,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44
+      ],
+      "letter_portrait": true,
+      "commands": [
+        [
+          "grade4-student",
+          "--source",
+          "..\\golden\\NY_Math_Grade4_2024_Released_Test_Questions.pdf",
+          "--manifest",
+          "C:\\Users\\Krishna Chaitanya\\Documents\\Codex\\2026-11-18\\mts-autonomous-mock-assessment-implementation-repository\\work\\mts-crossmodel\\specs\\generate_mock_assessment\\fixtures\\grade4-student-manifest.json",
+          "--output",
+          "work\\regression24\\grade4-student.pdf",
+          "--placements",
+          "work\\regression24\\grade4-placements.json"
+        ],
+        [
+          "teacher-key",
+          "--manifest",
+          "C:\\Users\\Krishna Chaitanya\\Documents\\Codex\\2026-11-18\\mts-autonomous-mock-assessment-implementation-repository\\work\\mts-crossmodel\\specs\\generate_mock_assessment\\fixtures\\grade4-teacher-manifest.json",
+          "--output",
+          "work\\regression24\\grade4-teacher.pdf"
+        ]
+      ],
+      "artifacts": {
+        "grade4-student.pdf": "649c496ce2807e95d41d4041a26068b2d71d20e35b168db74cce3d906f27ee37",
+        "grade4-teacher.pdf": "3bd27fc96615261919b3c83b61402109fbd10bc6cedb0c653167a433ac9f6d25",
+        "grade4-placements.json": "82a67943f116d9c4729a6f0999edabec7ee59ba7a74a9495b3ae3d079be71f4c"
+      }
+    },
+    {
+      "run": "grade5",
+      "student_pages": 3,
+      "student_ceiling": 4,
+      "teacher_pages": 1,
+      "teacher_target": 1,
+      "items": [
+        1,
+        2,
+        3,
+        4,
+        7,
+        9,
+        10,
+        12,
+        15,
+        16,
+        19,
+        27,
+        28,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44
+      ],
+      "letter_portrait": true,
+      "commands": [
+        [
+          "grade5-student",
+          "--source",
+          "..\\golden\\NY_Math_Grade5_2024_Released_Test_Questions.pdf",
+          "--manifest",
+          "C:\\Users\\Krishna Chaitanya\\Documents\\Codex\\2026-11-18\\mts-autonomous-mock-assessment-implementation-repository\\work\\mts-crossmodel\\specs\\generate_mock_assessment\\fixtures\\grade5-student-manifest.json",
+          "--output",
+          "work\\regression24\\grade5-student.pdf",
+          "--placements",
+          "work\\regression24\\grade5-placements.json"
+        ],
+        [
+          "teacher-key",
+          "--manifest",
+          "C:\\Users\\Krishna Chaitanya\\Documents\\Codex\\2026-11-18\\mts-autonomous-mock-assessment-implementation-repository\\work\\mts-crossmodel\\specs\\generate_mock_assessment\\fixtures\\grade5-teacher-manifest.json",
+          "--output",
+          "work\\regression24\\grade5-teacher.pdf"
+        ]
+      ],
+      "artifacts": {
+        "grade5-student.pdf": "6d02810fba0f8c137d467e0a342c318e5daf1e71e2702a27bab5b8521c311bb0",
+        "grade5-teacher.pdf": "ffd17dc82ac21036b7ebb0bd79c07584a97cddd363d61894046ff94ac515ae5c",
+        "grade5-placements.json": "b41533ae112e068b3e13ca4d753860022325bbfeec839f96ee033cad28bc112e"
+      }
+    },
+    {
+      "run": "ela6",
+      "student_pages": 4,
+      "student_ceiling": 4,
+      "teacher_pages": 2,
+      "teacher_target": 2,
+      "items": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "letter_portrait": true,
+      "commands": [
+        [
+          "ela-student",
+          "--source",
+          "..\\golden\\NY_ELA_Grade6_2025_Released_Test_Questions.pdf",
+          "--manifest",
+          "C:\\Users\\Krishna Chaitanya\\Documents\\Codex\\2026-11-18\\mts-autonomous-mock-assessment-implementation-repository\\work\\mts-crossmodel\\specs\\generate_mock_assessment\\fixtures\\ela-student-manifest.json",
+          "--output",
+          "work\\regression24\\ela6-student.pdf",
+          "--placements",
+          "work\\regression24\\ela6-placements.json"
+        ],
+        [
+          "ela-teacher",
+          "--manifest",
+          "C:\\Users\\Krishna Chaitanya\\Documents\\Codex\\2026-11-18\\mts-autonomous-mock-assessment-implementation-repository\\work\\mts-crossmodel\\specs\\generate_mock_assessment\\fixtures\\ela-teacher-manifest.json",
+          "--output",
+          "work\\regression24\\ela6-teacher.pdf"
+        ]
+      ],
+      "artifacts": {
+        "ela6-student.pdf": "d0c199983b035ccb17b52e9ceceeb156baa3c7d82705dcd3803eef91e45b3366",
+        "ela6-teacher.pdf": "301e754e459631e1d27ca688cb57ebca9d2586838e78789fdb0febfe59c6d1a1",
+        "ela6-placements.json": "b0b8223ab4923c5eb7be1f0e63e87c3608f0525dfd067c086b388d5ebb3d6ad4"
+      }
+    }
+  ]
+}

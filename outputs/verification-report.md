@@ -1,36 +1,21 @@
 # Mock Assessment verification report
 
-**NOT_DONE** � Iteration 23 � **10 / 76 verified (13.2%)**
+**NOT_DONE** · Iteration 24 · **18 / 76 mandatory criteria verified (23.7%)**
 
-Target code revision 3bc0e43f13e418d5eafc267dbab55d43d5e54bea. All 257 tests passed. Criterion-level evidence was evaluated using the unchanged verification gate. Sixty-six mandatory criteria remain open.
+Target code revision d47fd21fd51eba7b3c1ffe940ca5021ef22ba612. The unchanged evidence gate validates 18 mandatory criteria. All 261 tests passed. Fifty-eight mandatory criteria remain open.
 
-## Criteria verified
+The official-source ELA student profile is integrated into the CLI. The canonical manifest contains 23 numbered paragraphs and 14 questions. The renderer never opens a golden PDF. Native source text is combined with reviewed transcriptions of raster pages 10 and 16. See [source transcription review](ela-source-transcription-review.md) for differences from the delivered reference.
 
-| Criterion | Review result |
-|---|---|
-| V01.01 | Grade 4 and Grade 5 selections, counts, layout limits and corrections consolidated from supplied handoffs. |
-| V01.02 | Grade 6 passage clusters, 14-item mapping, answer sequence, YPQA and layout requirements consolidated. |
-| V01.04 | All three official source PDF fingerprints match the selected-item manifests. |
-| V01.05 | Count discrepancy, Q40 correction, Grade 4 crop/prompt and scoring corrections, ELA whitespace and identity gaps documented. |
-| V02.01 | Dedicated workflow documents its lifecycle, CLI, verification and release boundary. |
-| ARCH.01 | Standalone generate_mock_assessment.py --help returned zero. |
-| ARCH.04 | Reviewed all product and CLI imports; no subject, weekly or curriculum import found. |
-| ARCH.08 | Diff from original baseline has no changes in subject implementation or subject configuration; all 257 tests passed. |
-| ARCH.09 | Assessment-specific profiles stay in product code and fixtures; no subject configuration changes and regression suite passes. |
-| V07.06 | Current complete suite, including Weekly Practice coverage, passed 257 tests. |
+All three benchmark pairs ran through the CLI. Their student/teacher page counts are Grade 4 4+1, Grade 5 3+1, and ELA 4+2. Six PDFs reopened with Letter portrait dimensions. Ordered placements matched all selections.
 
-## Outstanding work
+## Acceptance scope
 
-Golden output identity remains incomplete, including the ELA Library-to-Drive comparison. Academic, source fidelity, visual and full historical regression acceptance remain unverified. Partial rendering and historic reviews do not establish those categories.
+The eight newly passing criteria establish student and separate teacher PDFs, paper/orientation, student and key pagination, independent invocation/execution, and independent configuration. The original ten requirements, workflow and isolation criteria were revalidated for this code revision. Passing pagination does not establish academic quality, source fidelity or equivalent readability.
 
-The current ELA student route is generic and has only synthetic integration coverage. Its official-source passage manifest is still required. RunSpec-driven orchestration, automated paired verification, and remaining operational requirements remain open.
+## Remaining work
 
-The earlier checkpoint asserted that a qualified external reviewer was mandatory. That restriction has been removed because the approved specification authorizes independent review within this autonomous task. A separate documented verification pass remains required.
+1. Add validated RunSpec JSON/PDF and local paired-run orchestration with structural verification and failure-safe staging.
+2. Complete Grade 4 academic/source review and ELA evidence, distractor and scoring review. Resolve the recorded historical-source text differences.
+3. Verify full scaling, fidelity, figures, readability and regression parity for the exact final artifacts.
 
-See [dashboard](dashboard.md), [source/import audit](iteration-23-audit.json), [test log](iteration-23-tests.txt), and [gate results](iteration-23-gate.json).
-
-## Exact next actions
-
-1. Replace the ELA student trial dependency on the historical transcript with a verified canonical passage and question manifest derived from the official source, including raster pages 10 and 16.
-2. Complete Grade 4 academic and source-fidelity review and source-to-output item mapping.
-3. Implement validated RunSpec and paired-run evidence orchestration, then verify remaining criteria against the final code revision.
+[Gate result](iteration-24-gate.json) · [Paired regression evidence](iteration-24-regression-structure.json) · [Test log](iteration-24-tests.txt)

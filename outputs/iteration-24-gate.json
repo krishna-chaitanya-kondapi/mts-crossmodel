@@ -1,0 +1,456 @@
+{
+  "status": "NOT_DONE",
+  "revision": "d47fd21fd51eba7b3c1ffe940ca5021ef22ba612",
+  "criteria": [
+    {
+      "id": "V01.01",
+      "mandatory": true,
+      "status": "PASS"
+    },
+    {
+      "id": "V01.02",
+      "mandatory": true,
+      "status": "PASS"
+    },
+    {
+      "id": "V01.03",
+      "mandatory": true,
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V01.04",
+      "mandatory": true,
+      "status": "PASS"
+    },
+    {
+      "id": "V01.05",
+      "mandatory": true,
+      "status": "PASS"
+    },
+    {
+      "id": "V01.06",
+      "mandatory": true,
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V01.07",
+      "mandatory": true,
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V02.01",
+      "mandatory": true,
+      "status": "PASS"
+    },
+    {
+      "id": "V02.02",
+      "mandatory": false,
+      "status": "NOT_APPLICABLE"
+    },
+    {
+      "id": "V02.03",
+      "mandatory": false,
+      "status": "NOT_APPLICABLE"
+    },
+    {
+      "id": "V02.04",
+      "mandatory": true,
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V02.05",
+      "mandatory": true,
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V02.06",
+      "mandatory": true,
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V02.07",
+      "mandatory": true,
+      "status": "PASS"
+    },
+    {
+      "id": "V02.08",
+      "mandatory": true,
+      "status": "PASS"
+    },
+    {
+      "id": "V02.09",
+      "mandatory": true,
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V02.10",
+      "mandatory": true,
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V02.11",
+      "mandatory": true,
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V03.01",
+      "mandatory": true,
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V03.02",
+      "mandatory": true,
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V03.03",
+      "mandatory": true,
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V03.04",
+      "mandatory": true,
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V03.05",
+      "mandatory": true,
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V03.06",
+      "mandatory": true,
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V03.07",
+      "mandatory": true,
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V04.01",
+      "mandatory": true,
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V04.02",
+      "mandatory": true,
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V04.03",
+      "mandatory": true,
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V04.04",
+      "mandatory": true,
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V04.05",
+      "mandatory": true,
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V04.06",
+      "mandatory": true,
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V04.07",
+      "mandatory": true,
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V04.08",
+      "mandatory": true,
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V05.01",
+      "mandatory": true,
+      "status": "PASS"
+    },
+    {
+      "id": "V05.02",
+      "mandatory": true,
+      "status": "PASS"
+    },
+    {
+      "id": "V05.03",
+      "mandatory": true,
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V05.04",
+      "mandatory": true,
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V05.05",
+      "mandatory": true,
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V05.06",
+      "mandatory": true,
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V05.07",
+      "mandatory": true,
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V05.08",
+      "mandatory": true,
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V05.09",
+      "mandatory": true,
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V05.10",
+      "mandatory": true,
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V05.11",
+      "mandatory": true,
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V05.12",
+      "mandatory": true,
+      "status": "PASS"
+    },
+    {
+      "id": "V05.13",
+      "mandatory": true,
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V06.01",
+      "mandatory": true,
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V06.02",
+      "mandatory": true,
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V06.03",
+      "mandatory": true,
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V06.04",
+      "mandatory": true,
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V06.05",
+      "mandatory": true,
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V06.06",
+      "mandatory": true,
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V06.07",
+      "mandatory": true,
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V06.08",
+      "mandatory": true,
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V06.09",
+      "mandatory": true,
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V06.10",
+      "mandatory": true,
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V06.11",
+      "mandatory": true,
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V06.12",
+      "mandatory": true,
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V07.01",
+      "mandatory": true,
+      "status": "PASS"
+    },
+    {
+      "id": "V07.02",
+      "mandatory": true,
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V07.03",
+      "mandatory": true,
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V07.04",
+      "mandatory": true,
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V07.05",
+      "mandatory": true,
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V07.06",
+      "mandatory": true,
+      "status": "PASS"
+    },
+    {
+      "id": "V07.07",
+      "mandatory": true,
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V07.08",
+      "mandatory": true,
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V07.09",
+      "mandatory": true,
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V07.10",
+      "mandatory": true,
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "ARCH.01",
+      "mandatory": true,
+      "status": "PASS"
+    },
+    {
+      "id": "ARCH.02",
+      "mandatory": true,
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "ARCH.03",
+      "mandatory": true,
+      "status": "PASS"
+    },
+    {
+      "id": "ARCH.04",
+      "mandatory": true,
+      "status": "PASS"
+    },
+    {
+      "id": "ARCH.05",
+      "mandatory": true,
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "ARCH.06",
+      "mandatory": true,
+      "status": "PASS"
+    },
+    {
+      "id": "ARCH.07",
+      "mandatory": true,
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "ARCH.08",
+      "mandatory": true,
+      "status": "PASS"
+    },
+    {
+      "id": "ARCH.09",
+      "mandatory": true,
+      "status": "PASS"
+    },
+    {
+      "id": "ARCH.10",
+      "mandatory": true,
+      "status": "NOT_VERIFIED"
+    }
+  ],
+  "pending_mandatory": [
+    "V01.03",
+    "V01.06",
+    "V01.07",
+    "V02.04",
+    "V02.05",
+    "V02.06",
+    "V02.09",
+    "V02.10",
+    "V02.11",
+    "V03.01",
+    "V03.02",
+    "V03.03",
+    "V03.04",
+    "V03.05",
+    "V03.06",
+    "V03.07",
+    "V04.01",
+    "V04.02",
+    "V04.03",
+    "V04.04",
+    "V04.05",
+    "V04.06",
+    "V04.07",
+    "V04.08",
+    "V05.03",
+    "V05.04",
+    "V05.05",
+    "V05.06",
+    "V05.07",
+    "V05.08",
+    "V05.09",
+    "V05.10",
+    "V05.11",
+    "V05.13",
+    "V06.01",
+    "V06.02",
+    "V06.03",
+    "V06.04",
+    "V06.05",
+    "V06.06",
+    "V06.07",
+    "V06.08",
+    "V06.09",
+    "V06.10",
+    "V06.11",
+    "V06.12",
+    "V07.02",
+    "V07.03",
+    "V07.04",
+    "V07.05",
+    "V07.07",
+    "V07.08",
+    "V07.09",
+    "V07.10",
+    "ARCH.02",
+    "ARCH.05",
+    "ARCH.07",
+    "ARCH.10"
+  ]
+}
