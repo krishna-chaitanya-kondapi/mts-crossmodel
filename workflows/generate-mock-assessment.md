@@ -8,4 +8,4 @@ Status: partially implemented; not production ready. Never invoke weekly generat
 4. Record revision-bound evidence and run verification gate. Repair and reverify; checkpoint on blockers. Do not declare complete until mandatory criteria pass.
 5. Human acceptance and explicit artifact-specific release approval precede publishing. Golden regressions never publish.
 
-Current CLI implements verification gate only; source extraction, rendering and full orchestration are not yet wired. This file does not claim executable generation is complete.
+Current CLI implements the evidence gate, fixed-source Math student profiles, Math teacher keys, ELA teacher reflow, and a generic ELA source-region renderer. Complete RunSpec-driven orchestration and source-verified ELA student composition remain open.
