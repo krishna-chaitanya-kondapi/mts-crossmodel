@@ -166,11 +166,6 @@ def render_grade4_student(source_path, manifest, destination):
                     raise ValueError("Grade 4 student worksheet exceeds four pages")
                 page = output.new_page(width=612, height=792)
                 page.insert_text((30, 30), "MTS | " + manifest["title"], fontsize=11)
-                page.insert_text(
-                    (30, 49),
-                    "Name: __________________________  Date: ______________",
-                    fontsize=9,
-                )
                 column = 0
                 y = left_bottom = band_top = 62
             source_index = region["source_page"] - 1
@@ -227,6 +222,11 @@ def render_grade4_student(source_path, manifest, destination):
                 left_bottom = band_top = y
                 column = 0
         for index, rendered_page in enumerate(output, 1):
+            rendered_page.insert_text(
+                (30, 49),
+                "Name: __________________________  Date: ______________",
+                fontsize=9,
+            )
             rendered_page.insert_text(
                 (548, 776), f"{index} / {len(output)}", fontsize=8
             )
