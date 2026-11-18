@@ -174,7 +174,7 @@
       "evidence": [
         {
           "path": "outputs/iteration-23-audit.json",
-          "sha256": "e32372cf3f30c089d1ed49f68490a9819a111d2d643cc2da275aa16a5e9b4a76"
+          "sha256": "1cf52acd3d6c88fe076075c306dc1b0c1d54783f01f30c355653a412588a415f"
         },
         {
           "path": "outputs/historical-source-item-maps.json",
@@ -625,11 +625,11 @@
       "evidence": [
         {
           "path": "outputs/iteration-23-tests.txt",
-          "sha256": "7a1af773b2510ab476ef6ee7178627efa7291a350b3c09094942a3152b7f490d"
+          "sha256": "77681437082a852df8b3661124239af226aad0c117c52745de76036f6730b29f"
         },
         {
           "path": "outputs/iteration-23-audit.json",
-          "sha256": "e32372cf3f30c089d1ed49f68490a9819a111d2d643cc2da275aa16a5e9b4a76"
+          "sha256": "1cf52acd3d6c88fe076075c306dc1b0c1d54783f01f30c355653a412588a415f"
         }
       ],
       "expected": "Weekly regression unaffected",
@@ -673,7 +673,7 @@
       "evidence": [
         {
           "path": "outputs/iteration-23-audit.json",
-          "sha256": "e32372cf3f30c089d1ed49f68490a9819a111d2d643cc2da275aa16a5e9b4a76"
+          "sha256": "1cf52acd3d6c88fe076075c306dc1b0c1d54783f01f30c355653a412588a415f"
         }
       ],
       "expected": "Dedicated executable entry point",
@@ -703,7 +703,7 @@
       "evidence": [
         {
           "path": "outputs/iteration-23-audit.json",
-          "sha256": "e32372cf3f30c089d1ed49f68490a9819a111d2d643cc2da275aa16a5e9b4a76"
+          "sha256": "1cf52acd3d6c88fe076075c306dc1b0c1d54783f01f30c355653a412588a415f"
         }
       ],
       "expected": "No weekly curriculum or generation dependency",
@@ -740,11 +740,11 @@
       "evidence": [
         {
           "path": "outputs/iteration-23-audit.json",
-          "sha256": "e32372cf3f30c089d1ed49f68490a9819a111d2d643cc2da275aa16a5e9b4a76"
+          "sha256": "1cf52acd3d6c88fe076075c306dc1b0c1d54783f01f30c355653a412588a415f"
         },
         {
           "path": "outputs/iteration-23-tests.txt",
-          "sha256": "7a1af773b2510ab476ef6ee7178627efa7291a350b3c09094942a3152b7f490d"
+          "sha256": "77681437082a852df8b3661124239af226aad0c117c52745de76036f6730b29f"
         }
       ],
       "expected": "Weekly implementation unaffected",
@@ -760,11 +760,11 @@
       "evidence": [
         {
           "path": "outputs/iteration-23-audit.json",
-          "sha256": "e32372cf3f30c089d1ed49f68490a9819a111d2d643cc2da275aa16a5e9b4a76"
+          "sha256": "1cf52acd3d6c88fe076075c306dc1b0c1d54783f01f30c355653a412588a415f"
         },
         {
           "path": "outputs/iteration-23-tests.txt",
-          "sha256": "7a1af773b2510ab476ef6ee7178627efa7291a350b3c09094942a3152b7f490d"
+          "sha256": "77681437082a852df8b3661124239af226aad0c117c52745de76036f6730b29f"
         }
       ],
       "expected": "Assessment policies do not alter weekly behavior",
