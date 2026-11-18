@@ -1,0 +1,329 @@
+{
+  "status": "NOT_DONE",
+  "iteration": 1,
+  "baseline_revision": "728596db0ec7deedc087b9e509da14701b7d088d",
+  "criteria": [
+    {
+      "id": "V01.01",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V01.02",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V01.03",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V01.04",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V01.05",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V01.06",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V01.07",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V02.01",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V02.02",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V02.03",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V02.04",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V02.05",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V02.06",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V02.07",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V02.08",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V02.09",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V02.10",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V02.11",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V03.01",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V03.02",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V03.03",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V03.04",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V03.05",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V03.06",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V03.07",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V04.01",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V04.02",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V04.03",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V04.04",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V04.05",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V04.06",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V04.07",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V04.08",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V05.01",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V05.02",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V05.03",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V05.04",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V05.05",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V05.06",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V05.07",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V05.08",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V05.09",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V05.10",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V05.11",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V05.12",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V05.13",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V06.01",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V06.02",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V06.03",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V06.04",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V06.05",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V06.06",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V06.07",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V06.08",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V06.09",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V06.10",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V06.11",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V06.12",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V07.01",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V07.02",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V07.03",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V07.04",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V07.05",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V07.06",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V07.07",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V07.08",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V07.09",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "V07.10",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "ARCH.01",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "ARCH.02",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "ARCH.03",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "ARCH.04",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "ARCH.05",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "ARCH.06",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "ARCH.07",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "ARCH.08",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "ARCH.09",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "ARCH.10",
+      "status": "NOT_VERIFIED"
+    }
+  ],
+  "next": [
+    "Audit exact golden artifacts and recover ELA final",
+    "Build independently invokable source-based composition and rendering",
+    "Run historical regressions and independent QA",
+    "Run existing weekly regression tests"
+  ],
+  "blockers": [
+    "ELA golden output not identified",
+    "Historical PDF content and approvals not verified"
+  ]
+}

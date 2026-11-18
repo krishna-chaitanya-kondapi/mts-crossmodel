@@ -1,0 +1,396 @@
+{
+  "version": "1.1",
+  "scope": "historical_source_based_benchmark_math_ela",
+  "criteria": [
+    {
+      "id": "V01.01",
+      "requirement": "Recover Math requirements",
+      "mandatory": true
+    },
+    {
+      "id": "V01.02",
+      "requirement": "Recover ELA requirements",
+      "mandatory": true
+    },
+    {
+      "id": "V01.03",
+      "requirement": "Identify final worksheets and keys",
+      "mandatory": true
+    },
+    {
+      "id": "V01.04",
+      "requirement": "Identify original sources",
+      "mandatory": true
+    },
+    {
+      "id": "V01.05",
+      "requirement": "Capture corrections and exceptions",
+      "mandatory": true
+    },
+    {
+      "id": "V01.06",
+      "requirement": "Trace mandatory requirements to implementation and evidence",
+      "mandatory": true
+    },
+    {
+      "id": "V01.07",
+      "requirement": "Resolve mandatory requirement gaps",
+      "mandatory": true
+    },
+    {
+      "id": "V02.01",
+      "requirement": "Dedicated workflow exists",
+      "mandatory": true
+    },
+    {
+      "id": "V02.02",
+      "requirement": "Support Benchmark and Diagnostic",
+      "mandatory": false
+    },
+    {
+      "id": "V02.03",
+      "requirement": "Support Full Mini and Custom",
+      "mandatory": false
+    },
+    {
+      "id": "V02.04",
+      "requirement": "Source-based generation works",
+      "mandatory": true
+    },
+    {
+      "id": "V02.05",
+      "requirement": "Math and ELA branches work",
+      "mandatory": true
+    },
+    {
+      "id": "V02.06",
+      "requirement": "Validated RunSpec PDF and JSON",
+      "mandatory": true
+    },
+    {
+      "id": "V02.07",
+      "requirement": "Student PDF",
+      "mandatory": true
+    },
+    {
+      "id": "V02.08",
+      "requirement": "Separate teacher PDF",
+      "mandatory": true
+    },
+    {
+      "id": "V02.09",
+      "requirement": "Automatic verification",
+      "mandatory": true
+    },
+    {
+      "id": "V02.10",
+      "requirement": "Approval gates enforced",
+      "mandatory": true
+    },
+    {
+      "id": "V02.11",
+      "requirement": "Reuse applicable shared capabilities",
+      "mandatory": true
+    },
+    {
+      "id": "V03.01",
+      "requirement": "Independently verify every Math answer",
+      "mandatory": true
+    },
+    {
+      "id": "V03.02",
+      "requirement": "Independently verify every ELA answer",
+      "mandatory": true
+    },
+    {
+      "id": "V03.03",
+      "requirement": "Verify all MCQ choices",
+      "mandatory": true
+    },
+    {
+      "id": "V03.04",
+      "requirement": "Verify constructed responses and scoring",
+      "mandatory": true
+    },
+    {
+      "id": "V03.05",
+      "requirement": "Verify ELA references",
+      "mandatory": true
+    },
+    {
+      "id": "V03.06",
+      "requirement": "Question-key correspondence",
+      "mandatory": true
+    },
+    {
+      "id": "V03.07",
+      "requirement": "Zero academic defects",
+      "mandatory": true
+    },
+    {
+      "id": "V04.01",
+      "requirement": "Preserve required source questions",
+      "mandatory": true
+    },
+    {
+      "id": "V04.02",
+      "requirement": "Preserve required passages",
+      "mandatory": true
+    },
+    {
+      "id": "V04.03",
+      "requirement": "Preserve choices except approved corrections",
+      "mandatory": true
+    },
+    {
+      "id": "V04.04",
+      "requirement": "Preserve figures",
+      "mandatory": true
+    },
+    {
+      "id": "V04.05",
+      "requirement": "Preserve math notation",
+      "mandatory": true
+    },
+    {
+      "id": "V04.06",
+      "requirement": "Preserve instructions",
+      "mandatory": true
+    },
+    {
+      "id": "V04.07",
+      "requirement": "Document deviations",
+      "mandatory": true
+    },
+    {
+      "id": "V04.08",
+      "requirement": "Zero unauthorized deviations",
+      "mandatory": true
+    },
+    {
+      "id": "V05.01",
+      "requirement": "Approved paper and orientation",
+      "mandatory": true
+    },
+    {
+      "id": "V05.02",
+      "requirement": "Student pagination",
+      "mandatory": true
+    },
+    {
+      "id": "V05.03",
+      "requirement": "Preferred scaling where feasible",
+      "mandatory": true
+    },
+    {
+      "id": "V05.04",
+      "requirement": "Minimum scale",
+      "mandatory": true
+    },
+    {
+      "id": "V05.05",
+      "requirement": "Minimum clearance",
+      "mandatory": true
+    },
+    {
+      "id": "V05.06",
+      "requirement": "Zero split questions",
+      "mandatory": true
+    },
+    {
+      "id": "V05.07",
+      "requirement": "Zero clipping or overlap",
+      "mandatory": true
+    },
+    {
+      "id": "V05.08",
+      "requirement": "Zero missing labels",
+      "mandatory": true
+    },
+    {
+      "id": "V05.09",
+      "requirement": "Sequential numbering and reading order",
+      "mandatory": true
+    },
+    {
+      "id": "V05.10",
+      "requirement": "Optimize whitespace",
+      "mandatory": true
+    },
+    {
+      "id": "V05.11",
+      "requirement": "Inspect every page",
+      "mandatory": true
+    },
+    {
+      "id": "V05.12",
+      "requirement": "Key pagination",
+      "mandatory": true
+    },
+    {
+      "id": "V05.13",
+      "requirement": "Print readability",
+      "mandatory": true
+    },
+    {
+      "id": "V06.01",
+      "requirement": "Identify final Math golden reference",
+      "mandatory": true
+    },
+    {
+      "id": "V06.02",
+      "requirement": "Identify final ELA golden reference",
+      "mandatory": true
+    },
+    {
+      "id": "V06.03",
+      "requirement": "Math golden RunSpec",
+      "mandatory": true
+    },
+    {
+      "id": "V06.04",
+      "requirement": "ELA golden RunSpec",
+      "mandatory": true
+    },
+    {
+      "id": "V06.05",
+      "requirement": "Reproduce Math benchmark",
+      "mandatory": true
+    },
+    {
+      "id": "V06.06",
+      "requirement": "Reproduce ELA benchmark",
+      "mandatory": true
+    },
+    {
+      "id": "V06.07",
+      "requirement": "Content and selection parity",
+      "mandatory": true
+    },
+    {
+      "id": "V06.08",
+      "requirement": "Key and scoring parity",
+      "mandatory": true
+    },
+    {
+      "id": "V06.09",
+      "requirement": "Scaling pagination and figure parity",
+      "mandatory": true
+    },
+    {
+      "id": "V06.10",
+      "requirement": "Equivalent or improved readability",
+      "mandatory": true
+    },
+    {
+      "id": "V06.11",
+      "requirement": "Document all differences",
+      "mandatory": true
+    },
+    {
+      "id": "V06.12",
+      "requirement": "Zero blocking regression differences",
+      "mandatory": true
+    },
+    {
+      "id": "V07.01",
+      "requirement": "Independent invocation without chat context",
+      "mandatory": true
+    },
+    {
+      "id": "V07.02",
+      "requirement": "Repository configuration and policies",
+      "mandatory": true
+    },
+    {
+      "id": "V07.03",
+      "requirement": "Estimated and actual runtime",
+      "mandatory": true
+    },
+    {
+      "id": "V07.04",
+      "requirement": "Persist evidence",
+      "mandatory": true
+    },
+    {
+      "id": "V07.05",
+      "requirement": "Repair and escalation tests",
+      "mandatory": true
+    },
+    {
+      "id": "V07.06",
+      "requirement": "Weekly regression unaffected",
+      "mandatory": true
+    },
+    {
+      "id": "V07.07",
+      "requirement": "Output conventions",
+      "mandatory": true
+    },
+    {
+      "id": "V07.08",
+      "requirement": "PrintReady approval",
+      "mandatory": true
+    },
+    {
+      "id": "V07.09",
+      "requirement": "Portability review",
+      "mandatory": true
+    },
+    {
+      "id": "V07.10",
+      "requirement": "Repeatability",
+      "mandatory": true
+    },
+    {
+      "id": "ARCH.01",
+      "requirement": "Dedicated executable entry point",
+      "mandatory": true
+    },
+    {
+      "id": "ARCH.02",
+      "requirement": "Independent orchestration",
+      "mandatory": true
+    },
+    {
+      "id": "ARCH.03",
+      "requirement": "Independent configuration",
+      "mandatory": true
+    },
+    {
+      "id": "ARCH.04",
+      "requirement": "No weekly curriculum or generation dependency",
+      "mandatory": true
+    },
+    {
+      "id": "ARCH.05",
+      "requirement": "Shared capabilities via reusable interfaces",
+      "mandatory": true
+    },
+    {
+      "id": "ARCH.06",
+      "requirement": "Independent execution",
+      "mandatory": true
+    },
+    {
+      "id": "ARCH.07",
+      "requirement": "Dedicated tests and golden regressions",
+      "mandatory": true
+    },
+    {
+      "id": "ARCH.08",
+      "requirement": "Weekly implementation unaffected",
+      "mandatory": true
+    },
+    {
+      "id": "ARCH.09",
+      "requirement": "Assessment policies do not alter weekly behavior",
+      "mandatory": true
+    },
+    {
+      "id": "ARCH.10",
+      "requirement": "Coordinated PrintReady preserves other approved artifacts",
+      "mandatory": true
+    }
+  ]
+}
