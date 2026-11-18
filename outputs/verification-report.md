@@ -1,6 +1,6 @@
 # Mock Assessment verification report
 
-**NOT_DONE.** Iteration 22. All 76 mandatory criteria remain open in the verification gate.
+**NOT_DONE. Iteration 23.** The revision-bound gate records **2 / 76 mandatory criteria PASS**; 74 remain open. V01.01 and V01.02 pass for requirements-source recovery only. This acceptance count is not the unit-test count and does not claim implementation, academic correctness, or release readiness.
 
 ## Historical evidence
 
@@ -104,3 +104,13 @@ Added an ELA student CLI route through the hash-bound source renderer and a synt
 Applied the Grade 4 Q42 page break. The candidate is four pages with 28 ordered regions, full-width Q26, and Q42–44 on page four; SHA-256 `faac0cbaf4b9d4cebee4843181c76a4d59b68ae09847f1a917ef689e707f8dd3`. The one-page teacher-key candidate has SHA-256 `fc8d015bacc65ead68c01b831a0bd62890f53dd35a4b06683eae65c622e949bd`. Both candidates were visually inspected. These are local review artifacts under `%TEMP%\\mock-assessment-iteration22`; actual paths, source identities, and structural checks are in [iteration 22 render evidence](iteration-22-render-evidence.json). Independent academic/source-fidelity review, historical student-golden comparison, and acceptance of fourth-page utilization remain open.
 
 No acceptance criterion is promoted: **0 / 76 mandatory criteria verified**. No production publication occurred. The checkpoint remains NOT_DONE; historical approval, independent review, source fidelity, and broad end-to-end workflow evidence are unresolved.
+
+## Iteration 23
+
+Recovered and fingerprinted the approved Mock Assessment contract and the Math and ELA requirements sources. V01.01 and V01.02 now pass for **source recovery and authority/scope classification only**. The ELA detailed requirements remain proposed/incomplete and no ELA subject design document was found; Weekly Practice rules and defaults were not imported as Mock Assessment policy. See [requirements recovery evidence](iteration-23-requirements-recovery.json).
+
+The full suite passed **262 tests** on the clean rerun. The first full run had 261 passed and one Weekly bypass integration failure; the isolated test passed, then the clean full rerun passed. The first failure's cause was not captured. Test-written transaction fixtures were restored. See [Iteration 23 test output](iteration-23-tests.txt).
+
+Compared the Grade 4 candidate with the recovered four-page historical golden. The candidate has 28 ordered items, full-width Q26, matching page 3/4 item groups, and matching response-line counts. It still differs in page 1/2 item grouping, all-page branding/numbering/student fields, and boxed question-label typography. No visual or academic equivalence is claimed. See [Grade 4 render evidence](iteration-23-grade4-render-evidence.json) and [open defects](iteration-23-defects.json).
+
+The source-control ELA manifest is not a final candidate. All other mandatory criteria remain NOT_VERIFIED. Next: complete criterion-level traceability, build an ELA candidate from the official source (including raster-only pages 10 and 16), repair the recorded Grade 4 golden differences, and run production-path verification. Qualified independent review is needed for academic/source acceptance; artifact-specific human approval remains required before production publication.

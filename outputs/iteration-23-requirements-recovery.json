@@ -28,7 +28,7 @@
     },
     {
       "path": "specs/generate_mock_assessment/README.md",
-      "sha256": "b14a731acce10299d6388d6e935f3f37c46e7e70149046d069ad2a8fdd5babfb",
+      "sha256": "9589bbee6e2e34a59a2c83972367f2e5029e40d738173e93a68b68c0f77d1a6b",
       "authority": "Proposed target specification; not treated as an approved requirements baseline",
       "scope": "Architecture, workflow, and current local render routes."
     }

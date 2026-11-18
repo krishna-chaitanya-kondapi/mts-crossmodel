@@ -1,13 +1,14 @@
 # Mock Assessment dashboard
 
-**0 / 76 (0%) mandatory criteria verified**  
-**Status NOT_DONE** · Iteration 22
+**2 / 76 (3%) mandatory criteria verified**
 
-Percentages count criteria recorded as PASS in the verification report. Implementation trials and unit tests are shown below because they provide progress evidence before acceptance.
+**Status NOT_DONE** · Iteration 23 · audited code revision `2c59606b7f5c9cc09069e432022d52f23f59759e`
+
+The acceptance count is separate from the test count. V01.01 and V01.02 pass for requirements-source recovery and authority/scope classification only; this does not establish implementation, educational correctness, or release readiness.
 
 | Category | Verified |
 |---|---:|
-| Requirements and traceability | 0 / 7 (0%) |
+| Requirements and traceability | 2 / 7 (29%) |
 | Workflow and deliverables | 0 / 9 (0%) |
 | Academic correctness | 0 / 7 (0%) |
 | Source fidelity | 0 / 8 (0%) |
@@ -18,19 +19,25 @@ Percentages count criteria recorded as PASS in the verification report. Implemen
 
 ## Work completed
 
-- Historical sources and official item mappings recovered for Grade 4 Math, Grade 5 Math, and Grade 6 ELA. The mappings cover 70 questions.
-- Latest full suite: 257 passed, including Weekly Practice. Test-written transaction fixtures were restored.
-- Repaired and visually reviewed the two-page ELA teacher-key candidate; all 12 MC answers match the historical key text. Independent answer/rubric review and readability parity remain NOT_VERIFIED.
-- Added the ELA student CLI route using the hash-bound source renderer; its route test uses a synthetic manifest only.
-- Grade 4 remains four pages with 28 ordered regions, full-width Q26, and Q42–44 on page four. The teacher-key candidate remains one page.
-- The Grade 5 vector rendering trial placed 28 regions on 8 pages. The historical ceiling is 4 pages. Large source crops still dominate page use.
+- Recovered and fingerprinted approved Mock Assessment and Math/ELA requirement sources. Weekly Practice defaults are explicitly excluded. ELA detailed requirements remain proposed/incomplete and no ELA subject design document was found.
+- Latest clean full suite: **262 passed**. An earlier full-suite run had one Weekly bypass integration failure; the isolated test and clean full-suite rerun passed. The first failure's cause was not captured; test-written transaction fixtures were restored.
+- Grade 4 candidate: four pages, 28 ordered regions, full-width Q26, and matching page 3/4 groups and response-line counts versus the recovered golden. Page 1/2 grouping, page furniture, and question-label typography still differ; no visual-equivalence claim is made.
+- ELA's 13-page source-control manifest is not a final student candidate. Source fidelity, independent review, and historical equivalence remain NOT_VERIFIED.
+- No production publication occurred.
 
 ## Next steps
 
-Create and verify an official-source-derived ELA student manifest against the delivered golden, including raster-only passage pages. Complete Grade 4 item-level academic/source review, retrieve the historical student golden, and document page-four utilization. Do not mark any criterion PASS without criterion-specific, revision-bound evidence or publish without human approval.
+1. Build criterion-level implementation/evidence traceability and keep unsupported criteria NOT_VERIFIED.
+2. Produce an ELA candidate from the official source, including raster-only pages 10 and 16, and compare it with the delivered golden.
+3. Repair the recorded Grade 4 golden differences and repeat the complete page-by-page comparison.
+4. Run both CLI production paths. Obtain qualified independent academic/source review; human approval is required before publication.
 
-**Your action** None required for development and testing.
+## Blockers and boundaries
 
-[Verification report](verification-report.md) · [Machine-readable criteria](verification-report.json) · [Layout evidence](grade5-layout-trial-evidence.json)
+- A qualified independent reviewer is required for academic/source acceptance; self-review is insufficient.
+- Artifact-specific human approval is absent, so production publication is not authorized.
+- Do not use proposed Weekly ELA requirements as approved Mock Assessment policy.
 
-**Latest work** See [iteration 22 evidence](iteration-22-render-evidence.json), [test output](iteration-22-tests.txt), and the [verification report](verification-report.md). The latest candidate outputs remain local review artifacts; 0 / 76 mandatory criteria are verified.
+[Verification report](verification-report.md) · [Machine-readable criteria](verification-report.json) · [Canonical checkpoint](../specs/generate_mock_assessment/implementation-checkpoint.json)
+
+**Latest evidence:** [requirements recovery](iteration-23-requirements-recovery.json) · [Grade 4 comparison](iteration-23-grade4-render-evidence.json) · [tests](iteration-23-tests.txt) · [open defects](iteration-23-defects.json)

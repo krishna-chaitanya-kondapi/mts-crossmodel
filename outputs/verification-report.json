@@ -1,10 +1,10 @@
 {
   "status": "NOT_DONE",
-  "iteration": 22,
+  "iteration": 23,
   "date": "2026-11-18",
-  "revision": "a67dd2e91f3f9c8ecf47bc9252a29fde8f7a865e",
+  "revision": "2c59606b7f5c9cc09069e432022d52f23f59759e",
   "registry_sha256": "c70cf4b237e712c11943ed16ac5a479a9310c65a6d1fd284baddb23d956f0aa4",
-  "mandatory_pass": 0,
+  "mandatory_pass": 2,
   "mandatory_total": 76,
   "baseline_tests": {
     "command": "python -m pytest tests -q",
@@ -23,7 +23,8 @@
     "Added dedicated Grade 5 student CLI with historical source fingerprint, item ordering and page-cap checks.",
     "Repaired ELA teacher-key typography and punctuation fallback while preserving the twelve official answers and two labeled MTS model responses.",
     "Added an ELA student CLI route through the hash-bound source renderer; the route is tested with a synthetic manifest, not a source-faithful ELA fixture.",
-    "Added a Grade 4 page-break policy before Q42 to keep Q42-Q44 together on page four while preserving full-width Q26."
+    "Added a Grade 4 page-break policy before Q42 to keep Q42-Q44 together on page four while preserving full-width Q26.",
+    "Repaired Grade 4 source-cropped fractions, page/column breaks, heading behavior, and constructed-response rules; recorded the remaining historical-golden mismatches without claiming parity."
   ],
   "production_publications": 0,
   "defects": [
@@ -51,16 +52,30 @@
       "id": "MA-005",
       "finding": "Grade 4 has structural layout evidence, but an independent academic/source-fidelity review, historical worksheet golden comparison, and acceptance of fourth-page utilization remain open.",
       "affected": "V03, V04, V05 and V06"
+    },
+    {
+      "id": "MA-006",
+      "finding": "Math and ELA requirement sources are recovered for V01.01 and V01.02 only. ELA detailed requirements remain proposed/incomplete and no ELA subject design document was found.",
+      "affected": "Requirement completeness, V01.06, V01.07 and ELA design traceability"
+    },
+    {
+      "id": "MA-007",
+      "finding": "The Grade 4 candidate still differs from its historical golden in page 1/2 item grouping, all-page headers/page numbers/student fields, and boxed question-label typography.",
+      "affected": "Grade 4 visual parity, page utilization and historical acceptance"
+    },
+    {
+      "id": "MA-008",
+      "finding": "The first Iteration 23 full-suite run had one Weekly bypass integration failure (261 passed); the isolated test passed and a clean full-suite rerun passed 262 tests. The initial failure's cause was not captured.",
+      "affected": "Repeatability evidence for Weekly integration behavior"
     }
   ],
   "next": [
-    "Create a source-derived ELA student manifest from the official source; compare all selected passages, raster-only pages, questions, choices, figures, and instructions to the delivered student golden. Keep source fidelity NOT_VERIFIED until each comparison is recorded.",
-    "Complete Grade 4 item-by-item academic and source-fidelity review against the official source and scoring materials; retrieve the historical student golden and document page-four utilization while preserving Q26 full width.",
-    "Run the ELA and Grade 4 production-path fixtures, capture revision-bound structural and visual evidence, and continue requirement-to-evidence tracing without promoting unsupported criteria."
+    "Build the criterion-level implementation/evidence trace for all 76 mandatory criteria; identify exact passing paths and keep unsupported rows NOT_VERIFIED.",
+    "Build a source-derived ELA student candidate from the official PDF, reconstruct raster-only source pages 10 and 16 from that source, and compare the full candidate with the historical delivered golden.",
+    "Repair the recorded Grade 4 golden differences in page 1/2 item grouping, all-page headers/page numbers/student fields, and boxed question-label typography; regenerate and compare all pages and page-four utilization while preserving full-width Q26.",
+    "Run the ELA and Grade 4 CLI production-path checks. Obtain qualified independent academic/source review and human approval before any production publication."
   ],
   "pending_mandatory": [
-    "V01.01",
-    "V01.02",
     "V01.03",
     "V01.04",
     "V01.05",
@@ -141,15 +156,33 @@
       "id": "V01.01",
       "mandatory": true,
       "requirement": "Recover Math requirements",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "status": "PASS",
+      "method": "Read and fingerprint the approved Mock Assessment contract and the canonical Math requirements/subject sources; record each source's authority, scope, and whether weekly-only policy was excluded.",
+      "reviewer": "Copilot implementation agent; source-recovery self-review only, not independent academic acceptance.",
+      "expected": "Recover Math requirements and identify their authority and scope without importing Weekly Practice policy as Mock Assessment rules.",
+      "actual": "Canonical Math requirements, subject constraints, and related design/configuration sources are recovered and fingerprinted; weekly behavior is explicitly excluded from the Mock Assessment contract.",
+      "evidence": [
+        {
+          "path": "outputs/iteration-23-requirements-recovery.json",
+          "sha256": "6f7aca6dc93213ffc46096e97b6f58e7e594091ef50bf6a96bac7d6a23b17a42"
+        }
+      ]
     },
     {
       "id": "V01.02",
       "mandatory": true,
       "requirement": "Recover ELA requirements",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "status": "PASS",
+      "method": "Read and fingerprint the ELA subject requirements and product sources; record authority, approval status, known gaps, and separation from Weekly Practice defaults.",
+      "reviewer": "Copilot implementation agent; source-recovery self-review only, not independent academic acceptance.",
+      "expected": "Recover ELA requirements and disclose source authority, approval status, and gaps without treating proposed weekly rules as approved Mock Assessment policy.",
+      "actual": "ELA subject requirements and product sources are recovered and fingerprinted. The detailed requirements' proposed/incomplete status and missing subject design are recorded as open gaps; no approval or implementation claim is made.",
+      "evidence": [
+        {
+          "path": "outputs/iteration-23-requirements-recovery.json",
+          "sha256": "6f7aca6dc93213ffc46096e97b6f58e7e594091ef50bf6a96bac7d6a23b17a42"
+        }
+      ]
     },
     {
       "id": "V01.03",
@@ -712,8 +745,8 @@
     }
   },
   "iteration_tests": {
-    "evidence": "iteration-22-tests.txt",
-    "passed": 257,
+    "evidence": "iteration-23-tests.txt",
+    "passed": 262,
     "failed": 0
   },
   "layout_trial": {
@@ -777,15 +810,15 @@
   "grade4_student_trial": {
     "golden_pages": 4,
     "regions": 28,
-    "status": "CLI_STRUCTURAL_PASS",
+    "status": "STRUCTURAL_PASS_VISUAL_GAPS_REMAIN",
     "maximum_pages": 4,
     "full_width_question": 26,
-    "evidence": "iteration-22-render-evidence.json",
+    "evidence": "iteration-23-grade4-render-evidence.json",
     "pages": 4,
     "source_fidelity": "NOT_VERIFIED",
-    "artifact": "%TEMP%\\mock-assessment-iteration22\\grade4-after.pdf",
-    "sha256": "faac0cbaf4b9d4cebee4843181c76a4d59b68ae09847f1a917ef689e707f8dd3",
-    "minimum_measured_clearance_pt": 6.38
+    "artifact": "%TEMP%\\mock-assessment-iteration22\\grade4-iteration23.pdf",
+    "sha256": "dbfe8956da41a8ee6ced75f948125f814d04b2970b9f3d33153ccadc2cfac907",
+    "visual_equivalence": "NOT_VERIFIED"
   },
   "ela_student_trial": {
     "pages": 4,
@@ -803,5 +836,31 @@
     "official_mc": 12,
     "sha256": "208ecc4a93d4f41e38f030617322f6b98b35eee7cf01f7e066d40f3c7a0b5c51",
     "matches_teacher_golden_answers": true
+  },
+  "iteration_23": {
+    "requirements_recovery": {
+      "evidence": "iteration-23-requirements-recovery.json",
+      "sha256": "6f7aca6dc93213ffc46096e97b6f58e7e594091ef50bf6a96bac7d6a23b17a42",
+      "scope": "V01.01 and V01.02 source recovery only; no implementation, academic correctness, or release claim."
+    },
+    "grade4_golden_comparison": {
+      "evidence": "iteration-23-grade4-render-evidence.json",
+      "sha256": "5dbcc70b2d5efe96581015bb58dc57ffac92e707ba116720198e43fc9218c3c5",
+      "status": "STRUCTURAL_PASS_VISUAL_GAPS_REMAIN",
+      "candidate_sha256": "dbfe8956da41a8ee6ced75f948125f814d04b2970b9f3d33153ccadc2cfac907",
+      "golden_sha256": "e01b89daed4d3719c9b0d63035b0239ef87e58f0cf759de7d2466f448445d107"
+    },
+    "defects": {
+      "evidence": "iteration-23-defects.json",
+      "sha256": "eaf430c9cb9514a6889196387eeb4bca2370e4af4be766a67a0a56fb51933fb6"
+    },
+    "tests": {
+      "command": ".venv\\Scripts\\python.exe -m pytest tests -q",
+      "passed": 262,
+      "failed": 0,
+      "evidence": "iteration-23-tests.txt",
+      "sha256": "42164d3fa25adb149e9adf4300e91077683511c11cf34f0661d6cd460a278eaa",
+      "note": "The first full run had 261 passed and one Weekly bypass integration failure. The isolated test passed, then a clean full-suite rerun passed 262 tests. The first failure's cause was not captured; test-written transaction fixtures were restored."
+    }
   }
 }

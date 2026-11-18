@@ -1,15 +1,15 @@
 {
   "status": "NOT_DONE",
-  "iteration": 22,
+  "iteration": 23,
   "baseline_revision": "728596db0ec7deedc087b9e509da14701b7d088d",
   "criteria": [
     {
       "id": "V01.01",
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V01.02",
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V01.03",
@@ -317,16 +317,17 @@
     }
   ],
   "next": [
-    "Create a source-derived ELA student manifest from the official source; compare all selected passages, raster-only pages, questions, choices, figures, and instructions to the delivered student golden. Keep source fidelity NOT_VERIFIED until each comparison is recorded.",
-    "Complete Grade 4 item-by-item academic and source-fidelity review against the official source and scoring materials; retrieve the historical student golden and document page-four utilization while preserving Q26 full width.",
-    "Run the ELA and Grade 4 production-path fixtures, capture revision-bound structural and visual evidence, and continue requirement-to-evidence tracing without promoting unsupported criteria."
+    "Build the criterion-level implementation/evidence trace for all 76 mandatory criteria; identify exact passing paths and keep unsupported rows NOT_VERIFIED.",
+    "Build a source-derived ELA student candidate from the official PDF, reconstruct raster-only source pages 10 and 16 from that source, and compare the full candidate with the historical delivered golden.",
+    "Repair the recorded Grade 4 golden differences in page 1/2 item grouping, all-page headers/page numbers/student fields, and boxed question-label typography; regenerate and compare all pages and page-four utilization while preserving full-width Q26.",
+    "Run the ELA and Grade 4 CLI production-path checks. Obtain qualified independent academic/source review and human approval before any production publication."
   ],
   "blockers": [
     "A qualified independent reviewer must review the Grade 4 and ELA candidate answers, source selections, and scoring/rubric alignment; self-review cannot satisfy the independent-review criteria. This prevents V03 academic acceptance and dependent source-fidelity acceptance until review evidence is recorded.",
     "Artifact-specific human final approval is absent from the handoffs. This prevents production publication only; no publication is authorized without that approval.",
-    "A source-derived ELA student manifest and complete student-golden comparison are still absent."
+    "The detailed ELA requirements remain proposed/incomplete and no ELA subject design document was found; do not treat weekly ELA materials as approved Mock Assessment policy."
   ],
-  "audited_revision": "a67dd2e91f3f9c8ecf47bc9252a29fde8f7a865e",
+  "audited_revision": "2c59606b7f5c9cc09069e432022d52f23f59759e",
   "evidence": [
     "outputs/verification-report.json",
     "outputs/baseline-tests.txt",
@@ -357,6 +358,10 @@
     "outputs/ela-student-trial-evidence.json",
     "outputs/ela-teacher-review.md",
     "outputs/iteration-22-tests.txt",
-    "outputs/iteration-22-render-evidence.json"
+    "outputs/iteration-22-render-evidence.json",
+    "outputs/iteration-23-requirements-recovery.json",
+    "outputs/iteration-23-defects.json",
+    "outputs/iteration-23-grade4-render-evidence.json",
+    "outputs/iteration-23-tests.txt"
   ]
 }
