@@ -10,6 +10,13 @@ ROOT = Path(__file__).resolve().parents[1]
 STATE = ROOT / "specs/generate_mock_assessment/resume"
 
 
+def fingerprint(path):
+    content = path.read_bytes()
+    if path.suffix in {".py", ".md", ".json", ".txt", ".ps1"}:
+        content = content.replace(b"\r\n", b"\n")
+    return sha256(content).hexdigest()
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--verify", action="store_true")
@@ -20,7 +27,7 @@ def main():
         failures = [
             row["path"] for row in inventory["files"]
             if not (ROOT / row["path"]).is_file()
-            or sha256((ROOT / row["path"]).read_bytes()).hexdigest() != row["sha256"]
+            or fingerprint(ROOT / row["path"]) != row["sha256"]
         ]
         if failures:
             raise SystemExit("Checkpoint files missing or changed: " + ", ".join(failures))
@@ -41,12 +48,13 @@ def main():
     paths += [ROOT / "scripts/generate_mock_assessment.py", ROOT / "scripts/resume_mock_assessment.py",
               Path(__file__), ROOT / "specs/generate_mock_assessment/implementation-checkpoint.json"]
     files = [
-        {"path": path.relative_to(ROOT).as_posix(), "sha256": sha256(path.read_bytes()).hexdigest()}
+        {"path": path.relative_to(ROOT).as_posix(), "sha256": fingerprint(path)}
         for path in sorted(set(paths))
         if path.is_file() and path != inventory_path and "__pycache__" not in path.parts
     ]
     inventory = {
         "status": "NOT_DONE",
+        "hash_policy": "SHA256, CRLF normalized to LF for code and text files",
         "base_revision": subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip(),
         "revision_note": "Base revision precedes the checkpoint commit. File hashes identify this snapshot.",
         "files": files,
