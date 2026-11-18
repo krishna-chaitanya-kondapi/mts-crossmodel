@@ -1,6 +1,6 @@
 """Validate and execute independent historical benchmark review RunSpecs."""
 
-from datetime import date
+from datetime import date, datetime, timezone
 from hashlib import sha256
 import json
 import os
@@ -17,6 +17,8 @@ from .ela_student import render_ela_student
 from .ela_teacher import render_ela_teacher
 from .grade4_student import render_grade4_student
 from .grade5_student import render_grade5_student
+from mts.infrastructure.file_system.atomic_writer import write_json
+
 from .teacher_key import render_teacher_key
 from .review_catalog import (
     match_frozen_review,
@@ -207,11 +209,28 @@ def run_benchmark(spec_path, source_root, output_root, fixtures):
     descriptor = os.open(lock, os.O_CREAT | os.O_EXCL | os.O_WRONLY)
     os.close(descriptor)
     moved = []
+    history_path = root / ".attempts" / f'{spec["run_id"]}.json'
+    history = None
+    current_attempt = None
     try:
         if any(target.exists() for target in targets):
             raise FileExistsError(
                 "A run with this identity already exists; select a new run ID"
             )
+        history = (
+            json.loads(history_path.read_text(encoding="utf-8-sig"))
+            if history_path.exists()
+            else {"attempts": []}
+        )
+        current_attempt = {
+            "attempt": len(history["attempts"]) + 1,
+            "started_utc": datetime.now(timezone.utc).isoformat(),
+            "profile": profile,
+            "source_sha256": spec["source_sha256"],
+            "status": "RUNNING",
+        }
+        history["attempts"].append(current_attempt)
+        write_json(history_path, history)
         with tempfile.TemporaryDirectory(prefix=".mock-", dir=root) as staging:
             stage = Path(staging)
             pre, run, post = [stage / phase for phase in phases]
@@ -268,6 +287,8 @@ def run_benchmark(spec_path, source_root, output_root, fixtures):
                     "production_publications": 0,
                     "estimated_runtime_seconds": spec["estimated_runtime_seconds"],
                     "rendering_seconds": rendering_seconds,
+                    "retry_count": current_attempt["attempt"] - 1,
+                    "human_wait_seconds": 0,
                     "actual_active_seconds": perf_counter() - started,
                     "placements": placements,
                     "artifacts": {
@@ -322,10 +343,24 @@ def run_benchmark(spec_path, source_root, output_root, fixtures):
                 target.parent.mkdir(parents=True, exist_ok=True)
                 os.rename(folder, target)
                 moved.append(target)
+        result["actual_active_seconds"] = perf_counter() - started
+        write_json(targets[2] / "runlog.json", result)
+        current_attempt.update(
+            status=result["status"],
+            actual_active_seconds=result["actual_active_seconds"],
+        )
+        write_json(history_path, history)
         return result
-    except Exception:
+    except Exception as failure:
         for target in moved:
             shutil.rmtree(target)
+        if current_attempt is not None:
+            current_attempt.update(
+                status="FAILED",
+                error=str(failure),
+                actual_active_seconds=perf_counter() - started,
+            )
+            write_json(history_path, history)
         raise
     finally:
         lock.unlink()

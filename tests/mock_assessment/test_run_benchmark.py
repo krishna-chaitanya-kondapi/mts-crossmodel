@@ -96,10 +96,14 @@ def test_partial_phase_move_rolls_back_and_can_be_retried(local_run, monkeypatch
     assert not list(output.rglob("*.pdf"))
     assert not list(output.glob("*.lock"))
     monkeypatch.setattr(runner.os, "rename", rename)
-    assert (
-        runner.run_benchmark(path, source, output, fixtures)["status"]
-        == "REVIEW_REQUIRED"
-    )
+    repaired = runner.run_benchmark(path, source, output, fixtures)
+    assert repaired["status"] == "REVIEW_REQUIRED"
+    assert repaired["retry_count"] == 1
+    journal = json.loads(next((output / ".attempts").glob("*.json")).read_text())
+    assert [item["status"] for item in journal["attempts"]] == [
+        "FAILED",
+        "REVIEW_REQUIRED",
+    ]
 
 
 def test_concurrent_run_identity_is_locked(local_run):

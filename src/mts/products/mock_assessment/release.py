@@ -6,11 +6,10 @@ import json
 from pathlib import Path
 
 from mts.publishing.coordinated_release import publish_verified_files
+from mts.publishing.coordinated_drive_release import publish_verified_drive_files
 
 
-def publish_approved_assessment(
-    run_root, review, approval, development_gate, destination
-):
+def approved_release_files(run_root, review, approval, development_gate):
     """Require completed quality gates and human approval before local publication."""
     if development_gate.get("status") != "READY_FOR_ACCEPTANCE":
         raise ValueError(
@@ -77,9 +76,38 @@ def publish_approved_assessment(
     for name, path in files.items():
         if sha256(path.read_bytes()).hexdigest() != hashes[name]:
             raise ValueError("An artifact changed after approval")
+    return files, hashes
+
+
+def publish_approved_assessment(
+    run_root, review, approval, development_gate, destination
+):
+    files, hashes = approved_release_files(run_root, review, approval, development_gate)
     return publish_verified_files(
         files,
         destination,
         expected_hashes=hashes,
         replace_hashes=approval.get("replace_hashes", {}),
+    )
+
+
+def publish_approved_assessment_drive(
+    run_root,
+    review,
+    approval,
+    development_gate,
+    adapter,
+    destination_id,
+    archive_id,
+    lock_path,
+):
+    files, hashes = approved_release_files(run_root, review, approval, development_gate)
+    return publish_verified_drive_files(
+        files,
+        destination_id,
+        archive_id,
+        adapter,
+        expected_hashes=hashes,
+        replace_hashes=approval.get("replace_hashes", {}),
+        lock_path=lock_path,
     )

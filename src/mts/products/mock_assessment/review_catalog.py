@@ -19,7 +19,7 @@ def manifest_fingerprint(value):
 def implementation_fingerprints(folder):
     return {
         path.name: sha256(
-            path.read_bytes().replace(b"\r\n", b"\n").lstrip(b"\xef\xbb\xbf")
+            path.read_bytes().replace(b"\r\n", b"\n").removeprefix(b"\xef\xbb\xbf")
         ).hexdigest()
         for path in sorted(Path(folder).glob("*.py"))
     }

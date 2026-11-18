@@ -13,18 +13,50 @@ from mts.infrastructure.file_system.atomic_writer import write_json
 
 
 def main():
-    if len(sys.argv) > 1 and sys.argv[1] == "release":
-        from mts.products.mock_assessment.release import publish_approved_assessment
-
+    if len(sys.argv) > 1 and sys.argv[1] == "recover-release-drive":
         parser = argparse.ArgumentParser(
-            description="Publish an explicitly approved, fully verified local PDF pair"
+            description="Restore the prior approved set from a trusted publication journal"
+        )
+        parser.add_argument("--journal", type=Path, required=True)
+        parser.add_argument("--credentials", type=Path, required=True)
+        args = parser.parse_args(sys.argv[2:])
+        record = json.loads(args.journal.read_text(encoding="utf-8-sig"))
+        if record.get("status") not in {"RUNNING", "RECOVERY_REQUIRED"}:
+            raise ValueError("This publication operation needs no recovery")
+        from google.oauth2.credentials import Credentials
+        from googleapiclient.discovery import build
+        from mts.infrastructure.google_docs.google_docs_adapter import GoogleDocsAdapter
+        from mts.publishing.coordinated_drive_release import recover_drive_publication
+
+        credentials = Credentials.from_authorized_user_file(str(args.credentials))
+        adapter = GoogleDocsAdapter(
+            build("drive", "v3", credentials=credentials, cache_discovery=False), None
+        )
+        recover_drive_publication(args.journal, adapter)
+        print("PRIOR_APPROVED_SET_RESTORED")
+        return 0
+
+    if len(sys.argv) > 1 and sys.argv[1] in {"release", "release-drive"}:
+        from mts.products.mock_assessment.release import (
+            approved_release_files,
+            publish_approved_assessment,
+            publish_approved_assessment_drive,
+        )
+
+        drive_mode = sys.argv[1] == "release-drive"
+        parser = argparse.ArgumentParser(
+            description="Publish an explicitly approved and fully verified PDF pair"
         )
         parser.add_argument("--run-root", type=Path, required=True)
         parser.add_argument("--review", type=Path, required=True)
         parser.add_argument("--approval", type=Path, required=True)
         parser.add_argument("--report", type=Path, required=True)
         parser.add_argument("--evidence-root", type=Path, required=True)
-        parser.add_argument("--destination", type=Path, required=True)
+        parser.add_argument("--destination", required=True)
+        if drive_mode:
+            parser.add_argument("--archive-folder", required=True)
+            parser.add_argument("--lock-file", type=Path, required=True)
+            parser.add_argument("--credentials", type=Path, required=True)
         args = parser.parse_args(sys.argv[2:])
         report = json.loads(args.report.read_text(encoding="utf-8-sig"))
         registry = REPO / "specs/generate_mock_assessment/acceptance-criteria.json"
@@ -37,10 +69,35 @@ def main():
         )
         review = json.loads(args.review.read_text(encoding="utf-8-sig"))
         approval = json.loads(args.approval.read_text(encoding="utf-8-sig"))
-        publish_approved_assessment(
-            args.run_root, review, approval, gate, args.destination
-        )
-        print("APPROVED_LOCAL_PUBLICATION_COMPLETE")
+        if drive_mode:
+            # Authorization is checked before credentials or the remote service are used.
+            approved_release_files(args.run_root, review, approval, gate)
+            from google.oauth2.credentials import Credentials
+            from googleapiclient.discovery import build
+            from mts.infrastructure.google_docs.google_docs_adapter import (
+                GoogleDocsAdapter,
+            )
+
+            credentials = Credentials.from_authorized_user_file(str(args.credentials))
+            adapter = GoogleDocsAdapter(
+                build("drive", "v3", credentials=credentials, cache_discovery=False),
+                None,
+            )
+            publish_approved_assessment_drive(
+                args.run_root,
+                review,
+                approval,
+                gate,
+                adapter,
+                args.destination,
+                args.archive_folder,
+                args.lock_file,
+            )
+        else:
+            publish_approved_assessment(
+                args.run_root, review, approval, gate, args.destination
+            )
+        print("APPROVED_PUBLICATION_COMPLETE")
         return 0
 
     if len(sys.argv) > 1 and sys.argv[1] == "run":

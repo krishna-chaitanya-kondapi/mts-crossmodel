@@ -38,6 +38,37 @@ class GoogleDocsAdapter:
             raise GoogleDocsAdapterError("Google Drive did not return an ID for the copied file.")
         return copied
 
+    def upload_pdf(self, source_path, destination_id, name, *, properties=None):
+        """Upload an existing PDF through the injected Drive client."""
+        from pathlib import Path
+        from googleapiclient.http import MediaFileUpload
+
+        source = Path(source_path)
+        if not source.is_file() or source.suffix.lower() != ".pdf":
+            raise GoogleDocsAdapterError("An existing PDF source is required.")
+        if not destination_id or not name:
+            raise GoogleDocsAdapterError("Destination and name are required.")
+        body = {"name": name, "parents": [destination_id], "mimeType": "application/pdf"}
+        if properties:
+            body["appProperties"] = dict(properties)
+        uploaded = self.drive.files().create(
+            body=body,
+            media_body=MediaFileUpload(str(source), mimetype="application/pdf", resumable=True),
+            fields="id,name,parents,mimeType,md5Checksum,size,appProperties",
+        ).execute()
+        if not uploaded.get("id"):
+            raise GoogleDocsAdapterError("Drive did not return the uploaded file ID.")
+        return uploaded
+
+    def release_inventory(self, folder_id):
+        """Inventory printable and other files without changing their parents."""
+        if not folder_id:
+            raise GoogleDocsAdapterError("A folder ID is required.")
+        return self._list_all(
+            f"'{folder_id}' in parents and mimeType != '{self.folder_mime_type}' and trashed = false",
+            fields="nextPageToken, files(id,name,mimeType,parents,md5Checksum,size,version,appProperties)",
+        )
+
     def render_document(self, document_id: str, projection: str) -> None:
         """Replace the configured placeholder, or append to a copied document."""
         if not document_id:
@@ -240,13 +271,16 @@ class GoogleDocsAdapter:
             raise GoogleDocsAdapterError("Drive did not record the provenance properties.")
         return stamped
 
-    def _list_all(self, query: str, *, order_by: str | None = None) -> list[dict[str, Any]]:
+    def _list_all(
+        self, query: str, *, order_by: str | None = None,
+        fields: str = "nextPageToken, files(id,name,mimeType,createdTime,webViewLink,appProperties)",
+    ) -> list[dict[str, Any]]:
         results: list[dict[str, Any]] = []
         page_token: str | None = None
         while True:
             parameters: dict[str, Any] = {
                 "q": query,
-                "fields": "nextPageToken, files(id,name,mimeType,createdTime,webViewLink,appProperties)",
+                "fields": fields,
                 "pageSize": 1000,
             }
             if order_by:
