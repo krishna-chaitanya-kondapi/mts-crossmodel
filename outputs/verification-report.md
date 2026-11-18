@@ -1,23 +1,42 @@
 # Mock Assessment verification report
 
-**NOT_DONE** · Iteration 25 · **27 / 76 verified (35.5%)**
+**76 / 76 mandatory criteria PASS (100%). Status: READY_FOR_ACCEPTANCE.**
 
-Target code revision 494547190b5195c3e6f5d0d13956ddefd07536f2. Forty-nine mandatory criteria remain open.
+Iteration 27 · November 18, 2026 · Verified implementation `95d76f12ef67867640a8a92df76e9711b9e098b8`.
 
-All three profiles now run from validated saved RunSpecs. Each produces a RunSpec JSON and one-page PDF, paired student and teacher PDFs, and structural/runtime/fingerprint records in phase folders. Source fingerprints, fixed selection counts, instructional Monday, local-review scope and paper/page constraints are checked before output.
+The approved initial milestone is complete for the three source-based historical benchmark profiles. Final human acceptance and production publication are separate. No production publication occurred.
 
-Runtime estimates are explicitly initial engineering estimates of five seconds. Measured active times were about 0.38 seconds for Grade 4, 0.43 for Grade 5 and 0.77 for ELA in the initial measured run; repeated runs record their own durations.
+| Benchmark | Questions | Student pages | Key pages | Quality |
+|---|---:|---:|---:|---|
+| NYSED 2024 Grade 4 Math | 28 | 4 | 1 | PASS |
+| NYSED 2024 Grade 5 Math | 28 | 3 | 1 | PASS |
+| NYSED 2025 Grade 6 ELA | 14 | 4 | 2 | PASS |
 
-All 269 tests passed. Tests exercise rejected invalid specs, duplicate run preservation, concurrency locks and rollback/retry following an injected phase-move failure. Two complete executions reproduced all nine PDFs by page count, extracted text and rendered pixels.
+## Evidence
 
-## Current academic and fidelity gaps
+- **293 tests pass** in the maintained `tests/` suite, including Weekly Practice regression checks.
+- All 70 selected questions, 50 official MC keys and 20 CR credit values match. All 56 Math native-word regions preserve source words.
+- Independent answer/distractor/scoring reviews and inspection of all 15 assessment pages are complete. The isolated ELA reviewer’s initial Q8 disagreement and reconciliation remain visible.
+- All six golden comparisons preserve selection/page parity; source corrections and intentional presentation differences are documented.
+- Fresh GitHub checkout restores pinned assets, runs all three profiles without chat context and passes their quality gates. All nine PDF page comparisons match.
+- Release guards, unrelated-file preservation, archival/readback, retries and durable recovery are tested. Drive transport tests use mocks.
 
-Academic, source-fidelity and complete golden-equivalence acceptance remains open. [ELA source review](ela-source-transcription-review.md) records wording differences against the delivered reference. Grade 4 and ELA need independent question-level reasoning and rubric records. All final pages need consolidated visual evidence bound to their final files.
+[Criterion traceability](criterion-traceability.md) · [Quality review and differences](iteration-27-review-closure.md) · [Full golden text diffs](iteration-27-golden-text-differences.txt) · [Tests](iteration-27-tests-final.txt) · [Clean-checkout/repeatability evidence](iteration-27-portability-repeatability.json) · [Machine gate](iteration-27-gate.json) · [JSON report](verification-report.json)
 
-## Exact next actions
+## Regenerated assessments
 
-1. Complete independent Grade 4 and ELA academic, distractor and rubric reviews with question-specific evidence.
-2. Resolve full source-to-output wording, illustration scaling, paragraph references and golden discrepancies; inspect all final pages.
-3. Complete approval/release coordination tests and criterion-level traceability, then run the final evidence gate.
+- Grade 4 Math: [student worksheet](historical-regressions/02-Run/2026-09-28/ny2024_math_grade4-review/student.pdf) · [teacher key](historical-regressions/02-Run/2026-09-28/ny2024_math_grade4-review/teacher.pdf)
+- Grade 5 Math: [student worksheet](historical-regressions/02-Run/2026-09-28/ny2024_math_grade5-review/student.pdf) · [teacher key](historical-regressions/02-Run/2026-09-28/ny2024_math_grade5-review/teacher.pdf)
+- Grade 6 ELA: [student worksheet](historical-regressions/02-Run/2026-09-21/ny2025_ela_grade6-review/student.pdf) · [teacher key](historical-regressions/02-Run/2026-09-21/ny2025_ela_grade6-review/teacher.pdf)
 
-[Run evidence](iteration-25-runspec-evidence.json) · [Repeatability](iteration-25-repeatability.json) · [Tests](iteration-25-tests.txt) · [Gate](iteration-25-gate.json)
+## Implementation and boundaries
+
+Dedicated RunSpec orchestration and renderers remain independent of Weekly Practice. Neutral atomic writing, storage adapters and publication coordinators are reused through explicit interfaces. Completed academic/source/visual reviews carry forward only when inputs, implementation, renderer, rendered page pixels and evidence all match. Unknown or changed inputs retain NOT_VERIFIED. The acceptance registry is unchanged; its two deferred broad-feature criteria remain NOT_APPLICABLE.
+
+The recovered ELA Drive pair is the user-designated golden. Original Library byte identity remains unknown. RunSpecs are reconstructed historical reproductions. Rendered readability was checked; physical print/student usability and alternate-OS execution are not claimed.
+
+The lightweight takeover guide and checkpoint remain on the same implementation branch. Run `python scripts/resume_mock_assessment.py` from the repository root.
+
+## Next action
+
+Review the six PDFs for human acceptance. Production release additionally requires explicit artifact-specific human approval of both exact PDF hashes for each intended run. Golden selection and this machine gate do not provide that approval.

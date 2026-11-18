@@ -1,1187 +1,2227 @@
 {
-  "status": "NOT_DONE",
-  "iteration": 25,
+  "status": "READY_FOR_ACCEPTANCE",
+  "iteration": 27,
   "date": "2026-11-18",
-  "revision": "494547190b5195c3e6f5d0d13956ddefd07536f2",
+  "revision": "95d76f12ef67867640a8a92df76e9711b9e098b8",
   "registry_sha256": "c70cf4b237e712c11943ed16ac5a479a9310c65a6d1fd284baddb23d956f0aa4",
-  "mandatory_pass": 27,
+  "mandatory_pass": 76,
   "mandatory_total": 76,
-  "baseline_tests": {
-    "command": "python -m pytest tests -q",
-    "passed": 243,
-    "failed": 0,
-    "evidence": "baseline-tests.txt"
-  },
-  "historical_inventory": "historical-inventory.json",
-  "historical_regressions_executed": 3,
-  "generation_implementation_changes": [
-    "Added isolated NYSED item-map parser and focused tests; matched three historical selections to official source IDs, keys, credit values and standards.",
-    "Added hash-bound vector crop rendering and a Grade 5 extraction trial.",
-    "Added forward two-column placement for narrow vector regions with full-width fallback. Grade 5 source crops still require component extraction.",
-    "Added atomic multi-part vector placement; Grade 5 diagnostic trial reached eight pages after compacting response regions.",
-    "Added dedicated teacher-key CLI mode with validated item and worked-solution parity.",
-    "Added dedicated Grade 5 student CLI with historical source fingerprint, item ordering and page-cap checks.",
-    "Repaired ELA teacher-key typography and punctuation fallback while preserving the twelve official answers and two labeled MTS model responses.",
-    "Added an ELA student CLI route through the hash-bound source renderer; the route is tested with a synthetic manifest, not a source-faithful ELA fixture.",
-    "Added a Grade 4 page-break policy before Q42 to keep Q42-Q44 together on page four while preserving full-width Q26."
-  ],
-  "production_publications": 0,
-  "defects": [
-    {
-      "id": "MA-001",
-      "finding": "The CLI now has local review rendering routes, but the end-to-end product workflow still lacks complete RunSpec selection and validation, requirement-driven generation, and automatic verification and approval gates.",
-      "affected": "V02, V03, V04, V05, V06, V07 and architecture execution criteria"
-    },
-    {
-      "id": "MA-002",
-      "finding": "Historical worksheet/key candidates and released question papers are available. Artifact-specific approval, official scoring alignment, and exact historical RunSpecs remain unverified.",
-      "affected": "V01 and V06"
-    },
-    {
-      "id": "MA-003",
-      "finding": "Baseline tests rewrite tracked Weekly Practice transaction fixtures in place. The changes were recorded and restored in the task-owned clone.",
-      "affected": "Repeatability of local verification"
-    },
-    {
-      "id": "MA-004",
-      "finding": "The ELA student CLI route has only been exercised with a synthetic manifest. A source-derived manifest and complete passage, question, choice, and figure fidelity review are still missing.",
-      "affected": "V02.04, V02.05, V04, V05 and V06"
-    },
-    {
-      "id": "MA-005",
-      "finding": "Grade 4 has structural layout evidence, but an independent academic/source-fidelity review, historical worksheet golden comparison, and acceptance of fourth-page utilization remain open.",
-      "affected": "V03, V04, V05 and V06"
-    }
-  ],
-  "next": [
-    "Complete independent Grade 4 and ELA academic, distractor and rubric reviews with question-specific evidence.",
-    "Resolve full source-to-output wording, illustration scaling, paragraph references and golden discrepancies; inspect all final pages.",
-    "Complete approval/release coordination tests and criterion-level traceability, then run the final evidence gate."
-  ],
-  "pending_mandatory": [
-    "V01.03",
-    "V01.06",
-    "V01.07",
-    "V02.09",
-    "V02.10",
-    "V02.11",
-    "V03.01",
-    "V03.02",
-    "V03.03",
-    "V03.04",
-    "V03.05",
-    "V03.06",
-    "V03.07",
-    "V04.01",
-    "V04.02",
-    "V04.03",
-    "V04.04",
-    "V04.05",
-    "V04.06",
-    "V04.07",
-    "V04.08",
-    "V05.03",
-    "V05.04",
-    "V05.05",
-    "V05.06",
-    "V05.07",
-    "V05.08",
-    "V05.09",
-    "V05.10",
-    "V05.11",
-    "V05.13",
-    "V06.01",
-    "V06.02",
-    "V06.03",
-    "V06.04",
-    "V06.05",
-    "V06.06",
-    "V06.07",
-    "V06.08",
-    "V06.09",
-    "V06.10",
-    "V06.11",
-    "V06.12",
-    "V07.02",
-    "V07.08",
-    "V07.09",
-    "ARCH.05",
-    "ARCH.07",
-    "ARCH.10"
-  ],
   "criteria": [
     {
       "id": "V01.01",
-      "mandatory": true,
       "requirement": "Recover Math requirements",
+      "mandatory": true,
       "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Recover Math requirements for the three fixed historical benchmark profiles.",
+      "actual": "Grade 4/5 source selections, 28-item counts, layout limits, scoring corrections and exceptions recovered.",
+      "implementation": [
+        "specs/generate_mock_assessment/historical-requirements.md"
+      ],
       "evidence": [
         {
           "path": "specs/generate_mock_assessment/historical-requirements.md",
-          "sha256": "d97ed849ab475ed5a3315343cad6f72e273558b286e8418def64b1de021010f0"
+          "sha256": "dc2c654a51b46b1b29ae6a8ffbf1ef0dec3940f85bff1623e9ab0fccb2eda731"
+        },
+        {
+          "path": "specs/generate_mock_assessment/golden-assets.json",
+          "sha256": "ccbce2d79bb818697f2a9778f2d041aedd5b08a80df9c6cd97fed5c65645612b"
         }
-      ],
-      "expected": "Recover Math requirements",
-      "actual": "Grade 4 and Grade 5 selections, counts, layout limits and corrections consolidated from supplied handoffs.",
-      "method": "Checkpoint review of recovered requirements, source identities, import audit and applicable regression tests.",
-      "reviewer": "Codex iteration 23 criterion review"
+      ]
     },
     {
       "id": "V01.02",
-      "mandatory": true,
       "requirement": "Recover ELA requirements",
+      "mandatory": true,
       "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Recover ELA requirements for the three fixed historical benchmark profiles.",
+      "actual": "ELA two nonfiction passage clusters, 14-item mapping, original image, 4+2 pagination and YPQA recovered.",
+      "implementation": [
+        "specs/generate_mock_assessment/historical-requirements.md"
+      ],
       "evidence": [
         {
           "path": "specs/generate_mock_assessment/historical-requirements.md",
-          "sha256": "d97ed849ab475ed5a3315343cad6f72e273558b286e8418def64b1de021010f0"
+          "sha256": "dc2c654a51b46b1b29ae6a8ffbf1ef0dec3940f85bff1623e9ab0fccb2eda731"
+        },
+        {
+          "path": "specs/generate_mock_assessment/golden-assets.json",
+          "sha256": "ccbce2d79bb818697f2a9778f2d041aedd5b08a80df9c6cd97fed5c65645612b"
         }
-      ],
-      "expected": "Recover ELA requirements",
-      "actual": "Grade 6 passage clusters, 14-item mapping, answer sequence, YPQA and layout requirements consolidated.",
-      "method": "Checkpoint review of recovered requirements, source identities, import audit and applicable regression tests.",
-      "reviewer": "Codex iteration 23 criterion review"
+      ]
     },
     {
       "id": "V01.03",
-      "mandatory": true,
       "requirement": "Identify final worksheets and keys",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "mandatory": true,
+      "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Identify final worksheets and keys for the three fixed historical benchmark profiles.",
+      "actual": "Both corrected final Math pairs are identified by filename, SHA256 and recoverable pinned Git object.",
+      "implementation": [
+        "specs/generate_mock_assessment/golden-assets.json"
+      ],
+      "evidence": [
+        {
+          "path": "specs/generate_mock_assessment/golden-assets.json",
+          "sha256": "ccbce2d79bb818697f2a9778f2d041aedd5b08a80df9c6cd97fed5c65645612b"
+        },
+        {
+          "path": "outputs/iteration-27-golden-comparison.json",
+          "sha256": "66abd5abc435cc36f66a2900a8528a7a6583f1c820a691a5ec24b73af8c30d42"
+        }
+      ]
     },
     {
       "id": "V01.04",
-      "mandatory": true,
       "requirement": "Identify original sources",
+      "mandatory": true,
       "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Identify original sources for the three fixed historical benchmark profiles.",
+      "actual": "All three original NYSED source fingerprints match the frozen selections.",
+      "implementation": [
+        "specs/generate_mock_assessment/golden-assets.json"
+      ],
       "evidence": [
         {
-          "path": "outputs/iteration-25-audit.json",
-          "sha256": "bb0b65e514bb6f941e2bce319c1a94c236c2e8df947162a8885f6d9746413bb4"
+          "path": "specs/generate_mock_assessment/golden-assets.json",
+          "sha256": "ccbce2d79bb818697f2a9778f2d041aedd5b08a80df9c6cd97fed5c65645612b"
+        },
+        {
+          "path": "outputs/historical-source-item-maps.json",
+          "sha256": "1a3f0ce2be7de3058f80c0bd2ada10c142877a00f081e364146d7c8b542ab60a"
+        },
+        {
+          "path": "outputs/iteration-27-isolation-audit.json",
+          "sha256": "09609b2b44f35964330903be955f90062107da6b6f45bfec53b514f338e989c6"
+        }
+      ]
+    },
+    {
+      "id": "V01.05",
+      "requirement": "Capture corrections and exceptions",
+      "mandatory": true,
+      "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Capture corrections and exceptions for the three fixed historical benchmark profiles.",
+      "actual": "Grade 4 count/crops/prompts/alternate responses, Grade 5 tile correction, and ELA source/golden differences are explicit.",
+      "implementation": [
+        "specs/generate_mock_assessment/historical-requirements.md"
+      ],
+      "evidence": [
+        {
+          "path": "specs/generate_mock_assessment/historical-requirements.md",
+          "sha256": "dc2c654a51b46b1b29ae6a8ffbf1ef0dec3940f85bff1623e9ab0fccb2eda731"
+        },
+        {
+          "path": "outputs/iteration-27-review-closure.md",
+          "sha256": "2e2ec1840b52a4ac94611a39efb2ac257a3029ecd3451f4811d8956378f4bc4f"
+        },
+        {
+          "path": "outputs/iteration-27-golden-comparison.json",
+          "sha256": "66abd5abc435cc36f66a2900a8528a7a6583f1c820a691a5ec24b73af8c30d42"
+        }
+      ]
+    },
+    {
+      "id": "V01.06",
+      "requirement": "Trace mandatory requirements to implementation and evidence",
+      "mandatory": true,
+      "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Trace mandatory requirements to implementation and evidence for the three fixed historical benchmark profiles.",
+      "actual": "Every mandatory criterion maps to concrete implementation and inspected evidence in the traceability matrix.",
+      "implementation": [
+        "workflows/generate-mock-assessment.md"
+      ],
+      "evidence": [
+        {
+          "path": "outputs/criterion-traceability.md",
+          "sha256": "25c88c04982cfcddb1c1455628a9089160a09892698ef2a5d2b2211f38018da0"
+        }
+      ]
+    },
+    {
+      "id": "V01.07",
+      "requirement": "Resolve mandatory requirement gaps",
+      "mandatory": true,
+      "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Resolve mandatory requirement gaps for the three fixed historical benchmark profiles.",
+      "actual": "Mandatory recovery gaps are resolved. ELA reference selection is explicit; RunSpecs are reconstructed; original Library byte identity remains disclosed.",
+      "implementation": [
+        "specs/generate_mock_assessment/historical-requirements.md"
+      ],
+      "evidence": [
+        {
+          "path": "specs/generate_mock_assessment/historical-requirements.md",
+          "sha256": "dc2c654a51b46b1b29ae6a8ffbf1ef0dec3940f85bff1623e9ab0fccb2eda731"
+        },
+        {
+          "path": "specs/generate_mock_assessment/golden-assets.json",
+          "sha256": "ccbce2d79bb818697f2a9778f2d041aedd5b08a80df9c6cd97fed5c65645612b"
+        },
+        {
+          "path": "outputs/iteration-27-review-closure.md",
+          "sha256": "2e2ec1840b52a4ac94611a39efb2ac257a3029ecd3451f4811d8956378f4bc4f"
+        },
+        {
+          "path": "outputs/iteration-27-portability-repeatability.json",
+          "sha256": "8d17fa0940d51f36a2cdd0221e38359879e94d1f9f57b003bf230c992e91555f"
+        }
+      ]
+    },
+    {
+      "id": "V02.01",
+      "requirement": "Dedicated workflow exists",
+      "mandatory": true,
+      "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Dedicated workflow exists for the three fixed historical benchmark profiles.",
+      "actual": "Dedicated Mock Assessment workflow documents executable lifecycle, quality checks and release boundaries.",
+      "implementation": [
+        "workflows/generate-mock-assessment.md"
+      ],
+      "evidence": [
+        {
+          "path": "workflows/generate-mock-assessment.md",
+          "sha256": "b3fbc9358efff32e9804b58a10d7d46d64a049daa38c2fd88239005050139bbc"
+        },
+        {
+          "path": "outputs/iteration-27-isolation-audit.json",
+          "sha256": "09609b2b44f35964330903be955f90062107da6b6f45bfec53b514f338e989c6"
+        }
+      ]
+    },
+    {
+      "id": "V02.02",
+      "requirement": "Support Benchmark and Diagnostic",
+      "mandatory": false,
+      "status": "NOT_APPLICABLE",
+      "actual": "Explicitly deferred in the unchanged approved initial milestone."
+    },
+    {
+      "id": "V02.03",
+      "requirement": "Support Full Mini and Custom",
+      "mandatory": false,
+      "status": "NOT_APPLICABLE",
+      "actual": "Explicitly deferred in the unchanged approved initial milestone."
+    },
+    {
+      "id": "V02.04",
+      "requirement": "Source-based generation works",
+      "mandatory": true,
+      "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Source-based generation works for the three fixed historical benchmark profiles.",
+      "actual": "All three source-bound Math/ELA profiles generated separate student/key pairs in an independent clean checkout.",
+      "implementation": [
+        "src/mts/products/mock_assessment/run_benchmark.py"
+      ],
+      "evidence": [
+        {
+          "path": "outputs/iteration-27-final-artifact-audit.json",
+          "sha256": "c0ff3bb64a1941333ce6d622f383078f9e2d8a547a0b43703162b73504e0b324"
+        },
+        {
+          "path": "outputs/iteration-27-portability-repeatability.json",
+          "sha256": "8d17fa0940d51f36a2cdd0221e38359879e94d1f9f57b003bf230c992e91555f"
+        }
+      ]
+    },
+    {
+      "id": "V02.05",
+      "requirement": "Math and ELA branches work",
+      "mandatory": true,
+      "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Math and ELA branches work for the three fixed historical benchmark profiles.",
+      "actual": "All three source-bound Math/ELA profiles generated separate student/key pairs in an independent clean checkout.",
+      "implementation": [
+        "src/mts/products/mock_assessment/run_benchmark.py"
+      ],
+      "evidence": [
+        {
+          "path": "outputs/iteration-27-final-artifact-audit.json",
+          "sha256": "c0ff3bb64a1941333ce6d622f383078f9e2d8a547a0b43703162b73504e0b324"
+        },
+        {
+          "path": "outputs/iteration-27-portability-repeatability.json",
+          "sha256": "8d17fa0940d51f36a2cdd0221e38359879e94d1f9f57b003bf230c992e91555f"
+        }
+      ]
+    },
+    {
+      "id": "V02.06",
+      "requirement": "Validated RunSpec PDF and JSON",
+      "mandatory": true,
+      "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Validated RunSpec PDF and JSON for the three fixed historical benchmark profiles.",
+      "actual": "Three frozen RunSpecs validate source, scope, blueprint, dates and page constraints and render JSON/PDF before generation.",
+      "implementation": [
+        "src/mts/products/mock_assessment/run_benchmark.py"
+      ],
+      "evidence": [
+        {
+          "path": "outputs/iteration-27-portability-repeatability.json",
+          "sha256": "8d17fa0940d51f36a2cdd0221e38359879e94d1f9f57b003bf230c992e91555f"
+        },
+        {
+          "path": "specs/generate_mock_assessment/fixtures/ny2024_math_grade4-runspec.json",
+          "sha256": "53a2b4775e7d4694c578f15c3822bbbbf87a22cf2a144f053ec87863abaeec2c"
+        },
+        {
+          "path": "specs/generate_mock_assessment/fixtures/ny2024_math_grade5-runspec.json",
+          "sha256": "5af297aba7ac5827b9ad3f71f2072428fd1eb9d55781fe3bb10d1def0f5cb774"
+        },
+        {
+          "path": "specs/generate_mock_assessment/fixtures/ny2025_ela_grade6-runspec.json",
+          "sha256": "3c66a01dae6951c0175f450bc8ff7c82eccbbdd356d3aefb1b84d541fbe503be"
+        }
+      ]
+    },
+    {
+      "id": "V02.07",
+      "requirement": "Student PDF",
+      "mandatory": true,
+      "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Student PDF for the three fixed historical benchmark profiles.",
+      "actual": "Regenerated student PDFs contain the selected 28+28+14 items and no teacher answers.",
+      "implementation": [
+        "src/mts/products/mock_assessment/grade4_student.py",
+        "src/mts/products/mock_assessment/grade5_student.py",
+        "src/mts/products/mock_assessment/ela_student.py"
+      ],
+      "evidence": [
+        {
+          "path": "outputs/iteration-27-final-artifact-audit.json",
+          "sha256": "c0ff3bb64a1941333ce6d622f383078f9e2d8a547a0b43703162b73504e0b324"
+        },
+        {
+          "path": "outputs/iteration-27-review-closure.md",
+          "sha256": "2e2ec1840b52a4ac94611a39efb2ac257a3029ecd3451f4811d8956378f4bc4f"
+        }
+      ]
+    },
+    {
+      "id": "V02.08",
+      "requirement": "Separate teacher PDF",
+      "mandatory": true,
+      "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Separate teacher PDF for the three fixed historical benchmark profiles.",
+      "actual": "Separate one-page Math keys and two-page ELA YPQA key match actual student numbering.",
+      "implementation": [
+        "src/mts/products/mock_assessment/teacher_key.py",
+        "src/mts/products/mock_assessment/ela_teacher.py"
+      ],
+      "evidence": [
+        {
+          "path": "outputs/iteration-27-final-artifact-audit.json",
+          "sha256": "c0ff3bb64a1941333ce6d622f383078f9e2d8a547a0b43703162b73504e0b324"
+        },
+        {
+          "path": "outputs/iteration-27-review-closure.md",
+          "sha256": "2e2ec1840b52a4ac94611a39efb2ac257a3029ecd3451f4811d8956378f4bc4f"
+        }
+      ]
+    },
+    {
+      "id": "V02.09",
+      "requirement": "Automatic verification",
+      "mandatory": true,
+      "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Automatic verification for the three fixed historical benchmark profiles.",
+      "actual": "Structural verification executes each run. Completed semantic/visual reviews carry forward only for exact reviewed source/manifests/code/renderer/page pixels and intact evidence; all three clean-checkout matches pass. Changed or missing proof remains NOT_VERIFIED.",
+      "implementation": [
+        "src/mts/products/mock_assessment/review_catalog.py",
+        "src/mts/products/mock_assessment/run_benchmark.py"
+      ],
+      "evidence": [
+        {
+          "path": "outputs/iteration-27-portability-repeatability.json",
+          "sha256": "8d17fa0940d51f36a2cdd0221e38359879e94d1f9f57b003bf230c992e91555f"
+        },
+        {
+          "path": "outputs/iteration-27-tests-final.txt",
+          "sha256": "eacec28e0119f9299a6bc0963348ab95546c699a803555fa61785c6b4b8d1f29"
+        },
+        {
+          "path": "tests/mock_assessment/test_review_catalog.py",
+          "sha256": "17990533b70987e885d926121d950eb0a78018a1c9ed30eedd2a9e6c79f35258"
+        },
+        {
+          "path": "specs/generate_mock_assessment/verified-profiles.json",
+          "sha256": "4d9267ca80a7b4eb29e41adbe0d19e4da872a0d38abda7eae14127c7af0565e0"
+        }
+      ]
+    },
+    {
+      "id": "V02.10",
+      "requirement": "Approval gates enforced",
+      "mandatory": true,
+      "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Approval gates enforced for the three fixed historical benchmark profiles.",
+      "actual": "Release rejects incomplete development gates, missing human approval and changed approved PDFs before destination writes or credentials. No production approval was fabricated.",
+      "implementation": [
+        "src/mts/products/mock_assessment/release.py"
+      ],
+      "evidence": [
+        {
+          "path": "outputs/iteration-27-tests-final.txt",
+          "sha256": "eacec28e0119f9299a6bc0963348ab95546c699a803555fa61785c6b4b8d1f29"
+        },
+        {
+          "path": "tests/mock_assessment/test_release.py",
+          "sha256": "f2f5571f21ae09a017fd590e6292fbf8dc5c49822e1895336a688e5ed8f3bf46"
+        },
+        {
+          "path": "outputs/iteration-27-review-closure.md",
+          "sha256": "2e2ec1840b52a4ac94611a39efb2ac257a3029ecd3451f4811d8956378f4bc4f"
+        }
+      ]
+    },
+    {
+      "id": "V02.11",
+      "requirement": "Reuse applicable shared capabilities",
+      "mandatory": true,
+      "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Reuse applicable shared capabilities for the three fixed historical benchmark profiles.",
+      "actual": "Assessment-specific orchestration reuses neutral atomic writing, injected Drive storage and publication coordination; neutral publishers import no product policy.",
+      "implementation": [
+        "src/mts/products/mock_assessment/run_benchmark.py",
+        "src/mts/products/mock_assessment/release.py",
+        "src/mts/publishing/coordinated_drive_release.py"
+      ],
+      "evidence": [
+        {
+          "path": "outputs/iteration-27-isolation-audit.json",
+          "sha256": "09609b2b44f35964330903be955f90062107da6b6f45bfec53b514f338e989c6"
+        },
+        {
+          "path": "outputs/iteration-27-tests-final.txt",
+          "sha256": "eacec28e0119f9299a6bc0963348ab95546c699a803555fa61785c6b4b8d1f29"
+        },
+        {
+          "path": "workflows/generate-mock-assessment.md",
+          "sha256": "b3fbc9358efff32e9804b58a10d7d46d64a049daa38c2fd88239005050139bbc"
+        }
+      ]
+    },
+    {
+      "id": "V03.01",
+      "requirement": "Independently verify every Math answer",
+      "mandatory": true,
+      "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Independently verify every Math answer for the three fixed historical benchmark profiles.",
+      "actual": "All 56 Math answers independently recomputed from stems/figures; full-credit solutions checked against official exemplars, including the independently measured 73-degree angle.",
+      "implementation": [
+        "src/mts/products/mock_assessment/teacher_key.py"
+      ],
+      "evidence": [
+        {
+          "path": "outputs/grade4-academic-review.md",
+          "sha256": "464e1af07cd89b3a94e51faef4c3379402bfbf85d2063bcc10d457732d0880cb"
+        },
+        {
+          "path": "outputs/grade5-scoring-review.md",
+          "sha256": "1adf252cb65868a92afda7d034174bc9e87a7bd8f36a574a9f3824efdff9a75f"
+        },
+        {
+          "path": "outputs/iteration-27-review-closure.md",
+          "sha256": "2e2ec1840b52a4ac94611a39efb2ac257a3029ecd3451f4811d8956378f4bc4f"
+        },
+        {
+          "path": "outputs/iteration-27-final-artifact-audit.json",
+          "sha256": "c0ff3bb64a1941333ce6d622f383078f9e2d8a547a0b43703162b73504e0b324"
+        }
+      ]
+    },
+    {
+      "id": "V03.02",
+      "requirement": "Independently verify every ELA answer",
+      "mandatory": true,
+      "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Independently verify every ELA answer for the three fixed historical benchmark profiles.",
+      "actual": "All 14 ELA answers reviewed from passage evidence. Authorized source-only blind review saved its predictions before key reconciliation; initial Q8 error is retained and resolved separately.",
+      "implementation": [
+        "src/mts/products/mock_assessment/ela_teacher.py"
+      ],
+      "evidence": [
+        {
+          "path": "outputs/ela-academic-review.md",
+          "sha256": "002968e624590187f84c6dc9e25b913d2d3ad767a2522c6207c06475dc01ddf1"
+        },
+        {
+          "path": "outputs/ela-blind-review.json",
+          "sha256": "79f127065b45bac39487e932744823349c1d7fc425481677c0217a935f2a80a4"
+        },
+        {
+          "path": "outputs/ela-blind-reconciliation.json",
+          "sha256": "e808133389e4d80834f70e30a398a69938d5e6724dfb677ba2e4b50fa3c7e7b0"
+        },
+        {
+          "path": "outputs/iteration-27-review-closure.md",
+          "sha256": "2e2ec1840b52a4ac94611a39efb2ac257a3029ecd3451f4811d8956378f4bc4f"
+        }
+      ]
+    },
+    {
+      "id": "V03.03",
+      "requirement": "Verify all MCQ choices",
+      "mandatory": true,
+      "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Verify all MCQ choices for the three fixed historical benchmark profiles.",
+      "actual": "All four alternatives reviewed for each of 38 Math and 12 ELA MC items; no unresolved second correct option.",
+      "implementation": [
+        "src/mts/products/mock_assessment/grade4_student.py",
+        "src/mts/products/mock_assessment/grade5_student.py",
+        "src/mts/products/mock_assessment/ela_student.py"
+      ],
+      "evidence": [
+        {
+          "path": "outputs/iteration-27-math-choice-review.md",
+          "sha256": "cdaee80f1fb7c93dc0496bb568943a1be8451bbbca04cc655a415504b5b5657d"
+        },
+        {
+          "path": "outputs/ela-academic-review.md",
+          "sha256": "002968e624590187f84c6dc9e25b913d2d3ad767a2522c6207c06475dc01ddf1"
+        },
+        {
+          "path": "outputs/ela-blind-reconciliation.json",
+          "sha256": "e808133389e4d80834f70e30a398a69938d5e6724dfb677ba2e4b50fa3c7e7b0"
+        },
+        {
+          "path": "outputs/iteration-27-final-artifact-audit.json",
+          "sha256": "c0ff3bb64a1941333ce6d622f383078f9e2d8a547a0b43703162b73504e0b324"
+        }
+      ]
+    },
+    {
+      "id": "V03.04",
+      "requirement": "Verify constructed responses and scoring",
+      "mandatory": true,
+      "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Verify constructed responses and scoring for the three fixed historical benchmark profiles.",
+      "actual": "All 20 CR solutions/models support full credit; point values match official maps. Grade 4 tolerance/alternate classification and ELA 2/1/0 guidance preserved. Math keys retain historical worked-solution format.",
+      "implementation": [
+        "src/mts/products/mock_assessment/teacher_key.py",
+        "src/mts/products/mock_assessment/ela_teacher.py"
+      ],
+      "evidence": [
+        {
+          "path": "outputs/grade4-academic-review.md",
+          "sha256": "464e1af07cd89b3a94e51faef4c3379402bfbf85d2063bcc10d457732d0880cb"
+        },
+        {
+          "path": "outputs/grade5-scoring-review.md",
+          "sha256": "1adf252cb65868a92afda7d034174bc9e87a7bd8f36a574a9f3824efdff9a75f"
+        },
+        {
+          "path": "outputs/ela-academic-review.md",
+          "sha256": "002968e624590187f84c6dc9e25b913d2d3ad767a2522c6207c06475dc01ddf1"
+        },
+        {
+          "path": "outputs/iteration-27-final-artifact-audit.json",
+          "sha256": "c0ff3bb64a1941333ce6d622f383078f9e2d8a547a0b43703162b73504e0b324"
+        },
+        {
+          "path": "outputs/iteration-27-review-closure.md",
+          "sha256": "2e2ec1840b52a4ac94611a39efb2ac257a3029ecd3451f4811d8956378f4bc4f"
+        },
+        {
+          "path": "outputs/math-official-scoring-evidence.json",
+          "sha256": "261bc7a290d82d5e1cadaefd318595eaa5000252081b4c23f6987b192ee27b21"
+        },
+        {
+          "path": "outputs/ela-official-scoring-evidence.json",
+          "sha256": "51756b17a89686434e93012e27fb8f74e9b7fd6dbf0715517fa83a5963d93a18"
+        }
+      ]
+    },
+    {
+      "id": "V03.05",
+      "requirement": "Verify ELA references",
+      "mandatory": true,
+      "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Verify ELA references for the three fixed historical benchmark profiles.",
+      "actual": "ELA question paragraph references, passage maps and evidence were checked against all 23 source paragraphs and retained source numbering.",
+      "implementation": [
+        "src/mts/products/mock_assessment/ela_student.py",
+        "src/mts/products/mock_assessment/ela_teacher.py"
+      ],
+      "evidence": [
+        {
+          "path": "outputs/ela-source-transcription-review.md",
+          "sha256": "15d3276d79226eb3bbd5fa5ce84f5cef420d7ec06b31632765697e05f9ed534e"
+        },
+        {
+          "path": "outputs/ela-academic-review.md",
+          "sha256": "002968e624590187f84c6dc9e25b913d2d3ad767a2522c6207c06475dc01ddf1"
+        },
+        {
+          "path": "outputs/iteration-27-review-closure.md",
+          "sha256": "2e2ec1840b52a4ac94611a39efb2ac257a3029ecd3451f4811d8956378f4bc4f"
+        }
+      ]
+    },
+    {
+      "id": "V03.06",
+      "requirement": "Question-key correspondence",
+      "mandatory": true,
+      "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Question-key correspondence for the three fixed historical benchmark profiles.",
+      "actual": "All 50 actual rendered MC keys and 20 CR credit labels agree with official source mappings and corresponding student IDs.",
+      "implementation": [
+        "src/mts/products/mock_assessment/teacher_key.py",
+        "src/mts/products/mock_assessment/ela_teacher.py"
+      ],
+      "evidence": [
+        {
+          "path": "scripts/verify_mock_artifacts.py",
+          "sha256": "c0b79eee8c95f9b01039bc5aeaf3dbbf346e67ad099f1132123eed97f27bec88"
+        },
+        {
+          "path": "outputs/iteration-27-final-artifact-audit.json",
+          "sha256": "c0ff3bb64a1941333ce6d622f383078f9e2d8a547a0b43703162b73504e0b324"
         },
         {
           "path": "outputs/historical-source-item-maps.json",
           "sha256": "1a3f0ce2be7de3058f80c0bd2ada10c142877a00f081e364146d7c8b542ab60a"
         }
-      ],
-      "expected": "Identify original sources",
-      "actual": "All three official source PDF fingerprints match the selected-item manifests.",
-      "method": "Checkpoint review of recovered requirements, source identities, import audit and applicable regression tests.",
-      "reviewer": "Codex iteration 23 criterion review"
-    },
-    {
-      "id": "V01.05",
-      "mandatory": true,
-      "requirement": "Capture corrections and exceptions",
-      "status": "PASS",
-      "evidence": [
-        {
-          "path": "specs/generate_mock_assessment/historical-requirements.md",
-          "sha256": "d97ed849ab475ed5a3315343cad6f72e273558b286e8418def64b1de021010f0"
-        }
-      ],
-      "expected": "Capture corrections and exceptions",
-      "actual": "Count discrepancy, Q40 correction, Grade 4 crop/prompt and scoring corrections, ELA whitespace and identity gaps documented.",
-      "method": "Checkpoint review of recovered requirements, source identities, import audit and applicable regression tests.",
-      "reviewer": "Codex iteration 23 criterion review"
-    },
-    {
-      "id": "V01.06",
-      "mandatory": true,
-      "requirement": "Trace mandatory requirements to implementation and evidence",
-      "status": "NOT_VERIFIED",
-      "evidence": []
-    },
-    {
-      "id": "V01.07",
-      "mandatory": true,
-      "requirement": "Resolve mandatory requirement gaps",
-      "status": "NOT_VERIFIED",
-      "evidence": []
-    },
-    {
-      "id": "V02.01",
-      "mandatory": true,
-      "requirement": "Dedicated workflow exists",
-      "status": "PASS",
-      "evidence": [
-        {
-          "path": "workflows/generate-mock-assessment.md",
-          "sha256": "480e6b397631823c516c9056958c88027b834c086430f4982eeae34fa657e1ac"
-        }
-      ],
-      "expected": "Dedicated workflow exists",
-      "actual": "Dedicated workflow documents its lifecycle, CLI, verification and release boundary.",
-      "method": "Checkpoint review of recovered requirements, source identities, import audit and applicable regression tests.",
-      "reviewer": "Codex iteration 23 criterion review"
-    },
-    {
-      "id": "V02.02",
-      "mandatory": false,
-      "requirement": "Support Benchmark and Diagnostic",
-      "status": "NOT_APPLICABLE",
-      "evidence": []
-    },
-    {
-      "id": "V02.03",
-      "mandatory": false,
-      "requirement": "Support Full Mini and Custom",
-      "status": "NOT_APPLICABLE",
-      "evidence": []
-    },
-    {
-      "id": "V02.04",
-      "mandatory": true,
-      "requirement": "Source-based generation works",
-      "status": "PASS",
-      "evidence": [
-        {
-          "path": "outputs/iteration-25-runspec-evidence.json",
-          "sha256": "e1c56f73232176a99f75d3f9b3cf8e30c03d50756dc1abb66fe8cb31b6ec4529"
-        },
-        {
-          "path": "outputs/iteration-25-repeatability.json",
-          "sha256": "c4561ea95dd0259958120a799437c33314cde643f7b06c05d0cac5517715df20"
-        },
-        {
-          "path": "outputs/iteration-25-tests.txt",
-          "sha256": "5e588202b466e07a868ddb3156c918bc79ffc52b9974141287f2599827be64a9"
-        },
-        {
-          "path": "outputs/iteration-25-audit.json",
-          "sha256": "bb0b65e514bb6f941e2bce319c1a94c236c2e8df947162a8885f6d9746413bb4"
-        }
-      ],
-      "expected": "Source-based generation works",
-      "actual": "Three fixed historical profiles validated source hashes and rendered local student/teacher sets from source-bound manifests. Full academic/fidelity acceptance remains separate.",
-      "method": "Execute all three validated RunSpecs twice, inspect RunSpec summaries and compare rendered outputs; run complete regression suite including failure/retry tests.",
-      "reviewer": "Codex iteration 25 run-orchestration review"
-    },
-    {
-      "id": "V02.05",
-      "mandatory": true,
-      "requirement": "Math and ELA branches work",
-      "status": "PASS",
-      "evidence": [
-        {
-          "path": "outputs/iteration-25-runspec-evidence.json",
-          "sha256": "e1c56f73232176a99f75d3f9b3cf8e30c03d50756dc1abb66fe8cb31b6ec4529"
-        },
-        {
-          "path": "outputs/iteration-25-repeatability.json",
-          "sha256": "c4561ea95dd0259958120a799437c33314cde643f7b06c05d0cac5517715df20"
-        },
-        {
-          "path": "outputs/iteration-25-tests.txt",
-          "sha256": "5e588202b466e07a868ddb3156c918bc79ffc52b9974141287f2599827be64a9"
-        },
-        {
-          "path": "outputs/iteration-25-audit.json",
-          "sha256": "bb0b65e514bb6f941e2bce319c1a94c236c2e8df947162a8885f6d9746413bb4"
-        }
-      ],
-      "expected": "Math and ELA branches work",
-      "actual": "The Math Grade 4, Math Grade 5 and ELA Grade 6 RunSpecs each completed their product branch.",
-      "method": "Execute all three validated RunSpecs twice, inspect RunSpec summaries and compare rendered outputs; run complete regression suite including failure/retry tests.",
-      "reviewer": "Codex iteration 25 run-orchestration review"
-    },
-    {
-      "id": "V02.06",
-      "mandatory": true,
-      "requirement": "Validated RunSpec PDF and JSON",
-      "status": "PASS",
-      "evidence": [
-        {
-          "path": "outputs/iteration-25-runspec-evidence.json",
-          "sha256": "e1c56f73232176a99f75d3f9b3cf8e30c03d50756dc1abb66fe8cb31b6ec4529"
-        },
-        {
-          "path": "outputs/iteration-25-repeatability.json",
-          "sha256": "c4561ea95dd0259958120a799437c33314cde643f7b06c05d0cac5517715df20"
-        },
-        {
-          "path": "outputs/iteration-25-tests.txt",
-          "sha256": "5e588202b466e07a868ddb3156c918bc79ffc52b9974141287f2599827be64a9"
-        },
-        {
-          "path": "outputs/iteration-25-audit.json",
-          "sha256": "bb0b65e514bb6f941e2bce319c1a94c236c2e8df947162a8885f6d9746413bb4"
-        }
-      ],
-      "expected": "Validated RunSpec PDF and JSON",
-      "actual": "All three saved RunSpecs passed strict profile/blueprint/date/source/presentation validation and generated matching one-page PDF summaries, visually inspected.",
-      "method": "Execute all three validated RunSpecs twice, inspect RunSpec summaries and compare rendered outputs; run complete regression suite including failure/retry tests.",
-      "reviewer": "Codex iteration 25 run-orchestration review"
-    },
-    {
-      "id": "V02.07",
-      "mandatory": true,
-      "requirement": "Student PDF",
-      "status": "PASS",
-      "evidence": [
-        {
-          "path": "outputs/iteration-25-runspec-evidence.json",
-          "sha256": "e1c56f73232176a99f75d3f9b3cf8e30c03d50756dc1abb66fe8cb31b6ec4529"
-        },
-        {
-          "path": "outputs/iteration-25-audit.json",
-          "sha256": "bb0b65e514bb6f941e2bce319c1a94c236c2e8df947162a8885f6d9746413bb4"
-        }
-      ],
-      "expected": "Student PDF",
-      "actual": "All three benchmark student PDFs generated through the CLI and reopened.",
-      "method": "Execute all three benchmark pairs and inspect paper, page counts, ordering and separate artifacts; review product fixtures and import evidence.",
-      "reviewer": "Codex iteration 24 structural review"
-    },
-    {
-      "id": "V02.08",
-      "mandatory": true,
-      "requirement": "Separate teacher PDF",
-      "status": "PASS",
-      "evidence": [
-        {
-          "path": "outputs/iteration-25-runspec-evidence.json",
-          "sha256": "e1c56f73232176a99f75d3f9b3cf8e30c03d50756dc1abb66fe8cb31b6ec4529"
-        },
-        {
-          "path": "outputs/iteration-25-audit.json",
-          "sha256": "bb0b65e514bb6f941e2bce319c1a94c236c2e8df947162a8885f6d9746413bb4"
-        }
-      ],
-      "expected": "Separate teacher PDF",
-      "actual": "All three teacher PDFs generated separately from the corresponding student PDFs.",
-      "method": "Execute all three benchmark pairs and inspect paper, page counts, ordering and separate artifacts; review product fixtures and import evidence.",
-      "reviewer": "Codex iteration 24 structural review"
-    },
-    {
-      "id": "V02.09",
-      "mandatory": true,
-      "requirement": "Automatic verification",
-      "status": "NOT_VERIFIED",
-      "evidence": []
-    },
-    {
-      "id": "V02.10",
-      "mandatory": true,
-      "requirement": "Approval gates enforced",
-      "status": "NOT_VERIFIED",
-      "evidence": []
-    },
-    {
-      "id": "V02.11",
-      "mandatory": true,
-      "requirement": "Reuse applicable shared capabilities",
-      "status": "NOT_VERIFIED",
-      "evidence": []
-    },
-    {
-      "id": "V03.01",
-      "mandatory": true,
-      "requirement": "Independently verify every Math answer",
-      "status": "NOT_VERIFIED",
-      "evidence": []
-    },
-    {
-      "id": "V03.02",
-      "mandatory": true,
-      "requirement": "Independently verify every ELA answer",
-      "status": "NOT_VERIFIED",
-      "evidence": []
-    },
-    {
-      "id": "V03.03",
-      "mandatory": true,
-      "requirement": "Verify all MCQ choices",
-      "status": "NOT_VERIFIED",
-      "evidence": []
-    },
-    {
-      "id": "V03.04",
-      "mandatory": true,
-      "requirement": "Verify constructed responses and scoring",
-      "status": "NOT_VERIFIED",
-      "evidence": []
-    },
-    {
-      "id": "V03.05",
-      "mandatory": true,
-      "requirement": "Verify ELA references",
-      "status": "NOT_VERIFIED",
-      "evidence": []
-    },
-    {
-      "id": "V03.06",
-      "mandatory": true,
-      "requirement": "Question-key correspondence",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      ]
     },
     {
       "id": "V03.07",
-      "mandatory": true,
       "requirement": "Zero academic defects",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "mandatory": true,
+      "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Zero academic defects for the three fixed historical benchmark profiles.",
+      "actual": "Independent solutions, distractor review and official scoring comparison leave zero unresolved academic defects in these reviewed profiles.",
+      "implementation": [
+        "src/mts/products/mock_assessment/teacher_key.py",
+        "src/mts/products/mock_assessment/ela_teacher.py"
+      ],
+      "evidence": [
+        {
+          "path": "outputs/grade4-academic-review.md",
+          "sha256": "464e1af07cd89b3a94e51faef4c3379402bfbf85d2063bcc10d457732d0880cb"
+        },
+        {
+          "path": "outputs/grade5-scoring-review.md",
+          "sha256": "1adf252cb65868a92afda7d034174bc9e87a7bd8f36a574a9f3824efdff9a75f"
+        },
+        {
+          "path": "outputs/iteration-27-math-choice-review.md",
+          "sha256": "cdaee80f1fb7c93dc0496bb568943a1be8451bbbca04cc655a415504b5b5657d"
+        },
+        {
+          "path": "outputs/ela-academic-review.md",
+          "sha256": "002968e624590187f84c6dc9e25b913d2d3ad767a2522c6207c06475dc01ddf1"
+        },
+        {
+          "path": "outputs/ela-blind-reconciliation.json",
+          "sha256": "e808133389e4d80834f70e30a398a69938d5e6724dfb677ba2e4b50fa3c7e7b0"
+        },
+        {
+          "path": "outputs/iteration-27-review-closure.md",
+          "sha256": "2e2ec1840b52a4ac94611a39efb2ac257a3029ecd3451f4811d8956378f4bc4f"
+        },
+        {
+          "path": "outputs/iteration-27-final-artifact-audit.json",
+          "sha256": "c0ff3bb64a1941333ce6d622f383078f9e2d8a547a0b43703162b73504e0b324"
+        }
+      ]
     },
     {
       "id": "V04.01",
-      "mandatory": true,
       "requirement": "Preserve required source questions",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "mandatory": true,
+      "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Preserve required source questions for the three fixed historical benchmark profiles.",
+      "actual": "All 70 selected source items occur once and in order; all 56 Math native-word regions preserve original words.",
+      "implementation": [
+        "src/mts/products/mock_assessment/grade4_student.py",
+        "src/mts/products/mock_assessment/grade5_student.py",
+        "src/mts/products/mock_assessment/ela_student.py"
+      ],
+      "evidence": [
+        {
+          "path": "outputs/iteration-27-final-artifact-audit.json",
+          "sha256": "c0ff3bb64a1941333ce6d622f383078f9e2d8a547a0b43703162b73504e0b324"
+        },
+        {
+          "path": "outputs/historical-source-item-maps.json",
+          "sha256": "1a3f0ce2be7de3058f80c0bd2ada10c142877a00f081e364146d7c8b542ab60a"
+        },
+        {
+          "path": "outputs/iteration-27-review-closure.md",
+          "sha256": "2e2ec1840b52a4ac94611a39efb2ac257a3029ecd3451f4811d8956378f4bc4f"
+        }
+      ]
     },
     {
       "id": "V04.02",
-      "mandatory": true,
       "requirement": "Preserve required passages",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "mandatory": true,
+      "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Preserve required passages for the three fixed historical benchmark profiles.",
+      "actual": "Both ELA passages contain all 23 numbered paragraphs and seven section headings; raster-only text was visually checked against official source.",
+      "implementation": [
+        "src/mts/products/mock_assessment/ela_student.py"
+      ],
+      "evidence": [
+        {
+          "path": "outputs/ela-source-transcription-review.md",
+          "sha256": "15d3276d79226eb3bbd5fa5ce84f5cef420d7ec06b31632765697e05f9ed534e"
+        },
+        {
+          "path": "outputs/iteration-27-review-closure.md",
+          "sha256": "2e2ec1840b52a4ac94611a39efb2ac257a3029ecd3451f4811d8956378f4bc4f"
+        },
+        {
+          "path": "specs/generate_mock_assessment/fixtures/ela-student-manifest.json",
+          "sha256": "5f03c7efc98bd8b446d2a79bc695bc0432a6bdfc903a5a0b01f669c0e451f161"
+        }
+      ]
     },
     {
       "id": "V04.03",
-      "mandatory": true,
       "requirement": "Preserve choices except approved corrections",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "mandatory": true,
+      "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Preserve choices except approved corrections for the three fixed historical benchmark profiles.",
+      "actual": "All 50 sets of four alternatives preserve source meaning and values, with source/golden transcription corrections documented.",
+      "implementation": [
+        "src/mts/products/mock_assessment/grade4_student.py",
+        "src/mts/products/mock_assessment/grade5_student.py",
+        "src/mts/products/mock_assessment/ela_student.py"
+      ],
+      "evidence": [
+        {
+          "path": "outputs/iteration-27-math-choice-review.md",
+          "sha256": "cdaee80f1fb7c93dc0496bb568943a1be8451bbbca04cc655a415504b5b5657d"
+        },
+        {
+          "path": "outputs/ela-academic-review.md",
+          "sha256": "002968e624590187f84c6dc9e25b913d2d3ad767a2522c6207c06475dc01ddf1"
+        },
+        {
+          "path": "outputs/ela-source-transcription-review.md",
+          "sha256": "15d3276d79226eb3bbd5fa5ce84f5cef420d7ec06b31632765697e05f9ed534e"
+        },
+        {
+          "path": "outputs/iteration-27-review-closure.md",
+          "sha256": "2e2ec1840b52a4ac94611a39efb2ac257a3029ecd3451f4811d8956378f4bc4f"
+        },
+        {
+          "path": "outputs/iteration-27-final-artifact-audit.json",
+          "sha256": "c0ff3bb64a1941333ce6d622f383078f9e2d8a547a0b43703162b73504e0b324"
+        }
+      ]
     },
     {
       "id": "V04.04",
-      "mandatory": true,
       "requirement": "Preserve figures",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "mandatory": true,
+      "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Preserve figures for the three fixed historical benchmark profiles.",
+      "actual": "Fourteen original Math vector crops and the original ELA cipher illustration preserve shapes, labels and aspect ratio.",
+      "implementation": [
+        "src/mts/products/mock_assessment/grade4_student.py",
+        "src/mts/products/mock_assessment/grade5_student.py",
+        "src/mts/products/mock_assessment/ela_student.py"
+      ],
+      "evidence": [
+        {
+          "path": "outputs/iteration-27-review-closure.md",
+          "sha256": "2e2ec1840b52a4ac94611a39efb2ac257a3029ecd3451f4811d8956378f4bc4f"
+        },
+        {
+          "path": "outputs/iteration-27-golden-comparison.json",
+          "sha256": "66abd5abc435cc36f66a2900a8528a7a6583f1c820a691a5ec24b73af8c30d42"
+        },
+        {
+          "path": "outputs/grade4-figure-clearance.json",
+          "sha256": "8dd4d7442d55cc2080319d0ab721f59ead48d674534d24e782a1e74096770939"
+        },
+        {
+          "path": "outputs/grade5-print-layout-review.md",
+          "sha256": "28a7d346119f2a609a685979694ad1c70e18028e9f164bb7807a497184688a17"
+        }
+      ]
     },
     {
       "id": "V04.05",
-      "mandatory": true,
       "requirement": "Preserve math notation",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "mandatory": true,
+      "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Preserve math notation for the three fixed historical benchmark profiles.",
+      "actual": "Restored vector-only formulas use equivalent inline fractions/operators; all values, relations and units checked against original source renderings.",
+      "implementation": [
+        "src/mts/products/mock_assessment/grade4_student.py",
+        "src/mts/products/mock_assessment/grade5_student.py"
+      ],
+      "evidence": [
+        {
+          "path": "outputs/iteration-27-math-choice-review.md",
+          "sha256": "cdaee80f1fb7c93dc0496bb568943a1be8451bbbca04cc655a415504b5b5657d"
+        },
+        {
+          "path": "outputs/grade4-academic-review.md",
+          "sha256": "464e1af07cd89b3a94e51faef4c3379402bfbf85d2063bcc10d457732d0880cb"
+        },
+        {
+          "path": "outputs/grade5-scoring-review.md",
+          "sha256": "1adf252cb65868a92afda7d034174bc9e87a7bd8f36a574a9f3824efdff9a75f"
+        },
+        {
+          "path": "outputs/iteration-27-review-closure.md",
+          "sha256": "2e2ec1840b52a4ac94611a39efb2ac257a3029ecd3451f4811d8956378f4bc4f"
+        },
+        {
+          "path": "outputs/grade5-source-comparison.md",
+          "sha256": "65620857dd95a5eac8f7c284a8952f1a3405a491ba1cdaa5596d9a5309f9c2ea"
+        }
+      ]
     },
     {
       "id": "V04.06",
-      "mandatory": true,
       "requirement": "Preserve instructions",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "mandatory": true,
+      "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Preserve instructions for the three fixed historical benchmark profiles.",
+      "actual": "Required show/explain prompts, point labels and response areas remain, including full Grade 4 Q41/Q43 instructions and ELA five-line CR areas.",
+      "implementation": [
+        "src/mts/products/mock_assessment/grade4_student.py",
+        "src/mts/products/mock_assessment/grade5_student.py",
+        "src/mts/products/mock_assessment/ela_student.py"
+      ],
+      "evidence": [
+        {
+          "path": "outputs/iteration-27-final-artifact-audit.json",
+          "sha256": "c0ff3bb64a1941333ce6d622f383078f9e2d8a547a0b43703162b73504e0b324"
+        },
+        {
+          "path": "outputs/iteration-27-review-closure.md",
+          "sha256": "2e2ec1840b52a4ac94611a39efb2ac257a3029ecd3451f4811d8956378f4bc4f"
+        },
+        {
+          "path": "outputs/ela-source-transcription-review.md",
+          "sha256": "15d3276d79226eb3bbd5fa5ce84f5cef420d7ec06b31632765697e05f9ed534e"
+        }
+      ]
     },
     {
       "id": "V04.07",
-      "mandatory": true,
       "requirement": "Document deviations",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "mandatory": true,
+      "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Document deviations for the three fixed historical benchmark profiles.",
+      "actual": "Complete page-text diffs for all six golden/output documents and reviewed explanations record reflow, notation, scoring/source corrections, metadata and image/key improvements.",
+      "implementation": [
+        "scripts/compare_mock_goldens.py"
+      ],
+      "evidence": [
+        {
+          "path": "outputs/iteration-27-golden-comparison.json",
+          "sha256": "66abd5abc435cc36f66a2900a8528a7a6583f1c820a691a5ec24b73af8c30d42"
+        },
+        {
+          "path": "outputs/iteration-27-review-closure.md",
+          "sha256": "2e2ec1840b52a4ac94611a39efb2ac257a3029ecd3451f4811d8956378f4bc4f"
+        },
+        {
+          "path": "outputs/iteration-27-golden-text-differences.txt",
+          "sha256": "674631a42e67ce94ab4f52ae3199d36c336edd8ad53a04c465760fa6abe65e27"
+        }
+      ]
     },
     {
       "id": "V04.08",
-      "mandatory": true,
       "requirement": "Zero unauthorized deviations",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "mandatory": true,
+      "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Zero unauthorized deviations for the three fixed historical benchmark profiles.",
+      "actual": "No substantive question, choice, source instruction or figure was removed or silently altered; transformations and official-source corrections stay within authorized reproduction/repair scope.",
+      "implementation": [
+        "workflows/generate-mock-assessment.md"
+      ],
+      "evidence": [
+        {
+          "path": "specs/generate_mock_assessment/historical-requirements.md",
+          "sha256": "dc2c654a51b46b1b29ae6a8ffbf1ef0dec3940f85bff1623e9ab0fccb2eda731"
+        },
+        {
+          "path": "outputs/iteration-27-review-closure.md",
+          "sha256": "2e2ec1840b52a4ac94611a39efb2ac257a3029ecd3451f4811d8956378f4bc4f"
+        },
+        {
+          "path": "outputs/iteration-27-golden-comparison.json",
+          "sha256": "66abd5abc435cc36f66a2900a8528a7a6583f1c820a691a5ec24b73af8c30d42"
+        },
+        {
+          "path": "outputs/iteration-27-final-artifact-audit.json",
+          "sha256": "c0ff3bb64a1941333ce6d622f383078f9e2d8a547a0b43703162b73504e0b324"
+        }
+      ]
     },
     {
       "id": "V05.01",
-      "mandatory": true,
       "requirement": "Approved paper and orientation",
+      "mandatory": true,
       "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Approved paper and orientation for the three fixed historical benchmark profiles.",
+      "actual": "All 15 assessment pages are US Letter portrait.",
+      "implementation": [
+        "src/mts/products/mock_assessment/run_benchmark.py"
+      ],
       "evidence": [
         {
-          "path": "outputs/iteration-25-runspec-evidence.json",
-          "sha256": "e1c56f73232176a99f75d3f9b3cf8e30c03d50756dc1abb66fe8cb31b6ec4529"
+          "path": "outputs/iteration-27-final-artifact-audit.json",
+          "sha256": "c0ff3bb64a1941333ce6d622f383078f9e2d8a547a0b43703162b73504e0b324"
         },
         {
-          "path": "outputs/iteration-25-audit.json",
-          "sha256": "bb0b65e514bb6f941e2bce319c1a94c236c2e8df947162a8885f6d9746413bb4"
+          "path": "outputs/iteration-27-golden-comparison.json",
+          "sha256": "66abd5abc435cc36f66a2900a8528a7a6583f1c820a691a5ec24b73af8c30d42"
         }
-      ],
-      "expected": "Approved paper and orientation",
-      "actual": "All six regenerated PDFs use Letter portrait dimensions.",
-      "method": "Execute all three benchmark pairs and inspect paper, page counts, ordering and separate artifacts; review product fixtures and import evidence.",
-      "reviewer": "Codex iteration 24 structural review"
+      ]
     },
     {
       "id": "V05.02",
-      "mandatory": true,
       "requirement": "Student pagination",
+      "mandatory": true,
       "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Student pagination for the three fixed historical benchmark profiles.",
+      "actual": "Student page counts are 4,3,4, within the historical four-page ceilings and equal to the designated goldens.",
+      "implementation": [
+        "src/mts/products/mock_assessment/grade4_student.py",
+        "src/mts/products/mock_assessment/grade5_student.py",
+        "src/mts/products/mock_assessment/ela_student.py"
+      ],
       "evidence": [
         {
-          "path": "outputs/iteration-25-runspec-evidence.json",
-          "sha256": "e1c56f73232176a99f75d3f9b3cf8e30c03d50756dc1abb66fe8cb31b6ec4529"
+          "path": "outputs/iteration-27-final-artifact-audit.json",
+          "sha256": "c0ff3bb64a1941333ce6d622f383078f9e2d8a547a0b43703162b73504e0b324"
         },
         {
-          "path": "outputs/iteration-25-audit.json",
-          "sha256": "bb0b65e514bb6f941e2bce319c1a94c236c2e8df947162a8885f6d9746413bb4"
+          "path": "outputs/iteration-27-golden-comparison.json",
+          "sha256": "66abd5abc435cc36f66a2900a8528a7a6583f1c820a691a5ec24b73af8c30d42"
         }
-      ],
-      "expected": "Student pagination",
-      "actual": "Student page counts are Grade 4 four, Grade 5 three and ELA four, within all historical page limits.",
-      "method": "Execute all three benchmark pairs and inspect paper, page counts, ordering and separate artifacts; review product fixtures and import evidence.",
-      "reviewer": "Codex iteration 24 structural review"
+      ]
     },
     {
       "id": "V05.03",
-      "mandatory": true,
       "requirement": "Preferred scaling where feasible",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "mandatory": true,
+      "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Preferred scaling where feasible for the three fixed historical benchmark profiles.",
+      "actual": "Grade 4 nine crops and Grade 5 four preferred crops remain 75%; only Grade 5 Q43 uses the historical 70% exception.",
+      "implementation": [
+        "src/mts/products/mock_assessment/grade4_student.py",
+        "src/mts/products/mock_assessment/grade5_student.py"
+      ],
+      "evidence": [
+        {
+          "path": "outputs/iteration-27-review-closure.md",
+          "sha256": "2e2ec1840b52a4ac94611a39efb2ac257a3029ecd3451f4811d8956378f4bc4f"
+        },
+        {
+          "path": "outputs/grade4-figure-clearance.json",
+          "sha256": "8dd4d7442d55cc2080319d0ab721f59ead48d674534d24e782a1e74096770939"
+        },
+        {
+          "path": "outputs/grade5-print-layout-review.md",
+          "sha256": "28a7d346119f2a609a685979694ad1c70e18028e9f164bb7807a497184688a17"
+        }
+      ]
     },
     {
       "id": "V05.04",
-      "mandatory": true,
       "requirement": "Minimum scale",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "mandatory": true,
+      "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Minimum scale for the three fixed historical benchmark profiles.",
+      "actual": "No Math crop falls below 70%; ELA uses its own image/typography policy and preserves aspect ratio.",
+      "implementation": [
+        "src/mts/products/mock_assessment/grade4_student.py",
+        "src/mts/products/mock_assessment/grade5_student.py",
+        "src/mts/products/mock_assessment/ela_student.py"
+      ],
+      "evidence": [
+        {
+          "path": "outputs/iteration-27-review-closure.md",
+          "sha256": "2e2ec1840b52a4ac94611a39efb2ac257a3029ecd3451f4811d8956378f4bc4f"
+        },
+        {
+          "path": "outputs/iteration-27-golden-comparison.json",
+          "sha256": "66abd5abc435cc36f66a2900a8528a7a6583f1c820a691a5ec24b73af8c30d42"
+        }
+      ]
     },
     {
       "id": "V05.05",
-      "mandatory": true,
       "requirement": "Minimum clearance",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "mandatory": true,
+      "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Minimum clearance for the three fixed historical benchmark profiles.",
+      "actual": "All fourteen Math crops meet 6-point visible-ink clearance; measured minima Grade 4=6.38, Grade 5=7.50 points.",
+      "implementation": [
+        "src/mts/products/mock_assessment/grade4_student.py",
+        "src/mts/products/mock_assessment/grade5_student.py"
+      ],
+      "evidence": [
+        {
+          "path": "outputs/grade4-figure-clearance.json",
+          "sha256": "8dd4d7442d55cc2080319d0ab721f59ead48d674534d24e782a1e74096770939"
+        },
+        {
+          "path": "outputs/grade5-print-layout-review.md",
+          "sha256": "28a7d346119f2a609a685979694ad1c70e18028e9f164bb7807a497184688a17"
+        },
+        {
+          "path": "outputs/iteration-27-review-closure.md",
+          "sha256": "2e2ec1840b52a4ac94611a39efb2ac257a3029ecd3451f4811d8956378f4bc4f"
+        }
+      ]
     },
     {
       "id": "V05.06",
-      "mandatory": true,
       "requirement": "Zero split questions",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "mandatory": true,
+      "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Zero split questions for the three fixed historical benchmark profiles.",
+      "actual": "Atomic question placements retain stems/options/figures/response space on one page; Math placements are disjoint within each column/full-width band.",
+      "implementation": [
+        "src/mts/products/mock_assessment/grade4_student.py",
+        "src/mts/products/mock_assessment/grade5_student.py",
+        "src/mts/products/mock_assessment/ela_student.py"
+      ],
+      "evidence": [
+        {
+          "path": "outputs/iteration-27-final-artifact-audit.json",
+          "sha256": "c0ff3bb64a1941333ce6d622f383078f9e2d8a547a0b43703162b73504e0b324"
+        },
+        {
+          "path": "outputs/iteration-27-review-closure.md",
+          "sha256": "2e2ec1840b52a4ac94611a39efb2ac257a3029ecd3451f4811d8956378f4bc4f"
+        }
+      ]
     },
     {
       "id": "V05.07",
-      "mandatory": true,
       "requirement": "Zero clipping or overlap",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "mandatory": true,
+      "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Zero clipping or overlap for the three fixed historical benchmark profiles.",
+      "actual": "Every rendered page and source crop was inspected; no clipping, overlapping questions or missing diagram/answer labels remain. Structural bounds/native-word checks support the visual review.",
+      "implementation": [
+        "src/mts/products/mock_assessment/grade4_student.py",
+        "src/mts/products/mock_assessment/grade5_student.py",
+        "src/mts/products/mock_assessment/ela_student.py"
+      ],
+      "evidence": [
+        {
+          "path": "outputs/iteration-27-final-artifact-audit.json",
+          "sha256": "c0ff3bb64a1941333ce6d622f383078f9e2d8a547a0b43703162b73504e0b324"
+        },
+        {
+          "path": "outputs/iteration-27-review-closure.md",
+          "sha256": "2e2ec1840b52a4ac94611a39efb2ac257a3029ecd3451f4811d8956378f4bc4f"
+        }
+      ]
     },
     {
       "id": "V05.08",
-      "mandatory": true,
       "requirement": "Zero missing labels",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "mandatory": true,
+      "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Zero missing labels for the three fixed historical benchmark profiles.",
+      "actual": "Every rendered page and source crop was inspected; no clipping, overlapping questions or missing diagram/answer labels remain. Structural bounds/native-word checks support the visual review.",
+      "implementation": [
+        "src/mts/products/mock_assessment/grade4_student.py",
+        "src/mts/products/mock_assessment/grade5_student.py",
+        "src/mts/products/mock_assessment/ela_student.py"
+      ],
+      "evidence": [
+        {
+          "path": "outputs/iteration-27-final-artifact-audit.json",
+          "sha256": "c0ff3bb64a1941333ce6d622f383078f9e2d8a547a0b43703162b73504e0b324"
+        },
+        {
+          "path": "outputs/iteration-27-review-closure.md",
+          "sha256": "2e2ec1840b52a4ac94611a39efb2ac257a3029ecd3451f4811d8956378f4bc4f"
+        }
+      ]
     },
     {
       "id": "V05.09",
-      "mandatory": true,
       "requirement": "Sequential numbering and reading order",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "mandatory": true,
+      "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Sequential numbering and reading order for the three fixed historical benchmark profiles.",
+      "actual": "Original selected Math IDs progress in source order; ELA renumbers consecutively 1-14. Columns read top-to-bottom then left-to-right, with full-width exceptions.",
+      "implementation": [
+        "src/mts/products/mock_assessment/grade4_student.py",
+        "src/mts/products/mock_assessment/grade5_student.py",
+        "src/mts/products/mock_assessment/ela_student.py"
+      ],
+      "evidence": [
+        {
+          "path": "outputs/iteration-27-final-artifact-audit.json",
+          "sha256": "c0ff3bb64a1941333ce6d622f383078f9e2d8a547a0b43703162b73504e0b324"
+        },
+        {
+          "path": "outputs/iteration-27-golden-comparison.json",
+          "sha256": "66abd5abc435cc36f66a2900a8528a7a6583f1c820a691a5ec24b73af8c30d42"
+        },
+        {
+          "path": "outputs/iteration-27-review-closure.md",
+          "sha256": "2e2ec1840b52a4ac94611a39efb2ac257a3029ecd3451f4811d8956378f4bc4f"
+        }
+      ]
     },
     {
       "id": "V05.10",
-      "mandatory": true,
       "requirement": "Optimize whitespace",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "mandatory": true,
+      "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Optimize whitespace for the three fixed historical benchmark profiles.",
+      "actual": "Forward packing meets 4/3 Math golden pagination with retained working space and full-width Q26; final Grade 4 CR group remains together. Larger ELA text uses more of the sparse golden passage pages.",
+      "implementation": [
+        "src/mts/products/mock_assessment/grade4_student.py",
+        "src/mts/products/mock_assessment/grade5_student.py",
+        "src/mts/products/mock_assessment/ela_student.py"
+      ],
+      "evidence": [
+        {
+          "path": "outputs/iteration-27-review-closure.md",
+          "sha256": "2e2ec1840b52a4ac94611a39efb2ac257a3029ecd3451f4811d8956378f4bc4f"
+        },
+        {
+          "path": "outputs/iteration-27-golden-comparison.json",
+          "sha256": "66abd5abc435cc36f66a2900a8528a7a6583f1c820a691a5ec24b73af8c30d42"
+        }
+      ]
     },
     {
       "id": "V05.11",
-      "mandatory": true,
       "requirement": "Inspect every page",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "mandatory": true,
+      "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Inspect every page for the three fixed historical benchmark profiles.",
+      "actual": "All eleven student and four teacher pages were rendered and visually inspected, including the repaired Grade 4 identity fields.",
+      "implementation": [
+        "src/mts/products/mock_assessment/grade4_student.py",
+        "src/mts/products/mock_assessment/grade5_student.py",
+        "src/mts/products/mock_assessment/ela_student.py",
+        "src/mts/products/mock_assessment/ela_teacher.py"
+      ],
+      "evidence": [
+        {
+          "path": "outputs/iteration-27-review-closure.md",
+          "sha256": "2e2ec1840b52a4ac94611a39efb2ac257a3029ecd3451f4811d8956378f4bc4f"
+        },
+        {
+          "path": "outputs/iteration-27-final-artifact-audit.json",
+          "sha256": "c0ff3bb64a1941333ce6d622f383078f9e2d8a547a0b43703162b73504e0b324"
+        }
+      ]
     },
     {
       "id": "V05.12",
-      "mandatory": true,
       "requirement": "Key pagination",
+      "mandatory": true,
       "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Key pagination for the three fixed historical benchmark profiles.",
+      "actual": "Separate key page counts are 1,1,2, matching historical targets.",
+      "implementation": [
+        "src/mts/products/mock_assessment/teacher_key.py",
+        "src/mts/products/mock_assessment/ela_teacher.py"
+      ],
       "evidence": [
         {
-          "path": "outputs/iteration-25-runspec-evidence.json",
-          "sha256": "e1c56f73232176a99f75d3f9b3cf8e30c03d50756dc1abb66fe8cb31b6ec4529"
+          "path": "outputs/iteration-27-final-artifact-audit.json",
+          "sha256": "c0ff3bb64a1941333ce6d622f383078f9e2d8a547a0b43703162b73504e0b324"
         },
         {
-          "path": "outputs/iteration-25-audit.json",
-          "sha256": "bb0b65e514bb6f941e2bce319c1a94c236c2e8df947162a8885f6d9746413bb4"
+          "path": "outputs/iteration-27-golden-comparison.json",
+          "sha256": "66abd5abc435cc36f66a2900a8528a7a6583f1c820a691a5ec24b73af8c30d42"
         }
-      ],
-      "expected": "Key pagination",
-      "actual": "Teacher page counts are Grade 4 one, Grade 5 one and ELA two, matching historical targets.",
-      "method": "Execute all three benchmark pairs and inspect paper, page counts, ordering and separate artifacts; review product fixtures and import evidence.",
-      "reviewer": "Codex iteration 24 structural review"
+      ]
     },
     {
       "id": "V05.13",
-      "mandatory": true,
       "requirement": "Print readability",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "mandatory": true,
+      "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Print readability for the three fixed historical benchmark profiles.",
+      "actual": "Math 9.2/9-point prompts/options and 10-point keys preserve readability; ELA 9.6/9.1-point passage/questions and 8.2-point key improve golden body text. Image/caption and writing rules inspected at rendered print dimensions.",
+      "implementation": [
+        "src/mts/products/mock_assessment/grade4_student.py",
+        "src/mts/products/mock_assessment/grade5_student.py",
+        "src/mts/products/mock_assessment/ela_student.py",
+        "src/mts/products/mock_assessment/ela_teacher.py"
+      ],
+      "evidence": [
+        {
+          "path": "outputs/iteration-27-review-closure.md",
+          "sha256": "2e2ec1840b52a4ac94611a39efb2ac257a3029ecd3451f4811d8956378f4bc4f"
+        },
+        {
+          "path": "outputs/iteration-27-golden-comparison.json",
+          "sha256": "66abd5abc435cc36f66a2900a8528a7a6583f1c820a691a5ec24b73af8c30d42"
+        },
+        {
+          "path": "outputs/grade5-print-layout-review.md",
+          "sha256": "28a7d346119f2a609a685979694ad1c70e18028e9f164bb7807a497184688a17"
+        }
+      ]
     },
     {
       "id": "V06.01",
-      "mandatory": true,
       "requirement": "Identify final Math golden reference",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "mandatory": true,
+      "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Identify final Math golden reference for the three fixed historical benchmark profiles.",
+      "actual": "Both corrected final Math pairs are identified by filename, SHA256 and recoverable pinned Git object.",
+      "implementation": [
+        "specs/generate_mock_assessment/golden-assets.json"
+      ],
+      "evidence": [
+        {
+          "path": "specs/generate_mock_assessment/golden-assets.json",
+          "sha256": "ccbce2d79bb818697f2a9778f2d041aedd5b08a80df9c6cd97fed5c65645612b"
+        },
+        {
+          "path": "outputs/iteration-27-golden-comparison.json",
+          "sha256": "66abd5abc435cc36f66a2900a8528a7a6583f1c820a691a5ec24b73af8c30d42"
+        }
+      ]
     },
     {
       "id": "V06.02",
-      "mandatory": true,
       "requirement": "Identify final ELA golden reference",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "mandatory": true,
+      "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Identify final ELA golden reference for the three fixed historical benchmark profiles.",
+      "actual": "User explicitly selected recovered Drive ELA 4+2-page pair as authoritative golden. SHA fingerprints are frozen; original Library byte identity remains disclosed.",
+      "implementation": [
+        "specs/generate_mock_assessment/golden-assets.json"
+      ],
+      "evidence": [
+        {
+          "path": "specs/generate_mock_assessment/golden-assets.json",
+          "sha256": "ccbce2d79bb818697f2a9778f2d041aedd5b08a80df9c6cd97fed5c65645612b"
+        },
+        {
+          "path": "specs/generate_mock_assessment/historical-requirements.md",
+          "sha256": "dc2c654a51b46b1b29ae6a8ffbf1ef0dec3940f85bff1623e9ab0fccb2eda731"
+        },
+        {
+          "path": "outputs/iteration-27-review-closure.md",
+          "sha256": "2e2ec1840b52a4ac94611a39efb2ac257a3029ecd3451f4811d8956378f4bc4f"
+        }
+      ]
     },
     {
       "id": "V06.03",
-      "mandatory": true,
       "requirement": "Math golden RunSpec",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "mandatory": true,
+      "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Math golden RunSpec for the three fixed historical benchmark profiles.",
+      "actual": "Both reconstructed Math RunSpecs bind the recovered exact sources, 28-item selections, blueprint and historical print settings.",
+      "implementation": [
+        "specs/generate_mock_assessment/fixtures/ny2024_math_grade4-runspec.json",
+        "specs/generate_mock_assessment/fixtures/ny2024_math_grade5-runspec.json"
+      ],
+      "evidence": [
+        {
+          "path": "specs/generate_mock_assessment/fixtures/ny2024_math_grade4-runspec.json",
+          "sha256": "53a2b4775e7d4694c578f15c3822bbbbf87a22cf2a144f053ec87863abaeec2c"
+        },
+        {
+          "path": "specs/generate_mock_assessment/fixtures/ny2024_math_grade5-runspec.json",
+          "sha256": "5af297aba7ac5827b9ad3f71f2072428fd1eb9d55781fe3bb10d1def0f5cb774"
+        },
+        {
+          "path": "outputs/iteration-27-portability-repeatability.json",
+          "sha256": "8d17fa0940d51f36a2cdd0221e38359879e94d1f9f57b003bf230c992e91555f"
+        }
+      ]
     },
     {
       "id": "V06.04",
-      "mandatory": true,
       "requirement": "ELA golden RunSpec",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "mandatory": true,
+      "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "ELA golden RunSpec for the three fixed historical benchmark profiles.",
+      "actual": "Reconstructed ELA RunSpec binds the recovered source, 14 selected items and 4+2 presentation contract.",
+      "implementation": [
+        "specs/generate_mock_assessment/fixtures/ny2025_ela_grade6-runspec.json"
+      ],
+      "evidence": [
+        {
+          "path": "specs/generate_mock_assessment/fixtures/ny2025_ela_grade6-runspec.json",
+          "sha256": "3c66a01dae6951c0175f450bc8ff7c82eccbbdd356d3aefb1b84d541fbe503be"
+        },
+        {
+          "path": "outputs/iteration-27-portability-repeatability.json",
+          "sha256": "8d17fa0940d51f36a2cdd0221e38359879e94d1f9f57b003bf230c992e91555f"
+        }
+      ]
     },
     {
       "id": "V06.05",
-      "mandatory": true,
       "requirement": "Reproduce Math benchmark",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "mandatory": true,
+      "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Reproduce Math benchmark for the three fixed historical benchmark profiles.",
+      "actual": "Both Math profiles independently regenerated from official sources with 28 items each, matching selected content, 4/3 student pages and 1-page keys.",
+      "implementation": [
+        "src/mts/products/mock_assessment/run_benchmark.py"
+      ],
+      "evidence": [
+        {
+          "path": "outputs/iteration-27-final-artifact-audit.json",
+          "sha256": "c0ff3bb64a1941333ce6d622f383078f9e2d8a547a0b43703162b73504e0b324"
+        },
+        {
+          "path": "outputs/iteration-27-golden-comparison.json",
+          "sha256": "66abd5abc435cc36f66a2900a8528a7a6583f1c820a691a5ec24b73af8c30d42"
+        },
+        {
+          "path": "outputs/iteration-27-portability-repeatability.json",
+          "sha256": "8d17fa0940d51f36a2cdd0221e38359879e94d1f9f57b003bf230c992e91555f"
+        },
+        {
+          "path": "outputs/iteration-27-review-closure.md",
+          "sha256": "2e2ec1840b52a4ac94611a39efb2ac257a3029ecd3451f4811d8956378f4bc4f"
+        }
+      ]
     },
     {
       "id": "V06.06",
-      "mandatory": true,
       "requirement": "Reproduce ELA benchmark",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "mandatory": true,
+      "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Reproduce ELA benchmark for the three fixed historical benchmark profiles.",
+      "actual": "ELA independently regenerated from official source/canonical raster transcription with complete passage clusters, image, 14 items and 4+2 pages.",
+      "implementation": [
+        "src/mts/products/mock_assessment/run_benchmark.py"
+      ],
+      "evidence": [
+        {
+          "path": "outputs/iteration-27-final-artifact-audit.json",
+          "sha256": "c0ff3bb64a1941333ce6d622f383078f9e2d8a547a0b43703162b73504e0b324"
+        },
+        {
+          "path": "outputs/iteration-27-golden-comparison.json",
+          "sha256": "66abd5abc435cc36f66a2900a8528a7a6583f1c820a691a5ec24b73af8c30d42"
+        },
+        {
+          "path": "outputs/iteration-27-portability-repeatability.json",
+          "sha256": "8d17fa0940d51f36a2cdd0221e38359879e94d1f9f57b003bf230c992e91555f"
+        },
+        {
+          "path": "outputs/ela-source-transcription-review.md",
+          "sha256": "15d3276d79226eb3bbd5fa5ce84f5cef420d7ec06b31632765697e05f9ed534e"
+        },
+        {
+          "path": "outputs/iteration-27-review-closure.md",
+          "sha256": "2e2ec1840b52a4ac94611a39efb2ac257a3029ecd3451f4811d8956378f4bc4f"
+        }
+      ]
     },
     {
       "id": "V06.07",
-      "mandatory": true,
       "requirement": "Content and selection parity",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "mandatory": true,
+      "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Content and selection parity for the three fixed historical benchmark profiles.",
+      "actual": "All three source selections and six golden inventories match; official-source transcription corrections are explicit.",
+      "implementation": [
+        "scripts/compare_mock_goldens.py"
+      ],
+      "evidence": [
+        {
+          "path": "outputs/iteration-27-final-artifact-audit.json",
+          "sha256": "c0ff3bb64a1941333ce6d622f383078f9e2d8a547a0b43703162b73504e0b324"
+        },
+        {
+          "path": "outputs/iteration-27-golden-comparison.json",
+          "sha256": "66abd5abc435cc36f66a2900a8528a7a6583f1c820a691a5ec24b73af8c30d42"
+        },
+        {
+          "path": "outputs/iteration-27-review-closure.md",
+          "sha256": "2e2ec1840b52a4ac94611a39efb2ac257a3029ecd3451f4811d8956378f4bc4f"
+        }
+      ]
     },
     {
       "id": "V06.08",
-      "mandatory": true,
       "requirement": "Key and scoring parity",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "mandatory": true,
+      "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Key and scoring parity for the three fixed historical benchmark profiles.",
+      "actual": "Official MC/credit mappings match all 70 output items; worked/model solutions align with scoring and source-authoritative Grade 4 corrections.",
+      "implementation": [
+        "src/mts/products/mock_assessment/teacher_key.py",
+        "src/mts/products/mock_assessment/ela_teacher.py"
+      ],
+      "evidence": [
+        {
+          "path": "outputs/iteration-27-final-artifact-audit.json",
+          "sha256": "c0ff3bb64a1941333ce6d622f383078f9e2d8a547a0b43703162b73504e0b324"
+        },
+        {
+          "path": "outputs/grade4-academic-review.md",
+          "sha256": "464e1af07cd89b3a94e51faef4c3379402bfbf85d2063bcc10d457732d0880cb"
+        },
+        {
+          "path": "outputs/grade5-scoring-review.md",
+          "sha256": "1adf252cb65868a92afda7d034174bc9e87a7bd8f36a574a9f3824efdff9a75f"
+        },
+        {
+          "path": "outputs/ela-academic-review.md",
+          "sha256": "002968e624590187f84c6dc9e25b913d2d3ad767a2522c6207c06475dc01ddf1"
+        },
+        {
+          "path": "outputs/iteration-27-review-closure.md",
+          "sha256": "2e2ec1840b52a4ac94611a39efb2ac257a3029ecd3451f4811d8956378f4bc4f"
+        }
+      ]
     },
     {
       "id": "V06.09",
-      "mandatory": true,
       "requirement": "Scaling pagination and figure parity",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "mandatory": true,
+      "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Scaling pagination and figure parity for the three fixed historical benchmark profiles.",
+      "actual": "Golden student/key page counts match; Math source-vector scaling meets historical 75/70 rules; enlarged ELA cipher preserves the same complete illustration.",
+      "implementation": [
+        "scripts/compare_mock_goldens.py"
+      ],
+      "evidence": [
+        {
+          "path": "outputs/iteration-27-golden-comparison.json",
+          "sha256": "66abd5abc435cc36f66a2900a8528a7a6583f1c820a691a5ec24b73af8c30d42"
+        },
+        {
+          "path": "outputs/iteration-27-review-closure.md",
+          "sha256": "2e2ec1840b52a4ac94611a39efb2ac257a3029ecd3451f4811d8956378f4bc4f"
+        },
+        {
+          "path": "outputs/grade4-figure-clearance.json",
+          "sha256": "8dd4d7442d55cc2080319d0ab721f59ead48d674534d24e782a1e74096770939"
+        },
+        {
+          "path": "outputs/grade5-print-layout-review.md",
+          "sha256": "28a7d346119f2a609a685979694ad1c70e18028e9f164bb7807a497184688a17"
+        }
+      ]
     },
     {
       "id": "V06.10",
-      "mandatory": true,
       "requirement": "Equivalent or improved readability",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "mandatory": true,
+      "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Equivalent or improved readability for the three fixed historical benchmark profiles.",
+      "actual": "Rendered font sizes match or improve golden text; original vectors retained, ELA illustration/caption enlarged, and long prompts/response labels remain readable.",
+      "implementation": [
+        "scripts/compare_mock_goldens.py"
+      ],
+      "evidence": [
+        {
+          "path": "outputs/iteration-27-golden-comparison.json",
+          "sha256": "66abd5abc435cc36f66a2900a8528a7a6583f1c820a691a5ec24b73af8c30d42"
+        },
+        {
+          "path": "outputs/iteration-27-review-closure.md",
+          "sha256": "2e2ec1840b52a4ac94611a39efb2ac257a3029ecd3451f4811d8956378f4bc4f"
+        }
+      ]
     },
     {
       "id": "V06.11",
-      "mandatory": true,
       "requirement": "Document all differences",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "mandatory": true,
+      "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Document all differences for the three fixed historical benchmark profiles.",
+      "actual": "Complete page-text diffs for all six golden/output documents and reviewed explanations record reflow, notation, scoring/source corrections, metadata and image/key improvements.",
+      "implementation": [
+        "scripts/compare_mock_goldens.py"
+      ],
+      "evidence": [
+        {
+          "path": "outputs/iteration-27-golden-comparison.json",
+          "sha256": "66abd5abc435cc36f66a2900a8528a7a6583f1c820a691a5ec24b73af8c30d42"
+        },
+        {
+          "path": "outputs/iteration-27-review-closure.md",
+          "sha256": "2e2ec1840b52a4ac94611a39efb2ac257a3029ecd3451f4811d8956378f4bc4f"
+        },
+        {
+          "path": "outputs/iteration-27-golden-text-differences.txt",
+          "sha256": "674631a42e67ce94ab4f52ae3199d36c336edd8ad53a04c465760fa6abe65e27"
+        }
+      ]
     },
     {
       "id": "V06.12",
-      "mandatory": true,
       "requirement": "Zero blocking regression differences",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "mandatory": true,
+      "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Zero blocking regression differences for the three fixed historical benchmark profiles.",
+      "actual": "Source-authoritative differences were reviewed and recorded. No blocking educational, content or print regression remains across all three reference pairs.",
+      "implementation": [
+        "workflows/generate-mock-assessment.md"
+      ],
+      "evidence": [
+        {
+          "path": "outputs/iteration-27-review-closure.md",
+          "sha256": "2e2ec1840b52a4ac94611a39efb2ac257a3029ecd3451f4811d8956378f4bc4f"
+        },
+        {
+          "path": "outputs/iteration-27-golden-comparison.json",
+          "sha256": "66abd5abc435cc36f66a2900a8528a7a6583f1c820a691a5ec24b73af8c30d42"
+        },
+        {
+          "path": "outputs/iteration-27-final-artifact-audit.json",
+          "sha256": "c0ff3bb64a1941333ce6d622f383078f9e2d8a547a0b43703162b73504e0b324"
+        },
+        {
+          "path": "outputs/iteration-27-math-choice-review.md",
+          "sha256": "cdaee80f1fb7c93dc0496bb568943a1be8451bbbca04cc655a415504b5b5657d"
+        },
+        {
+          "path": "outputs/ela-academic-review.md",
+          "sha256": "002968e624590187f84c6dc9e25b913d2d3ad767a2522c6207c06475dc01ddf1"
+        },
+        {
+          "path": "outputs/iteration-27-portability-repeatability.json",
+          "sha256": "8d17fa0940d51f36a2cdd0221e38359879e94d1f9f57b003bf230c992e91555f"
+        }
+      ]
     },
     {
       "id": "V07.01",
-      "mandatory": true,
       "requirement": "Independent invocation without chat context",
+      "mandatory": true,
       "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Independent invocation without chat context for the three fixed historical benchmark profiles.",
+      "actual": "Fresh GitHub checkout restored all pinned assets and executed all three saved RunSpecs without chat context or weekly generation.",
+      "implementation": [
+        "src/mts/products/mock_assessment/run_benchmark.py",
+        "scripts/restore_mock_assets.py"
+      ],
       "evidence": [
         {
-          "path": "outputs/iteration-25-runspec-evidence.json",
-          "sha256": "e1c56f73232176a99f75d3f9b3cf8e30c03d50756dc1abb66fe8cb31b6ec4529"
+          "path": "outputs/iteration-27-portability-repeatability.json",
+          "sha256": "8d17fa0940d51f36a2cdd0221e38359879e94d1f9f57b003bf230c992e91555f"
         },
         {
-          "path": "outputs/iteration-25-audit.json",
-          "sha256": "bb0b65e514bb6f941e2bce319c1a94c236c2e8df947162a8885f6d9746413bb4"
+          "path": "outputs/iteration-27-tests-final.txt",
+          "sha256": "eacec28e0119f9299a6bc0963348ab95546c699a803555fa61785c6b4b8d1f29"
+        },
+        {
+          "path": "outputs/iteration-27-isolation-audit.json",
+          "sha256": "09609b2b44f35964330903be955f90062107da6b6f45bfec53b514f338e989c6"
         }
-      ],
-      "expected": "Independent invocation without chat context",
-      "actual": "Three benchmark pairs invoked from saved manifests and explicit source paths by the regression script.",
-      "method": "Execute all three benchmark pairs and inspect paper, page counts, ordering and separate artifacts; review product fixtures and import evidence.",
-      "reviewer": "Codex iteration 24 structural review"
+      ]
     },
     {
       "id": "V07.02",
-      "mandatory": true,
       "requirement": "Repository configuration and policies",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "mandatory": true,
+      "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Repository configuration and policies for the three fixed historical benchmark profiles.",
+      "actual": "Repository workflow, dedicated fixtures and entry point enforce approved benchmark/local-review scope, source hashes, blueprint and independent page policies.",
+      "implementation": [
+        "workflows/generate-mock-assessment.md",
+        "src/mts/products/mock_assessment/run_benchmark.py"
+      ],
+      "evidence": [
+        {
+          "path": "workflows/generate-mock-assessment.md",
+          "sha256": "b3fbc9358efff32e9804b58a10d7d46d64a049daa38c2fd88239005050139bbc"
+        },
+        {
+          "path": "specs/generate_mock_assessment/historical-requirements.md",
+          "sha256": "dc2c654a51b46b1b29ae6a8ffbf1ef0dec3940f85bff1623e9ab0fccb2eda731"
+        },
+        {
+          "path": "outputs/iteration-27-tests-final.txt",
+          "sha256": "eacec28e0119f9299a6bc0963348ab95546c699a803555fa61785c6b4b8d1f29"
+        }
+      ]
     },
     {
       "id": "V07.03",
-      "mandatory": true,
       "requirement": "Estimated and actual runtime",
+      "mandatory": true,
       "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Estimated and actual runtime for the three fixed historical benchmark profiles.",
+      "actual": "All three logs record engineering estimate, measured active duration, retry count and human-wait duration; failed-attempt journal is exercised in tests.",
+      "implementation": [
+        "src/mts/products/mock_assessment/run_benchmark.py"
+      ],
       "evidence": [
         {
-          "path": "outputs/iteration-25-runspec-evidence.json",
-          "sha256": "e1c56f73232176a99f75d3f9b3cf8e30c03d50756dc1abb66fe8cb31b6ec4529"
+          "path": "outputs/iteration-27-portability-repeatability.json",
+          "sha256": "8d17fa0940d51f36a2cdd0221e38359879e94d1f9f57b003bf230c992e91555f"
         },
         {
-          "path": "outputs/iteration-25-repeatability.json",
-          "sha256": "c4561ea95dd0259958120a799437c33314cde643f7b06c05d0cac5517715df20"
+          "path": "outputs/iteration-27-tests-final.txt",
+          "sha256": "eacec28e0119f9299a6bc0963348ab95546c699a803555fa61785c6b4b8d1f29"
         },
         {
-          "path": "outputs/iteration-25-tests.txt",
-          "sha256": "5e588202b466e07a868ddb3156c918bc79ffc52b9974141287f2599827be64a9"
-        },
-        {
-          "path": "outputs/iteration-25-audit.json",
-          "sha256": "bb0b65e514bb6f941e2bce319c1a94c236c2e8df947162a8885f6d9746413bb4"
+          "path": "tests/mock_assessment/test_run_benchmark.py",
+          "sha256": "ce63e121b8c5c76624beae55a7e0482e12b5e35358fff79752be118f66dcd790"
         }
-      ],
-      "expected": "Estimated and actual runtime",
-      "actual": "All three logs capture a five-second initial engineering estimate with basis and measured active/rendering durations.",
-      "method": "Execute all three validated RunSpecs twice, inspect RunSpec summaries and compare rendered outputs; run complete regression suite including failure/retry tests.",
-      "reviewer": "Codex iteration 25 run-orchestration review"
+      ]
     },
     {
       "id": "V07.04",
-      "mandatory": true,
       "requirement": "Persist evidence",
+      "mandatory": true,
       "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Persist evidence for the three fixed historical benchmark profiles.",
+      "actual": "RunSpec JSON/PDF, regenerated student/key, runlog/review, quality evidence and criterion report are persisted; checkpoints and takeover guide share this branch.",
+      "implementation": [
+        "src/mts/products/mock_assessment/run_benchmark.py",
+        "scripts/resume_mock_assessment.py"
+      ],
       "evidence": [
         {
-          "path": "outputs/iteration-25-runspec-evidence.json",
-          "sha256": "e1c56f73232176a99f75d3f9b3cf8e30c03d50756dc1abb66fe8cb31b6ec4529"
+          "path": "outputs/iteration-27-portability-repeatability.json",
+          "sha256": "8d17fa0940d51f36a2cdd0221e38359879e94d1f9f57b003bf230c992e91555f"
         },
         {
-          "path": "outputs/iteration-25-repeatability.json",
-          "sha256": "c4561ea95dd0259958120a799437c33314cde643f7b06c05d0cac5517715df20"
+          "path": "outputs/iteration-27-final-artifact-audit.json",
+          "sha256": "c0ff3bb64a1941333ce6d622f383078f9e2d8a547a0b43703162b73504e0b324"
         },
         {
-          "path": "outputs/iteration-25-tests.txt",
-          "sha256": "5e588202b466e07a868ddb3156c918bc79ffc52b9974141287f2599827be64a9"
+          "path": "outputs/iteration-27-review-closure.md",
+          "sha256": "2e2ec1840b52a4ac94611a39efb2ac257a3029ecd3451f4811d8956378f4bc4f"
         },
         {
-          "path": "outputs/iteration-25-audit.json",
-          "sha256": "bb0b65e514bb6f941e2bce319c1a94c236c2e8df947162a8885f6d9746413bb4"
+          "path": "specs/generate_mock_assessment/resume/START_HERE.md",
+          "sha256": "a279927486fbd63b1eb03d839be96aee970dcc102200fb8964748baa1d6eac89"
         }
-      ],
-      "expected": "Persist evidence",
-      "actual": "Run logs persist exact input/artifact hashes, code revision and implementation hashes with structural and open-review states.",
-      "method": "Execute all three validated RunSpecs twice, inspect RunSpec summaries and compare rendered outputs; run complete regression suite including failure/retry tests.",
-      "reviewer": "Codex iteration 25 run-orchestration review"
+      ]
     },
     {
       "id": "V07.05",
-      "mandatory": true,
       "requirement": "Repair and escalation tests",
+      "mandatory": true,
       "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Repair and escalation tests for the three fixed historical benchmark profiles.",
+      "actual": "Tests inject phase-promotion failure/retry, concurrent locks, unknown prior versions, lost Drive replies, persistent outage recovery and failed local rollback with retained approved backups.",
+      "implementation": [
+        "src/mts/products/mock_assessment/run_benchmark.py",
+        "src/mts/publishing/coordinated_release.py",
+        "src/mts/publishing/coordinated_drive_release.py"
+      ],
       "evidence": [
         {
-          "path": "outputs/iteration-25-runspec-evidence.json",
-          "sha256": "e1c56f73232176a99f75d3f9b3cf8e30c03d50756dc1abb66fe8cb31b6ec4529"
+          "path": "outputs/iteration-27-tests-final.txt",
+          "sha256": "eacec28e0119f9299a6bc0963348ab95546c699a803555fa61785c6b4b8d1f29"
         },
         {
-          "path": "outputs/iteration-25-repeatability.json",
-          "sha256": "c4561ea95dd0259958120a799437c33314cde643f7b06c05d0cac5517715df20"
+          "path": "tests/mock_assessment/test_run_benchmark.py",
+          "sha256": "ce63e121b8c5c76624beae55a7e0482e12b5e35358fff79752be118f66dcd790"
         },
         {
-          "path": "outputs/iteration-25-tests.txt",
-          "sha256": "5e588202b466e07a868ddb3156c918bc79ffc52b9974141287f2599827be64a9"
+          "path": "tests/mock_assessment/test_release.py",
+          "sha256": "f2f5571f21ae09a017fd590e6292fbf8dc5c49822e1895336a688e5ed8f3bf46"
         },
         {
-          "path": "outputs/iteration-25-audit.json",
-          "sha256": "bb0b65e514bb6f941e2bce319c1a94c236c2e8df947162a8885f6d9746413bb4"
+          "path": "tests/mock_assessment/test_drive_release.py",
+          "sha256": "01ec659b3cedc248a184159a04c186137482977464f5552892736b6d9dd5275d"
         }
-      ],
-      "expected": "Repair and escalation tests",
-      "actual": "Tests reject invalid specs, preserve completed identities, enforce concurrent identity locks, and prove rollback/retry after an injected second-phase move failure.",
-      "method": "Execute all three validated RunSpecs twice, inspect RunSpec summaries and compare rendered outputs; run complete regression suite including failure/retry tests.",
-      "reviewer": "Codex iteration 25 run-orchestration review"
+      ]
     },
     {
       "id": "V07.06",
-      "mandatory": true,
       "requirement": "Weekly regression unaffected",
+      "mandatory": true,
       "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Weekly regression unaffected for the three fixed historical benchmark profiles.",
+      "actual": "Fresh-checkout maintained suite passes 293 tests including Weekly Practice; baseline diff shows no subject implementation/config changes.",
+      "implementation": [
+        "src/mts/products/mock_assessment/run_benchmark.py"
+      ],
       "evidence": [
         {
-          "path": "outputs/iteration-25-tests.txt",
-          "sha256": "5e588202b466e07a868ddb3156c918bc79ffc52b9974141287f2599827be64a9"
+          "path": "outputs/iteration-27-tests-final.txt",
+          "sha256": "eacec28e0119f9299a6bc0963348ab95546c699a803555fa61785c6b4b8d1f29"
         },
         {
-          "path": "outputs/iteration-25-audit.json",
-          "sha256": "bb0b65e514bb6f941e2bce319c1a94c236c2e8df947162a8885f6d9746413bb4"
+          "path": "outputs/iteration-27-isolation-audit.json",
+          "sha256": "09609b2b44f35964330903be955f90062107da6b6f45bfec53b514f338e989c6"
+        },
+        {
+          "path": "outputs/iteration-27-portability-repeatability.json",
+          "sha256": "8d17fa0940d51f36a2cdd0221e38359879e94d1f9f57b003bf230c992e91555f"
         }
-      ],
-      "expected": "Weekly regression unaffected",
-      "actual": "Current complete suite, including Weekly Practice coverage, passed 257 tests.",
-      "method": "Checkpoint review of recovered requirements, source identities, import audit and applicable regression tests.",
-      "reviewer": "Codex iteration 23 criterion review"
+      ]
     },
     {
       "id": "V07.07",
-      "mandatory": true,
       "requirement": "Output conventions",
+      "mandatory": true,
       "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Output conventions for the three fixed historical benchmark profiles.",
+      "actual": "Persisted phase-first Monday/run-ID directories keep RunSpec, student/key and post-run evidence separate; completed identities are preserved.",
+      "implementation": [
+        "src/mts/products/mock_assessment/run_benchmark.py"
+      ],
       "evidence": [
         {
-          "path": "outputs/iteration-25-runspec-evidence.json",
-          "sha256": "e1c56f73232176a99f75d3f9b3cf8e30c03d50756dc1abb66fe8cb31b6ec4529"
+          "path": "outputs/iteration-27-portability-repeatability.json",
+          "sha256": "8d17fa0940d51f36a2cdd0221e38359879e94d1f9f57b003bf230c992e91555f"
         },
         {
-          "path": "outputs/iteration-25-repeatability.json",
-          "sha256": "c4561ea95dd0259958120a799437c33314cde643f7b06c05d0cac5517715df20"
-        },
-        {
-          "path": "outputs/iteration-25-tests.txt",
-          "sha256": "5e588202b466e07a868ddb3156c918bc79ffc52b9974141287f2599827be64a9"
-        },
-        {
-          "path": "outputs/iteration-25-audit.json",
-          "sha256": "bb0b65e514bb6f941e2bce319c1a94c236c2e8df947162a8885f6d9746413bb4"
+          "path": "outputs/historical-regressions/03-PostRun/2026-09-21/ny2025_ela_grade6-review/runlog.json",
+          "sha256": "19f12c632bfc9178b6f713b44b372849e08912af7b7c7b5e82db434999070131"
         }
-      ],
-      "expected": "Output conventions",
-      "actual": "All three RunSpec runs use 01-PreRun, 02-Run, and 03-PostRun, instructional Mondays and run identities; 02-Run contains student and teacher PDFs.",
-      "method": "Execute all three validated RunSpecs twice, inspect RunSpec summaries and compare rendered outputs; run complete regression suite including failure/retry tests.",
-      "reviewer": "Codex iteration 25 run-orchestration review"
+      ]
     },
     {
       "id": "V07.08",
-      "mandatory": true,
       "requirement": "PrintReady approval",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "mandatory": true,
+      "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "PrintReady approval for the three fixed historical benchmark profiles.",
+      "actual": "Release rejects incomplete development gates, missing human approval and changed approved PDFs before destination writes or credentials. No production approval was fabricated.",
+      "implementation": [
+        "src/mts/products/mock_assessment/release.py"
+      ],
+      "evidence": [
+        {
+          "path": "outputs/iteration-27-tests-final.txt",
+          "sha256": "eacec28e0119f9299a6bc0963348ab95546c699a803555fa61785c6b4b8d1f29"
+        },
+        {
+          "path": "tests/mock_assessment/test_release.py",
+          "sha256": "f2f5571f21ae09a017fd590e6292fbf8dc5c49822e1895336a688e5ed8f3bf46"
+        },
+        {
+          "path": "outputs/iteration-27-review-closure.md",
+          "sha256": "2e2ec1840b52a4ac94611a39efb2ac257a3029ecd3451f4811d8956378f4bc4f"
+        }
+      ]
     },
     {
       "id": "V07.09",
-      "mandatory": true,
       "requirement": "Portability review",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "mandatory": true,
+      "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Portability review for the three fixed historical benchmark profiles.",
+      "actual": "Fresh GitHub checkout restores nine exact assets, passes 293 tests and all three completed-review gates. Canonical evidence-byte mismatch was found and repaired. No absolute workspace path is required; alternate OS execution is not claimed.",
+      "implementation": [
+        "scripts/restore_mock_assets.py",
+        "scripts/resume_mock_assessment.py"
+      ],
+      "evidence": [
+        {
+          "path": "outputs/iteration-27-portability-repeatability.json",
+          "sha256": "8d17fa0940d51f36a2cdd0221e38359879e94d1f9f57b003bf230c992e91555f"
+        },
+        {
+          "path": "outputs/iteration-27-portability-repair.json",
+          "sha256": "b9e8dc234d9e2a85af2f2a0e15e575268c04ffe4b30391437fed8a5f2ddf1920"
+        },
+        {
+          "path": "outputs/iteration-27-tests-final.txt",
+          "sha256": "eacec28e0119f9299a6bc0963348ab95546c699a803555fa61785c6b4b8d1f29"
+        }
+      ]
     },
     {
       "id": "V07.10",
-      "mandatory": true,
       "requirement": "Repeatability",
+      "mandatory": true,
       "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Repeatability for the three fixed historical benchmark profiles.",
+      "actual": "Two independent checkout executions produce identical page pixels for all nine RunSpec/student/key PDFs at the verified revision.",
+      "implementation": [
+        "src/mts/products/mock_assessment/run_benchmark.py"
+      ],
       "evidence": [
         {
-          "path": "outputs/iteration-25-runspec-evidence.json",
-          "sha256": "e1c56f73232176a99f75d3f9b3cf8e30c03d50756dc1abb66fe8cb31b6ec4529"
-        },
-        {
-          "path": "outputs/iteration-25-repeatability.json",
-          "sha256": "c4561ea95dd0259958120a799437c33314cde643f7b06c05d0cac5517715df20"
-        },
-        {
-          "path": "outputs/iteration-25-tests.txt",
-          "sha256": "5e588202b466e07a868ddb3156c918bc79ffc52b9974141287f2599827be64a9"
-        },
-        {
-          "path": "outputs/iteration-25-audit.json",
-          "sha256": "bb0b65e514bb6f941e2bce319c1a94c236c2e8df947162a8885f6d9746413bb4"
+          "path": "outputs/iteration-27-portability-repeatability.json",
+          "sha256": "8d17fa0940d51f36a2cdd0221e38359879e94d1f9f57b003bf230c992e91555f"
         }
-      ],
-      "expected": "Repeatability",
-      "actual": "Two independent executions with identical sources and RunSpecs reproduced identical text, page counts and rendered pixels across nine PDFs.",
-      "method": "Execute all three validated RunSpecs twice, inspect RunSpec summaries and compare rendered outputs; run complete regression suite including failure/retry tests.",
-      "reviewer": "Codex iteration 25 run-orchestration review"
+      ]
     },
     {
       "id": "ARCH.01",
-      "mandatory": true,
       "requirement": "Dedicated executable entry point",
+      "mandatory": true,
       "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Dedicated executable entry point for the three fixed historical benchmark profiles.",
+      "actual": "Dedicated entry point executes independently and its CLI help exits successfully.",
+      "implementation": [
+        "scripts/generate_mock_assessment.py"
+      ],
       "evidence": [
         {
-          "path": "outputs/iteration-25-audit.json",
-          "sha256": "bb0b65e514bb6f941e2bce319c1a94c236c2e8df947162a8885f6d9746413bb4"
+          "path": "outputs/iteration-27-isolation-audit.json",
+          "sha256": "09609b2b44f35964330903be955f90062107da6b6f45bfec53b514f338e989c6"
+        },
+        {
+          "path": "outputs/iteration-27-portability-repeatability.json",
+          "sha256": "8d17fa0940d51f36a2cdd0221e38359879e94d1f9f57b003bf230c992e91555f"
         }
-      ],
-      "expected": "Dedicated executable entry point",
-      "actual": "Standalone generate_mock_assessment.py --help returned zero.",
-      "method": "Checkpoint review of recovered requirements, source identities, import audit and applicable regression tests.",
-      "reviewer": "Codex iteration 23 criterion review"
+      ]
     },
     {
       "id": "ARCH.02",
-      "mandatory": true,
       "requirement": "Independent orchestration",
+      "mandatory": true,
       "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Independent orchestration for the three fixed historical benchmark profiles.",
+      "actual": "Dedicated RunSpec orchestrator stages/promotes assessment phases and invokes only assessment renderers plus neutral storage primitives.",
+      "implementation": [
+        "src/mts/products/mock_assessment/run_benchmark.py"
+      ],
       "evidence": [
         {
-          "path": "outputs/iteration-25-runspec-evidence.json",
-          "sha256": "e1c56f73232176a99f75d3f9b3cf8e30c03d50756dc1abb66fe8cb31b6ec4529"
+          "path": "outputs/iteration-27-isolation-audit.json",
+          "sha256": "09609b2b44f35964330903be955f90062107da6b6f45bfec53b514f338e989c6"
         },
         {
-          "path": "outputs/iteration-25-repeatability.json",
-          "sha256": "c4561ea95dd0259958120a799437c33314cde643f7b06c05d0cac5517715df20"
+          "path": "outputs/iteration-27-tests-final.txt",
+          "sha256": "eacec28e0119f9299a6bc0963348ab95546c699a803555fa61785c6b4b8d1f29"
         },
         {
-          "path": "outputs/iteration-25-tests.txt",
-          "sha256": "5e588202b466e07a868ddb3156c918bc79ffc52b9974141287f2599827be64a9"
-        },
-        {
-          "path": "outputs/iteration-25-audit.json",
-          "sha256": "bb0b65e514bb6f941e2bce319c1a94c236c2e8df947162a8885f6d9746413bb4"
+          "path": "outputs/iteration-27-portability-repeatability.json",
+          "sha256": "8d17fa0940d51f36a2cdd0221e38359879e94d1f9f57b003bf230c992e91555f"
         }
-      ],
-      "expected": "Independent orchestration",
-      "actual": "The dedicated RunSpec runner performs source validation, separate subject dispatch, phase staging and local verification without weekly orchestration.",
-      "method": "Execute all three validated RunSpecs twice, inspect RunSpec summaries and compare rendered outputs; run complete regression suite including failure/retry tests.",
-      "reviewer": "Codex iteration 25 run-orchestration review"
+      ]
     },
     {
       "id": "ARCH.03",
-      "mandatory": true,
       "requirement": "Independent configuration",
+      "mandatory": true,
       "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Independent configuration for the three fixed historical benchmark profiles.",
+      "actual": "Assessment fixture RunSpecs/manifests define source, blueprint, typography, scale and pagination without weekly config.",
+      "implementation": [
+        "specs/generate_mock_assessment/fixtures/ny2024_math_grade4-runspec.json",
+        "specs/generate_mock_assessment/fixtures/ny2025_ela_grade6-runspec.json"
+      ],
       "evidence": [
         {
-          "path": "outputs/iteration-25-runspec-evidence.json",
-          "sha256": "e1c56f73232176a99f75d3f9b3cf8e30c03d50756dc1abb66fe8cb31b6ec4529"
+          "path": "specs/generate_mock_assessment/historical-requirements.md",
+          "sha256": "dc2c654a51b46b1b29ae6a8ffbf1ef0dec3940f85bff1623e9ab0fccb2eda731"
         },
         {
-          "path": "outputs/iteration-25-audit.json",
-          "sha256": "bb0b65e514bb6f941e2bce319c1a94c236c2e8df947162a8885f6d9746413bb4"
+          "path": "outputs/iteration-27-isolation-audit.json",
+          "sha256": "09609b2b44f35964330903be955f90062107da6b6f45bfec53b514f338e989c6"
+        },
+        {
+          "path": "outputs/iteration-27-portability-repeatability.json",
+          "sha256": "8d17fa0940d51f36a2cdd0221e38359879e94d1f9f57b003bf230c992e91555f"
         }
-      ],
-      "expected": "Independent configuration",
-      "actual": "Assessment fixtures supply independent source selections, text, scoring and layout parameters; no weekly configuration changes.",
-      "method": "Execute all three benchmark pairs and inspect paper, page counts, ordering and separate artifacts; review product fixtures and import evidence.",
-      "reviewer": "Codex iteration 24 structural review"
+      ]
     },
     {
       "id": "ARCH.04",
-      "mandatory": true,
       "requirement": "No weekly curriculum or generation dependency",
+      "mandatory": true,
       "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "No weekly curriculum or generation dependency for the three fixed historical benchmark profiles.",
+      "actual": "AST/import review finds no weekly, subject curriculum or generation import in product code or its entry point.",
+      "implementation": [
+        "src/mts/products/mock_assessment/run_benchmark.py"
+      ],
       "evidence": [
         {
-          "path": "outputs/iteration-25-audit.json",
-          "sha256": "bb0b65e514bb6f941e2bce319c1a94c236c2e8df947162a8885f6d9746413bb4"
+          "path": "outputs/iteration-27-isolation-audit.json",
+          "sha256": "09609b2b44f35964330903be955f90062107da6b6f45bfec53b514f338e989c6"
         }
-      ],
-      "expected": "No weekly curriculum or generation dependency",
-      "actual": "Reviewed all product and CLI imports; no subject, weekly or curriculum import found.",
-      "method": "Checkpoint review of recovered requirements, source identities, import audit and applicable regression tests.",
-      "reviewer": "Codex iteration 23 criterion review"
+      ]
     },
     {
       "id": "ARCH.05",
-      "mandatory": true,
       "requirement": "Shared capabilities via reusable interfaces",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "mandatory": true,
+      "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Shared capabilities via reusable interfaces for the three fixed historical benchmark profiles.",
+      "actual": "Assessment-specific orchestration reuses neutral atomic writing, injected Drive storage and publication coordination; neutral publishers import no product policy.",
+      "implementation": [
+        "src/mts/products/mock_assessment/run_benchmark.py",
+        "src/mts/products/mock_assessment/release.py",
+        "src/mts/publishing/coordinated_drive_release.py"
+      ],
+      "evidence": [
+        {
+          "path": "outputs/iteration-27-isolation-audit.json",
+          "sha256": "09609b2b44f35964330903be955f90062107da6b6f45bfec53b514f338e989c6"
+        },
+        {
+          "path": "outputs/iteration-27-tests-final.txt",
+          "sha256": "eacec28e0119f9299a6bc0963348ab95546c699a803555fa61785c6b4b8d1f29"
+        },
+        {
+          "path": "workflows/generate-mock-assessment.md",
+          "sha256": "b3fbc9358efff32e9804b58a10d7d46d64a049daa38c2fd88239005050139bbc"
+        }
+      ]
     },
     {
       "id": "ARCH.06",
-      "mandatory": true,
       "requirement": "Independent execution",
+      "mandatory": true,
       "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Independent execution for the three fixed historical benchmark profiles.",
+      "actual": "Fresh GitHub checkout restored all pinned assets and executed all three saved RunSpecs without chat context or weekly generation.",
+      "implementation": [
+        "src/mts/products/mock_assessment/run_benchmark.py",
+        "scripts/restore_mock_assets.py"
+      ],
       "evidence": [
         {
-          "path": "outputs/iteration-25-runspec-evidence.json",
-          "sha256": "e1c56f73232176a99f75d3f9b3cf8e30c03d50756dc1abb66fe8cb31b6ec4529"
+          "path": "outputs/iteration-27-portability-repeatability.json",
+          "sha256": "8d17fa0940d51f36a2cdd0221e38359879e94d1f9f57b003bf230c992e91555f"
         },
         {
-          "path": "outputs/iteration-25-audit.json",
-          "sha256": "bb0b65e514bb6f941e2bce319c1a94c236c2e8df947162a8885f6d9746413bb4"
+          "path": "outputs/iteration-27-tests-final.txt",
+          "sha256": "eacec28e0119f9299a6bc0963348ab95546c699a803555fa61785c6b4b8d1f29"
+        },
+        {
+          "path": "outputs/iteration-27-isolation-audit.json",
+          "sha256": "09609b2b44f35964330903be955f90062107da6b6f45bfec53b514f338e989c6"
         }
-      ],
-      "expected": "Independent execution",
-      "actual": "Three benchmark pairs executed through the dedicated CLI without weekly workflow invocation.",
-      "method": "Execute all three benchmark pairs and inspect paper, page counts, ordering and separate artifacts; review product fixtures and import evidence.",
-      "reviewer": "Codex iteration 24 structural review"
+      ]
     },
     {
       "id": "ARCH.07",
-      "mandatory": true,
       "requirement": "Dedicated tests and golden regressions",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "mandatory": true,
+      "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Dedicated tests and golden regressions for the three fixed historical benchmark profiles.",
+      "actual": "Dedicated parser/render/run/review/release/Drive tests pass, and all three official-source golden regressions execute and match reviewed expectations.",
+      "implementation": [
+        "tests/mock_assessment",
+        "scripts/compare_mock_goldens.py"
+      ],
+      "evidence": [
+        {
+          "path": "outputs/iteration-27-tests-final.txt",
+          "sha256": "eacec28e0119f9299a6bc0963348ab95546c699a803555fa61785c6b4b8d1f29"
+        },
+        {
+          "path": "outputs/iteration-27-final-artifact-audit.json",
+          "sha256": "c0ff3bb64a1941333ce6d622f383078f9e2d8a547a0b43703162b73504e0b324"
+        },
+        {
+          "path": "outputs/iteration-27-golden-comparison.json",
+          "sha256": "66abd5abc435cc36f66a2900a8528a7a6583f1c820a691a5ec24b73af8c30d42"
+        },
+        {
+          "path": "outputs/iteration-27-portability-repeatability.json",
+          "sha256": "8d17fa0940d51f36a2cdd0221e38359879e94d1f9f57b003bf230c992e91555f"
+        }
+      ]
     },
     {
       "id": "ARCH.08",
-      "mandatory": true,
       "requirement": "Weekly implementation unaffected",
+      "mandatory": true,
       "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Weekly implementation unaffected for the three fixed historical benchmark profiles.",
+      "actual": "Fresh-checkout maintained suite passes 293 tests including Weekly Practice; baseline diff shows no subject implementation/config changes.",
+      "implementation": [
+        "src/mts/products/mock_assessment/run_benchmark.py"
+      ],
       "evidence": [
         {
-          "path": "outputs/iteration-25-audit.json",
-          "sha256": "bb0b65e514bb6f941e2bce319c1a94c236c2e8df947162a8885f6d9746413bb4"
+          "path": "outputs/iteration-27-tests-final.txt",
+          "sha256": "eacec28e0119f9299a6bc0963348ab95546c699a803555fa61785c6b4b8d1f29"
         },
         {
-          "path": "outputs/iteration-25-tests.txt",
-          "sha256": "5e588202b466e07a868ddb3156c918bc79ffc52b9974141287f2599827be64a9"
+          "path": "outputs/iteration-27-isolation-audit.json",
+          "sha256": "09609b2b44f35964330903be955f90062107da6b6f45bfec53b514f338e989c6"
+        },
+        {
+          "path": "outputs/iteration-27-portability-repeatability.json",
+          "sha256": "8d17fa0940d51f36a2cdd0221e38359879e94d1f9f57b003bf230c992e91555f"
         }
-      ],
-      "expected": "Weekly implementation unaffected",
-      "actual": "Diff from original baseline has no changes in subject implementation or subject configuration; all 257 tests passed.",
-      "method": "Checkpoint review of recovered requirements, source identities, import audit and applicable regression tests.",
-      "reviewer": "Codex iteration 23 criterion review"
+      ]
     },
     {
       "id": "ARCH.09",
-      "mandatory": true,
       "requirement": "Assessment policies do not alter weekly behavior",
+      "mandatory": true,
       "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Assessment policies do not alter weekly behavior for the three fixed historical benchmark profiles.",
+      "actual": "Assessment policies stay in assessment modules/manifests; subject config and implementation diff is empty and weekly regressions pass.",
+      "implementation": [
+        "src/mts/products/mock_assessment/run_benchmark.py"
+      ],
       "evidence": [
         {
-          "path": "outputs/iteration-25-audit.json",
-          "sha256": "bb0b65e514bb6f941e2bce319c1a94c236c2e8df947162a8885f6d9746413bb4"
+          "path": "outputs/iteration-27-isolation-audit.json",
+          "sha256": "09609b2b44f35964330903be955f90062107da6b6f45bfec53b514f338e989c6"
         },
         {
-          "path": "outputs/iteration-25-tests.txt",
-          "sha256": "5e588202b466e07a868ddb3156c918bc79ffc52b9974141287f2599827be64a9"
+          "path": "outputs/iteration-27-tests-final.txt",
+          "sha256": "eacec28e0119f9299a6bc0963348ab95546c699a803555fa61785c6b4b8d1f29"
         }
-      ],
-      "expected": "Assessment policies do not alter weekly behavior",
-      "actual": "Assessment-specific profiles stay in product code and fixtures; no subject configuration changes and regression suite passes.",
-      "method": "Checkpoint review of recovered requirements, source identities, import audit and applicable regression tests.",
-      "reviewer": "Codex iteration 23 criterion review"
+      ]
     },
     {
       "id": "ARCH.10",
-      "mandatory": true,
       "requirement": "Coordinated PrintReady preserves other approved artifacts",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "mandatory": true,
+      "status": "PASS",
+      "reviewer": "Codex final criterion review, incorporating the separately authorized isolated ELA reviewer",
+      "method": "Reviewed implementation and actual source-bound benchmark evidence against the criterion.",
+      "expected": "Coordinated PrintReady preserves other approved artifacts for the three fixed historical benchmark profiles.",
+      "actual": "Neutral local and injected Drive coordinators preserve unrelated approved weekly/subject IDs and bytes, validate readback, archive approved Drive predecessors under the same IDs, and recover failures. Tested transport is mocked; no live publication occurred.",
+      "implementation": [
+        "src/mts/publishing/coordinated_release.py",
+        "src/mts/publishing/coordinated_drive_release.py"
+      ],
+      "evidence": [
+        {
+          "path": "outputs/iteration-27-tests-final.txt",
+          "sha256": "eacec28e0119f9299a6bc0963348ab95546c699a803555fa61785c6b4b8d1f29"
+        },
+        {
+          "path": "tests/mock_assessment/test_release.py",
+          "sha256": "f2f5571f21ae09a017fd590e6292fbf8dc5c49822e1895336a688e5ed8f3bf46"
+        },
+        {
+          "path": "tests/mock_assessment/test_drive_release.py",
+          "sha256": "01ec659b3cedc248a184159a04c186137482977464f5552892736b6d9dd5275d"
+        },
+        {
+          "path": "tests/integration/test_drive_pdf_release_adapter.py",
+          "sha256": "3e45ec0e3573ada1360d879eb85522d9bf3e9f5c12395681199da957a94208c6"
+        }
+      ]
     }
   ],
-  "handoff_evidence": {
-    "item_maps": "historical-source-item-maps.json",
-    "grade4": {
-      "worksheet_drive_id": "1OKfwI8SjrU4zMvbXIV7VrABMWrJXz6-T",
-      "key_drive_id": "1sUBGq_nlxJsjYzpT2Ig5JI9bCnKf0cmK",
-      "source_drive_id": "13T-IY0FHGBYQc9jCL7A8Nat6oBOetFtD",
-      "worksheet_pages": 4,
-      "key_pages": 1,
-      "historical_status": "STAGED_FOR_REVIEW",
-      "count_discrepancy": "Handoff headline reports 29 items and 10 CR. Listed IDs, the official source item map, and the staged key show 28 items, including 9 CR."
-    },
-    "grade5": {
-      "historical_status": "DELIVERED",
-      "correction": "Q40 has 35 half-foot square tiles, for 8 3/4 square feet."
-    },
-    "ela": {
-      "historical_status": "DELIVERED",
-      "student_library_id": "libfile_dfcd2e3aa84c81919748c5af363c62a1",
-      "key_library_id": "libfile_7c2c790bd454819182f6de84610d266a",
-      "drive_library_identity": "Byte identity has not been established.",
-      "source_passages": [
-        "Cracking Code Purple",
-        "Excerpt from New York: Local Legacies"
-      ],
-      "known_delivered_defect": "Trailing whitespace on pages 1 and 3."
-    }
-  },
+  "pending_mandatory": [],
   "iteration_tests": {
-    "passed": 269,
+    "passed": 293,
     "failed": 0,
-    "evidence": "outputs/iteration-25-tests.txt"
+    "command": "python -m pytest tests -q",
+    "evidence": "outputs/iteration-27-tests-final.txt"
   },
-  "layout_trial": {
-    "status": "FAIL",
-    "actual_pages": 8,
-    "evidence": "grade5-component-trial-evidence.json",
-    "maximum_pages": 4,
-    "regions": 28
-  },
-  "reflow_trial": {
-    "fidelity": "NOT_VERIFIED",
-    "regions": 28,
-    "structural_checks": "PASS",
-    "pages": 4,
-    "evidence": "grade5-reflow-evidence.json",
-    "maximum_pages": 4,
-    "visual_review": {
-      "notes": "Targeted notation, Q33 D, Q43 key and printed answer labels render. Complete original-to-output source comparison and rubric review pending.",
-      "status": "PARTIAL",
-      "pages_reviewed": 4
-    }
-  },
-  "grade5_teacher_key": {
-    "evidence": "iteration-10-teacher-key-test.txt",
-    "sha256": "c56b59547289ce39689552a8039e6fe42ee0ba3cac21b4eff4ee57a3dc88bda4",
-    "rubric_alignment": "FULL_CREDIT_EXEMPLARS_MATCH_9_OF_9",
-    "worked_solutions": 9,
-    "artifact": "grade5-teacher-review.pdf",
-    "official_mc_answers": 19,
-    "pages": 1,
-    "visual_review": "PASS"
-  },
-  "grade5_paired_regression": {
-    "status": "PARTIAL",
-    "golden": "Final delivered Math Grade 5 2024 worksheet and answer key",
-    "evidence": "grade5-golden-comparison.json"
-  },
-  "math_scoring_sources": "math-official-scoring-evidence.json",
-  "grade4_teacher_key": {
-    "sha256": "d6b25f78ef25c2b9e69f3735e32d79a82d42b4c40f56a66a36e1d249ed41d482",
-    "visual_inspection": "PASS",
-    "status": "STRUCTURAL_PASS",
-    "academic_status": "FULL_CREDIT_EXEMPLARS_COMPARED_9_OF_9",
-    "pages": 1
-  },
-  "grade5_source_comparison": {
-    "notation_items": 13,
-    "evidence": "grade5-source-comparison.md",
-    "items": 28,
-    "response_rules_restored": 9
-  },
-  "grade5_print_review": {
-    "response_rule_spacing_pt": 12,
-    "artifact": "grade5-student-review.pdf",
-    "evidence": "grade5-print-layout-review.md",
-    "pages": 3,
-    "sha256": "4318e4cda042dbc0ad5cfc0c362d0aeb80461784bd6292e2953575ac8b9655b4",
-    "min_clearance_pt": 7.5,
-    "figures_measured": 5
-  },
-  "grade4_student_trial": {
-    "golden_pages": 4,
-    "regions": 28,
-    "status": "CLI_STRUCTURAL_PASS",
-    "maximum_pages": 4,
-    "full_width_question": 26,
-    "evidence": "iteration-22-render-evidence.json",
-    "pages": 4,
-    "source_fidelity": "NOT_VERIFIED",
-    "artifact": "%TEMP%\\mock-assessment-iteration22\\grade4-after.pdf",
-    "sha256": "faac0cbaf4b9d4cebee4843181c76a4d59b68ae09847f1a917ef689e707f8dd3",
-    "minimum_measured_clearance_pt": 6.38
-  },
-  "ela_student_trial": {
-    "pages": 4,
-    "evidence": "ela-student-trial-evidence.json",
-    "items": 14,
-    "status": "STRUCTURAL_PASS",
-    "golden_pages": 4
-  },
-  "ela_teacher_trial": {
-    "independent_answer_review": "NOT_VERIFIED",
-    "mts_model_responses": 2,
-    "status": "STRUCTURAL_PASS",
-    "evidence": "iteration-22-render-evidence.json",
-    "pages": 2,
-    "official_mc": 12,
-    "sha256": "208ecc4a93d4f41e38f030617322f6b98b35eee7cf01f7e066d40f3c7a0b5c51",
-    "matches_teacher_golden_answers": true
-  },
-  "verification_scope": "The target code revision is immutable. This report records reviewed criteria for that revision; later dependent code changes require revalidation.",
+  "historical_regressions_executed": 3,
+  "production_publications": 0,
+  "verification_scope": "Three source-based historical benchmark profiles, educational/functional/presentation equivalence. Broad diagnostic/custom/generated modes remain deferred. Code revision is immutable; this subsequent report/evidence checkpoint does not modify target implementation. Changed dependent code or assets requires revalidation.",
+  "limitations": [
+    "Original ELA Library byte identity is unknown; the user explicitly selected the recovered Drive golden instead.",
+    "RunSpecs are reconstructed from supplied historical scope, not claimed recovered originals.",
+    "Drive service transport is mocked in tests; actual production publication and final human acceptance have not occurred.",
+    "Print readability was reviewed from rendered pages. No physical printer/student usability study or alternate-OS execution is claimed.",
+    "The bare pytest command collects archived duplicate tests and obsolete local scratch scripts; tests/ is the maintained suite root. Existing Weekly Practice fixture mutations were restored after tests."
+  ],
   "current_outcomes": [
-    "All three source-bound benchmark pairs execute from validated saved RunSpecs.",
-    "RunSpec PDF/JSON, student/teacher PDFs, runtime, hashes and structural checks are staged in phase folders.",
-    "269 tests passed, including invalid-spec, retry, concurrency and rollback coverage.",
-    "Two executions matched all nine PDFs by rendered pixels and extracted text.",
-    "Full academic, fidelity, visual and golden parity checks remain open."
+    "All 76 mandatory criteria pass the revision-bound evidence gate.",
+    "All three regenerated pairs match golden item inventories and 4+1, 3+1, 4+2 student/key page counts.",
+    "All 70 selected items, 50 official MC keys and 20 CR credit values verified. All 15 assessment pages visually reviewed.",
+    "Fresh GitHub checkout passes 293 tests and all three exact-match quality gates. All nine PDF page comparisons match.",
+    "Weekly Practice remains independent. No production worksheets were published."
+  ],
+  "next": [
+    "Human acceptance: review outputs/dashboard.md, verification-report.md and the six PDFs under outputs/historical-regressions/02-Run.",
+    "Production publication remains blocked until an explicit artifact-specific human_final_release receipt binds both approved PDF hashes for each intended run.",
+    "For later changes or Copilot takeover, run scripts/resume_mock_assessment.py on this branch and repeat dependent verification before release."
+  ],
+  "defects": [
+    {
+      "id": "MA-001",
+      "status": "RESOLVED",
+      "finding": "Independent source-bound orchestration, RunSpec validation and fail-closed QA/release gates implemented."
+    },
+    {
+      "id": "MA-002",
+      "status": "RESOLVED",
+      "finding": "Sources/final goldens recovered and fingerprinted; user-selected ELA reference and reconstructed RunSpec provenance recorded."
+    },
+    {
+      "id": "MA-003",
+      "status": "DOCUMENTED",
+      "finding": "Existing Weekly Practice tests mutate transaction fixtures. Test-owned changes were restored; weekly implementation remained untouched."
+    },
+    {
+      "id": "MA-004",
+      "status": "RESOLVED",
+      "finding": "ELA source-derived renderer and reviewed raster transcription replace the incomplete trial."
+    },
+    {
+      "id": "MA-005",
+      "status": "RESOLVED",
+      "finding": "Grade 4 independent academic/source/golden and four-page visual reviews complete."
+    },
+    {
+      "id": "MA-006",
+      "status": "RESOLVED",
+      "finding": "Blind ELA Q8 disagreement reconciled; original prediction preserved and key reasoning clarified."
+    },
+    {
+      "id": "MA-007",
+      "status": "RESOLVED",
+      "finding": "Grade 4 Name/Date fields repaired and all four final pages re-inspected."
+    },
+    {
+      "id": "MA-008",
+      "status": "RESOLVED",
+      "finding": "Fresh-checkout evidence CRLF mismatch repaired to canonical committed bytes; all three quality gates now pass."
+    },
+    {
+      "id": "MA-009",
+      "status": "RESOLVED",
+      "finding": "Persistent local rollback failure retains prior approved backups. Drive recovery uses durable operation journals."
+    }
   ]
 }

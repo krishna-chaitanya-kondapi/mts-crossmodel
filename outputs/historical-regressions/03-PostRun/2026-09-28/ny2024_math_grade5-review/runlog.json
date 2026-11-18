@@ -1,0 +1,278 @@
+{
+  "academic_review": "PASS",
+  "actual_active_seconds": 0.6117285000073025,
+  "artifacts": {
+    "runspec.json": "5af297aba7ac5827b9ad3f71f2072428fd1eb9d55781fe3bb10d1def0f5cb774",
+    "runspec.pdf": "4c3d8519f82db3c52a15e2bb6f043b77dd14f8646cf458120909b030e65d7eda",
+    "student.pdf": "16c15517e10fd4b63cd07cfa245b55cd0f26b43e8a354145587f545e5bd4ab7b",
+    "teacher.pdf": "f9e38e90e1f4a124320ef738884ed28519f390536d5ac6adf8012fce5c93f997"
+  },
+  "estimated_runtime_seconds": 5,
+  "execution_revision": "95d76f12ef67867640a8a92df76e9711b9e098b8",
+  "human_wait_seconds": 0,
+  "implementation_hashes": {
+    "__init__.py": "2f7160bde1e8af02610234978f8021fca3dbe86ee0bd3478391b20f674451716",
+    "ela_student.py": "666100c0eeee3adb4ecb3e96525d02959d0a942446b6b96a3ba607cc498db852",
+    "ela_teacher.py": "ba7953da69eb5b006f3f4afb95bdd6c5cc595dbe4e11307e5363624b61043748",
+    "grade4_student.py": "5ced6e629e130518ff3b017668094d97e728f5df94b77e8433e5a4f2ab70985c",
+    "grade5_student.py": "d580b4c3a845120d03ec0d442b7a6a4b711dc68766abbd16ea2976f7569dc8e7",
+    "item_map.py": "ae68b55fc46d7c4304dce9f1502d6c8ae159549b0adcaa188a96686e074d3bb7",
+    "release.py": "c0bd81545a95e540d31e9f8e3e6279aeb524b8989ca4edd953df28b95054ffb5",
+    "review_catalog.py": "8463c3c150e150331836b3a1ba90da95b64b19c2e458ef6ec8a500fd5a1b0be6",
+    "run_benchmark.py": "c7a7c9a11e5b363b4ef1fffd5db7d937e7a123738835aa8055d658eba408bf8a",
+    "source_render.py": "54ad336b49bb05a110a3d075205dbcede1ee132e5261ec123204ab848bf478c2",
+    "teacher_key.py": "ec2b722ac12bec20c9579f7af6902cfb43fd424ebd4935307035ffc4db97191a",
+    "verification.py": "e31302ca61abbfb65cd6675ff4cd149cfc73de260277f948a60874d8257f6de1"
+  },
+  "input_hashes": {
+    "source": "96bc4dca01185cda99056c98391ac85d41ecf7595b2b3ec29f7595b7e7b91f93",
+    "student_manifest": "c4eaf4338310b60cb937a945d3c1b159970b95e6788cca95616742626eaf6221",
+    "student_manifest_file_sha256": "e27e3f51f4687e9432c8b3ec0bba83a980db7d2222dfadf514091cd36dee654d",
+    "teacher_manifest": "0266fbb18e9ff6408a77d2ee48c70ddc71d9d5bcd87edb8f0f482cd1776d6877",
+    "teacher_manifest_file_sha256": "9aa3115e7edbf7f36cd7648c4c26485ef66d5c6262f7b3d2806c0425f72c8884"
+  },
+  "placements": [
+    {
+      "column": 1,
+      "height": 98.0,
+      "id": 1,
+      "page": 1,
+      "y": 64
+    },
+    {
+      "column": 1,
+      "height": 75.0,
+      "id": 2,
+      "page": 1,
+      "y": 162.0
+    },
+    {
+      "column": 1,
+      "height": 181.75,
+      "id": 3,
+      "page": 1,
+      "y": 237.0
+    },
+    {
+      "column": 1,
+      "height": 75.0,
+      "id": 4,
+      "page": 1,
+      "y": 418.75
+    },
+    {
+      "column": 1,
+      "height": 98.0,
+      "id": 7,
+      "page": 1,
+      "y": 493.75
+    },
+    {
+      "column": 2,
+      "height": 270.5,
+      "id": 9,
+      "page": 1,
+      "y": 64
+    },
+    {
+      "column": 2,
+      "height": 98.0,
+      "id": 10,
+      "page": 1,
+      "y": 334.5
+    },
+    {
+      "column": 2,
+      "height": 98.0,
+      "id": 12,
+      "page": 1,
+      "y": 432.5
+    },
+    {
+      "column": 2,
+      "height": 132.5,
+      "id": 15,
+      "page": 1,
+      "y": 530.5
+    },
+    {
+      "column": 2,
+      "height": 75.0,
+      "id": 16,
+      "page": 1,
+      "y": 663.0
+    },
+    {
+      "column": 1,
+      "height": 132.5,
+      "id": 19,
+      "page": 2,
+      "y": 64
+    },
+    {
+      "column": 1,
+      "height": 75.0,
+      "id": 27,
+      "page": 2,
+      "y": 196.5
+    },
+    {
+      "column": 1,
+      "height": 98.0,
+      "id": 28,
+      "page": 2,
+      "y": 271.5
+    },
+    {
+      "column": 1,
+      "height": 86.5,
+      "id": 30,
+      "page": 2,
+      "y": 369.5
+    },
+    {
+      "column": 1,
+      "height": 98.0,
+      "id": 31,
+      "page": 2,
+      "y": 456.0
+    },
+    {
+      "column": 1,
+      "height": 86.5,
+      "id": 32,
+      "page": 2,
+      "y": 554.0
+    },
+    {
+      "column": 1,
+      "height": 98.0,
+      "id": 33,
+      "page": 2,
+      "y": 640.5
+    },
+    {
+      "column": 2,
+      "height": 109.5,
+      "id": 34,
+      "page": 2,
+      "y": 64
+    },
+    {
+      "column": 2,
+      "height": 86.5,
+      "id": 35,
+      "page": 2,
+      "y": 173.5
+    },
+    {
+      "column": 2,
+      "height": 164.5,
+      "id": 36,
+      "page": 2,
+      "y": 260.0
+    },
+    {
+      "column": 2,
+      "height": 130.0,
+      "id": 37,
+      "page": 2,
+      "y": 424.5
+    },
+    {
+      "column": 2,
+      "height": 107.0,
+      "id": 38,
+      "page": 2,
+      "y": 554.5
+    },
+    {
+      "column": 1,
+      "height": 302.0,
+      "id": 39,
+      "page": 3,
+      "y": 64
+    },
+    {
+      "column": 1,
+      "height": 258.5,
+      "id": 40,
+      "page": 3,
+      "y": 366.0
+    },
+    {
+      "column": 1,
+      "height": 114.0,
+      "id": 41,
+      "page": 3,
+      "y": 624.5
+    },
+    {
+      "column": 2,
+      "height": 148.5,
+      "id": 42,
+      "page": 3,
+      "y": 64
+    },
+    {
+      "column": 2,
+      "height": 274.79999999999995,
+      "id": 43,
+      "page": 3,
+      "y": 212.5
+    },
+    {
+      "column": 2,
+      "height": 141.5,
+      "id": 44,
+      "page": 3,
+      "y": 487.29999999999995
+    }
+  ],
+  "production_publications": 0,
+  "profile": "ny2024_math_grade5",
+  "rendering_seconds": 0.3583685999910813,
+  "retry_count": 0,
+  "review_evidence": [
+    {
+      "path": "outputs/iteration-27-review-closure.md",
+      "sha256": "2e2ec1840b52a4ac94611a39efb2ac257a3029ecd3451f4811d8956378f4bc4f"
+    },
+    {
+      "path": "outputs/iteration-27-artifact-audit.json",
+      "sha256": "3da9f06976a086f3438349c3757644981170ec7c1058075eb5895e835ac9311e"
+    },
+    {
+      "path": "outputs/iteration-27-golden-comparison.json",
+      "sha256": "66abd5abc435cc36f66a2900a8528a7a6583f1c820a691a5ec24b73af8c30d42"
+    },
+    {
+      "path": "outputs/iteration-27-golden-text-differences.txt",
+      "sha256": "674631a42e67ce94ab4f52ae3199d36c336edd8ad53a04c465760fa6abe65e27"
+    },
+    {
+      "path": "outputs/grade5-scoring-review.md",
+      "sha256": "1adf252cb65868a92afda7d034174bc9e87a7bd8f36a574a9f3824efdff9a75f"
+    },
+    {
+      "path": "outputs/math-official-scoring-evidence.json",
+      "sha256": "261bc7a290d82d5e1cadaefd318595eaa5000252081b4c23f6987b192ee27b21"
+    },
+    {
+      "path": "outputs/grade5-source-comparison.md",
+      "sha256": "65620857dd95a5eac8f7c284a8952f1a3405a491ba1cdaa5596d9a5309f9c2ea"
+    },
+    {
+      "path": "outputs/grade5-print-layout-review.md",
+      "sha256": "28a7d346119f2a609a685979694ad1c70e18028e9f164bb7807a497184688a17"
+    }
+  ],
+  "review_match": "Exact reviewed inputs, implementation and rendered pages",
+  "run_id": "ny2024_math_grade5-review",
+  "source_fidelity": "PASS",
+  "status": "READY_FOR_HUMAN_ACCEPTANCE",
+  "structural_checks": "PASS",
+  "student_pages": 3,
+  "teacher_pages": 1,
+  "visual_review": "PASS"
+}

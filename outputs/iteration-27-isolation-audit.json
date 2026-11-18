@@ -1,0 +1,82 @@
+{
+  "revision": "95d76f12ef67867640a8a92df76e9711b9e098b8",
+  "source_checks": [
+    {
+      "run_id": "math-grade4-2024",
+      "filename": "NY_Math_Grade4_2024_Released_Test_Questions.pdf",
+      "sha256": "88351089919b18dfc2f3dc5d64809d20aadd68d56a1dc38841a3387354b8c0f6",
+      "selected_items": 28
+    },
+    {
+      "run_id": "math-grade5-2024",
+      "filename": "NY_Math_Grade5_2024_Released_Test_Questions.pdf",
+      "sha256": "96bc4dca01185cda99056c98391ac85d41ecf7595b2b3ec29f7595b7e7b91f93",
+      "selected_items": 28
+    },
+    {
+      "run_id": "ela-grade6-2025",
+      "filename": "NY_ELA_Grade6_2025_Released_Test_Questions.pdf",
+      "sha256": "734c8ac722ece5fe182bcd36652c8ae8617124eccf03b6de16ae71c3244907ea",
+      "selected_items": 14
+    }
+  ],
+  "imports_reviewed": [
+    "argparse",
+    "datetime",
+    "ela_student",
+    "ela_teacher",
+    "google.oauth2.credentials",
+    "googleapiclient.discovery",
+    "grade4_student",
+    "grade5_student",
+    "hashlib",
+    "json",
+    "math",
+    "mts.infrastructure.file_system.atomic_writer",
+    "mts.infrastructure.google_docs.google_docs_adapter",
+    "mts.products.mock_assessment.ela_student",
+    "mts.products.mock_assessment.ela_teacher",
+    "mts.products.mock_assessment.grade4_student",
+    "mts.products.mock_assessment.grade5_student",
+    "mts.products.mock_assessment.release",
+    "mts.products.mock_assessment.run_benchmark",
+    "mts.products.mock_assessment.source_render",
+    "mts.products.mock_assessment.teacher_key",
+    "mts.products.mock_assessment.verification",
+    "mts.publishing.coordinated_drive_release",
+    "mts.publishing.coordinated_release",
+    "os",
+    "pathlib",
+    "pymupdf",
+    "re",
+    "review_catalog",
+    "shutil",
+    "subprocess",
+    "sys",
+    "teacher_key",
+    "tempfile",
+    "time"
+  ],
+  "prohibited_imports": [],
+  "weekly_implementation_changes": [],
+  "cli_help_returncode": 0,
+  "implementation_hashes": {
+    "scripts/generate_mock_assessment.py": "71addc60c67b71d53762be403f66b473a84ecf8b28093d246d5c23f9834a0a1f",
+    "src/mts/products/mock_assessment/__init__.py": "5656cb5e95f1e7544987ff19c95aa9467b528ae7242198e7d4befa260c52c099",
+    "src/mts/products/mock_assessment/ela_student.py": "666100c0eeee3adb4ecb3e96525d02959d0a942446b6b96a3ba607cc498db852",
+    "src/mts/products/mock_assessment/ela_teacher.py": "1db3bf0bf2fcbb404f228e19b1f9b4512be2ebc1cb8881aca26d5721f56d6ec7",
+    "src/mts/products/mock_assessment/grade4_student.py": "5ced6e629e130518ff3b017668094d97e728f5df94b77e8433e5a4f2ab70985c",
+    "src/mts/products/mock_assessment/grade5_student.py": "d580b4c3a845120d03ec0d442b7a6a4b711dc68766abbd16ea2976f7569dc8e7",
+    "src/mts/products/mock_assessment/item_map.py": "4fb2474e2cee8b416abd439bf691ad1cff8774fae84103a7306a6818abf7d7a6",
+    "src/mts/products/mock_assessment/release.py": "c0bd81545a95e540d31e9f8e3e6279aeb524b8989ca4edd953df28b95054ffb5",
+    "src/mts/products/mock_assessment/review_catalog.py": "8463c3c150e150331836b3a1ba90da95b64b19c2e458ef6ec8a500fd5a1b0be6",
+    "src/mts/products/mock_assessment/run_benchmark.py": "c7a7c9a11e5b363b4ef1fffd5db7d937e7a123738835aa8055d658eba408bf8a",
+    "src/mts/products/mock_assessment/source_render.py": "699998f8f28fcadc081fd33d54acd694439524b1b0a93dbe358309d0119ca1d2",
+    "src/mts/products/mock_assessment/teacher_key.py": "d54a3330906272aa565c3c2edd68890f00bd9b0d45643d2e1e17e1ddb3954e2d",
+    "src/mts/products/mock_assessment/verification.py": "a5f07e747335c348d99abadbe70b124bc71be9df924397e2d2a894740abeb40b"
+  },
+  "limitations": [
+    "Import review and help invocation establish entry point and dependency isolation.",
+    "They do not establish complete orchestration, ELA source fidelity or academic correctness."
+  ]
+}

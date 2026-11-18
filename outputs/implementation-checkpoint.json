@@ -1,6 +1,6 @@
 {
-  "status": "NOT_DONE",
-  "iteration": 25,
+  "status": "READY_FOR_ACCEPTANCE",
+  "iteration": 27,
   "baseline_revision": "728596db0ec7deedc087b9e509da14701b7d088d",
   "criteria": [
     {
@@ -16,7 +16,7 @@
     {
       "id": "V01.03",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V01.04",
@@ -31,12 +31,12 @@
     {
       "id": "V01.06",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V01.07",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V02.01",
@@ -81,92 +81,92 @@
     {
       "id": "V02.09",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V02.10",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V02.11",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V03.01",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V03.02",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V03.03",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V03.04",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V03.05",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V03.06",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V03.07",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V04.01",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V04.02",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V04.03",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V04.04",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V04.05",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V04.06",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V04.07",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V04.08",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V05.01",
@@ -181,47 +181,47 @@
     {
       "id": "V05.03",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V05.04",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V05.05",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V05.06",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V05.07",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V05.08",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V05.09",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V05.10",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V05.11",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V05.12",
@@ -231,67 +231,67 @@
     {
       "id": "V05.13",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V06.01",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V06.02",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V06.03",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V06.04",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V06.05",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V06.06",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V06.07",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V06.08",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V06.09",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V06.10",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V06.11",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V06.12",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V07.01",
@@ -301,7 +301,7 @@
     {
       "id": "V07.02",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V07.03",
@@ -331,12 +331,12 @@
     {
       "id": "V07.08",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V07.09",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V07.10",
@@ -366,7 +366,7 @@
     {
       "id": "ARCH.05",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "ARCH.06",
@@ -376,7 +376,7 @@
     {
       "id": "ARCH.07",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "ARCH.08",
@@ -391,62 +391,60 @@
     {
       "id": "ARCH.10",
       "mandatory": true,
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     }
   ],
   "next": [
-    "Complete independent Grade 4 and ELA academic, distractor and rubric reviews with question-specific evidence.",
-    "Resolve full source-to-output wording, illustration scaling, paragraph references and golden discrepancies; inspect all final pages.",
-    "Complete approval/release coordination tests and criterion-level traceability, then run the final evidence gate."
+    "Human acceptance: review outputs/dashboard.md, verification-report.md and the six PDFs under outputs/historical-regressions/02-Run.",
+    "Production publication remains blocked until an explicit artifact-specific human_final_release receipt binds both approved PDF hashes for each intended run.",
+    "For later changes or Copilot takeover, run scripts/resume_mock_assessment.py on this branch and repeat dependent verification before release."
   ],
-  "blockers": [
-    "Golden/source discrepancies and complete academic/visual review remain open implementation and verification work.",
-    "Final human approval is required for production publication."
-  ],
-  "audited_revision": "494547190b5195c3e6f5d0d13956ddefd07536f2",
+  "blockers": [],
+  "audited_revision": "95d76f12ef67867640a8a92df76e9711b9e098b8",
   "evidence": [
-    "outputs/verification-report.json",
-    "outputs/baseline-tests.txt",
-    "outputs/historical-inventory.json",
-    "outputs/historical-source-item-maps.json",
-    "outputs/iteration-3-tests.txt",
-    "outputs/grade5-source-regions.json",
-    "outputs/grade5-layout-trial-evidence.json",
-    "outputs/grade5-component-trial-evidence.json",
-    "outputs/grade5-historical-implementation-audit.md",
-    "outputs/grade5-reflow-evidence.json",
-    "outputs/iteration-8-layout-test.txt",
-    "outputs/iteration-9-layout-test.txt",
-    "outputs/grade5-scoring-review.md",
-    "outputs/iteration-10-teacher-key-test.txt",
-    "outputs/iteration-10-tests.txt",
-    "outputs/grade5-golden-comparison.json",
-    "outputs/iteration-12-layout-test.txt",
-    "outputs/math-official-scoring-evidence.json",
-    "outputs/grade5-source-comparison.md",
-    "outputs/grade5-print-layout-review.md",
-    "outputs/iteration-16-layout-test.txt",
-    "outputs/grade4-component-trial-evidence.json",
-    "outputs/grade4-reflow-evidence.json",
-    "outputs/iteration-18-grade4-layout.txt",
-    "outputs/grade4-figure-clearance.json",
-    "outputs/iteration-19-grade4-checks.txt",
-    "outputs/ela-student-trial-evidence.json",
-    "outputs/ela-teacher-review.md",
-    "outputs/iteration-22-tests.txt",
-    "outputs/iteration-22-render-evidence.json",
-    "outputs/iteration-23-audit.json",
-    "outputs/iteration-23-tests.txt",
-    "outputs/iteration-23-gate.json",
-    "outputs/iteration-24-audit.json",
-    "outputs/iteration-24-regression-structure.json",
-    "outputs/iteration-24-tests.txt",
-    "outputs/iteration-24-gate.json",
+    "outputs/criterion-traceability.md",
+    "outputs/ela-academic-review.md",
+    "outputs/ela-blind-reconciliation.json",
+    "outputs/ela-blind-review.json",
+    "outputs/ela-official-scoring-evidence.json",
     "outputs/ela-source-transcription-review.md",
-    "outputs/iteration-25-runspec-evidence.json",
-    "outputs/iteration-25-repeatability.json",
-    "outputs/iteration-25-tests.txt",
-    "outputs/iteration-25-audit.json",
-    "outputs/iteration-25-gate.json"
-  ]
+    "outputs/grade4-academic-review.md",
+    "outputs/grade4-figure-clearance.json",
+    "outputs/grade5-print-layout-review.md",
+    "outputs/grade5-scoring-review.md",
+    "outputs/grade5-source-comparison.md",
+    "outputs/historical-regressions/03-PostRun/2026-09-21/ny2025_ela_grade6-review/runlog.json",
+    "outputs/historical-source-item-maps.json",
+    "outputs/iteration-27-final-artifact-audit.json",
+    "outputs/iteration-27-gate.json",
+    "outputs/iteration-27-golden-comparison.json",
+    "outputs/iteration-27-golden-text-differences.txt",
+    "outputs/iteration-27-isolation-audit.json",
+    "outputs/iteration-27-math-choice-review.md",
+    "outputs/iteration-27-portability-repair.json",
+    "outputs/iteration-27-portability-repeatability.json",
+    "outputs/iteration-27-review-closure.md",
+    "outputs/iteration-27-tests-final.txt",
+    "outputs/math-official-scoring-evidence.json",
+    "outputs/verification-report.json",
+    "outputs/verification-report.md",
+    "scripts/verify_mock_artifacts.py",
+    "specs/generate_mock_assessment/fixtures/ela-student-manifest.json",
+    "specs/generate_mock_assessment/fixtures/ny2024_math_grade4-runspec.json",
+    "specs/generate_mock_assessment/fixtures/ny2024_math_grade5-runspec.json",
+    "specs/generate_mock_assessment/fixtures/ny2025_ela_grade6-runspec.json",
+    "specs/generate_mock_assessment/golden-assets.json",
+    "specs/generate_mock_assessment/historical-requirements.md",
+    "specs/generate_mock_assessment/resume/START_HERE.md",
+    "specs/generate_mock_assessment/verified-profiles.json",
+    "tests/integration/test_drive_pdf_release_adapter.py",
+    "tests/mock_assessment/test_drive_release.py",
+    "tests/mock_assessment/test_release.py",
+    "tests/mock_assessment/test_review_catalog.py",
+    "tests/mock_assessment/test_run_benchmark.py",
+    "workflows/generate-mock-assessment.md"
+  ],
+  "mandatory_pass": 76,
+  "mandatory_total": 76,
+  "production_release_status": "AWAITING_ARTIFACT_SPECIFIC_HUMAN_APPROVAL"
 }

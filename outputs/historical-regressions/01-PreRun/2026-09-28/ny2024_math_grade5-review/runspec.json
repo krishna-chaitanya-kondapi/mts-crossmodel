@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "run_id": "ny2024_math_grade5-review",
+  "profile": "ny2024_math_grade5",
+  "instructional_monday": "2026-09-28",
+  "purpose": "benchmark",
+  "academic_length": "full",
+  "source_filename": "NY_Math_Grade5_2024_Released_Test_Questions.pdf",
+  "source_sha256": "96bc4dca01185cda99056c98391ac85d41ecf7595b2b3ec29f7595b7e7b91f93",
+  "blueprint": {
+    "items": 28,
+    "multiple_choice": 19,
+    "constructed_response": 9
+  },
+  "presentation": {
+    "paper": "US_Letter",
+    "orientation": "portrait",
+    "student_maximum_pages": 4,
+    "teacher_target_pages": 1
+  },
+  "execution": "local_review",
+  "estimated_runtime_seconds": 5,
+  "estimate_basis": "Initial engineering estimate for local PDF rendering; measured active runtime recorded in run log."
+}

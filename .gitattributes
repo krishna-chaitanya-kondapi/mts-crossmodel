@@ -1,0 +1,8 @@
+# Keep revision-bound Mock Assessment proof bytes identical in every checkout.
+/specs/generate_mock_assessment/*.json -text
+/specs/generate_mock_assessment/*.md -text
+/specs/generate_mock_assessment/fixtures/*.json -text
+/workflows/generate-mock-assessment.md -text
+/tests/mock_assessment/*.py -text
+/tests/integration/test_drive_pdf_release_adapter.py -text
+/scripts/verify_mock_artifacts.py -text

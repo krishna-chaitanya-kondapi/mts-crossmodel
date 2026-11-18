@@ -1,0 +1,119 @@
+{
+  "status": "PASS",
+  "revision": "95d76f12ef67867640a8a92df76e9711b9e098b8",
+  "fresh_checkout": "Fresh GitHub clone of the checkpoint branch, followed by fast-forward of the evidence portability repair",
+  "environment": "Windows/Python uv environment; alternate operating systems were reviewed for path portability but not executed",
+  "asset_recovery": "All nine pinned source/golden PDFs restored using restore_mock_assets.py and exact SHA checks",
+  "tests": {
+    "passed": 293,
+    "failed": 0,
+    "command": "python -m pytest tests -q"
+  },
+  "independent_checkout_runs": [
+    {
+      "profile": "ny2025_ela_grade6",
+      "execution_revision": "95d76f12ef67867640a8a92df76e9711b9e098b8",
+      "academic_review": "PASS",
+      "source_fidelity": "PASS",
+      "visual_review": "PASS",
+      "structural_checks": "PASS",
+      "status": "READY_FOR_HUMAN_ACCEPTANCE",
+      "estimated_runtime_seconds": 5,
+      "actual_active_seconds": 0.9484429000003729,
+      "retry_count": 0,
+      "human_wait_seconds": 0
+    },
+    {
+      "profile": "ny2024_math_grade4",
+      "execution_revision": "95d76f12ef67867640a8a92df76e9711b9e098b8",
+      "academic_review": "PASS",
+      "source_fidelity": "PASS",
+      "visual_review": "PASS",
+      "structural_checks": "PASS",
+      "status": "READY_FOR_HUMAN_ACCEPTANCE",
+      "estimated_runtime_seconds": 5,
+      "actual_active_seconds": 0.5455862999951933,
+      "retry_count": 0,
+      "human_wait_seconds": 0
+    },
+    {
+      "profile": "ny2024_math_grade5",
+      "execution_revision": "95d76f12ef67867640a8a92df76e9711b9e098b8",
+      "academic_review": "PASS",
+      "source_fidelity": "PASS",
+      "visual_review": "PASS",
+      "structural_checks": "PASS",
+      "status": "READY_FOR_HUMAN_ACCEPTANCE",
+      "estimated_runtime_seconds": 5,
+      "actual_active_seconds": 0.6117285000073025,
+      "retry_count": 0,
+      "human_wait_seconds": 0
+    }
+  ],
+  "repeatability": [
+    {
+      "path": "01-PreRun/2026-09-21/ny2025_ela_grade6-review/runspec.pdf",
+      "page_pixels_equal": true,
+      "page_count": 1,
+      "local_sha256": "876dc109175042d1704d449977adc8e9af0b7fb0920fb6baeeda76e154db5113",
+      "fresh_sha256": "6f7a20cebb8702da2614ed4efd081f90c974d538e2ebcb46a20fc0eff09eb8a0"
+    },
+    {
+      "path": "01-PreRun/2026-09-28/ny2024_math_grade4-review/runspec.pdf",
+      "page_pixels_equal": true,
+      "page_count": 1,
+      "local_sha256": "6c80977cb23668974bf1aadd2bc337b1413219a06cc07139deb8ce189b009a40",
+      "fresh_sha256": "79e2eb2b3ef2891b02f3f6a659ff90fcf1b56f391afffef7fe49dbccac6c9062"
+    },
+    {
+      "path": "01-PreRun/2026-09-28/ny2024_math_grade5-review/runspec.pdf",
+      "page_pixels_equal": true,
+      "page_count": 1,
+      "local_sha256": "5a9d586651a9df6ded392720321386f1302c3adc5f1c99005185f4c679189ef9",
+      "fresh_sha256": "4c3d8519f82db3c52a15e2bb6f043b77dd14f8646cf458120909b030e65d7eda"
+    },
+    {
+      "path": "02-Run/2026-09-21/ny2025_ela_grade6-review/student.pdf",
+      "page_pixels_equal": true,
+      "page_count": 4,
+      "local_sha256": "c301b3eda0b3d953dd399ab133857bec6008cd736061ccdefaffaa08d3bed64b",
+      "fresh_sha256": "27ddb1666fd45e978887ed81dfd76be82db9e02382fafbed2742724f7be582cc"
+    },
+    {
+      "path": "02-Run/2026-09-21/ny2025_ela_grade6-review/teacher.pdf",
+      "page_pixels_equal": true,
+      "page_count": 2,
+      "local_sha256": "300b1765b3b3e4d02119495afe58c9b933b65785dd2a14869eb6e84168ee2487",
+      "fresh_sha256": "1071bf6e103c0695828857f1607ec1de3da10b8a0228f04d14119e95a3d31124"
+    },
+    {
+      "path": "02-Run/2026-09-28/ny2024_math_grade4-review/student.pdf",
+      "page_pixels_equal": true,
+      "page_count": 4,
+      "local_sha256": "117e6b1c5215df33848660698679238b6e3157a597451a20a028e3f01523c8df",
+      "fresh_sha256": "214007beb4652e8bca94bffed35ea560cc521d611f960c4dbd18078944a43fc5"
+    },
+    {
+      "path": "02-Run/2026-09-28/ny2024_math_grade4-review/teacher.pdf",
+      "page_pixels_equal": true,
+      "page_count": 1,
+      "local_sha256": "e46b3916a1ce8176e647dcb70eb345e2cce49801f35bde19449def739e8d2679",
+      "fresh_sha256": "ba42066cf041c4c97308359b238ccaf798f1b630041505b792287619f9d496f1"
+    },
+    {
+      "path": "02-Run/2026-09-28/ny2024_math_grade5-review/student.pdf",
+      "page_pixels_equal": true,
+      "page_count": 3,
+      "local_sha256": "ab4087fbdef8192997f040404b5c454dc95a072d8662661bde46c08e33ab1859",
+      "fresh_sha256": "16c15517e10fd4b63cd07cfa245b55cd0f26b43e8a354145587f545e5bd4ab7b"
+    },
+    {
+      "path": "02-Run/2026-09-28/ny2024_math_grade5-review/teacher.pdf",
+      "page_pixels_equal": true,
+      "page_count": 1,
+      "local_sha256": "5ccb5c2d3c27a6af997a3210ff645c4da8092c55dead8389ca8b720e48647bd3",
+      "fresh_sha256": "f9e38e90e1f4a124320ef738884ed28519f390536d5ac6adf8012fce5c93f997"
+    }
+  ],
+  "production_publications": 0
+}
