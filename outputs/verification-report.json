@@ -1,8 +1,8 @@
 {
   "status": "NOT_DONE",
-  "iteration": 32,
+  "iteration": 33,
   "date": "2026-11-19",
-  "revision": "3ec9219c6fc241760e7b0d222877564a9e51e9c0",
+  "revision": "995ffe4d453b0e76f09598dbd2a94324ffcb6cb3",
   "registry_sha256": "c70cf4b237e712c11943ed16ac5a479a9310c65a6d1fd284baddb23d956f0aa4",
   "mandatory_pass": 4,
   "mandatory_total": 76,
@@ -83,11 +83,16 @@
       "id": "MA-011",
       "finding": "The Grade 4 chat summary overstates the checked selection by one constructed response. Use 28 items (19 MC, 9 CR), validated from the enumerated selection and the historical NYSED item map.",
       "affected": "Historical Grade 4 RunSpec provenance. The contradictory headline is excluded; exact Math chat PDF identity and original manifests remain unverified."
+    },
+    {
+      "id": "MA-012",
+      "finding": "Local approval authentication is tested with a synthetic issuer. No live operator identity or trusted signing-key provision has been verified.",
+      "affected": "End-to-end pre-run approval remains NOT_VERIFIED."
     }
   ],
   "next": [
     "Use the reconstructed historical benchmark targets as comparison inputs. Verify the Math chat attachment digests and recover original manifests or remaining settings before completing runnable RunSpecs. Keep unsupported criteria NOT_VERIFIED.",
-    "Integrate the local planned-run dispatcher with an authenticated approval source. Verify print and accessibility acceptance for raster crops before considering them for release. Keep the existing review-only CLI separate.",
+    "Connect an authorized operator decision issuer and provision its trusted key separately from job inputs. Verify print and accessibility acceptance for raster crops before considering them for release. Keep the review-only CLI separate.",
     "Obtain and record written authorization, a license, or another documented rights basis covering the intended reproduction, reformatting, local storage, and distribution of the selected NYSED content; do not generate or revise source-derived candidates until resolved.",
     "While rights are pending, complete non-content criterion traceability and product-neutral architecture/synthetic-fixture checks; keep source-dependent criteria NOT_VERIFIED.",
     "After authorization, build and compare the source-derived ELA candidate (including raster-only source pages 10 and 16), then repair and fully compare the recorded Grade 4 golden differences.",
@@ -922,6 +927,12 @@
       },
       "result": "Both HTTP 200 PDF downloads match the local historical goldens and prior Drive fingerprint inventory."
     }
+  },
+  "iteration_33_local_approval_authentication": {
+    "command": ".venv\\Scripts\\python.exe -m pytest tests\\mock_assessment -q",
+    "result": "40 passed in 10.54s",
+    "observed": "A signed synthetic decision rendered the exact reviewed packet. Unsigned, tampered, wrong-key, empty-key, wrong-scope, and stale-packet inputs did not render.",
+    "limitations": "A synthetic issuer was used. Operator authentication, trusted key provisioning, source rights, and production enforcement are not verified. The user reaffirmed that they can reuse the material; this checkpoint did not recover source terms covering the proposed copying or third-party passage. No assessments were regenerated and no criteria changed status."
   },
   "iteration_32_crop_isolation": {
     "command": ".venv\\Scripts\\python.exe -m pytest tests\\mock_assessment -q",

@@ -155,6 +155,10 @@ The approved local dispatcher now rasterizes selections before embedding them. T
 
 The rights-notice follow-up confirmed that ELA PDF page 7 names Highlights for Children as the copyright holder of the selected passage *Cracking Code Purple* and credits permission through Copyright Clearance Center for its use in the test. The ELA paper and Grade 4 paper also carry NYSED copyright notices. These notices do not establish MTS reuse rights. Historical reproduction remains blocked pending documented authorization covering the intended MTS use, including applicable third-party material.
 
+## Iteration 33: Local approval authentication
+
+The planned-run dispatcher now authenticates signed decisions before checking the two review-packet digests. The 40-test Mock Assessment suite passed. Synthetic coverage included an accepted signed packet and rejection of unsigned decisions, changed reviewer fields, wrong or empty keys, release-scope decisions and stale packet digests. Integration with an authorized issuer, trusted key provisioning, source rights and production publication remain unverified. No criteria were promoted.
+
 ### User-designated golden runs
 
 Authenticated browser access on November 19, 2026 resolved the three user-designated handoffs. The [golden run inventory](../specs/generate_mock_assessment/golden-reference-inventory.md) records verified selections and artifact names for Grade 4 Math 2024, Grade 5 Math 2024, and Grade 6 ELA 2025. Both authenticated ELA library PDFs match the recovered historical PDFs by SHA-256 despite different filenames. The Math filenames and reported page counts match existing evidence, but the chat attachment bytes were not verified. The Grade 4 handoff's 29-item headline disagrees with its item list and the NYSED map; the checked count is 28. No final RunSpecs, final acceptance, or source reuse authorization were established in the handoffs. No criterion changed status.

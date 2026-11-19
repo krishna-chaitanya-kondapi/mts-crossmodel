@@ -2,7 +2,7 @@
 
 **4 / 76 (5%) mandatory criteria verified**
 
-**Status NOT_DONE** · Iteration 32 · audited revision `3ec9219c6fc241760e7b0d222877564a9e51e9c0`
+**Status NOT_DONE** · Iteration 33 · audited revision `995ffe4d453b0e76f09598dbd2a94324ffcb6cb3`
 
 The acceptance count is separate from the test count. V01.01 and V01.02 pass for requirements-source recovery, V01.04 for original question-paper identification, and ARCH.01 for the dedicated executable. This does not establish end-to-end generation, educational correctness, or release readiness.
 
@@ -18,6 +18,8 @@ The acceptance count is separate from the test count. V01.01 and V01.02 pass for
 | Architecture and isolation | 1 / 10 (10%) |
 
 ## Work completed
+
+- Iteration 33: **40 focused tests passed**. The local dispatcher authenticates approved decisions before rendering. Synthetic decisions with a missing or invalid signature, wrong scope, or stale packet digests were rejected.
 
 - Iteration 32: **40 focused tests passed**. The approved local path now embeds only rasterized crop pixels instead of original PDF page objects. Synthetic checks verified both image payloads and their order. Print and accessibility acceptance remain unverified.
 
@@ -45,7 +47,7 @@ The acceptance count is separate from the test count. V01.01 and V01.02 pass for
 
 All [three user-designated golden handoffs](../specs/generate_mock_assessment/golden-reference-inventory.md) were recovered. Both ELA PDFs match the existing reference hashes. The [reconstructed benchmark targets](../specs/generate_mock_assessment/fixtures/historical-benchmark-targets.json) were checked against the historical maps, fingerprints, and Math scoring references; **40 focused tests passed**. Next, verify the Math chat attachment bytes and recover or reconstruct the remaining settings for runnable RunSpecs.
 
-Next, connect the local dispatcher to an authenticated approval source and verify print and accessibility acceptance. Keep approval enforcement and full-workflow portability NOT_VERIFIED.
+Next, connect the local dispatcher to an authorized operator issuer with trusted key provisioning, and verify print and accessibility acceptance. Keep end-to-end approval enforcement and full-workflow portability NOT_VERIFIED.
 
 1. Provide written authorization, a license, or another documented rights basis covering reproduction, reformatting, local storage, and the intended distribution of the selected NYSED content.
 2. While rights are pending, complete non-content criterion traceability and product-neutral architecture/synthetic-fixture checks; keep source-dependent criteria NOT_VERIFIED.

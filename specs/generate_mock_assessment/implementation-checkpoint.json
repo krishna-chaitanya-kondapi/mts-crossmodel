@@ -1,6 +1,6 @@
 {
   "status": "NOT_DONE",
-  "iteration": 32,
+  "iteration": 33,
   "baseline_revision": "728596db0ec7deedc087b9e509da14701b7d088d",
   "criteria": [
     {
@@ -318,7 +318,7 @@
   ],
   "next": [
     "Use the reconstructed historical benchmark targets to guide comparison and RunSpec work. Verify the Math chat attachment digests against the recovered pairs and recover any original manifests or remaining settings; the target fixture is not itself a runnable RunSpec.",
-    "Integrate the local planned-run dispatcher with an authenticated approval source. Verify print and accessibility acceptance for raster crops before considering them for release. Keep the existing review-only CLI separate.",
+    "Connect an authorized operator decision issuer and provision its trusted key separately from job inputs. Verify print and accessibility acceptance for raster crops before considering them for release. Keep the review-only CLI separate.",
     "Obtain and record written authorization, a license, or another documented rights basis covering the intended reproduction, reformatting, local storage, and distribution of the selected NYSED content. Do not generate or revise source-derived candidate PDFs until this is resolved.",
     "While rights are pending, complete non-content criterion traceability and product-neutral architecture/synthetic-fixture checks; keep all source-dependent criteria NOT_VERIFIED.",
     "After authorization, build and compare the source-derived ELA candidate (including raster-only source pages 10 and 16), then repair and fully compare the recorded Grade 4 golden differences.",
@@ -331,7 +331,7 @@
     "Artifact-specific human final approval is absent from the handoffs. This prevents production publication only; no publication is authorized without that approval.",
     "The detailed ELA requirements remain proposed/incomplete and no ELA subject design document was found; do not treat weekly ELA materials as approved Mock Assessment policy."
   ],
-  "audited_revision": "3ec9219c6fc241760e7b0d222877564a9e51e9c0",
+  "audited_revision": "995ffe4d453b0e76f09598dbd2a94324ffcb6cb3",
   "evidence": [
     "specs/generate_mock_assessment/fixtures/historical-benchmark-targets.json",
     "specs/generate_mock_assessment/golden-reference-inventory.md",
