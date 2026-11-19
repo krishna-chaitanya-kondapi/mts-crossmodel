@@ -1,0 +1,32 @@
+V01.05 - Capture corrections and exceptions.
+
+Scope: corrections and exceptions recoverable from the three user-designated
+authenticated handoffs, corroborated where available by the recorded NYSED
+item maps and historical PDF evidence. Source question numbers are used.
+
+Grade 4 Math 2024, corrected review pair:
+- Use 28 questions (19 MC and 9 CR). The 29-item headline conflicts with
+  the enumerated selection and NYSED item map.
+- Q26 is full width so the complete figure and choices fit at no less
+  than 70% scale. The Q34 diagram crop was widened.
+- Restore complete source prompts for Q41 and Q43. Wrap long response
+  labels instead of letting them overflow.
+
+Grade 5 Math 2024, corrected delivered pair:
+- Q40 uses the 5-by-7 array: 35 tiles and 8 3/4 square feet.
+- Q43 diagrams use the 70% exception; Q3, Q9, Q39, and Q40 use 75%.
+- The four-page limit is a ceiling, not the delivered page count. The
+  third and final student page contains Q43 and Q44.
+
+Grade 6 ELA 2025, delivered pair:
+- Preserve the cipher illustration; source Q27 and Q28 become output
+  Q13 and Q14, retain two credits each, and are full width with five
+  response lines each. Model responses are MTS-authored, not NYSED exemplars.
+- Excess trailing whitespace on student pages 1 and 3 was identified
+  after delivery. The delivered four-page golden was not reflowed.
+- The later production manifest and updated design reference are not
+  evidence of the original run settings.
+
+Capture only; this does not establish that the current implementation
+reproduces these corrections, that the Math chat bytes match the recovered
+files, or that any regenerated artifact is approved.
