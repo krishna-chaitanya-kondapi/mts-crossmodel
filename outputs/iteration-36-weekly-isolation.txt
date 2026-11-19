@@ -1,0 +1,18 @@
+ARCH.08 - Weekly implementation unaffected.
+
+Baseline master: 83265deabe08a9d27ab7c14398832966c0e838b1
+Tested implementation: 710ba71f13b52b583278454e3dc1b2ea3da27a49
+
+The Git tree comparison found no changes under src, scripts, tests, or
+data outside the dedicated Mock Assessment package, CLI, and test suite.
+The complete tree diff contained only those paths, Mock Assessment specs,
+and verification evidence. Weekly code, tests, config and data are unchanged.
+
+Ran the full suite using the existing .venv interpreter and PYTHONPATH set
+to src in a disposable detached checkout created with core.autocrlf=false:
+  python -m pytest tests -q
+  286 passed in 26.35s
+
+Removed the disposable worktree after testing. No production publishing
+or assessment regeneration was performed. This verifies preservation of
+the current Weekly implementation, not future PrintReady coordination.
