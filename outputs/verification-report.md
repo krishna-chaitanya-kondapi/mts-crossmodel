@@ -1,12 +1,12 @@
 # Mock Assessment verification report
 
-**NOT_DONE. Iteration 32.** The revision-bound gate records **4 / 76 mandatory criteria PASS**; 72 remain open. V01.01 and V01.02 pass for requirements-source recovery, V01.04 for original question-paper identification, and ARCH.01 for the dedicated executable. This acceptance count is not the unit-test count and does not claim end-to-end implementation, academic correctness, or release readiness.
+**NOT_DONE. Iteration 34.** The revision-bound gate records **5 / 76 mandatory criteria PASS**; 71 remain open. V01.01 and V01.02 pass for requirements-source recovery, V01.04 for original question-paper identification, V06.02 for exact ELA golden PDF identity, and ARCH.01 for the dedicated executable. This acceptance count is not the unit-test count and does not claim end-to-end implementation, academic correctness, or release readiness.
 
 ## Historical evidence
 
 - Grade 4 Math, NYSED 2024. Recovered the staged review worksheet and key from Drive and verified their four-page and one-page counts. The handoff calls out 29 items and 10 constructed responses. The listed IDs, official item map, and staged key show 28 items, with 19 multiple-choice and 9 constructed-response items. The official item map is PDF page 34.
 - Grade 5 Math, NYSED 2024. The official item map on PDF page 32 confirms the handoff's selection of 28 items, with 19 multiple-choice and 9 constructed responses. The historical handoff records a Q40 correction to 35 tiles and 8 3/4 square feet.
-- Grade 6 ELA, NYSED 2025. The official item map on PDF page 43 confirms Q8–14 and Q22–28, with 12 multiple-choice and two 2-credit constructed responses. The handoff identifies the final delivered Library PDFs. The Drive copies match the reported titles and page counts. Byte identity with the Library PDFs remains unverified. The handoff records excess trailing whitespace on student pages 1 and 3.
+- Grade 6 ELA, NYSED 2025. The official item map on PDF page 43 confirms Q8–14 and Q22–28, with 12 multiple-choice and two 2-credit constructed responses. The authenticated Library downloads and recovered PDFs match by SHA-256, with four student pages and two teacher pages. See [the V06.02 identity evidence](iteration-34-ela-golden-identity.txt). The handoff records excess trailing whitespace on student pages 1 and 3.
 - The handoffs document delivery for Grade 5 Math and Grade 6 ELA and staging for Grade 4 Math. Artifact-specific final approval remains unverified.
 
 ## Implementation and verification

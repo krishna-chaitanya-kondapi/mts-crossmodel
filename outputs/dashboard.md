@@ -1,10 +1,10 @@
 # Mock Assessment dashboard
 
-**4 / 76 (5%) mandatory criteria verified**
+**5 / 76 (7%) mandatory criteria verified**
 
-**Status NOT_DONE** · Iteration 33 · audited revision `995ffe4d453b0e76f09598dbd2a94324ffcb6cb3`
+**Status NOT_DONE** · Iteration 34 · audited revision `1c4e741eae86544fa213330e5cbc69b59b1f8df9`
 
-The acceptance count is separate from the test count. V01.01 and V01.02 pass for requirements-source recovery, V01.04 for original question-paper identification, and ARCH.01 for the dedicated executable. This does not establish end-to-end generation, educational correctness, or release readiness.
+The acceptance count is separate from the test count. V01.01 and V01.02 pass for requirements-source recovery, V01.04 for original question-paper identification, V06.02 for exact ELA golden PDF identity, and ARCH.01 for the dedicated executable. This does not establish end-to-end generation, educational correctness, or release readiness.
 
 | Category | Verified |
 |---|---:|
@@ -13,11 +13,13 @@ The acceptance count is separate from the test count. V01.01 and V01.02 pass for
 | Academic correctness | 0 / 7 (0%) |
 | Source fidelity | 0 / 8 (0%) |
 | Print and visual quality | 0 / 13 (0%) |
-| Historical regression | 0 / 12 (0%) |
+| Historical regression | 1 / 12 (8%) |
 | Operations and repeatability | 0 / 10 (0%) |
 | Architecture and isolation | 1 / 10 (10%) |
 
 ## Work completed
+
+- Iteration 34: [Verified exact ELA golden PDF identity](iteration-34-ela-golden-identity.txt). The authenticated and recovered student/key SHA-256 values matched; no assessment was generated.
 
 - Iteration 33: **40 focused tests passed**. The local dispatcher authenticates approved decisions before rendering. Synthetic decisions with a missing or invalid signature, wrong scope, or stale packet digests were rejected.
 

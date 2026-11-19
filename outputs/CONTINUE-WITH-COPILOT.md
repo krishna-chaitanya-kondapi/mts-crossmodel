@@ -2,7 +2,7 @@
 
 Run `python scripts/resume_mock_assessment.py` from the repository root. Read [START_HERE.md](../specs/generate_mock_assessment/resume/START_HERE.md); the canonical checkpoint owns criterion status, blockers, and next actions.
 
-Current state: **NOT_DONE**, Iteration 33, **4 / 76 mandatory criteria PASS** for requirements-source recovery, original question-paper identification, and the dedicated executable. Audited revision `995ffe4d453b0e76f09598dbd2a94324ffcb6cb3`; 40 focused tests passed. Source identity is not authorization to reproduce content.
+Current state: **NOT_DONE**, Iteration 34, **5 / 76 mandatory criteria PASS** for requirements-source recovery, original question-paper identification, exact ELA golden PDF identity, and the dedicated executable. Audited revision `1c4e741eae86544fa213330e5cbc69b59b1f8df9`; the most recent code checkpoint passed 40 focused tests. Source identity is not authorization to reproduce content.
 
 Latest clean full-suite command: `.venv\Scripts\python.exe -m pytest tests -q` (**262 passed** at Iteration 23). The first full run had one Weekly bypass integration failure; the isolated test and clean full rerun passed. The first failure's cause was not captured. Restore test-written `data/transactions` changes after each run.
 
