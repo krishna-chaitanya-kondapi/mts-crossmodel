@@ -1,8 +1,8 @@
 # Mock Assessment dashboard
 
-**6 / 76 (8%) mandatory criteria verified**
+**7 / 76 (9%) mandatory criteria verified**
 
-**Status NOT_DONE** · Iteration 36 · audited revision `a20c973144d9d6e0fe24706ec1a8cd8005bb97de`
+**Status NOT_DONE** · Iteration 37 · audited revision `2b695a1bac5c4668cc9f6e726ecfd445c5249050`
 
 The acceptance count is separate from the test count. V01.01 and V01.02 pass for requirements-source recovery, V01.04 for original question-paper identification, V06.02 for exact ELA golden PDF identity, ARCH.01 for the dedicated executable, and ARCH.08 for preserving Weekly Practice. This does not establish end-to-end generation, educational correctness, or release readiness.
 
@@ -15,9 +15,11 @@ The acceptance count is separate from the test count. V01.01 and V01.02 pass for
 | Print and visual quality | 0 / 13 (0%) |
 | Historical regression | 1 / 12 (8%) |
 | Operations and repeatability | 0 / 10 (0%) |
-| Architecture and isolation | 2 / 10 (20%) |
+| Architecture and isolation | 3 / 10 (30%) |
 
 ## Work completed
+
+- Iteration 37: [44 focused tests passed without Weekly Practice present](iteration-37-mock-only-execution.txt). ARCH.04 passes for the implemented routes; this does not verify end-to-end release.
 
 - Iteration 35: **44 focused tests passed**. Preflight rejects empty and out-of-page source crop bounds before producing a review packet.
 

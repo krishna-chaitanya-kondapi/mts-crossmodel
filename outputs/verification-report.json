@@ -1,10 +1,10 @@
 {
   "status": "NOT_DONE",
-  "iteration": 36,
+  "iteration": 37,
   "date": "2026-11-19",
-  "revision": "a20c973144d9d6e0fe24706ec1a8cd8005bb97de",
+  "revision": "2b695a1bac5c4668cc9f6e726ecfd445c5249050",
   "registry_sha256": "c70cf4b237e712c11943ed16ac5a479a9310c65a6d1fd284baddb23d956f0aa4",
-  "mandatory_pass": 6,
+  "mandatory_pass": 7,
   "mandatory_total": 76,
   "verification_environment_revision": "55ea8c10371b6079b45eac87167c23d06985f19b",
   "baseline_tests": {
@@ -163,7 +163,6 @@
     "V07.10",
     "ARCH.02",
     "ARCH.03",
-    "ARCH.04",
     "ARCH.05",
     "ARCH.06",
     "ARCH.07",
@@ -717,8 +716,17 @@
       "id": "ARCH.04",
       "mandatory": true,
       "requirement": "No weekly curriculum or generation dependency",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "status": "PASS",
+      "method": "Run the dedicated assessment tests in an allowlisted export with no Weekly code or data, and verify import origin.",
+      "reviewer": "Copilot implementation agent; isolated execution check.",
+      "expected": "The implemented, tested assessment routes run without Weekly curriculum or generation files.",
+      "actual": "44 tests passed using the exported package, with no Weekly implementation or data present.",
+      "evidence": [
+        {
+          "path": "outputs/iteration-37-mock-only-execution.txt",
+          "sha256": "78d4f69447ca2364870f15b07b184d5f0a0ff6341b91ca00835a209effb5b5ba"
+        }
+      ]
     },
     {
       "id": "ARCH.05",
