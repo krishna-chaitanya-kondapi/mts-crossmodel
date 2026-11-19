@@ -71,7 +71,7 @@
     },
     {
       "id": "MA-009",
-      "finding": "The selected NYSED ELA and Grade 4 Math source PDFs contain copyright/permission notices, but no source-specific authorization record was located in the scoped project materials.",
+      "finding": "The original papers carry NYSED copyright notices. The 2025 Grade 6 ELA paper, PDF page 7, credits Highlights for Children and permission for Cracking Code Purple in the NYSED test. No documented rights basis covering the intended MTS reuse was located.",
       "affected": "Creation of new source-derived ELA/Grade 4 candidates and content-parity acceptance for V02.04, V04.* and V06.*"
     },
     {

@@ -324,7 +324,7 @@
     "Obtain qualified independent academic/source review and artifact-specific human approval before any production publication."
   ],
   "blockers": [
-    "The selected NYSED ELA and Grade 4 Math source PDFs contain copyright/permission notices, and no source-specific authorization record was located in the scoped project materials. This blocks new source-derived ELA and Grade 4 candidate PDFs and content-parity acceptance until a documented rights basis is supplied; see outputs/iteration-24-source-rights-check.json.",
+    "The selected NYSED ELA and Grade 4 Math source PDFs carry NYSED copyright notices. The selected ELA passage Cracking Code Purple also credits Highlights for Children and records permission for its use in the NYSED test, not permission for MTS. No source-specific MTS authorization was located. This blocks source-derived candidates and content-parity acceptance until a documented rights basis is supplied; see outputs/verification-report.md.",
     "A qualified independent reviewer must review the Grade 4 and ELA candidate answers, source selections, and scoring/rubric alignment; self-review cannot satisfy the independent-review criteria. This prevents V03 academic acceptance and dependent source-fidelity acceptance until review evidence is recorded.",
     "Artifact-specific human final approval is absent from the handoffs. This prevents production publication only; no publication is authorized without that approval.",
     "The detailed ELA requirements remain proposed/incomplete and no ELA subject design document was found; do not treat weekly ELA materials as approved Mock Assessment policy."

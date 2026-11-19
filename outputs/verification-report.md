@@ -152,3 +152,5 @@ The local dispatcher renders only the selected bounds in the approved order on t
 ## Iteration 32: crop isolation
 
 The approved local dispatcher now rasterizes selections before embedding them. The synthetic test verified no form XObjects and matched the two embedded images byte-for-byte at the pixel level against the inward-rounded approved crops. **40 focused tests passed.** The older vector routes remain review-only. Image-only source crops are not selectable text and still need print and accessibility acceptance. No historical content was generated or published.
+
+The rights-notice follow-up confirmed that ELA PDF page 7 names Highlights for Children as the copyright holder of the selected passage *Cracking Code Purple* and credits permission through Copyright Clearance Center for its use in the test. The ELA paper and Grade 4 paper also carry NYSED copyright notices. These notices do not establish MTS reuse rights. Historical reproduction remains blocked pending documented authorization covering the intended MTS use, including applicable third-party material.

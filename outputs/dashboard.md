@@ -52,7 +52,7 @@ Next, connect the local dispatcher to an authenticated approval source and verif
 
 ## Blockers and boundaries
 
-- **Source rights:** blocks new source-derived ELA/Grade 4 candidate PDFs and content-parity acceptance until authorization is documented. This is not a legal determination.
+- **Source rights:** blocks new source-derived ELA/Grade 4 candidate PDFs and content-parity acceptance. The ELA test credits third-party permission for a selected passage; permission for the published test does not establish MTS reuse rights. See the [rights-notice follow-up](verification-report.md#iteration-32-crop-isolation).
 - **Independent review:** required for academic/source acceptance; self-review is insufficient.
 - **Human publication approval:** absent, so production publication is not authorized.
 - Do not use proposed Weekly ELA requirements as approved Mock Assessment policy.
