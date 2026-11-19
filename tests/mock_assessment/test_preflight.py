@@ -26,6 +26,14 @@ ROOT = Path(__file__).resolve().parents[2]
         {"source_number": 9, "source_page": 1, "type": "constructed_response"},
     ], "page exceeds the PDF page count"),
     ("source", "selection", [
+        {"source_number": 8, "source_page": 1, "type": "multiple_choice", "bounds": [10, 10, 650, 40]},
+        {"source_number": 9, "source_page": 1, "type": "constructed_response"},
+    ], "bounds must be a nonempty rectangle within the source page"),
+    ("source", "selection", [
+        {"source_number": 8, "source_page": 1, "type": "multiple_choice", "bounds": [10, 40, 50, 40]},
+        {"source_number": 9, "source_page": 1, "type": "constructed_response"},
+    ], "bounds must be a nonempty rectangle within the source page"),
+    ("source", "selection", [
         {"source_number": 8, "source_page": 1, "type": "multiple_choice"},
         {"source_number": 8, "source_page": 1, "type": "constructed_response"},
     ], "question numbers must be unique"),

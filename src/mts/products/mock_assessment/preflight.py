@@ -21,6 +21,15 @@ def _integer(values: dict[str, object], name: str, minimum: int) -> int:
     return value
 
 
+def _validate_bounds(bounds: object, page: pymupdf.Rect, number: int) -> None:
+    error = f"Source item {number} bounds must be a nonempty rectangle within the source page"
+    if not isinstance(bounds, list) or len(bounds) != 4 or any(type(value) not in (int, float) for value in bounds):
+        raise ValueError(error)
+    x0, y0, x1, y1 = bounds
+    if not (page.x0 <= x0 < x1 <= page.x1 and page.y0 <= y0 < y1 <= page.y1):
+        raise ValueError(error)
+
+
 def validate_draft(spec: object, source_path: Path) -> dict[str, object]:
     """Check structure and source identity, not authorization or approval."""
     if not isinstance(spec, dict):
@@ -63,7 +72,7 @@ def validate_draft(spec: object, source_path: Path) -> dict[str, object]:
         with pymupdf.open(stream=source_bytes, filetype="pdf") as document:
             if not document.is_pdf or document.needs_pass or not document.page_count:
                 raise ValueError("Source must be a readable, unencrypted PDF")
-            page_count = document.page_count
+            page_rects = [page.rect for page in document]
     except pymupdf.FileDataError as error:
         raise ValueError("Source must be a readable PDF") from error
     observed = dict.fromkeys(counts, 0)
@@ -75,8 +84,11 @@ def validate_draft(spec: object, source_path: Path) -> dict[str, object]:
         if number in selected_ids:
             raise ValueError("Source selection question numbers must be unique")
         selected_ids.add(number)
-        if _integer(item, "source_page", 1) > page_count:
+        page_number = _integer(item, "source_page", 1)
+        if page_number > len(page_rects):
             raise ValueError("Source selection page exceeds the PDF page count")
+        if "bounds" in item:
+            _validate_bounds(item["bounds"], page_rects[page_number - 1], number)
         kind = item.get("type")
         if not isinstance(kind, str) or kind not in counts:
             raise ValueError("Invalid source selection question type")
