@@ -1,0 +1,7 @@
+# These evidence files have published SHA-256 digests of their CRLF checkout bytes.
+/iteration-23-grade4-render-evidence.json text eol=crlf
+/iteration-23-requirements-recovery.json text eol=crlf
+/iteration-23-defects.json text eol=crlf
+/iteration-23-tests.txt text eol=crlf
+/iteration-24-source-rights-check.json text eol=crlf
+/iteration-25-cli-evidence.txt text eol=crlf
