@@ -7,6 +7,9 @@ from pathlib import Path
 import pymupdf
 import pytest
 
+from mts.products.mock_assessment.approval import run_approved_draft
+from mts.products.mock_assessment.source_render import render_student
+
 ROOT = Path(__file__).resolve().parents[2]
 
 
@@ -95,3 +98,38 @@ def test_draft_preflight_cli(tmp_path, section, field, value, error, emit_bundle
     retry = subprocess.run(command, cwd=tmp_path, capture_output=True, text=True)
     assert retry.returncode == 2, retry.stderr
     assert {path.name: path.read_bytes() for path in bundle.iterdir()} == before
+
+    approval = {
+        "decision": "APPROVED",
+        "scope": "PRE_RUN",
+        "reviewer": "Synthetic test reviewer",
+        "runspec_json_sha256": hashlib.sha256(before["runspec.json"]).hexdigest(),
+        "runspec_pdf_sha256": hashlib.sha256(before["runspec.pdf"]).hexdigest(),
+    }
+    output = tmp_path / "synthetic-student.pdf"
+
+    def render(approved):
+        assert approved == draft
+        return render_student(source, {
+            "title": "Synthetic approved-run fixture",
+            "source_sha256": approved["source"]["sha256"],
+            "scale": 0.75,
+            "maximum_pages": 2,
+            "regions": [{"id": 8, "source_page": 1, "bounds": [28, 15, 225, 50]}],
+        }, output)
+
+    for decision in ({}, {**approval, "scope": "RELEASE"}):
+        with pytest.raises(ValueError, match="separate pre-run approval"):
+            run_approved_draft(bundle, source, decision, render)
+    for name in before:
+        path = bundle / name
+        path.write_bytes(before[name] + b"\n")
+        with pytest.raises(ValueError, match="does not match"):
+            run_approved_draft(bundle, source, approval, render)
+        path.write_bytes(before[name])
+    assert not output.exists()
+
+    placements = run_approved_draft(bundle, source, approval, render)
+    assert [placement["id"] for placement in placements] == [8]
+    with pymupdf.open(output) as pdf:
+        assert "Original synthetic fixture" in pdf[0].get_text()
