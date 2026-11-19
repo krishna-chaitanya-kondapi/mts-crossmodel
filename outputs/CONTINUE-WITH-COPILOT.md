@@ -2,7 +2,7 @@
 
 Run `python scripts/resume_mock_assessment.py` from the repository root. Read [START_HERE.md](../specs/generate_mock_assessment/resume/START_HERE.md); the canonical checkpoint owns criterion status, blockers, and next actions.
 
-Current state: **NOT_DONE**, Iteration 37, **7 / 76 mandatory criteria PASS**. Audited revision `2b695a1bac5c4668cc9f6e726ecfd445c5249050`; ARCH.04 now passes for running the tested assessment routes without Weekly curriculum or generation. Source identity is not authorization to reproduce content.
+Current state: **NOT_DONE**, Iteration 38, **8 / 76 mandatory criteria PASS**. Audited revision `525371bffac0c8aa9e23d22a2f6de413c604a508`; V01.05 now passes for capturing historical corrections, not reproducing them. Source identity is not authorization to reproduce content.
 
 Latest clean full suite: **286 passed** in a disposable checkout at Iteration 36 with its `src` on `PYTHONPATH`. Prefer a disposable checkout to keep test-written transaction changes out of the active worktree.
 

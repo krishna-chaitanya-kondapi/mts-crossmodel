@@ -1,6 +1,6 @@
 # Mock Assessment verification report
 
-**NOT_DONE. Iteration 37.** The revision-bound gate records **7 / 76 mandatory criteria PASS**; 69 remain open. ARCH.04 now passes: [44 focused tests ran without Weekly curriculum or generation code](iteration-37-mock-only-execution.txt). Separately, ARCH.08 remains verified by the [branch comparison and full suite](iteration-36-weekly-isolation.txt), which passed **286 tests**. Neither check verifies PrintReady coordination or release readiness.
+**NOT_DONE. Iteration 38.** The revision-bound gate records **8 / 76 mandatory criteria PASS**; 68 remain open. V01.05 now passes for [capture of historical corrections and exceptions](iteration-38-historical-corrections.txt), not for reproducing them. ARCH.04 and ARCH.08 remain verified by the [isolation check](iteration-37-mock-only-execution.txt) and the [286-test full suite](iteration-36-weekly-isolation.txt), respectively.
 
 Preflight now rejects empty and out-of-page source crop bounds before producing a review packet. The out-of-page case previously passed validation; the focused suite now passes all **44 tests**. A browser retry did not yield the Grade 4 chat worksheet bytes; the recovered Math PDFs still have no verified byte-for-byte match to the chat attachments.
 

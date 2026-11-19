@@ -1,10 +1,10 @@
 {
   "status": "NOT_DONE",
-  "iteration": 37,
+  "iteration": 38,
   "date": "2026-11-19",
-  "revision": "2b695a1bac5c4668cc9f6e726ecfd445c5249050",
+  "revision": "525371bffac0c8aa9e23d22a2f6de413c604a508",
   "registry_sha256": "c70cf4b237e712c11943ed16ac5a479a9310c65a6d1fd284baddb23d956f0aa4",
-  "mandatory_pass": 7,
+  "mandatory_pass": 8,
   "mandatory_total": 76,
   "verification_environment_revision": "55ea8c10371b6079b45eac87167c23d06985f19b",
   "baseline_tests": {
@@ -100,7 +100,6 @@
   ],
   "pending_mandatory": [
     "V01.03",
-    "V01.05",
     "V01.06",
     "V01.07",
     "V02.01",
@@ -229,8 +228,17 @@
       "id": "V01.05",
       "mandatory": true,
       "requirement": "Capture corrections and exceptions",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "status": "PASS",
+      "method": "Consolidate recoverable historical handoff corrections and exceptions and distinguish delivered behavior from later findings.",
+      "reviewer": "Copilot implementation agent; capture only, not implementation or academic acceptance.",
+      "expected": "For each designated run, record the known corrections and exceptions with unverified details clearly separated.",
+      "actual": "Recorded Grade 4 crop and prompt corrections, Grade 5 scoring and layout exceptions, and the ELA illustration, scoring, layout and post-delivery distinctions.",
+      "evidence": [
+        {
+          "path": "outputs/iteration-38-historical-corrections.txt",
+          "sha256": "38b37d5b9781ba3d7232aecc064812efb0ef02bb593d5b73be5a753ba53c0579"
+        }
+      ]
     },
     {
       "id": "V01.06",
