@@ -2,7 +2,7 @@
 
 **3 / 76 (4%) mandatory criteria verified**
 
-**Status NOT_DONE** · Iteration 25 · audited code revision `5da918a7bcb6d2b7526e760bb7c36cc65d09b847`
+**Status NOT_DONE** · Iteration 26 · audited code revision `5da918a7bcb6d2b7526e760bb7c36cc65d09b847`
 
 The acceptance count is separate from the test count. V01.01 and V01.02 pass for requirements-source recovery; ARCH.01 passes for the dedicated executable. This does not establish end-to-end generation, educational correctness, or release readiness.
 
@@ -19,6 +19,8 @@ The acceptance count is separate from the test count. V01.01 and V01.02 pass for
 
 ## Work completed
 
+- Iteration 26: verified that a fresh checkout with `core.autocrlf=false` retains all three evidence-backed passes. Previously, checkout conversion invalidated them. No additional criterion was promoted.
+
 - Iteration 25: **22 focused Mock Assessment tests passed**. The dedicated CLI worked from outside the repository, rejected a wrong source digest without output, and accepted a UTF-8 BOM report. See [CLI evidence](iteration-25-cli-evidence.txt).
 
 - Recovered and fingerprinted approved Mock Assessment and Math/ELA requirement sources. Weekly Practice defaults are explicitly excluded. ELA detailed requirements remain proposed/incomplete and no ELA subject design document was found.
@@ -29,7 +31,7 @@ The acceptance count is separate from the test count. V01.01 and V01.02 pass for
 
 ## Next steps
 
-First, make registry and evidence fingerprints portable across checkout line endings, verify a fresh checkout, and continue the synthetic RunSpec and traceability work.
+First, continue synthetic RunSpec preflight and criterion traceability. Keep full-workflow portability NOT_VERIFIED.
 
 1. Provide written authorization, a license, or another documented rights basis covering reproduction, reformatting, local storage, and the intended distribution of the selected NYSED content.
 2. While rights are pending, complete non-content criterion traceability and product-neutral architecture/synthetic-fixture checks; keep source-dependent criteria NOT_VERIFIED.

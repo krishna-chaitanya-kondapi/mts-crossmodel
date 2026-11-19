@@ -1,11 +1,12 @@
 {
   "status": "NOT_DONE",
-  "iteration": 25,
+  "iteration": 26,
   "date": "2026-11-19",
   "revision": "5da918a7bcb6d2b7526e760bb7c36cc65d09b847",
   "registry_sha256": "c70cf4b237e712c11943ed16ac5a479a9310c65a6d1fd284baddb23d956f0aa4",
   "mandatory_pass": 3,
   "mandatory_total": 76,
+  "verification_environment_revision": "55ea8c10371b6079b45eac87167c23d06985f19b",
   "baseline_tests": {
     "command": "python -m pytest tests -q",
     "passed": 243,
@@ -75,12 +76,12 @@
     },
     {
       "id": "MA-010",
-      "finding": "The registry and text evidence hashes differ between this Windows checkout and the Git blobs due to line-ending conversion.",
-      "affected": "Acceptance verification across checkouts; V07.09 stays NOT_VERIFIED."
+      "finding": "Resolved for the acceptance registry and the hashed Iteration 23-25 report evidence by pinning checkout line endings. The same gate recovered 3/76 passes in a fresh checkout with core.autocrlf=false; the prior checkout produced 0/76.",
+      "affected": "The gate portability defect is fixed. Full workflow portability (V07.09) remains NOT_VERIFIED."
     }
   ],
   "next": [
-    "Make evidence and registry fingerprints portable across Git checkout line endings without weakening exact PDF identity checks, then verify the gate on a fresh checkout. Continue criterion-level traceability and implement synthetic RunSpec preflight checks.",
+    "Implement synthetic RunSpec preflight checks for explicit source identity, a recorded rights basis, blueprint consistency, and presentation constraints. Add negative tests and attach the results to the criterion trace.",
     "Obtain and record written authorization, a license, or another documented rights basis covering the intended reproduction, reformatting, local storage, and distribution of the selected NYSED content; do not generate or revise source-derived candidates until resolved.",
     "While rights are pending, complete non-content criterion traceability and product-neutral architecture/synthetic-fixture checks; keep source-dependent criteria NOT_VERIFIED.",
     "After authorization, build and compare the source-derived ELA candidate (including raster-only source pages 10 and 16), then repair and fully compare the recorded Grade 4 golden differences.",
@@ -881,6 +882,15 @@
       "sha256": "42164d3fa25adb149e9adf4300e91077683511c11cf34f0661d6cd460a278eaa",
       "note": "The first full run had 261 passed and one Weekly bypass integration failure. The isolated test passed, then a clean full-suite rerun passed 262 tests. The first failure's cause was not captured; test-written transaction fixtures were restored."
     }
+  },
+  "iteration_26_checkout": {
+    "method": "Run the existing verification CLI in separate clean Git worktrees created with core.autocrlf=false, with identical report and audited code revision.",
+    "before_revision": "f68fc18",
+    "before_mandatory_pass": 0,
+    "after_revision": "55ea8c10371b6079b45eac87167c23d06985f19b",
+    "after_mandatory_pass": 3,
+    "status": "NOT_DONE",
+    "scope": "Checkout stability of the current gate only. No change to hashing, source PDFs, audited Python code, or pass count."
   },
   "iteration_25_cli": {
     "command": ".venv\\Scripts\\python.exe -m pytest tests\\mock_assessment -q",

@@ -1,6 +1,6 @@
 # Mock Assessment verification report
 
-**NOT_DONE. Iteration 25.** The revision-bound gate records **3 / 76 mandatory criteria PASS**; 73 remain open. V01.01 and V01.02 pass for requirements-source recovery only; ARCH.01 passes for the dedicated executable. This acceptance count is not the unit-test count and does not claim end-to-end implementation, academic correctness, or release readiness.
+**NOT_DONE. Iteration 26.** The revision-bound gate records **3 / 76 mandatory criteria PASS**; 73 remain open. V01.01 and V01.02 pass for requirements-source recovery only; ARCH.01 passes for the dedicated executable. This acceptance count is not the unit-test count and does not claim end-to-end implementation, academic correctness, or release readiness.
 
 ## Historical evidence
 
@@ -125,4 +125,6 @@ Before creating another source-derived candidate, checked PDF metadata and right
 
 The [CLI integration evidence](iteration-25-cli-evidence.txt) verifies ARCH.01. The entry point ran from a temporary working directory, rendered and checked a synthetic PDF, rejected a wrong source digest without output, and persisted `NOT_DONE` after reading a UTF-8 BOM report missing criterion evidence. All 22 focused tests passed. No historical candidate was generated or published.
 
-Open portability defect: registry and text evidence hashes recorded in the Windows checkout differ from their Git blob hashes because Git converts line endings. A checkout with different line-ending settings can invalidate otherwise current evidence. Keep V07.09 NOT_VERIFIED; before relying on the gate on another machine, make these checked-in fingerprints byte-stable and verify a fresh checkout. This does not affect the exact-byte identity requirement for source PDFs.
+## Iteration 26: checkout-stable gate evidence
+
+The same report and audited revision produced **0/76 PASS** in a fresh checkout of `f68fc18` with `core.autocrlf=false` and **3/76 PASS** in a fresh checkout of `55ea8c1` with the same setting. Git attributes now preserve the existing registry and report-evidence checkout bytes. Hashing and PDF identity checks are unchanged. The gate remains `NOT_DONE` and V07.09 stays NOT_VERIFIED because this test did not cover full workflow portability. Next: implement and test synthetic RunSpec preflight and record the criterion trace.

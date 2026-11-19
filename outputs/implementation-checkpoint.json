@@ -1,6 +1,6 @@
 {
   "status": "NOT_DONE",
-  "iteration": 25,
+  "iteration": 26,
   "baseline_revision": "728596db0ec7deedc087b9e509da14701b7d088d",
   "criteria": [
     {
@@ -317,7 +317,7 @@
     }
   ],
   "next": [
-    "Make evidence and registry fingerprints portable across Git checkout line endings without weakening exact PDF identity checks, then verify the gate on a fresh checkout. Continue criterion-level traceability and implement synthetic RunSpec preflight checks.",
+    "Implement synthetic RunSpec preflight checks for explicit source identity, a recorded rights basis, blueprint consistency, and presentation constraints. Add negative tests and attach the results to the criterion trace.",
     "Obtain and record written authorization, a license, or another documented rights basis covering the intended reproduction, reformatting, local storage, and distribution of the selected NYSED content. Do not generate or revise source-derived candidate PDFs until this is resolved.",
     "While rights are pending, complete non-content criterion traceability and product-neutral architecture/synthetic-fixture checks; keep all source-dependent criteria NOT_VERIFIED.",
     "After authorization, build and compare the source-derived ELA candidate (including raster-only source pages 10 and 16), then repair and fully compare the recorded Grade 4 golden differences.",
