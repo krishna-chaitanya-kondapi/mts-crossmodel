@@ -78,10 +78,15 @@
       "id": "MA-010",
       "finding": "Resolved for the acceptance registry and the hashed Iteration 23-25 report evidence by pinning checkout line endings. The same gate recovered 3/76 passes in a fresh checkout with core.autocrlf=false; the prior checkout produced 0/76.",
       "affected": "The gate portability defect is fixed. Full workflow portability (V07.09) remains NOT_VERIFIED."
+    },
+    {
+      "id": "MA-011",
+      "finding": "The Grade 4 chat summary overstates the checked selection by one constructed response. Use 28 items (19 MC, 9 CR), validated from the enumerated selection and the historical NYSED item map.",
+      "affected": "Historical Grade 4 RunSpec provenance. The contradictory headline is excluded; exact Math chat PDF identity and original manifests remain unverified."
     }
   ],
   "next": [
-    "Map the three user-designated ChatGPT golden runs to the exact historical student PDFs, keys, and RunSpecs from an accessible transcript, export, or artifact handoff. Keep the affected criteria NOT_VERIFIED until mapped.",
+    "Verify the Math conversation attachment digests against the recovered Drive PDFs and recover available original manifests or explicitly reconstruct RunSpecs from corroborated evidence. Keep unsupported criteria NOT_VERIFIED.",
     "Integrate the local planned-run dispatcher with an authenticated approval source. Verify print and accessibility acceptance for raster crops before considering them for release. Keep the existing review-only CLI separate.",
     "Obtain and record written authorization, a license, or another documented rights basis covering the intended reproduction, reformatting, local storage, and distribution of the selected NYSED content; do not generate or revise source-derived candidates until resolved.",
     "While rights are pending, complete non-content criterion traceability and product-neutral architecture/synthetic-fixture checks; keep source-dependent criteria NOT_VERIFIED.",
@@ -895,9 +900,21 @@
   "golden_run_designation": {
     "date": "2026-11-19",
     "user_designated_runs": 3,
+    "authenticated_handoffs_reviewed": 3,
     "status": "NOT_VERIFIED",
     "inventory": "specs/generate_mock_assessment/golden-reference-inventory.md",
-    "finding": "Two conversation links could not be opened and their public lookups returned Not Found; the project conversation redirected to login. No conversation contents were reviewed or mapped to existing artifacts."
+    "finding": "All three handoffs match the NYSED selections in the historical maps. The Grade 4 handoff headline conflicts with its own item list: the checked scope is 28 items (19 MC, 9 CR), not 29. Math file names match existing fingerprints, but chat attachment bytes were not independently checked. No final original RunSpec was found for any run. No documented rights basis was located in the handoffs.",
+    "ela_authenticated_downloads": {
+      "student": {
+        "bytes": 255543,
+        "sha256": "1f3688f5141837ffb037cc97fd64399d6a752d6624465f209b12c406f994a8b9"
+      },
+      "teacher": {
+        "bytes": 135491,
+        "sha256": "5a744c0f2b5ea742ba1bcafa9f383c2812f08e0e870eb8e7e627e7b7770a01f2"
+      },
+      "result": "Both HTTP 200 PDF downloads match the local historical goldens and prior Drive fingerprint inventory."
+    }
   },
   "iteration_32_crop_isolation": {
     "command": ".venv\\Scripts\\python.exe -m pytest tests\\mock_assessment -q",

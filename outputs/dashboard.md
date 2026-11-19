@@ -43,7 +43,7 @@ The acceptance count is separate from the test count. V01.01 and V01.02 pass for
 
 ## Next steps
 
-Map the [three user-designated golden runs](../specs/generate_mock_assessment/golden-reference-inventory.md) to exact PDFs and RunSpecs once accessible transcripts or an artifact handoff are available. No existing artifact candidate has been assigned to the new links.
+All [three user-designated golden handoffs](../specs/generate_mock_assessment/golden-reference-inventory.md) were recovered. Both ELA PDFs match the existing reference hashes. Next, verify the Math chat attachment bytes against the recovered pairs and recover or reconstruct the benchmark RunSpecs with provenance.
 
 Next, connect the local dispatcher to an authenticated approval source and verify print and accessibility acceptance. Keep approval enforcement and full-workflow portability NOT_VERIFIED.
 
