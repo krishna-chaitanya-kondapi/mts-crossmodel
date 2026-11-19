@@ -1,0 +1,13 @@
+ARCH.04 - No Weekly curriculum or generation dependency.
+
+Tested revision: 0fd9f04157677204bcede01c615ebf8b9c8729b6
+Exported only the Mock Assessment package, CLI, specs, and tests, MTS
+package initializers, and the shared atomic JSON writer. No Weekly code,
+curriculum, configuration, or data was present in the export.
+
+Set PYTHONPATH to the exported src and verified that the imported MTS
+package resolved inside that export. Ran the Mock Assessment test suite
+there using the existing virtual environment: 44 passed in 12.72s.
+
+This covers the implemented and tested routes. It does not establish
+historical reproduction, release readiness, or future route isolation.
