@@ -4,7 +4,7 @@
 
 On November 19, 2026, the user designated three past ChatGPT runs as golden references: two conversations linked from Mock Assessment history search, and one conversation in the MTS Math AI Generation project. The private conversation links remain in the request, not in this repository.
 
-Authenticated review resolved all three handoffs. The counts and selections below were cross-checked against the [historical NYSED item maps](../../outputs/historical-source-item-maps.json). Page counts and layout details are comparison targets, not acceptance results.
+Authenticated review resolved all three handoffs. The counts and selections below were cross-checked against the [historical NYSED item maps](../../outputs/historical-source-item-maps.json). The [reconstructed comparison targets](fixtures/historical-benchmark-targets.json) bind those maps to the recorded PDF hashes and layout targets. They are not original RunSpecs, renderer inputs, or acceptance results.
 
 | Conversation | Source and checked selection | Final files named in chat | PDF identity |
 |---|---|---|---|

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "provenance": "Reconstructed from the designated historical handoffs and recorded PDF and NYSED evidence. Comparison targets only; not original RunSpecs, renderer inputs, or approval decisions.",
+  "item_maps": "outputs/historical-source-item-maps.json",
+  "math_scoring": "outputs/math-official-scoring-evidence.json",
+  "paper": "US Letter portrait",
+  "benchmarks": {
+    "math-grade4-2024": {
+      "source_sha256": "88351089919b18dfc2f3dc5d64809d20aadd68d56a1dc38841a3387354b8c0f6",
+      "blueprint": {"multiple_choice": 19, "constructed_response": 9},
+      "student": {"pages": 4, "sha256": "e01b89daed4d3719c9b0d63035b0239ef87e58f0cf759de7d2466f448445d107"},
+      "teacher": {"pages": 1, "sha256": "cb5eff9f5a872647f4ff3c28975834e52ad40587a1c13db9cf18756f7e82c246"},
+      "artifact_identity": "Recovered pair; ChatGPT attachment bytes not verified.",
+      "layout_targets": {"student_page_ceiling": 4, "columns": 2, "full_width_source_questions": [26], "figure_scale_range_percent": [70, 75]}
+    },
+    "math-grade5-2024": {
+      "source_sha256": "96bc4dca01185cda99056c98391ac85d41ecf7595b2b3ec29f7595b7e7b91f93",
+      "blueprint": {"multiple_choice": 19, "constructed_response": 9},
+      "student": {"pages": 3, "sha256": "9834833933a068b02d704591bb3a7b1e7936c41b813871166ac00848aa10b05f"},
+      "teacher": {"pages": 1, "sha256": "8b053a6158a96d0d5dcfefe1ddafd555c5c92d02118ca079e6b399041abc6f64"},
+      "artifact_identity": "Recovered pair; ChatGPT attachment bytes not verified.",
+      "layout_targets": {"student_page_ceiling": 4, "columns": 2, "final_page_source_questions": [43, 44], "figure_scale_percent_by_source_question": {"3": 75, "9": 75, "39": 75, "40": 75, "43": 70}}
+    },
+    "ela-grade6-2025": {
+      "source_sha256": "734c8ac722ece5fe182bcd36652c8ae8617124eccf03b6de16ae71c3244907ea",
+      "blueprint": {"multiple_choice": 12, "constructed_response": 2},
+      "student": {"pages": 4, "sha256": "1f3688f5141837ffb037cc97fd64399d6a752d6624465f209b12c406f994a8b9"},
+      "teacher": {"pages": 2, "sha256": "5a744c0f2b5ea742ba1bcafa9f383c2812f08e0e870eb8e7e627e7b7770a01f2"},
+      "artifact_identity": "Both authenticated ChatGPT library downloads match the recovered PDF hashes.",
+      "layout_targets": {"columns": 2, "illustration_page": 2, "full_width_source_questions": [27, 28], "response_lines_per_full_width_question": 5, "teacher_format": "YPQA"}
+    }
+  }
+}

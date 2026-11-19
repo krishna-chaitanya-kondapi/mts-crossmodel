@@ -43,7 +43,7 @@ The acceptance count is separate from the test count. V01.01 and V01.02 pass for
 
 ## Next steps
 
-All [three user-designated golden handoffs](../specs/generate_mock_assessment/golden-reference-inventory.md) were recovered. Both ELA PDFs match the existing reference hashes. Next, verify the Math chat attachment bytes against the recovered pairs and recover or reconstruct the benchmark RunSpecs with provenance.
+All [three user-designated golden handoffs](../specs/generate_mock_assessment/golden-reference-inventory.md) were recovered. Both ELA PDFs match the existing reference hashes. The [reconstructed benchmark targets](../specs/generate_mock_assessment/fixtures/historical-benchmark-targets.json) were checked against the historical maps, fingerprints, and Math scoring references; **40 focused tests passed**. Next, verify the Math chat attachment bytes and recover or reconstruct the remaining settings for runnable RunSpecs.
 
 Next, connect the local dispatcher to an authenticated approval source and verify print and accessibility acceptance. Keep approval enforcement and full-workflow portability NOT_VERIFIED.
 

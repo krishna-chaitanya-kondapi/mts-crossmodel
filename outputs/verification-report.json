@@ -86,7 +86,7 @@
     }
   ],
   "next": [
-    "Verify the Math conversation attachment digests against the recovered Drive PDFs and recover available original manifests or explicitly reconstruct RunSpecs from corroborated evidence. Keep unsupported criteria NOT_VERIFIED.",
+    "Use the reconstructed historical benchmark targets as comparison inputs. Verify the Math chat attachment digests and recover original manifests or remaining settings before completing runnable RunSpecs. Keep unsupported criteria NOT_VERIFIED.",
     "Integrate the local planned-run dispatcher with an authenticated approval source. Verify print and accessibility acceptance for raster crops before considering them for release. Keep the existing review-only CLI separate.",
     "Obtain and record written authorization, a license, or another documented rights basis covering the intended reproduction, reformatting, local storage, and distribution of the selected NYSED content; do not generate or revise source-derived candidates until resolved.",
     "While rights are pending, complete non-content criterion traceability and product-neutral architecture/synthetic-fixture checks; keep source-dependent criteria NOT_VERIFIED.",
@@ -896,6 +896,13 @@
       "sha256": "42164d3fa25adb149e9adf4300e91077683511c11cf34f0661d6cd460a278eaa",
       "note": "The first full run had 261 passed and one Weekly bypass integration failure. The isolated test passed, then a clean full-suite rerun passed 262 tests. The first failure's cause was not captured; test-written transaction fixtures were restored."
     }
+  },
+  "historical_benchmark_targets": {
+    "path": "specs/generate_mock_assessment/fixtures/historical-benchmark-targets.json",
+    "checked": "Three source fingerprints and item-type counts matched the historical NYSED maps; all six artifact fingerprints matched the prior inventory; Math scoring records cover each selected constructed-response source number.",
+    "tests": "40 passed in 10.27s (tests/mock_assessment)",
+    "rights_follow_up": "The user considers publicly released NYSED materials available for the intended use and requested proceeding. This is not a source license and does not resolve third-party rights. No rights determination was changed and no source-derived candidate was generated.",
+    "limitations": "Comparison targets only, not runnable RunSpecs, independent QA, or permission to regenerate or publish. No criteria changed status."
   },
   "golden_run_designation": {
     "date": "2026-11-19",
