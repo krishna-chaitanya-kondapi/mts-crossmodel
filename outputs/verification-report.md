@@ -1,6 +1,6 @@
 # Mock Assessment verification report
 
-**NOT_DONE. Iteration 30.** The revision-bound gate records **4 / 76 mandatory criteria PASS**; 72 remain open. V01.01 and V01.02 pass for requirements-source recovery, V01.04 for original question-paper identification, and ARCH.01 for the dedicated executable. This acceptance count is not the unit-test count and does not claim end-to-end implementation, academic correctness, or release readiness.
+**NOT_DONE. Iteration 31.** The revision-bound gate records **4 / 76 mandatory criteria PASS**; 72 remain open. V01.01 and V01.02 pass for requirements-source recovery, V01.04 for original question-paper identification, and ARCH.01 for the dedicated executable. This acceptance count is not the unit-test count and does not claim end-to-end implementation, academic correctness, or release readiness.
 
 ## Historical evidence
 
@@ -144,3 +144,7 @@ The [approval helper](../src/mts/products/mock_assessment/approval.py) revalidat
 ## Iteration 30: original-source identification
 
 [Source identity evidence](iteration-30-original-source-identities.txt) verifies V01.04 for the original NYSED question papers. The Grade 4 and ELA PDFs were rehashed locally and their publisher metadata checked. The Grade 5 fingerprint was matched across prior inventory, item-map, and renderer records; that PDF was not reacquired in this iteration. No generated artifacts, rights authorization, or fidelity claims result from this check.
+
+## Iteration 31: approved-input local dispatch
+
+The local dispatcher renders only the selected bounds in the approved order on the visible page, without accepting a second manifest. The synthetic test also verified stale approval rejection and output preservation. **40 focused tests passed.** The existing vector crop method is not redaction; distribution requires verifying or replacing it to exclude hidden source data. Authentication, rights, and full approval enforcement remain NOT_VERIFIED.

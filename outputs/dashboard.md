@@ -2,7 +2,7 @@
 
 **4 / 76 (5%) mandatory criteria verified**
 
-**Status NOT_DONE** · Iteration 30 · audited revision `71737d500ca2bbfa07ef54894d5422596079216b`
+**Status NOT_DONE** · Iteration 31 · audited revision `6c957b52655a5f50e14bfe8ccf20632098b04a12`
 
 The acceptance count is separate from the test count. V01.01 and V01.02 pass for requirements-source recovery, V01.04 for original question-paper identification, and ARCH.01 for the dedicated executable. This does not establish end-to-end generation, educational correctness, or release readiness.
 
@@ -18,6 +18,8 @@ The acceptance count is separate from the test count. V01.01 and V01.02 pass for
 | Architecture and isolation | 1 / 10 (10%) |
 
 ## Work completed
+
+- Iteration 31: **40 focused tests passed**. The local student dispatcher uses the approved PDF crop selections and order. The synthetic render displayed the two approved selections; this is not evidence that excluded source data was removed from the PDF internals.
 
 - Iteration 30: [identified the original NYSED question papers](iteration-30-original-source-identities.txt) for all three benchmarks, with fresh local checks for Grade 4 Math and Grade 6 ELA and prior fingerprint evidence for Grade 5 Math. No source was reproduced.
 
@@ -39,7 +41,7 @@ The acceptance count is separate from the test count. V01.01 and V01.02 pass for
 
 ## Next steps
 
-Next, connect the tested approval helper to a trusted approval source and a planned-run dispatcher. Keep approval enforcement and full-workflow portability NOT_VERIFIED.
+Next, connect the local dispatcher to an authenticated approval source and prove that any distributable PDF excludes out-of-bounds source data. Keep approval enforcement and full-workflow portability NOT_VERIFIED.
 
 1. Provide written authorization, a license, or another documented rights basis covering reproduction, reformatting, local storage, and the intended distribution of the selected NYSED content.
 2. While rights are pending, complete non-content criterion traceability and product-neutral architecture/synthetic-fixture checks; keep source-dependent criteria NOT_VERIFIED.
