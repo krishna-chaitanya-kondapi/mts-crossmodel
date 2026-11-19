@@ -49,7 +49,7 @@ def test_draft_preflight_cli(tmp_path, section, field, value, error, emit_bundle
             "rights_basis": "Original synthetic test fixture created by this test.",
             "sha256": hashlib.sha256(source.read_bytes()).hexdigest(),
             "selection": [
-                {"source_number": 8, "source_page": 1, "type": "multiple_choice", "bounds": [28, 15, 225, 50]},
+                {"source_number": 8, "source_page": 1, "type": "multiple_choice", "bounds": [28.1, 15.1, 224.9, 49.9]},
                 {"source_number": 9, "source_page": 1, "type": "constructed_response", "bounds": [28, 130, 225, 165]},
             ],
         },
@@ -122,10 +122,19 @@ def test_draft_preflight_cli(tmp_path, section, field, value, error, emit_bundle
     assert not output.exists()
 
     render_approved_student(bundle, source, approval, output)
-    with pymupdf.open(output) as pdf:
-        rendered = pdf[0].get_text()
-    assert rendered.index("First synthetic selection") < rendered.index("Second synthetic selection")
-    assert "Excluded synthetic text" not in rendered
+    with pymupdf.open(output) as pdf, pymupdf.open(source) as original:
+        page = pdf[0]
+        assert not page.get_xobjects()
+        assert "synthetic selection" not in page.get_text()
+        images = sorted(page.get_image_info(xrefs=True), key=lambda image: image["bbox"][1])
+        assert len(images) == 2
+        clips = [(28.25, 15.25, 224.75, 49.75), (28, 130, 225, 165)]
+        for image, clip in zip(images, clips, strict=True):
+            expected = original[0].get_pixmap(dpi=288, clip=pymupdf.Rect(clip), annots=False)
+            embedded = pymupdf.Pixmap(pdf, image["xref"])
+            assert (embedded.width, embedded.height, embedded.samples) == (
+                expected.width, expected.height, expected.samples,
+            )
     before_output = output.read_bytes()
     with pytest.raises(FileExistsError):
         render_approved_student(bundle, source, approval, output)

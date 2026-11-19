@@ -4,8 +4,8 @@ import math
 from pathlib import Path
 
 
-def render_student(source_path, manifest, destination):
-    """Pack atomic vector crops on Letter pages and return their placements."""
+def render_student(source_path, manifest, destination, *, rasterize_crops=False):
+    """Pack atomic crops on Letter pages and return their placements."""
     import pymupdf
 
     source_path = Path(source_path)
@@ -70,7 +70,24 @@ def render_student(source_path, manifest, destination):
             part_y = cursor
             for clip in clips:
                 part = pymupdf.Rect(x, part_y, x + clip.width * scale, part_y + clip.height * scale)
-                page.show_pdf_page(part, original, number - 1, clip=clip)
+                if rasterize_crops:
+                    # A clipped vector form still embeds the original page contents.
+                    pixel_clip = pymupdf.Rect(
+                        math.ceil(clip.x0 * 4) / 4, math.ceil(clip.y0 * 4) / 4,
+                        math.floor(clip.x1 * 4) / 4, math.floor(clip.y1 * 4) / 4,
+                    )
+                    if pixel_clip.is_empty:
+                        raise ValueError(f"Crop is too small to rasterize for region {region['id']}")
+                    pixels = original[number - 1].get_pixmap(dpi=288, clip=pixel_clip, annots=False)
+                    pixel_target = pymupdf.Rect(
+                        part.x0 + (pixel_clip.x0 - clip.x0) * scale,
+                        part.y0 + (pixel_clip.y0 - clip.y0) * scale,
+                        part.x0 + (pixel_clip.x1 - clip.x0) * scale,
+                        part.y0 + (pixel_clip.y1 - clip.y0) * scale,
+                    )
+                    page.insert_image(pixel_target, pixmap=pixels, keep_proportion=False)
+                else:
+                    page.show_pdf_page(part, original, number - 1, clip=clip)
                 part_y = part.y1 + gap
             placements.append({
                 "id": region["id"], "page": len(output), "bounds": list(target), "scale": scale

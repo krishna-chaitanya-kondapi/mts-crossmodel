@@ -48,10 +48,7 @@ def render_approved_student(
     decision: Mapping[str, object],
     destination: Path,
 ) -> None:
-    """Render a local crop draft after the caller verifies approval and source rights.
-
-    The vector renderer clips display, not source data. Do not distribute this PDF.
-    """
+    """Render an image-only local crop draft after the caller verifies approval and rights."""
     def execute(draft: dict[str, object]) -> None:
         source = draft["source"]
         presentation = draft["presentation"]
@@ -79,7 +76,7 @@ def render_approved_student(
             }
             if pagination["policy"] in ("maximum", "exact"):
                 manifest["maximum_pages"] = pagination["pages"]
-            placements = render_student(source_path, manifest, candidate)
+            placements = render_student(source_path, manifest, candidate, rasterize_crops=True)
             if pagination["policy"] == "exact" and placements[-1]["page"] != pagination["pages"]:
                 raise ValueError("Student PDF does not meet the approved exact page count")
             with destination.open("xb") as output:
