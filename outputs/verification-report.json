@@ -1,10 +1,10 @@
 {
   "status": "NOT_DONE",
-  "iteration": 29,
+  "iteration": 30,
   "date": "2026-11-19",
-  "revision": "295d4c8d3ecc3673e80a1bd9d264dd0910d4c513",
+  "revision": "71737d500ca2bbfa07ef54894d5422596079216b",
   "registry_sha256": "c70cf4b237e712c11943ed16ac5a479a9310c65a6d1fd284baddb23d956f0aa4",
-  "mandatory_pass": 3,
+  "mandatory_pass": 4,
   "mandatory_total": 76,
   "verification_environment_revision": "55ea8c10371b6079b45eac87167c23d06985f19b",
   "baseline_tests": {
@@ -89,7 +89,6 @@
   ],
   "pending_mandatory": [
     "V01.03",
-    "V01.04",
     "V01.05",
     "V01.06",
     "V01.07",
@@ -206,8 +205,17 @@
       "id": "V01.04",
       "mandatory": true,
       "requirement": "Identify original sources",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "status": "PASS",
+      "method": "Match historical source identities and SHA-256 records; rehash the available Grade 4 and ELA PDFs and check their publisher metadata.",
+      "reviewer": "Copilot implementation agent; source identification only.",
+      "expected": "Identify the original NYSED question paper for each of the three scoped benchmarks.",
+      "actual": "Recorded all three source titles and fingerprints. Grade 4 and ELA were rehashed locally; Grade 5 identity is supported by the prior inventory, item-map audit, and matching renderer manifest.",
+      "evidence": [
+        {
+          "path": "outputs/iteration-30-original-source-identities.txt",
+          "sha256": "6eba0170ffcd374375b4c44ddb44d94bc739356fe378e90a92e3b147914a2541"
+        }
+      ]
     },
     {
       "id": "V01.05",

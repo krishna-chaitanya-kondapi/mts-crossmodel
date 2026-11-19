@@ -1,6 +1,6 @@
 {
   "status": "NOT_DONE",
-  "iteration": 29,
+  "iteration": 30,
   "baseline_revision": "728596db0ec7deedc087b9e509da14701b7d088d",
   "criteria": [
     {
@@ -17,7 +17,7 @@
     },
     {
       "id": "V01.04",
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "V01.05",
@@ -329,7 +329,7 @@
     "Artifact-specific human final approval is absent from the handoffs. This prevents production publication only; no publication is authorized without that approval.",
     "The detailed ELA requirements remain proposed/incomplete and no ELA subject design document was found; do not treat weekly ELA materials as approved Mock Assessment policy."
   ],
-  "audited_revision": "295d4c8d3ecc3673e80a1bd9d264dd0910d4c513",
+  "audited_revision": "71737d500ca2bbfa07ef54894d5422596079216b",
   "evidence": [
     "outputs/verification-report.json",
     "outputs/baseline-tests.txt",
@@ -366,6 +366,7 @@
     "outputs/iteration-23-grade4-render-evidence.json",
     "outputs/iteration-23-tests.txt",
     "outputs/iteration-24-source-rights-check.json",
-    "outputs/iteration-25-cli-evidence.txt"
+    "outputs/iteration-25-cli-evidence.txt",
+    "outputs/iteration-30-original-source-identities.txt"
   ]
 }

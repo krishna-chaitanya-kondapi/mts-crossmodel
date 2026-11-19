@@ -1,6 +1,6 @@
 # Mock Assessment verification report
 
-**NOT_DONE. Iteration 29.** The revision-bound gate records **3 / 76 mandatory criteria PASS**; 73 remain open. V01.01 and V01.02 pass for requirements-source recovery only; ARCH.01 passes for the dedicated executable. This acceptance count is not the unit-test count and does not claim end-to-end implementation, academic correctness, or release readiness.
+**NOT_DONE. Iteration 30.** The revision-bound gate records **4 / 76 mandatory criteria PASS**; 72 remain open. V01.01 and V01.02 pass for requirements-source recovery, V01.04 for original question-paper identification, and ARCH.01 for the dedicated executable. This acceptance count is not the unit-test count and does not claim end-to-end implementation, academic correctness, or release readiness.
 
 ## Historical evidence
 
@@ -140,3 +140,7 @@ The [synthetic CLI tests](../tests/mock_assessment/test_preflight.py) verified s
 ## Iteration 29: digest-bound pre-run approval
 
 The [approval helper](../src/mts/products/mock_assessment/approval.py) revalidates the draft and source before dispatch. The synthetic integration test verified that missing, release-scoped, or stale decisions prevented rendering and that a matching pre-run decision dispatched the test renderer. **40 focused tests passed.** No new criteria pass: a trusted approval source and real planned-run dispatch are not connected, and no historical assessment was generated or published.
+
+## Iteration 30: original-source identification
+
+[Source identity evidence](iteration-30-original-source-identities.txt) verifies V01.04 for the original NYSED question papers. The Grade 4 and ELA PDFs were rehashed locally and their publisher metadata checked. The Grade 5 fingerprint was matched across prior inventory, item-map, and renderer records; that PDF was not reacquired in this iteration. No generated artifacts, rights authorization, or fidelity claims result from this check.

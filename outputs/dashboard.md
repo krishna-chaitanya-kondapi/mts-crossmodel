@@ -1,14 +1,14 @@
 # Mock Assessment dashboard
 
-**3 / 76 (4%) mandatory criteria verified**
+**4 / 76 (5%) mandatory criteria verified**
 
-**Status NOT_DONE** · Iteration 29 · audited code revision `295d4c8d3ecc3673e80a1bd9d264dd0910d4c513`
+**Status NOT_DONE** · Iteration 30 · audited revision `71737d500ca2bbfa07ef54894d5422596079216b`
 
-The acceptance count is separate from the test count. V01.01 and V01.02 pass for requirements-source recovery; ARCH.01 passes for the dedicated executable. This does not establish end-to-end generation, educational correctness, or release readiness.
+The acceptance count is separate from the test count. V01.01 and V01.02 pass for requirements-source recovery, V01.04 for original question-paper identification, and ARCH.01 for the dedicated executable. This does not establish end-to-end generation, educational correctness, or release readiness.
 
 | Category | Verified |
 |---|---:|
-| Requirements and traceability | 2 / 7 (29%) |
+| Requirements and traceability | 3 / 7 (43%) |
 | Workflow and deliverables | 0 / 9 (0%) |
 | Academic correctness | 0 / 7 (0%) |
 | Source fidelity | 0 / 8 (0%) |
@@ -18,6 +18,8 @@ The acceptance count is separate from the test count. V01.01 and V01.02 pass for
 | Architecture and isolation | 1 / 10 (10%) |
 
 ## Work completed
+
+- Iteration 30: [identified the original NYSED question papers](iteration-30-original-source-identities.txt) for all three benchmarks, with fresh local checks for Grade 4 Math and Grade 6 ELA and prior fingerprint evidence for Grade 5 Math. No source was reproduced.
 
 - Iteration 29: **40 focused tests passed**. An approval bound to both review packet digests dispatched a synthetic renderer; missing, wrong-scope, and stale approvals did not.
 
