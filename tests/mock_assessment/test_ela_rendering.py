@@ -7,6 +7,7 @@ from collections import Counter
 from pathlib import Path
 
 import pymupdf
+import pytest
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "src"))
@@ -40,7 +41,8 @@ def test_ela_teacher_retains_answers_and_avoids_punctuation_fallback(tmp_path):
     assert all(actual_words[word] >= count for word, count in expected_words.items())
 
 
-def test_ela_student_cli_uses_hash_bound_region_renderer(tmp_path):
+@pytest.mark.parametrize("valid_hash", [True, False], ids=["matching-source", "wrong-source"])
+def test_ela_student_cli_uses_hash_bound_region_renderer(tmp_path, valid_hash):
     source_path = tmp_path / "source.pdf"
     with pymupdf.open() as source:
         page = source.new_page(width=612, height=792)
@@ -50,7 +52,7 @@ def test_ela_student_cli_uses_hash_bound_region_renderer(tmp_path):
     manifest_path = tmp_path / "manifest.json"
     manifest_path.write_text(json.dumps({
         "title": "ELA student review",
-        "source_sha256": source_hash,
+        "source_sha256": source_hash if valid_hash else "0" * 64,
         "scale": 0.75,
         "maximum_pages": 1,
         "regions": [{"id": 8, "source_page": 1, "bounds": [30, 30, 180, 70]}],
@@ -58,12 +60,23 @@ def test_ela_student_cli_uses_hash_bound_region_renderer(tmp_path):
     output_path = tmp_path / "student.pdf"
     placements_path = tmp_path / "placements.json"
 
-    subprocess.run([
+    result = subprocess.run([
         sys.executable, str(ROOT / "scripts/generate_mock_assessment.py"),
         "ela-student", "--source", str(source_path), "--manifest", str(manifest_path),
         "--output", str(output_path), "--placements", str(placements_path),
-    ], check=True, capture_output=True, text=True)
+    ], cwd=tmp_path, capture_output=True, text=True)
 
+    if not valid_hash:
+        assert result.returncode != 0
+        assert "Source PDF hash does not match" in result.stderr
+        assert not output_path.exists()
+        assert not placements_path.exists()
+        return
+
+    assert result.returncode == 0, result.stderr
     with pymupdf.open(output_path) as document:
         assert len(document) == 1
-    assert json.loads(placements_path.read_text(encoding="utf-8"))["placements"][0]["id"] == 8
+        assert "Source item" in document[0].get_text()
+    assert json.loads(placements_path.read_text(encoding="utf-8")) == {
+        "placements": [{"id": 8, "page": 1, "bounds": [36, 64, 148.5, 94], "scale": 0.75}],
+    }

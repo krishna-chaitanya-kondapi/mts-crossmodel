@@ -69,7 +69,8 @@ def main():
     parser.add_argument("--checkpoint", type=Path, required=True)
     args = parser.parse_args()
     registry = REPO / "specs/generate_mock_assessment/acceptance-criteria.json"
-    result = evaluate(json.loads(registry.read_text()), json.loads(args.report.read_text()),
+    result = evaluate(json.loads(registry.read_text(encoding="utf-8-sig")),
+                      json.loads(args.report.read_text(encoding="utf-8-sig")),
                       args.evidence_root, args.revision, digest(registry))
     write_json(args.checkpoint, result)
     print(result["status"])

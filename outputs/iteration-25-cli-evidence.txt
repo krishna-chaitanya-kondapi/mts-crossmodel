@@ -1,0 +1,18 @@
+Iteration 25: dedicated Mock Assessment entry point
+Command: .venv\Scripts\python.exe -m pytest tests\mock_assessment -q
+Observed result: 22 passed in 3.35s
+
+ARCH.01 - Dedicated executable entry point
+Implementation: scripts/generate_mock_assessment.py
+Method: Invoke the script by absolute path from a temporary working directory.
+Expected: The entry point runs without the Weekly Practice CLI or chat context.
+Actual: A synthetic ELA student source with a matching digest produced a readable
+one-page PDF and placement JSON. An incorrect digest produced a nonzero exit
+without either output. A UTF-8 BOM report with missing acceptance evidence was
+read successfully, produced a NOT_DONE checkpoint, and exited with status 1.
+Tests: tests/mock_assessment/test_ela_rendering.py and test_verification.py
+
+Scope: This verifies ARCH.01 only. The synthetic cases provide partial evidence
+for V02.04, V02.09, V07.01, V07.05, and ARCH.06. They do not establish end-to-end
+generation or verification, production readiness, or historical source fidelity.
+No historical candidate was generated and no publication was attempted.
