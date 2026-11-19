@@ -2,7 +2,7 @@
 
 **4 / 76 (5%) mandatory criteria verified**
 
-**Status NOT_DONE** · Iteration 31 · audited revision `6c957b52655a5f50e14bfe8ccf20632098b04a12`
+**Status NOT_DONE** · Iteration 32 · audited revision `3ec9219c6fc241760e7b0d222877564a9e51e9c0`
 
 The acceptance count is separate from the test count. V01.01 and V01.02 pass for requirements-source recovery, V01.04 for original question-paper identification, and ARCH.01 for the dedicated executable. This does not establish end-to-end generation, educational correctness, or release readiness.
 
@@ -18,6 +18,8 @@ The acceptance count is separate from the test count. V01.01 and V01.02 pass for
 | Architecture and isolation | 1 / 10 (10%) |
 
 ## Work completed
+
+- Iteration 32: **40 focused tests passed**. The approved local path now embeds only rasterized crop pixels instead of original PDF page objects. Synthetic checks verified both image payloads and their order. Print and accessibility acceptance remain unverified.
 
 - Iteration 31: **40 focused tests passed**. The local student dispatcher uses the approved PDF crop selections and order. The synthetic render displayed the two approved selections; this is not evidence that excluded source data was removed from the PDF internals.
 
@@ -41,7 +43,7 @@ The acceptance count is separate from the test count. V01.01 and V01.02 pass for
 
 ## Next steps
 
-Next, connect the local dispatcher to an authenticated approval source and prove that any distributable PDF excludes out-of-bounds source data. Keep approval enforcement and full-workflow portability NOT_VERIFIED.
+Next, connect the local dispatcher to an authenticated approval source and verify print and accessibility acceptance. Keep approval enforcement and full-workflow portability NOT_VERIFIED.
 
 1. Provide written authorization, a license, or another documented rights basis covering reproduction, reformatting, local storage, and the intended distribution of the selected NYSED content.
 2. While rights are pending, complete non-content criterion traceability and product-neutral architecture/synthetic-fixture checks; keep source-dependent criteria NOT_VERIFIED.

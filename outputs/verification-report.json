@@ -1,8 +1,8 @@
 {
   "status": "NOT_DONE",
-  "iteration": 31,
+  "iteration": 32,
   "date": "2026-11-19",
-  "revision": "6c957b52655a5f50e14bfe8ccf20632098b04a12",
+  "revision": "3ec9219c6fc241760e7b0d222877564a9e51e9c0",
   "registry_sha256": "c70cf4b237e712c11943ed16ac5a479a9310c65a6d1fd284baddb23d956f0aa4",
   "mandatory_pass": 4,
   "mandatory_total": 76,
@@ -81,7 +81,7 @@
     }
   ],
   "next": [
-    "Integrate the local planned-run dispatcher with an authenticated approval source. Before enabling distribution, replace or verify crop handling so out-of-bounds source data is not embedded in candidate PDFs. Keep the existing review-only CLI separate.",
+    "Integrate the local planned-run dispatcher with an authenticated approval source. Verify print and accessibility acceptance for raster crops before considering them for release. Keep the existing review-only CLI separate.",
     "Obtain and record written authorization, a license, or another documented rights basis covering the intended reproduction, reformatting, local storage, and distribution of the selected NYSED content; do not generate or revise source-derived candidates until resolved.",
     "While rights are pending, complete non-content criterion traceability and product-neutral architecture/synthetic-fixture checks; keep source-dependent criteria NOT_VERIFIED.",
     "After authorization, build and compare the source-derived ELA candidate (including raster-only source pages 10 and 16), then repair and fully compare the recorded Grade 4 golden differences.",
@@ -890,6 +890,12 @@
       "sha256": "42164d3fa25adb149e9adf4300e91077683511c11cf34f0661d6cd460a278eaa",
       "note": "The first full run had 261 passed and one Weekly bypass integration failure. The isolated test passed, then a clean full-suite rerun passed 262 tests. The first failure's cause was not captured; test-written transaction fixtures were restored."
     }
+  },
+  "iteration_32_crop_isolation": {
+    "command": ".venv\\Scripts\\python.exe -m pytest tests\\mock_assessment -q",
+    "result": "40 passed in 12.27s",
+    "observed": "The synthetic approved-run PDF contains no source form XObjects. Its two embedded images match the approved inward-rounded source crop pixels in order. Existing vector routes retain their default behavior.",
+    "limitations": "Synthetic evidence only. Print, accessibility, authentication, rights, and release are not verified."
   },
   "iteration_31_dispatch": {
     "command": ".venv\\Scripts\\python.exe -m pytest tests\\mock_assessment -q",
