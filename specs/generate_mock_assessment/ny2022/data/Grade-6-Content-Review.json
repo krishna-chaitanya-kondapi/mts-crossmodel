@@ -1,0 +1,199 @@
+{
+  "title": "MTS ELA Mock Test",
+  "grade": 6,
+  "numbering": "preserve",
+  "source_pdf": "NY_ELA_Grade6_2022_Released_Test_Questions.pdf",
+  "source_sha256": "e85617d445f9cd4e7d5c37a5138ee5efcf068cf48030397b88185e0a7a2e6d9e",
+  "official_scoring_pdf_page": 47,
+  "branch": "mock-assessment-verification-progress",
+  "passages": [
+    {
+      "passage_title": "Excerpt from The Bat Scientists",
+      "genre": "Nonfiction",
+      "passage_pages": [
+        15,
+        16
+      ],
+      "question_pages": [
+        17,
+        18,
+        19
+      ],
+      "question_map": [
+        {
+          "source": 8,
+          "mock": 8,
+          "response_type": "multiple_choice",
+          "answer_status": "official",
+          "official_answer": "B",
+          "credit_value": 1
+        },
+        {
+          "source": 9,
+          "mock": 9,
+          "response_type": "multiple_choice",
+          "answer_status": "official",
+          "official_answer": "A",
+          "credit_value": 1
+        },
+        {
+          "source": 10,
+          "mock": 10,
+          "response_type": "multiple_choice",
+          "answer_status": "official",
+          "official_answer": "A",
+          "credit_value": 1
+        },
+        {
+          "source": 11,
+          "mock": 11,
+          "response_type": "multiple_choice",
+          "answer_status": "official",
+          "official_answer": "B",
+          "credit_value": 1
+        },
+        {
+          "source": 12,
+          "mock": 12,
+          "response_type": "multiple_choice",
+          "answer_status": "official",
+          "official_answer": "D",
+          "credit_value": 1
+        },
+        {
+          "source": 13,
+          "mock": 13,
+          "response_type": "multiple_choice",
+          "answer_status": "official",
+          "official_answer": "A",
+          "credit_value": 1
+        },
+        {
+          "source": 14,
+          "mock": 14,
+          "response_type": "multiple_choice",
+          "answer_status": "official",
+          "official_answer": "C",
+          "credit_value": 1
+        }
+      ],
+      "layout_note": "Preserve subheadings and captions."
+    },
+    {
+      "passage_title": "Excerpt from Greenglass House",
+      "genre": "Fiction",
+      "passage_pages": [
+        20,
+        21
+      ],
+      "question_pages": [
+        22,
+        23,
+        24
+      ],
+      "question_map": [
+        {
+          "source": 22,
+          "mock": 22,
+          "response_type": "multiple_choice",
+          "answer_status": "official",
+          "official_answer": "C",
+          "credit_value": 1
+        },
+        {
+          "source": 23,
+          "mock": 23,
+          "response_type": "multiple_choice",
+          "answer_status": "official",
+          "official_answer": "B",
+          "credit_value": 1
+        },
+        {
+          "source": 24,
+          "mock": 24,
+          "response_type": "multiple_choice",
+          "answer_status": "official",
+          "official_answer": "C",
+          "credit_value": 1
+        },
+        {
+          "source": 25,
+          "mock": 25,
+          "response_type": "multiple_choice",
+          "answer_status": "official",
+          "official_answer": "A",
+          "credit_value": 1
+        },
+        {
+          "source": 26,
+          "mock": 26,
+          "response_type": "multiple_choice",
+          "answer_status": "official",
+          "official_answer": "A",
+          "credit_value": 1
+        },
+        {
+          "source": 27,
+          "mock": 27,
+          "response_type": "multiple_choice",
+          "answer_status": "official",
+          "official_answer": "B",
+          "credit_value": 1
+        },
+        {
+          "source": 28,
+          "mock": 28,
+          "response_type": "multiple_choice",
+          "answer_status": "official",
+          "official_answer": "D",
+          "credit_value": 1
+        }
+      ],
+      "layout_note": "Preserve paragraph references."
+    },
+    {
+      "passage_title": "Excerpt from A Legend of the Wooden Shoes",
+      "genre": "Fiction",
+      "passage_pages": [
+        29,
+        30,
+        31
+      ],
+      "question_pages": [
+        32,
+        33,
+        34
+      ],
+      "question_map": [
+        {
+          "source": 36,
+          "mock": 36,
+          "response_type": "constructed_response",
+          "answer_status": "MTS Model Response",
+          "credit_value": 2,
+          "model_response": "Paragraph 3 moves from the history of deforestation to the carpenter’s personal conflict. He mourns the lost forest and names his family after the oak. His attachment explains why the spirits send him to the ancestral oak with a message of hope. (¶2–6)"
+        },
+        {
+          "source": 37,
+          "mock": 37,
+          "response_type": "constructed_response",
+          "answer_status": "MTS Model Response",
+          "credit_value": 2,
+          "model_response": "The speaking oak supports the theme that something valuable can endure in a new form. It says the oaks must pass away but will return to help future generations. Its promise comes true when oak wood becomes useful shoes and brings prosperity to the carpenter’s family. (¶8, 16–20)"
+        },
+        {
+          "source": 38,
+          "mock": 38,
+          "response_type": "constructed_response",
+          "answer_status": "MTS Model Response",
+          "credit_value": 2,
+          "model_response": "The carpenter begins distressed that the oaks may disappear. After meeting the spirits, he is puzzled but willing to follow their instructions. When the wooden shoes prove useful outdoors, he makes them for his family and eventually sells them, showing he recognizes a new way the oaks can help people. (¶3–4, 15–20)"
+        }
+      ],
+      "layout_note": null
+    }
+  ],
+  "paired_questions": [],
+  "question_count": 17,
+  "maximum_score": 20
+}

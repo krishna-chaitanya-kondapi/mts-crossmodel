@@ -14,3 +14,9 @@ Run artifacts use 01-PreRun/<Monday>/<run-id> for RunSpec JSON/PDF, 02-Run for t
 Drive publication writes an operation-tagged durable journal before mutations, stages and reads back candidates, archives predecessors under their original IDs, verifies the final set and restores the prior set on failure. A persistent outage leaves RECOVERY_REQUIRED with its journal path. After connectivity returns, use recover-release-drive --journal <trusted-journal> --credentials <authorized-user-file>. An existing lock is never stolen. After a process crash, an operator must verify its owner is inactive before clearing a stale lock. Local and Drive transport tests use temporary stores/mocks. No production release is part of the regression workflow.
 
 Install requirements.txt and pytest in a Python environment. PyMuPDF supplies PDF rendering and is pinned to a supported major range; frozen page-review carryforward additionally requires the exact reviewed renderer version. Regenerate and re-review if the renderer changes. The lightweight resume command is read-only and requires no source PDFs or regeneration.
+
+## Source exposure and 2022 regeneration
+
+Before proposing a new paper, consult the [source-use ledger](../specs/generate_mock_assessment/source-use.md) and check the intended cohort against prior question and passage exposure. Record delivered and administered status after the run.
+
+The [2022 Grades 4–6 runner](../specs/generate_mock_assessment/ny2022/README.md) regenerates the delivered Math and ELA layout from the pinned source files and explicit dependencies.

@@ -1,0 +1,210 @@
+{
+  "title": "MTS ELA Mock Test",
+  "grade": 4,
+  "numbering": "preserve",
+  "source_pdf": "NY_ELA_Grade4_2022_Released_Test_Questions.pdf",
+  "source_sha256": "eefb0f795262fa4b68e66e3b34957cf73eb88ed4927d8a6072350a512fbd7007",
+  "official_scoring_pdf_page": 40,
+  "branch": "mock-assessment-verification-progress",
+  "passages": [
+    {
+      "passage_title": "Fabulous Fathers",
+      "genre": "Nonfiction",
+      "passage_pages": [
+        9,
+        10
+      ],
+      "question_pages": [
+        11,
+        12
+      ],
+      "question_map": [
+        {
+          "source": 1,
+          "mock": 1,
+          "response_type": "multiple_choice",
+          "answer_status": "official",
+          "official_answer": "D",
+          "credit_value": 1
+        },
+        {
+          "source": 2,
+          "mock": 2,
+          "response_type": "multiple_choice",
+          "answer_status": "official",
+          "official_answer": "C",
+          "credit_value": 1
+        },
+        {
+          "source": 3,
+          "mock": 3,
+          "response_type": "multiple_choice",
+          "answer_status": "official",
+          "official_answer": "C",
+          "credit_value": 1
+        },
+        {
+          "source": 4,
+          "mock": 4,
+          "response_type": "multiple_choice",
+          "answer_status": "official",
+          "official_answer": "C",
+          "credit_value": 1
+        },
+        {
+          "source": 5,
+          "mock": 5,
+          "response_type": "multiple_choice",
+          "answer_status": "official",
+          "official_answer": "D",
+          "credit_value": 1
+        },
+        {
+          "source": 6,
+          "mock": 6,
+          "response_type": "multiple_choice",
+          "answer_status": "official",
+          "official_answer": "B",
+          "credit_value": 1
+        }
+      ],
+      "layout_note": null
+    },
+    {
+      "passage_title": "Sharing My Story",
+      "genre": "Nonfiction",
+      "passage_pages": [
+        13,
+        14
+      ],
+      "question_pages": [
+        15,
+        16,
+        17
+      ],
+      "question_map": [
+        {
+          "source": 19,
+          "mock": 19,
+          "response_type": "multiple_choice",
+          "answer_status": "official",
+          "official_answer": "C",
+          "credit_value": 1
+        },
+        {
+          "source": 20,
+          "mock": 20,
+          "response_type": "multiple_choice",
+          "answer_status": "official",
+          "official_answer": "D",
+          "credit_value": 1
+        },
+        {
+          "source": 21,
+          "mock": 21,
+          "response_type": "multiple_choice",
+          "answer_status": "official",
+          "official_answer": "B",
+          "credit_value": 1
+        },
+        {
+          "source": 22,
+          "mock": 22,
+          "response_type": "multiple_choice",
+          "answer_status": "official",
+          "official_answer": "A",
+          "credit_value": 1
+        },
+        {
+          "source": 23,
+          "mock": 23,
+          "response_type": "multiple_choice",
+          "answer_status": "official",
+          "official_answer": "A",
+          "credit_value": 1
+        },
+        {
+          "source": 24,
+          "mock": 24,
+          "response_type": "multiple_choice",
+          "answer_status": "official",
+          "official_answer": "C",
+          "credit_value": 1
+        }
+      ],
+      "layout_note": "Preserve paragraph numbers and verify printed ligatures against the source."
+    },
+    {
+      "passage_title": "The Fox and the Crow",
+      "genre": "Fiction",
+      "passage_pages": [
+        28,
+        29
+      ],
+      "question_pages": [
+        30
+      ],
+      "question_map": [
+        {
+          "source": 28,
+          "mock": 28,
+          "response_type": "constructed_response",
+          "answer_status": "MTS Model Response",
+          "credit_value": 2,
+          "model_response": "Paragraph 1 sets up both the Fox’s motive and his opportunity. He is looking for food and notices the cheese in the Crow’s beak. Later he praises her voice so she will open her beak, and the cheese falls into his mouth. (¶1, 5–6)"
+        }
+      ],
+      "layout_note": "Preserve vocabulary glosses."
+    },
+    {
+      "passage_title": "The Otters and the Fox",
+      "genre": "Fiction",
+      "passage_pages": [
+        31,
+        32
+      ],
+      "question_pages": [
+        33,
+        34
+      ],
+      "question_map": [
+        {
+          "source": 29,
+          "mock": 29,
+          "response_type": "constructed_response",
+          "answer_status": "MTS Model Response",
+          "credit_value": 2,
+          "model_response": "The Fox presents himself as a skilled, fair judge and thinks he deserves a reward. He tells the otters that he is widely known for his fairness, then claims the body of the fish as payment for judging. (¶5, 13)"
+        },
+        {
+          "source": 30,
+          "mock": 30,
+          "response_type": "constructed_response",
+          "answer_status": "MTS Model Response",
+          "credit_value": 2,
+          "model_response": "Quarreling over a fair share can leave both sides worse off. The otters cannot agree and ask the Fox to divide their catch. He leaves one with the head and the other with the tail and takes most of the fish himself. (¶2–4, 8–13)"
+        }
+      ],
+      "layout_note": "Preserve paragraph numbering for the paired response."
+    }
+  ],
+  "paired_questions": [
+    {
+      "source": 31,
+      "mock": 31,
+      "response_type": "constructed_response",
+      "answer_status": "MTS Model Response",
+      "credit_value": 4,
+      "model_response": "Both foxes trick other animals to get food and make their plans sound appealing. The first Fox wants the Crow’s cheese, so he flatters her and suggests her singing could make her Queen of Birds. When she opens her beak the cheese falls. The second Fox wants a share of the pike, so he gains the otters’ trust by claiming to be fair and uses his position as judge to take most of the fish. One trick exploits vanity and the other exploits a disagreement. (Crow ¶1–2, 5–6; Otters ¶2–5, 8–13)",
+      "question_pages": [
+        37
+      ],
+      "passages": [
+        "The Fox and the Crow",
+        "The Otters and the Fox"
+      ]
+    }
+  ],
+  "question_count": 16,
+  "maximum_score": 22
+}

@@ -1,0 +1,199 @@
+{
+  "title": "MTS ELA Mock Test",
+  "grade": 5,
+  "numbering": "preserve",
+  "source_pdf": "NY_ELA_Grade5_2022_Released_Test_Questions.pdf",
+  "source_sha256": "9040c839cdaa09ef0946561edae9f21e30aea6897fe46ae31a4711f61f34654a",
+  "official_scoring_pdf_page": 46,
+  "branch": "mock-assessment-verification-progress",
+  "passages": [
+    {
+      "passage_title": "Excerpt from A Scrap and a Robe",
+      "genre": "Fiction",
+      "passage_pages": [
+        9,
+        10,
+        11
+      ],
+      "question_pages": [
+        12,
+        13,
+        14
+      ],
+      "question_map": [
+        {
+          "source": 1,
+          "mock": 1,
+          "response_type": "multiple_choice",
+          "answer_status": "official",
+          "official_answer": "D",
+          "credit_value": 1
+        },
+        {
+          "source": 2,
+          "mock": 2,
+          "response_type": "multiple_choice",
+          "answer_status": "official",
+          "official_answer": "B",
+          "credit_value": 1
+        },
+        {
+          "source": 3,
+          "mock": 3,
+          "response_type": "multiple_choice",
+          "answer_status": "official",
+          "official_answer": "A",
+          "credit_value": 1
+        },
+        {
+          "source": 4,
+          "mock": 4,
+          "response_type": "multiple_choice",
+          "answer_status": "official",
+          "official_answer": "D",
+          "credit_value": 1
+        },
+        {
+          "source": 5,
+          "mock": 5,
+          "response_type": "multiple_choice",
+          "answer_status": "official",
+          "official_answer": "D",
+          "credit_value": 1
+        },
+        {
+          "source": 6,
+          "mock": 6,
+          "response_type": "multiple_choice",
+          "answer_status": "official",
+          "official_answer": "C",
+          "credit_value": 1
+        },
+        {
+          "source": 7,
+          "mock": 7,
+          "response_type": "multiple_choice",
+          "answer_status": "official",
+          "official_answer": "B",
+          "credit_value": 1
+        }
+      ],
+      "layout_note": null
+    },
+    {
+      "passage_title": "What Is Lake-Effect Snow?",
+      "genre": "Nonfiction",
+      "passage_pages": [
+        21,
+        22
+      ],
+      "question_pages": [
+        23,
+        24,
+        25
+      ],
+      "question_map": [
+        {
+          "source": 29,
+          "mock": 29,
+          "response_type": "multiple_choice",
+          "answer_status": "official",
+          "official_answer": "C",
+          "credit_value": 1
+        },
+        {
+          "source": 30,
+          "mock": 30,
+          "response_type": "multiple_choice",
+          "answer_status": "official",
+          "official_answer": "B",
+          "credit_value": 1
+        },
+        {
+          "source": 31,
+          "mock": 31,
+          "response_type": "multiple_choice",
+          "answer_status": "official",
+          "official_answer": "A",
+          "credit_value": 1
+        },
+        {
+          "source": 32,
+          "mock": 32,
+          "response_type": "multiple_choice",
+          "answer_status": "official",
+          "official_answer": "D",
+          "credit_value": 1
+        },
+        {
+          "source": 33,
+          "mock": 33,
+          "response_type": "multiple_choice",
+          "answer_status": "official",
+          "official_answer": "C",
+          "credit_value": 1
+        },
+        {
+          "source": 34,
+          "mock": 34,
+          "response_type": "multiple_choice",
+          "answer_status": "official",
+          "official_answer": "B",
+          "credit_value": 1
+        },
+        {
+          "source": 35,
+          "mock": 35,
+          "response_type": "multiple_choice",
+          "answer_status": "official",
+          "official_answer": "C",
+          "credit_value": 1
+        }
+      ],
+      "layout_note": "Preserve the full diagram on PDF p. 22 with all labels."
+    },
+    {
+      "passage_title": "The Raindrops’ New Dresses",
+      "genre": "Poetry",
+      "passage_pages": [
+        30,
+        31
+      ],
+      "question_pages": [
+        32,
+        33,
+        34
+      ],
+      "question_map": [
+        {
+          "source": 36,
+          "mock": 36,
+          "response_type": "constructed_response",
+          "answer_status": "MTS Model Response",
+          "credit_value": 2,
+          "model_response": "Stanza 1 presents the problem: the raindrops are tired of their gray dresses. In stanza 3, the Sun responds by asking them to stop fighting and promising white robes. (lines 1–4, 9–12)"
+        },
+        {
+          "source": 37,
+          "mock": 37,
+          "response_type": "constructed_response",
+          "answer_status": "MTS Model Response",
+          "credit_value": 2,
+          "model_response": "The raindrops start unhappy with their gray dresses and bump against each other spitefully. After the Sun promises new white dresses, they become cheerful and hum a merry refrain. (lines 1–8, 11–14)"
+        },
+        {
+          "source": 38,
+          "mock": 38,
+          "response_type": "constructed_response",
+          "answer_status": "MTS Model Response",
+          "credit_value": 2,
+          "model_response": "A change in how we see a situation can turn frustration into joy. The gray dresses make the raindrops unhappy, but the promise of white robes makes them sing. When they fall as snow, the children are delighted. (lines 1–8, 11–14, 21–24)"
+        }
+      ],
+      "layout_note": "Preserve 6 stanzas, 24 lines, and source line markers."
+    }
+  ],
+  "paired_questions": [],
+  "question_count": 17,
+  "maximum_score": 20
+}
