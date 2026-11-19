@@ -2,7 +2,7 @@
 
 **3 / 76 (4%) mandatory criteria verified**
 
-**Status NOT_DONE** · Iteration 26 · audited code revision `5da918a7bcb6d2b7526e760bb7c36cc65d09b847`
+**Status NOT_DONE** · Iteration 27 · audited code revision `2d65a72fee170f48f2f5aef6ed4e9e686dd1617e`
 
 The acceptance count is separate from the test count. V01.01 and V01.02 pass for requirements-source recovery; ARCH.01 passes for the dedicated executable. This does not establish end-to-end generation, educational correctness, or release readiness.
 
@@ -19,6 +19,8 @@ The acceptance count is separate from the test count. V01.01 and V01.02 pass for
 
 ## Work completed
 
+- Iteration 27: **27 focused tests passed**. Draft RunSpec preflight validates a source digest, presence of a rights reference, blueprint counts, and student pagination inputs. It does not confer approval, verify rights, or render outputs.
+
 - Iteration 26: verified that a fresh checkout with `core.autocrlf=false` retains all three evidence-backed passes. Previously, checkout conversion invalidated them. No additional criterion was promoted.
 
 - Iteration 25: **22 focused Mock Assessment tests passed**. The dedicated CLI worked from outside the repository, rejected a wrong source digest without output, and accepted a UTF-8 BOM report. See [CLI evidence](iteration-25-cli-evidence.txt).
@@ -31,7 +33,7 @@ The acceptance count is separate from the test count. V01.01 and V01.02 pass for
 
 ## Next steps
 
-First, continue synthetic RunSpec preflight and criterion traceability. Keep full-workflow portability NOT_VERIFIED.
+Next, validate structured source selections, add a reviewable RunSpec PDF/JSON pair, and test the approval boundary with synthetic inputs. Keep full-workflow portability NOT_VERIFIED.
 
 1. Provide written authorization, a license, or another documented rights basis covering reproduction, reformatting, local storage, and the intended distribution of the selected NYSED content.
 2. While rights are pending, complete non-content criterion traceability and product-neutral architecture/synthetic-fixture checks; keep source-dependent criteria NOT_VERIFIED.

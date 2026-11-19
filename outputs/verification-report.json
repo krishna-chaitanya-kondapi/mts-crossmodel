@@ -1,8 +1,8 @@
 {
   "status": "NOT_DONE",
-  "iteration": 26,
+  "iteration": 27,
   "date": "2026-11-19",
-  "revision": "5da918a7bcb6d2b7526e760bb7c36cc65d09b847",
+  "revision": "2d65a72fee170f48f2f5aef6ed4e9e686dd1617e",
   "registry_sha256": "c70cf4b237e712c11943ed16ac5a479a9310c65a6d1fd284baddb23d956f0aa4",
   "mandatory_pass": 3,
   "mandatory_total": 76,
@@ -81,7 +81,7 @@
     }
   ],
   "next": [
-    "Implement synthetic RunSpec preflight checks for explicit source identity, a recorded rights basis, blueprint consistency, and presentation constraints. Add negative tests and attach the results to the criterion trace.",
+    "Extend draft preflight to validate a structured source selection and emit a reviewable RunSpec PDF and JSON. Add synthetic approval-boundary tests before connecting validated plans to rendering; do not treat a rights reference as authorization.",
     "Obtain and record written authorization, a license, or another documented rights basis covering the intended reproduction, reformatting, local storage, and distribution of the selected NYSED content; do not generate or revise source-derived candidates until resolved.",
     "While rights are pending, complete non-content criterion traceability and product-neutral architecture/synthetic-fixture checks; keep source-dependent criteria NOT_VERIFIED.",
     "After authorization, build and compare the source-derived ELA candidate (including raster-only source pages 10 and 16), then repair and fully compare the recorded Grade 4 golden differences.",
@@ -882,6 +882,15 @@
       "sha256": "42164d3fa25adb149e9adf4300e91077683511c11cf34f0661d6cd460a278eaa",
       "note": "The first full run had 261 passed and one Weekly bypass integration failure. The isolated test passed, then a clean full-suite rerun passed 262 tests. The first failure's cause was not captured; test-written transaction fixtures were restored."
     }
+  },
+  "iteration_27_preflight": {
+    "command": ".venv\\Scripts\\python.exe -m pytest tests\\mock_assessment -q",
+    "result": "27 passed in 4.30s",
+    "implementation": "src/mts/products/mock_assessment/preflight.py",
+    "test": "tests/mock_assessment/test_preflight.py",
+    "partial_criteria": ["V02.06", "V02.10", "V07.05"],
+    "observed": "Accepted a synthetic draft with matching source bytes; rejected a blank rights reference, digest mismatch, inconsistent item counts, and a Boolean page count. Neither successful nor rejected invocations produced artifacts.",
+    "unverified": "Full RunSpec schema and PDF output, validation of permission documentation, and enforcement of approval during generation."
   },
   "iteration_26_checkout": {
     "method": "Run the existing verification CLI in separate clean Git worktrees created with core.autocrlf=false, with identical report and audited code revision.",
