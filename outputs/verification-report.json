@@ -1,10 +1,10 @@
 {
   "status": "NOT_DONE",
-  "iteration": 24,
-  "date": "2026-11-18",
-  "revision": "2c59606b7f5c9cc09069e432022d52f23f59759e",
+  "iteration": 25,
+  "date": "2026-11-19",
+  "revision": "5da918a7bcb6d2b7526e760bb7c36cc65d09b847",
   "registry_sha256": "c70cf4b237e712c11943ed16ac5a479a9310c65a6d1fd284baddb23d956f0aa4",
-  "mandatory_pass": 2,
+  "mandatory_pass": 3,
   "mandatory_total": 76,
   "baseline_tests": {
     "command": "python -m pytest tests -q",
@@ -72,9 +72,15 @@
       "id": "MA-009",
       "finding": "The selected NYSED ELA and Grade 4 Math source PDFs contain copyright/permission notices, but no source-specific authorization record was located in the scoped project materials.",
       "affected": "Creation of new source-derived ELA/Grade 4 candidates and content-parity acceptance for V02.04, V04.* and V06.*"
+    },
+    {
+      "id": "MA-010",
+      "finding": "The registry and text evidence hashes differ between this Windows checkout and the Git blobs due to line-ending conversion.",
+      "affected": "Acceptance verification across checkouts; V07.09 stays NOT_VERIFIED."
     }
   ],
   "next": [
+    "Make evidence and registry fingerprints portable across Git checkout line endings without weakening exact PDF identity checks, then verify the gate on a fresh checkout. Continue criterion-level traceability and implement synthetic RunSpec preflight checks.",
     "Obtain and record written authorization, a license, or another documented rights basis covering the intended reproduction, reformatting, local storage, and distribution of the selected NYSED content; do not generate or revise source-derived candidates until resolved.",
     "While rights are pending, complete non-content criterion traceability and product-neutral architecture/synthetic-fixture checks; keep source-dependent criteria NOT_VERIFIED.",
     "After authorization, build and compare the source-derived ELA candidate (including raster-only source pages 10 and 16), then repair and fully compare the recorded Grade 4 golden differences.",
@@ -145,7 +151,6 @@
     "V07.08",
     "V07.09",
     "V07.10",
-    "ARCH.01",
     "ARCH.02",
     "ARCH.03",
     "ARCH.04",
@@ -655,8 +660,17 @@
       "id": "ARCH.01",
       "mandatory": true,
       "requirement": "Dedicated executable entry point",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "status": "PASS",
+      "method": "Invoke the dedicated script from a temporary working directory using synthetic inputs.",
+      "reviewer": "Copilot implementation agent; deterministic CLI integration tests.",
+      "expected": "The standalone executable handles rendering and verification without invoking the Weekly Practice CLI.",
+      "actual": "Rendered a synthetic PDF and placement record, rejected the wrong source digest without writing either output, and emitted a NOT_DONE checkpoint for a UTF-8 BOM report with missing evidence.",
+      "evidence": [
+        {
+          "path": "outputs/iteration-25-cli-evidence.txt",
+          "sha256": "08ee4977be5e91494c0a7af47167c3dd07d09f422022bbe72bd8035f49895aca"
+        }
+      ]
     },
     {
       "id": "ARCH.02",
@@ -867,6 +881,13 @@
       "sha256": "42164d3fa25adb149e9adf4300e91077683511c11cf34f0661d6cd460a278eaa",
       "note": "The first full run had 261 passed and one Weekly bypass integration failure. The isolated test passed, then a clean full-suite rerun passed 262 tests. The first failure's cause was not captured; test-written transaction fixtures were restored."
     }
+  },
+  "iteration_25_cli": {
+    "command": ".venv\\Scripts\\python.exe -m pytest tests\\mock_assessment -q",
+    "passed": 22,
+    "failed": 0,
+    "scope": "Focused Mock Assessment tests only; full suite not rerun in Iteration 25.",
+    "evidence": "iteration-25-cli-evidence.txt"
   },
   "iteration_24_source_rights": {
     "evidence": "iteration-24-source-rights-check.json",

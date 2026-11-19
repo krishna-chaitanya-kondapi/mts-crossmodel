@@ -1,6 +1,6 @@
 # Mock Assessment verification report
 
-**NOT_DONE. Iteration 23.** The revision-bound gate records **2 / 76 mandatory criteria PASS**; 74 remain open. V01.01 and V01.02 pass for requirements-source recovery only. This acceptance count is not the unit-test count and does not claim implementation, academic correctness, or release readiness.
+**NOT_DONE. Iteration 25.** The revision-bound gate records **3 / 76 mandatory criteria PASS**; 73 remain open. V01.01 and V01.02 pass for requirements-source recovery only; ARCH.01 passes for the dedicated executable. This acceptance count is not the unit-test count and does not claim end-to-end implementation, academic correctness, or release readiness.
 
 ## Historical evidence
 
@@ -120,3 +120,9 @@ The source-control ELA manifest is not a final candidate. All other mandatory cr
 Before creating another source-derived candidate, checked PDF metadata and rights-notice indicators without extracting or recording assessment text. The selected ELA PDF has copyright/permission notices on pages 7 and 24; the Grade 4 Math source has copyright notices on pages 5 and 19; its scoring source has one on page 2. No source-specific authorization record was located in the scoped project materials. No candidate PDF was generated in this iteration. See [source-rights check](iteration-24-source-rights-check.json).
 
 **Needed to unblock source-derived work:** written authorization, a license, or another documented rights basis covering reproduction, reformatting, local storage, and the intended distribution of these selected materials. Without it, ELA candidate generation and Grade 4 source-derived repairs/content-parity evidence are blocked; related source-dependent criteria remain NOT_VERIFIED. Non-content traceability and synthetic-fixture/architecture checks can continue. This is not a legal determination. Qualified independent academic review and artifact-specific human publication approval remain separate requirements.
+
+## Iteration 25: standalone CLI
+
+The [CLI integration evidence](iteration-25-cli-evidence.txt) verifies ARCH.01. The entry point ran from a temporary working directory, rendered and checked a synthetic PDF, rejected a wrong source digest without output, and persisted `NOT_DONE` after reading a UTF-8 BOM report missing criterion evidence. All 22 focused tests passed. No historical candidate was generated or published.
+
+Open portability defect: registry and text evidence hashes recorded in the Windows checkout differ from their Git blob hashes because Git converts line endings. A checkout with different line-ending settings can invalidate otherwise current evidence. Keep V07.09 NOT_VERIFIED; before relying on the gate on another machine, make these checked-in fingerprints byte-stable and verify a fresh checkout. This does not affect the exact-byte identity requirement for source PDFs.

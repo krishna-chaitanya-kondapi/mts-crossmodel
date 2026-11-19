@@ -2,7 +2,7 @@
 
 Run `python scripts/resume_mock_assessment.py` from the repository root. Read [START_HERE.md](../specs/generate_mock_assessment/resume/START_HERE.md); the canonical checkpoint owns criterion status, blockers, and next actions.
 
-Current state: **NOT_DONE**, Iteration 24, **2 / 76 mandatory criteria PASS** for requirements-source recovery only. This is not the unit-test count and does not imply implementation or release acceptance. The audited code revision is `2c59606b7f5c9cc09069e432022d52f23f59759e`.
+Current state: **NOT_DONE**, Iteration 25, **3 / 76 mandatory criteria PASS** for requirements-source recovery and the dedicated executable. The audited code revision is `5da918a7bcb6d2b7526e760bb7c36cc65d09b847`. [Focused CLI evidence](iteration-25-cli-evidence.txt): 22 tests passed.
 
 Latest clean full-suite command: `.venv\Scripts\python.exe -m pytest tests -q` (**262 passed** at Iteration 23). The first full run had one Weekly bypass integration failure; the isolated test and clean full rerun passed. The first failure's cause was not captured. Restore test-written `data/transactions` changes after each run.
 
@@ -10,4 +10,4 @@ Latest clean full-suite command: `.venv\Scripts\python.exe -m pytest tests -q` (
 
 While rights are pending, continue non-content criterion traceability and product-neutral architecture/synthetic-fixture checks; keep source-dependent criteria NOT_VERIFIED. After authorization, build and compare the ELA candidate and repair/recompare the Grade 4 candidate. Qualified independent review is required for academic/source acceptance. Production publication requires artifact-specific human approval and remains unauthorized.
 
-At each logical checkpoint update [the canonical checkpoint](../specs/generate_mock_assessment/implementation-checkpoint.json), evidence, verification report, and dashboard. Run `python scripts/checkpoint_mock_assessment.py`; commit and push code and state together to `master`. Large PDFs and rendered drafts stay in the development workspace.
+Next, fix checkout line-ending portability for registry/evidence hashes and verify a fresh checkout; continue criterion traceability and synthetic RunSpec preflight. At each logical checkpoint update [the canonical checkpoint](../specs/generate_mock_assessment/implementation-checkpoint.json), evidence, verification report, and dashboard. Run `python scripts/checkpoint_mock_assessment.py`; commit and push to `gc-mock-assessment-implementation`, not `master`. Large PDFs and rendered drafts stay in the development workspace.

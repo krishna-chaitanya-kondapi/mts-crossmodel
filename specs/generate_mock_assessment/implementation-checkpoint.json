@@ -1,6 +1,6 @@
 {
   "status": "NOT_DONE",
-  "iteration": 24,
+  "iteration": 25,
   "baseline_revision": "728596db0ec7deedc087b9e509da14701b7d088d",
   "criteria": [
     {
@@ -37,11 +37,11 @@
     },
     {
       "id": "V02.02",
-      "status": "NOT_VERIFIED"
+      "status": "NOT_APPLICABLE"
     },
     {
       "id": "V02.03",
-      "status": "NOT_VERIFIED"
+      "status": "NOT_APPLICABLE"
     },
     {
       "id": "V02.04",
@@ -277,7 +277,7 @@
     },
     {
       "id": "ARCH.01",
-      "status": "NOT_VERIFIED"
+      "status": "PASS"
     },
     {
       "id": "ARCH.02",
@@ -317,6 +317,7 @@
     }
   ],
   "next": [
+    "Make evidence and registry fingerprints portable across Git checkout line endings without weakening exact PDF identity checks, then verify the gate on a fresh checkout. Continue criterion-level traceability and implement synthetic RunSpec preflight checks.",
     "Obtain and record written authorization, a license, or another documented rights basis covering the intended reproduction, reformatting, local storage, and distribution of the selected NYSED content. Do not generate or revise source-derived candidate PDFs until this is resolved.",
     "While rights are pending, complete non-content criterion traceability and product-neutral architecture/synthetic-fixture checks; keep all source-dependent criteria NOT_VERIFIED.",
     "After authorization, build and compare the source-derived ELA candidate (including raster-only source pages 10 and 16), then repair and fully compare the recorded Grade 4 golden differences.",
@@ -328,7 +329,7 @@
     "Artifact-specific human final approval is absent from the handoffs. This prevents production publication only; no publication is authorized without that approval.",
     "The detailed ELA requirements remain proposed/incomplete and no ELA subject design document was found; do not treat weekly ELA materials as approved Mock Assessment policy."
   ],
-  "audited_revision": "2c59606b7f5c9cc09069e432022d52f23f59759e",
+  "audited_revision": "5da918a7bcb6d2b7526e760bb7c36cc65d09b847",
   "evidence": [
     "outputs/verification-report.json",
     "outputs/baseline-tests.txt",
@@ -364,6 +365,7 @@
     "outputs/iteration-23-defects.json",
     "outputs/iteration-23-grade4-render-evidence.json",
     "outputs/iteration-23-tests.txt",
-    "outputs/iteration-24-source-rights-check.json"
+    "outputs/iteration-24-source-rights-check.json",
+    "outputs/iteration-25-cli-evidence.txt"
   ]
 }

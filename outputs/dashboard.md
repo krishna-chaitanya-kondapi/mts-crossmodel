@@ -1,10 +1,10 @@
 # Mock Assessment dashboard
 
-**2 / 76 (3%) mandatory criteria verified**
+**3 / 76 (4%) mandatory criteria verified**
 
-**Status NOT_DONE** · Iteration 24 · audited code revision `2c59606b7f5c9cc09069e432022d52f23f59759e`
+**Status NOT_DONE** · Iteration 25 · audited code revision `5da918a7bcb6d2b7526e760bb7c36cc65d09b847`
 
-The acceptance count is separate from the test count. V01.01 and V01.02 pass for requirements-source recovery and authority/scope classification only; this does not establish implementation, educational correctness, or release readiness.
+The acceptance count is separate from the test count. V01.01 and V01.02 pass for requirements-source recovery; ARCH.01 passes for the dedicated executable. This does not establish end-to-end generation, educational correctness, or release readiness.
 
 | Category | Verified |
 |---|---:|
@@ -15,9 +15,11 @@ The acceptance count is separate from the test count. V01.01 and V01.02 pass for
 | Print and visual quality | 0 / 13 (0%) |
 | Historical regression | 0 / 12 (0%) |
 | Operations and repeatability | 0 / 10 (0%) |
-| Architecture and isolation | 0 / 10 (0%) |
+| Architecture and isolation | 1 / 10 (10%) |
 
 ## Work completed
+
+- Iteration 25: **22 focused Mock Assessment tests passed**. The dedicated CLI worked from outside the repository, rejected a wrong source digest without output, and accepted a UTF-8 BOM report. See [CLI evidence](iteration-25-cli-evidence.txt).
 
 - Recovered and fingerprinted approved Mock Assessment and Math/ELA requirement sources. Weekly Practice defaults are explicitly excluded. ELA detailed requirements remain proposed/incomplete and no ELA subject design document was found.
 - Latest clean full suite: **262 passed**. An earlier full-suite run had one Weekly bypass integration failure; the isolated test and clean full-suite rerun passed. The first failure's cause was not captured; test-written transaction fixtures were restored.
@@ -26,6 +28,8 @@ The acceptance count is separate from the test count. V01.01 and V01.02 pass for
 - No production publication occurred.
 
 ## Next steps
+
+First, make registry and evidence fingerprints portable across checkout line endings, verify a fresh checkout, and continue the synthetic RunSpec and traceability work.
 
 1. Provide written authorization, a license, or another documented rights basis covering reproduction, reformatting, local storage, and the intended distribution of the selected NYSED content.
 2. While rights are pending, complete non-content criterion traceability and product-neutral architecture/synthetic-fixture checks; keep source-dependent criteria NOT_VERIFIED.
