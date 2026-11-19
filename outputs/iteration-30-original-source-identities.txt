@@ -1,0 +1,24 @@
+V01.04 - Identify original sources for the three scoped benchmarks.
+
+2024 NYSED Grade 4 Mathematics Released Test Questions
+Historical source filename: NY_Math_Grade4_2024_Released_Test_Questions.pdf
+SHA-256: 88351089919b18dfc2f3dc5d64809d20aadd68d56a1dc38841a3387354b8c0f6
+Evidence: Rehashed local grade4-source.pdf, confirmed NYSED title/author and
+34 pages, and matched the fingerprint in historical-source-item-maps.json.
+
+2024 NYSED Grade 5 Mathematics Released Test Questions
+Historical source filename: NY_Math_Grade5_2024_Released_Test_Questions.pdf
+SHA-256: 96bc4dca01185cda99056c98391ac85d41ecf7595b2b3ec29f7595b7e7b91f93
+Evidence: The prior source inventory records the Drive identity and fingerprint.
+The prior source item-map audit identifies PDF page 32 and agrees with the
+inventory and the Grade 5 student manifest on the exact fingerprint.
+The Grade 5 input was not reacquired or rehashed in this iteration.
+
+2025 NYSED Grade 6 English Language Arts Released Test Questions
+Historical source filename: NY_ELA_Grade6_2025_Released_Test_Questions.pdf
+SHA-256: 734c8ac722ece5fe182bcd36652c8ae8617124eccf03b6de16ae71c3244907ea
+Evidence: Rehashed local ela-source.pdf, confirmed NYSED title/author and
+43 pages, and matched the fingerprint in the inventory and item-map audit.
+
+This identifies the original question papers, not the historical deliverables.
+It does not establish reuse rights, academic accuracy, or candidate fidelity.
