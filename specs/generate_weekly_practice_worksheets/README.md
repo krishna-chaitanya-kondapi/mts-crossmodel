@@ -23,6 +23,63 @@ Produce curriculum-aligned Math and ELA student worksheets and teacher keys, ind
 
 Human decides; AI reasons; harness coordinates; code executes and verifies; storage remembers.
 
+## Implementation mapping — level 1
+
+The swimlane retains the target lifecycle and adds the current implementation technology and component labels. **Repo** means the named code is present at the inspected repository revision; **Observed** means the technology/artifact was used or recorded in the November 16 workflow; **Partial** means the target capability is not yet demonstrated end-to-end. An asterisk in the diagram denotes incomplete implementation, coverage or integration. Component labels are not a claim that the November 16 ChatGPT run invoked the repository scripts.
+
+| Lane | Implementation |
+|---|---|
+| Human | MTS educator / release owner, interacting through ChatGPT |
+| AI / LLM | OpenAI GPT; domain prompts, generation and editorial review |
+| Harness | ChatGPT current execution environment; repository workflow and skills as portable instructions |
+| Code / Tools | Python, Google Drive / Docs / Sheets APIs, PDF tooling |
+| Storage / Knowledge | Google Drive, Google Sheets, GitHub; structured JSON, YAML and Markdown |
+| External automation | Windows, `scripts/print_worksheets.py` |
+
+| Activity | Implementation component | Evidence / maturity |
+|---|---|---|
+| Weekly intent | ChatGPT conversation | Observed |
+| Initialize run | run_writer.py + telemetry* | Partial |
+| Knowledge inputs | Sheets / Drive / GitHub | Observed |
+| Resolve configuration | config_resolver.py | Repo |
+| Plan content | GPT + Math / ELA skills | Observed |
+| Assemble RunSpec | ChatGPT + JSON/PDF tools | Observed |
+| 01-PreRun / Week | Google Drive | Observed |
+| G1: Approve RunSpec | ChatGPT human approval | Observed |
+| Freeze approved revision | gates.py / spec_writer.py | Partial |
+| Dispatch Math + ELA | ChatGPT + weekly workflow | Partial |
+| Generate content | GPT + subject prompts | Observed |
+| Working content bank | Worksheet Spec / JSON | Observed |
+| Independent AI review | Separate GPT review pass* | Partial |
+| Objective content checks | Math verification.py / ELA QA* | Partial |
+| Repair content | GPT + targeted edits | Observed |
+| Content QA gate | ChatGPT + gates.py | Partial |
+| Render PDFs | Google Docs / PDF renderer | Observed |
+| 02-Run / Week | Google Drive | Observed |
+| Visual and semantic QA | GPT vision + editorial rubrics | Partial |
+| Export QA | PDF checks / QA registry* | Partial |
+| Aggregate final QA | QA aggregation component* | Partial |
+| 03-PostRun / Week | Google Drive | Observed |
+| G2: Final approval | ChatGPT human approval | Observed |
+| Validate release | gates.py + manifest checks* | Partial |
+| Publish complete set | Drive connector / publisher* | Partial |
+| Shared PrintReady | Google Drive flat folder | Observed |
+| Retrospective | GPT + improvement register | Observed |
+| Close run | run_writer.py + closeout* | Partial |
+| 03-PostRun / Week | Google Drive / JSON + MD | Observed |
+
+### Repository component references
+
+- [Weekly workflow instructions](../../workflows/generate-weekly-worksheets.md) and [Math runbook](../../skills/math/weekly-worksheet-execution-runbook.md).
+- [Configuration resolver](../../src/mts/infrastructure/configuration/config_resolver.py), [Math scope preparation](../../src/mts/subjects/math/weekly_workflow.py) and [weekly worksheet spec preparation](../../scripts/prepare_weekly_spec.py).
+- [Revision-scoped gates](../../src/mts/workflow_management/gates.py), [spec writer](../../src/mts/worksheets/spec_writer.py), [run writer](../../src/mts/workflow_management/run_writer.py).
+- [Math verification](../../src/mts/subjects/math/verification.py) and [validation](../../src/mts/subjects/math/validation.py).
+- [Math Google Docs rendering](../../scripts/render_weekly_specs_to_drive.py) and [Google Docs adapter](../../src/mts/infrastructure/google_docs/google_docs_adapter.py).
+- [Existing weekly publishing script](../../scripts/publish_weekly_artifacts.py) publishes validated pairs to a configured approved folder; it is not proof of combined latest-week PrintReady cleanup, approval validation or rollback. Shared publisher integration remains partial.
+- [Independent Windows printer](../../scripts/print_worksheets.py).
+
+The repository gate names are scope_review, question_review, verification_review, formatting_review and publish_approval. Diagram labels G1/G2 denote the two primary human boundaries, not literal repository gate numbers. Existing enabled intermediate gates remain applicable. ELA QA, renderer and source selection were observed in the separate ChatGPT/Drive workflow; their matching active repository modules were not located in the inspected Python tree. Do not substitute mock-assessment components for weekly worksheet components. Runtime telemetry, complete QA aggregation and closeout are still target capabilities.
+
 ## End-to-end lifecycle
 
 | Phase | Sequence | Outputs |
