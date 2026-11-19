@@ -2,9 +2,9 @@
 
 Run `python scripts/resume_mock_assessment.py` from the repository root. Read [START_HERE.md](../specs/generate_mock_assessment/resume/START_HERE.md); the canonical checkpoint owns criterion status, blockers, and next actions.
 
-Current state: **NOT_DONE**, Iteration 35, **5 / 76 mandatory criteria PASS** for requirements-source recovery, original question-paper identification, exact ELA golden PDF identity, and the dedicated executable. Audited revision `35102946e104fd99e71fd8b397f6feed05fe9023`; the most recent code checkpoint passed 44 focused tests. Source identity is not authorization to reproduce content.
+Current state: **NOT_DONE**, Iteration 36, **6 / 76 mandatory criteria PASS**. Audited revision `a20c973144d9d6e0fe24706ec1a8cd8005bb97de`; ARCH.08 now passes for preserving the Weekly implementation. Source identity is not authorization to reproduce content.
 
-Latest clean full-suite command: `.venv\Scripts\python.exe -m pytest tests -q` (**262 passed** at Iteration 23). The first full run had one Weekly bypass integration failure; the isolated test and clean full rerun passed. The first failure's cause was not captured. Restore test-written `data/transactions` changes after each run.
+Latest clean full suite: **286 passed** in a disposable checkout at Iteration 36 with its `src` on `PYTHONPATH`. Prefer a disposable checkout to keep test-written transaction changes out of the active worktree.
 
 **Current blocker:** the selected NYSED ELA and Grade 4 Math source PDFs contain copyright/permission notices, and no source-specific authorization record was located in the scoped project materials. Do not generate or revise source-derived candidates until written authorization, a license, or another documented rights basis covering reproduction, reformatting, local storage, and intended distribution is recorded. See [source-rights evidence](iteration-24-source-rights-check.json).
 

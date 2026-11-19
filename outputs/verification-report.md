@@ -1,6 +1,6 @@
 # Mock Assessment verification report
 
-**NOT_DONE. Iteration 35.** The revision-bound gate records **5 / 76 mandatory criteria PASS**; 71 remain open. V01.01 and V01.02 pass for requirements-source recovery, V01.04 for original question-paper identification, V06.02 for exact ELA golden PDF identity, and ARCH.01 for the dedicated executable. This acceptance count is not the unit-test count and does not claim end-to-end implementation, academic correctness, or release readiness.
+**NOT_DONE. Iteration 36.** The revision-bound gate records **6 / 76 mandatory criteria PASS**; 70 remain open. ARCH.08 now passes: the branch preserves Weekly Practice code, tests, configuration, and data, and the full suite passed **286 tests** in a disposable checkout. See [Weekly isolation evidence](iteration-36-weekly-isolation.txt). This does not verify PrintReady coordination or release readiness.
 
 Preflight now rejects empty and out-of-page source crop bounds before producing a review packet. The out-of-page case previously passed validation; the focused suite now passes all **44 tests**. A browser retry did not yield the Grade 4 chat worksheet bytes; the recovered Math PDFs still have no verified byte-for-byte match to the chat attachments.
 

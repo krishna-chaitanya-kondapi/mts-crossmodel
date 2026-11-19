@@ -1,10 +1,10 @@
 # Mock Assessment dashboard
 
-**5 / 76 (7%) mandatory criteria verified**
+**6 / 76 (8%) mandatory criteria verified**
 
-**Status NOT_DONE** · Iteration 35 · audited revision `35102946e104fd99e71fd8b397f6feed05fe9023`
+**Status NOT_DONE** · Iteration 36 · audited revision `a20c973144d9d6e0fe24706ec1a8cd8005bb97de`
 
-The acceptance count is separate from the test count. V01.01 and V01.02 pass for requirements-source recovery, V01.04 for original question-paper identification, V06.02 for exact ELA golden PDF identity, and ARCH.01 for the dedicated executable. This does not establish end-to-end generation, educational correctness, or release readiness.
+The acceptance count is separate from the test count. V01.01 and V01.02 pass for requirements-source recovery, V01.04 for original question-paper identification, V06.02 for exact ELA golden PDF identity, ARCH.01 for the dedicated executable, and ARCH.08 for preserving Weekly Practice. This does not establish end-to-end generation, educational correctness, or release readiness.
 
 | Category | Verified |
 |---|---:|
@@ -15,7 +15,7 @@ The acceptance count is separate from the test count. V01.01 and V01.02 pass for
 | Print and visual quality | 0 / 13 (0%) |
 | Historical regression | 1 / 12 (8%) |
 | Operations and repeatability | 0 / 10 (0%) |
-| Architecture and isolation | 1 / 10 (10%) |
+| Architecture and isolation | 2 / 10 (20%) |
 
 ## Work completed
 
@@ -42,7 +42,7 @@ The acceptance count is separate from the test count. V01.01 and V01.02 pass for
 - Iteration 25: **22 focused Mock Assessment tests passed**. The dedicated CLI worked from outside the repository, rejected a wrong source digest without output, and accepted a UTF-8 BOM report. See [CLI evidence](iteration-25-cli-evidence.txt).
 
 - Recovered and fingerprinted approved Mock Assessment and Math/ELA requirement sources. Weekly Practice defaults are explicitly excluded. ELA detailed requirements remain proposed/incomplete and no ELA subject design document was found.
-- Latest clean full suite: **262 passed**. An earlier full-suite run had one Weekly bypass integration failure; the isolated test and clean full-suite rerun passed. The first failure's cause was not captured; test-written transaction fixtures were restored.
+- Latest clean full suite: **286 passed**. [Iteration 36](iteration-36-weekly-isolation.txt) verified that the branch does not modify Weekly code, tests, config or data. The suite ran in a disposable checkout.
 - Grade 4 candidate evidence records four pages, 28 ordered regions, full-width Q26, and matching page 3/4 groups and response-line counts versus the recovered golden. Page 1/2 grouping, page furniture, and question-label typography still differ; no visual-equivalence claim is made.
 - Iteration 24 found copyright/permission notices in the selected NYSED sources and no source-specific authorization record in the scoped project materials. No candidate was generated in that iteration.
 - No production publication occurred.

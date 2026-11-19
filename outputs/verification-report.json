@@ -1,10 +1,10 @@
 {
   "status": "NOT_DONE",
-  "iteration": 35,
+  "iteration": 36,
   "date": "2026-11-19",
-  "revision": "35102946e104fd99e71fd8b397f6feed05fe9023",
+  "revision": "a20c973144d9d6e0fe24706ec1a8cd8005bb97de",
   "registry_sha256": "c70cf4b237e712c11943ed16ac5a479a9310c65a6d1fd284baddb23d956f0aa4",
-  "mandatory_pass": 5,
+  "mandatory_pass": 6,
   "mandatory_total": 76,
   "verification_environment_revision": "55ea8c10371b6079b45eac87167c23d06985f19b",
   "baseline_tests": {
@@ -167,7 +167,6 @@
     "ARCH.05",
     "ARCH.06",
     "ARCH.07",
-    "ARCH.08",
     "ARCH.09",
     "ARCH.10"
   ],
@@ -746,8 +745,17 @@
       "id": "ARCH.08",
       "mandatory": true,
       "requirement": "Weekly implementation unaffected",
-      "status": "NOT_VERIFIED",
-      "evidence": []
+      "status": "PASS",
+      "method": "Compare the implementation with master and run the entire regression suite in a disposable checkout.",
+      "reviewer": "Copilot implementation agent; tree comparison and regression tests.",
+      "expected": "No Weekly code, tests, configuration or data changes and no regression suite failures.",
+      "actual": "The changes are confined to Mock Assessment implementation and evidence; all 286 tests passed.",
+      "evidence": [
+        {
+          "path": "outputs/iteration-36-weekly-isolation.txt",
+          "sha256": "045c6d0a81a7b6910d8059ed7b99aa6c1beaf4b2c14abe0344c20e38881597ff"
+        }
+      ]
     },
     {
       "id": "ARCH.09",
