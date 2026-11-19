@@ -18,11 +18,11 @@ Large PDFs, local drafts and scratch scripts stay in the development workspace. 
 
 Small renderer manifests are in specs/generate_mock_assessment/fixtures. Use explicit CLI arguments to point to local sources and output locations. ELA student generation remains an unfinished local trial; the 13-page source-control manifest is not a final candidate. Its source transcription and raster-only pages must be completed against NYSED and compared with the delivered golden.
 
-Check a draft source-based benchmark RunSpec without rendering:
+Check a draft source-based benchmark RunSpec, optionally writing a PDF and JSON for review:
 
-    python scripts/generate_mock_assessment.py preflight --runspec <draft.json> --source <source.pdf>
+    python scripts/generate_mock_assessment.py preflight --runspec <draft.json> --source <source.pdf> --review-dir <new-review-folder>
 
-The check requires `source.sha256` and a nonempty `source.rights_basis` reference, checks blueprint counts, and checks portrait US Letter student pagination. It does not evaluate the referenced rights, approve the RunSpec, or gate the existing local review renderers.
+Omit `--review-dir` for validation only. The draft requires `source.sha256`, a nonempty `source.rights_basis` reference, and `source.selection` entries with unique `source_number`, one-based `source_page`, and `type` (`multiple_choice` or `constructed_response`). Preflight checks the source PDF, selection and blueprint counts, and portrait US Letter student pagination. The packet is explicitly DRAFT; caller-provided approval or release fields are rejected. Preflight does not evaluate the referenced rights, authorize generation, or gate the existing local review renderers.
 
 ## Copilot prompt
 

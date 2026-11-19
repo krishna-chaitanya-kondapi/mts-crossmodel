@@ -12,14 +12,17 @@ from mts.infrastructure.file_system.atomic_writer import write_json
 
 def main():
     if len(sys.argv) > 1 and sys.argv[1] == "preflight":
-        from mts.products.mock_assessment.preflight import validate_draft
+        from mts.products.mock_assessment.preflight import validate_draft, write_review_bundle
 
-        parser = argparse.ArgumentParser(description="Check a draft RunSpec; does not approve or generate")
+        parser = argparse.ArgumentParser(description="Check a draft RunSpec; does not approve or generate worksheets")
         parser.add_argument("--runspec", type=Path, required=True)
         parser.add_argument("--source", type=Path, required=True)
+        parser.add_argument("--review-dir", type=Path, help="New directory for the draft RunSpec PDF and JSON")
         args = parser.parse_args(sys.argv[2:])
         try:
-            validate_draft(json.loads(args.runspec.read_text(encoding="utf-8-sig")), args.source)
+            draft = validate_draft(json.loads(args.runspec.read_text(encoding="utf-8-sig")), args.source)
+            if args.review_dir is not None:
+                write_review_bundle(draft, args.review_dir)
         except (OSError, ValueError) as error:
             parser.error(str(error))
         print("Draft RunSpec checks passed; rights and human approval not verified.")

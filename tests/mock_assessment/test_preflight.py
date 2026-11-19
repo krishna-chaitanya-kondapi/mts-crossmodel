@@ -12,12 +12,26 @@ ROOT = Path(__file__).resolve().parents[2]
 
 @pytest.mark.parametrize(("section", "field", "value", "error"), [
     (None, None, None, None),
+    ("", "approval", True, "cannot contain status, approval, or release"),
     ("source", "rights_basis", "  ", "rights_basis"),
     ("source", "sha256", "0" * 64, "Source SHA-256 does not match"),
     ("blueprint", "constructed_response", 2, "format counts must sum"),
     ("presentation", "student_pagination", {"policy": "maximum", "pages": True}, "pages must be an integer"),
+    ("source", "selection", [
+        {"source_number": 8, "source_page": 2, "type": "multiple_choice"},
+        {"source_number": 9, "source_page": 1, "type": "constructed_response"},
+    ], "page exceeds the PDF page count"),
+    ("source", "selection", [
+        {"source_number": 8, "source_page": 1, "type": "multiple_choice"},
+        {"source_number": 8, "source_page": 1, "type": "constructed_response"},
+    ], "question numbers must be unique"),
+    ("source", "selection", [
+        {"source_number": 8, "source_page": 1, "type": "multiple_choice"},
+        {"source_number": 9, "source_page": 1, "type": "multiple_choice"},
+    ], "selection format counts must match"),
 ])
-def test_draft_preflight_cli(tmp_path, section, field, value, error):
+@pytest.mark.parametrize("emit_bundle", [False, True])
+def test_draft_preflight_cli(tmp_path, section, field, value, error, emit_bundle):
     source = tmp_path / "source.pdf"
     with pymupdf.open() as pdf:
         pdf.new_page().insert_text((36, 36), "Original synthetic fixture")
@@ -29,6 +43,10 @@ def test_draft_preflight_cli(tmp_path, section, field, value, error):
             "mode": "source_based",
             "rights_basis": "Original synthetic test fixture created by this test.",
             "sha256": hashlib.sha256(source.read_bytes()).hexdigest(),
+            "selection": [
+                {"source_number": 8, "source_page": 1, "type": "multiple_choice"},
+                {"source_number": 9, "source_page": 1, "type": "constructed_response"},
+            ],
         },
         "blueprint": {"questions": 2, "multiple_choice": 1, "constructed_response": 1},
         "presentation": {
@@ -38,14 +56,18 @@ def test_draft_preflight_cli(tmp_path, section, field, value, error):
         },
     }
     if section is not None:
-        draft[section][field] = value
+        (draft[section] if section else draft)[field] = value
     runspec = tmp_path / "runspec.json"
     runspec.write_text(json.dumps(draft), encoding="utf-8")
 
-    result = subprocess.run([
+    bundle = tmp_path / "review"
+    command = [
         sys.executable, str(ROOT / "scripts" / "generate_mock_assessment.py"),
         "preflight", "--runspec", str(runspec), "--source", str(source),
-    ], cwd=tmp_path, capture_output=True, text=True)
+    ]
+    if emit_bundle:
+        command.extend(["--review-dir", str(bundle)])
+    result = subprocess.run(command, cwd=tmp_path, capture_output=True, text=True)
 
     if error is None:
         assert result.returncode == 0, result.stderr
@@ -53,4 +75,23 @@ def test_draft_preflight_cli(tmp_path, section, field, value, error):
     else:
         assert result.returncode == 2, result.stderr
         assert error in result.stderr
-    assert set(tmp_path.iterdir()) == {source, runspec}
+    if error is not None or not emit_bundle:
+        assert set(tmp_path.iterdir()) == {source, runspec}
+        return
+
+    record = json.loads((bundle / "runspec.json").read_text(encoding="utf-8"))
+    assert record == {
+        "status": "DRAFT",
+        "rights_verified": False,
+        "human_approval_verified": False,
+        "runspec": draft,
+    }
+    with pymupdf.open(bundle / "runspec.pdf") as pdf:
+        text = "".join(page.get_text() for page in pdf)
+    assert "Draft, not approved" in text
+    assert draft["source"]["sha256"] in text
+    assert '"source_number": 9' in text
+    before = {path.name: path.read_bytes() for path in bundle.iterdir()}
+    retry = subprocess.run(command, cwd=tmp_path, capture_output=True, text=True)
+    assert retry.returncode == 2, retry.stderr
+    assert {path.name: path.read_bytes() for path in bundle.iterdir()} == before
