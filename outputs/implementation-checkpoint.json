@@ -1,6 +1,6 @@
 {
   "status": "NOT_DONE",
-  "iteration": 27,
+  "iteration": 28,
   "baseline_revision": "728596db0ec7deedc087b9e509da14701b7d088d",
   "criteria": [
     {
@@ -317,7 +317,7 @@
     }
   ],
   "next": [
-    "Extend draft preflight to validate a structured source selection and emit a reviewable RunSpec PDF and JSON. Add synthetic approval-boundary tests before connecting validated plans to rendering; do not treat a rights reference as authorization.",
+    "Implement and test a separate pre-run approval record bound to the exact draft PDF and JSON digests; reject stale approvals in the synthetic planned-run path before allowing it to call a renderer.",
     "Obtain and record written authorization, a license, or another documented rights basis covering the intended reproduction, reformatting, local storage, and distribution of the selected NYSED content. Do not generate or revise source-derived candidate PDFs until this is resolved.",
     "While rights are pending, complete non-content criterion traceability and product-neutral architecture/synthetic-fixture checks; keep all source-dependent criteria NOT_VERIFIED.",
     "After authorization, build and compare the source-derived ELA candidate (including raster-only source pages 10 and 16), then repair and fully compare the recorded Grade 4 golden differences.",
@@ -329,7 +329,7 @@
     "Artifact-specific human final approval is absent from the handoffs. This prevents production publication only; no publication is authorized without that approval.",
     "The detailed ELA requirements remain proposed/incomplete and no ELA subject design document was found; do not treat weekly ELA materials as approved Mock Assessment policy."
   ],
-  "audited_revision": "2d65a72fee170f48f2f5aef6ed4e9e686dd1617e",
+  "audited_revision": "271d36adb580176eb112bef51550b39e2e9253ba",
   "evidence": [
     "outputs/verification-report.json",
     "outputs/baseline-tests.txt",

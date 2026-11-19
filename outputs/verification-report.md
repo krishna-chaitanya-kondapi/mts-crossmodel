@@ -1,6 +1,6 @@
 # Mock Assessment verification report
 
-**NOT_DONE. Iteration 27.** The revision-bound gate records **3 / 76 mandatory criteria PASS**; 73 remain open. V01.01 and V01.02 pass for requirements-source recovery only; ARCH.01 passes for the dedicated executable. This acceptance count is not the unit-test count and does not claim end-to-end implementation, academic correctness, or release readiness.
+**NOT_DONE. Iteration 28.** The revision-bound gate records **3 / 76 mandatory criteria PASS**; 73 remain open. V01.01 and V01.02 pass for requirements-source recovery only; ARCH.01 passes for the dedicated executable. This acceptance count is not the unit-test count and does not claim end-to-end implementation, academic correctness, or release readiness.
 
 ## Historical evidence
 
@@ -132,3 +132,7 @@ The same report and audited revision produced **0/76 PASS** in a fresh checkout 
 ## Iteration 27: draft RunSpec preflight
 
 The [preflight integration tests](../tests/mock_assessment/test_preflight.py) passed a valid synthetic draft and rejected missing rights information, a mismatched source digest, inconsistent item counts, and a Boolean page count. All **27 focused Mock Assessment tests passed**. This is partial evidence for V02.06, V02.10, and V07.05; none moves to PASS. The preflight does not validate rights documentation, generate a RunSpec PDF/JSON pair, or enforce approval in the renderers. No historical candidate was generated or published.
+
+## Iteration 28: RunSpec review packet
+
+The [synthetic CLI tests](../tests/mock_assessment/test_preflight.py) verified selection pages, unique source question numbers, item format counts, and a draft PDF/JSON pair. The CLI rejected caller-supplied approval and did not overwrite existing packets. **40 focused tests passed.** The bundle still cannot authorize generation; full RunSpec and approval criteria remain NOT_VERIFIED. No historical assessment was generated or published.

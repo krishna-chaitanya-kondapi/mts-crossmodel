@@ -1,8 +1,8 @@
 {
   "status": "NOT_DONE",
-  "iteration": 27,
+  "iteration": 28,
   "date": "2026-11-19",
-  "revision": "2d65a72fee170f48f2f5aef6ed4e9e686dd1617e",
+  "revision": "271d36adb580176eb112bef51550b39e2e9253ba",
   "registry_sha256": "c70cf4b237e712c11943ed16ac5a479a9310c65a6d1fd284baddb23d956f0aa4",
   "mandatory_pass": 3,
   "mandatory_total": 76,
@@ -81,7 +81,7 @@
     }
   ],
   "next": [
-    "Extend draft preflight to validate a structured source selection and emit a reviewable RunSpec PDF and JSON. Add synthetic approval-boundary tests before connecting validated plans to rendering; do not treat a rights reference as authorization.",
+    "Implement and test a separate pre-run approval record bound to the exact draft PDF and JSON digests; reject stale approvals in the synthetic planned-run path before allowing it to call a renderer.",
     "Obtain and record written authorization, a license, or another documented rights basis covering the intended reproduction, reformatting, local storage, and distribution of the selected NYSED content; do not generate or revise source-derived candidates until resolved.",
     "While rights are pending, complete non-content criterion traceability and product-neutral architecture/synthetic-fixture checks; keep source-dependent criteria NOT_VERIFIED.",
     "After authorization, build and compare the source-derived ELA candidate (including raster-only source pages 10 and 16), then repair and fully compare the recorded Grade 4 golden differences.",
@@ -882,6 +882,15 @@
       "sha256": "42164d3fa25adb149e9adf4300e91077683511c11cf34f0661d6cd460a278eaa",
       "note": "The first full run had 261 passed and one Weekly bypass integration failure. The isolated test passed, then a clean full-suite rerun passed 262 tests. The first failure's cause was not captured; test-written transaction fixtures were restored."
     }
+  },
+  "iteration_28_run_spec_review": {
+    "command": ".venv\\Scripts\\python.exe -m pytest tests\\mock_assessment -q",
+    "result": "40 passed in 13.03s",
+    "implementation": "src/mts/products/mock_assessment/preflight.py",
+    "test": "tests/mock_assessment/test_preflight.py",
+    "partial_criteria": ["V02.06", "V02.10", "V07.05"],
+    "observed": "Validated synthetic item selection and emitted a draft PDF and JSON. Rejected invalid pages, duplicate question identifiers, incompatible item counts, and caller-supplied approval without creating a packet. An existing review packet was not overwritten.",
+    "unverified": "Full benchmark RunSpecs and a separate, digest-bound human approval that gates generation. No historical content was generated."
   },
   "iteration_27_preflight": {
     "command": ".venv\\Scripts\\python.exe -m pytest tests\\mock_assessment -q",
