@@ -1,13 +1,9 @@
 # Mock Assessment takeover
 
-Run `python scripts/resume_mock_assessment.py` from the repository root. Read [START_HERE.md](../specs/generate_mock_assessment/resume/START_HERE.md); the canonical checkpoint owns criterion status, blockers, and next actions.
+Run `python scripts/resume_mock_assessment.py` from the repository root. It reads the canonical checkpoint and lists the next actions. Follow [START_HERE.md](../specs/generate_mock_assessment/resume/START_HERE.md).
 
-Current state: **NOT_DONE**, Iteration 24, **2 / 76 mandatory criteria PASS** for requirements-source recovery only. This is not the unit-test count and does not imply implementation or release acceptance. The audited code revision is `2c59606b7f5c9cc09069e432022d52f23f59759e`.
+At each logical checkpoint update [implementation-checkpoint.json](../specs/generate_mock_assessment/implementation-checkpoint.json), relevant evidence and the Markdown dashboard, commit the changed files and push the same branch. Validate the checkpoint with `python scripts/checkpoint_mock_assessment.py`. Do not promote unsupported acceptance criteria.
 
-Latest clean full-suite command: `.venv\Scripts\python.exe -m pytest tests -q` (**262 passed** at Iteration 23). The first full run had one Weekly bypass integration failure; the isolated test and clean full rerun passed. The first failure's cause was not captured. Restore test-written `data/transactions` changes after each run.
+The latest full test command is `.venv\Scripts\python.exe -m pytest tests -q` (257 passed at iteration 22); restore test-written `data/transactions` changes after the run. PyMuPDF is declared in requirements.txt and installed in the selected `.venv`.
 
-**Current blocker:** the selected NYSED ELA and Grade 4 Math source PDFs contain copyright/permission notices, and no source-specific authorization record was located in the scoped project materials. Do not generate or revise source-derived candidates until written authorization, a license, or another documented rights basis covering reproduction, reformatting, local storage, and intended distribution is recorded. See [source-rights evidence](iteration-24-source-rights-check.json).
-
-While rights are pending, continue non-content criterion traceability and product-neutral architecture/synthetic-fixture checks; keep source-dependent criteria NOT_VERIFIED. After authorization, build and compare the ELA candidate and repair/recompare the Grade 4 candidate. Qualified independent review is required for academic/source acceptance. Production publication requires artifact-specific human approval and remains unauthorized.
-
-At each logical checkpoint update [the canonical checkpoint](../specs/generate_mock_assessment/implementation-checkpoint.json), evidence, verification report, and dashboard. Run `python scripts/checkpoint_mock_assessment.py`; commit and push code and state together to `master`. Large PDFs and rendered drafts stay in the development workspace.
+The current implementation remains NOT_DONE (0 / 76 mandatory criteria verified). Next actions: create and verify the source-derived ELA student manifest against the delivered golden, complete Grade 4 academic/source review and historical-golden comparison, then run and record production-path checks. Large PDFs and rendered drafts stay in the development workspace; no snapshot copying is required to transfer control. Production publication requires human approval.
