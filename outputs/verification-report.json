@@ -81,6 +81,7 @@
     }
   ],
   "next": [
+    "Map the three user-designated ChatGPT golden runs to the exact historical student PDFs, keys, and RunSpecs from an accessible transcript, export, or artifact handoff. Keep the affected criteria NOT_VERIFIED until mapped.",
     "Integrate the local planned-run dispatcher with an authenticated approval source. Verify print and accessibility acceptance for raster crops before considering them for release. Keep the existing review-only CLI separate.",
     "Obtain and record written authorization, a license, or another documented rights basis covering the intended reproduction, reformatting, local storage, and distribution of the selected NYSED content; do not generate or revise source-derived candidates until resolved.",
     "While rights are pending, complete non-content criterion traceability and product-neutral architecture/synthetic-fixture checks; keep source-dependent criteria NOT_VERIFIED.",
@@ -890,6 +891,13 @@
       "sha256": "42164d3fa25adb149e9adf4300e91077683511c11cf34f0661d6cd460a278eaa",
       "note": "The first full run had 261 passed and one Weekly bypass integration failure. The isolated test passed, then a clean full-suite rerun passed 262 tests. The first failure's cause was not captured; test-written transaction fixtures were restored."
     }
+  },
+  "golden_run_designation": {
+    "date": "2026-11-19",
+    "user_designated_runs": 3,
+    "status": "NOT_VERIFIED",
+    "inventory": "specs/generate_mock_assessment/golden-reference-inventory.md",
+    "finding": "Two conversation links could not be opened and their public lookups returned Not Found; the project conversation redirected to login. No conversation contents were reviewed or mapped to existing artifacts."
   },
   "iteration_32_crop_isolation": {
     "command": ".venv\\Scripts\\python.exe -m pytest tests\\mock_assessment -q",

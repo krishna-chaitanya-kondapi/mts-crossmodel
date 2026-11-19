@@ -1,4 +1,14 @@
-# Golden reference candidates
+# Golden run inventory
+
+## User-designated golden runs
+
+On November 19, 2026, the user designated three past ChatGPT runs as golden references: two conversations linked from Mock Assessment history search, and one conversation in the MTS Math AI Generation project. The private conversation links remain in the request, not in this repository.
+
+The conversations were not accessible from the implementation session. Their subjects, exact worksheet and key versions, RunSpecs, corrections, and any approval or source-rights records have not been verified against the links. Do not assign these conversations to the artifact candidates below by guesswork.
+
+To resolve each run, read a redacted transcript or export from the owner, or a handoff containing the final worksheet and key identifiers, source edition and item selection, and RunSpec or generation settings. Record the verified mapping and artifact fingerprints here before using the run for acceptance. Golden designation establishes the comparison target, not permission to reproduce the underlying material or approval to publish a new output.
+
+## Previously recovered artifact candidates
 
 Drive metadata discovered; final approval, bytes and content not yet independently verified.
 

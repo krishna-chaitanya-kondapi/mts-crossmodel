@@ -154,3 +154,7 @@ The local dispatcher renders only the selected bounds in the approved order on t
 The approved local dispatcher now rasterizes selections before embedding them. The synthetic test verified no form XObjects and matched the two embedded images byte-for-byte at the pixel level against the inward-rounded approved crops. **40 focused tests passed.** The older vector routes remain review-only. Image-only source crops are not selectable text and still need print and accessibility acceptance. No historical content was generated or published.
 
 The rights-notice follow-up confirmed that ELA PDF page 7 names Highlights for Children as the copyright holder of the selected passage *Cracking Code Purple* and credits permission through Copyright Clearance Center for its use in the test. The ELA paper and Grade 4 paper also carry NYSED copyright notices. These notices do not establish MTS reuse rights. Historical reproduction remains blocked pending documented authorization covering the intended MTS use, including applicable third-party material.
+
+### User-designated golden runs
+
+On November 19, 2026, the user selected three past ChatGPT conversations as golden runs. Two links could not be opened and their public lookups returned Not Found; the third redirected to login. The [golden run inventory](../specs/generate_mock_assessment/golden-reference-inventory.md) records the designation and the evidence needed to map them to exact PDFs and RunSpecs. No run-to-artifact mapping, criterion status, or rights determination changed.

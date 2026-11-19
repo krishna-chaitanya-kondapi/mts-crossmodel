@@ -317,6 +317,7 @@
     }
   ],
   "next": [
+    "Map the three user-designated ChatGPT golden runs to exact historical student PDFs, keys, and RunSpecs from an accessible transcript, export, or artifact handoff. Do not infer the mappings from the prior candidates.",
     "Integrate the local planned-run dispatcher with an authenticated approval source. Verify print and accessibility acceptance for raster crops before considering them for release. Keep the existing review-only CLI separate.",
     "Obtain and record written authorization, a license, or another documented rights basis covering the intended reproduction, reformatting, local storage, and distribution of the selected NYSED content. Do not generate or revise source-derived candidate PDFs until this is resolved.",
     "While rights are pending, complete non-content criterion traceability and product-neutral architecture/synthetic-fixture checks; keep all source-dependent criteria NOT_VERIFIED.",
@@ -324,6 +325,7 @@
     "Obtain qualified independent academic/source review and artifact-specific human approval before any production publication."
   ],
   "blockers": [
+    "The three designated ChatGPT conversation links did not expose their contents in this session. The exact run-to-artifact mapping remains unverified; see specs/generate_mock_assessment/golden-reference-inventory.md.",
     "The selected NYSED ELA and Grade 4 Math source PDFs carry NYSED copyright notices. The selected ELA passage Cracking Code Purple also credits Highlights for Children and records permission for its use in the NYSED test, not permission for MTS. No source-specific MTS authorization was located. This blocks source-derived candidates and content-parity acceptance until a documented rights basis is supplied; see outputs/verification-report.md.",
     "A qualified independent reviewer must review the Grade 4 and ELA candidate answers, source selections, and scoring/rubric alignment; self-review cannot satisfy the independent-review criteria. This prevents V03 academic acceptance and dependent source-fidelity acceptance until review evidence is recorded.",
     "Artifact-specific human final approval is absent from the handoffs. This prevents production publication only; no publication is authorized without that approval.",
@@ -331,6 +333,7 @@
   ],
   "audited_revision": "3ec9219c6fc241760e7b0d222877564a9e51e9c0",
   "evidence": [
+    "specs/generate_mock_assessment/golden-reference-inventory.md",
     "outputs/verification-report.json",
     "outputs/baseline-tests.txt",
     "outputs/historical-inventory.json",

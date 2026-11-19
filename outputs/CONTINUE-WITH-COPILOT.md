@@ -10,4 +10,6 @@ Latest clean full-suite command: `.venv\Scripts\python.exe -m pytest tests -q` (
 
 While rights are pending, continue non-content criterion traceability and product-neutral architecture/synthetic-fixture checks; keep source-dependent criteria NOT_VERIFIED. After authorization, build and compare the ELA candidate and repair/recompare the Grade 4 candidate. Qualified independent review is required for academic/source acceptance. Production publication requires artifact-specific human approval and remains unauthorized.
 
+The [golden run inventory](../specs/generate_mock_assessment/golden-reference-inventory.md) records three user-designated ChatGPT runs. Their private contents were not accessible. Obtain an export or artifact handoff and verify the exact mapping before using them for acceptance.
+
 Next, connect an authenticated approval source and verify print and accessibility acceptance for raster crops. The dispatcher remains local-only. At each logical checkpoint update [the canonical checkpoint](../specs/generate_mock_assessment/implementation-checkpoint.json), evidence, verification report, and dashboard. Run `python scripts/checkpoint_mock_assessment.py`; commit and push to `gc-mock-assessment-implementation`, not `master`. Large PDFs and rendered drafts stay in the development workspace.
