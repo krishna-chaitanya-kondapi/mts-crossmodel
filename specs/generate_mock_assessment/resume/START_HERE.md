@@ -18,6 +18,12 @@ Large PDFs, local drafts and scratch scripts stay in the development workspace. 
 
 Small renderer manifests are in specs/generate_mock_assessment/fixtures. Use explicit CLI arguments to point to local sources and output locations. ELA student generation remains an unfinished local trial; the 13-page source-control manifest is not a final candidate. Its source transcription and raster-only pages must be completed against NYSED and compared with the delivered golden.
 
+Check a draft source-based benchmark RunSpec without rendering:
+
+    python scripts/generate_mock_assessment.py preflight --runspec <draft.json> --source <source.pdf>
+
+The check requires `source.sha256` and a nonempty `source.rights_basis` reference, checks blueprint counts, and checks portrait US Letter student pagination. It does not evaluate the referenced rights, approve the RunSpec, or gate the existing local review renderers.
+
 ## Copilot prompt
 
 Continue Mock Assessment from the canonical checkpoint. Follow this guide and the approved Definition of Done. Implement, test and repair until all 76 mandatory criteria pass with sufficient revision-bound evidence or an external blocker prevents progress. Keep Weekly Practice independent. Persist code, evidence and exact next actions at each checkpoint. Production publication requires human approval.
