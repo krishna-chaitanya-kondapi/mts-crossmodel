@@ -1,6 +1,7 @@
 """Bind a trusted operator's pre-run decision to the exact review packet."""
 from collections.abc import Callable, Mapping
 from hashlib import sha256
+import hmac
 import json
 from pathlib import Path
 from tempfile import TemporaryDirectory
@@ -10,6 +11,23 @@ from .preflight import validate_draft
 from .source_render import render_student
 
 Result = TypeVar("Result")
+_DECISION_FIELDS = frozenset({
+    "decision", "scope", "reviewer", "runspec_json_sha256", "runspec_pdf_sha256",
+})
+
+
+def _verify_decision(decision: Mapping[str, object], key: bytes) -> dict[str, object]:
+    if not isinstance(key, bytes) or len(key) < 32:
+        raise ValueError("A trusted approval key of at least 32 bytes is required")
+    record = dict(decision)
+    mac = record.pop("hmac_sha256", None)
+    if record.keys() != _DECISION_FIELDS or not all(isinstance(value, str) for value in record.values()):
+        raise ValueError("Invalid signed pre-run decision fields")
+    payload = json.dumps(record, sort_keys=True, separators=(",", ":"), ensure_ascii=True).encode("ascii")
+    expected = hmac.digest(key, b"mts/mock-assessment/pre-run/v1\0" + payload, "sha256").hex()
+    if not isinstance(mac, str) or not mac.isascii() or not hmac.compare_digest(mac, expected):
+        raise ValueError("Pre-run decision authentication failed")
+    return record
 
 
 def run_approved_draft(
@@ -17,8 +35,11 @@ def run_approved_draft(
     source_path: Path,
     decision: Mapping[str, object],
     execute: Callable[[dict[str, object]], Result],
+    *,
+    approval_key: bytes,
 ) -> Result:
-    """Dispatch an approved draft. The caller must authenticate the decision."""
+    """Dispatch a draft only after verifying a decision from a trusted issuer."""
+    decision = _verify_decision(decision, approval_key)
     reviewer = decision.get("reviewer")
     if (
         decision.get("decision") != "APPROVED"
@@ -47,8 +68,10 @@ def render_approved_student(
     source_path: Path,
     decision: Mapping[str, object],
     destination: Path,
+    *,
+    approval_key: bytes,
 ) -> None:
-    """Render an image-only local crop draft after the caller verifies approval and rights."""
+    """Render an image-only local draft; the issuer must separately verify source rights."""
     def execute(draft: dict[str, object]) -> None:
         source = draft["source"]
         presentation = draft["presentation"]
@@ -82,4 +105,4 @@ def render_approved_student(
             with destination.open("xb") as output:
                 output.write(candidate.read_bytes())
 
-    run_approved_draft(review_dir, source_path, decision, execute)
+    run_approved_draft(review_dir, source_path, decision, execute, approval_key=approval_key)

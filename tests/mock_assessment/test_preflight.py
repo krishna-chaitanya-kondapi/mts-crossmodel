@@ -1,5 +1,7 @@
 import hashlib
+import hmac
 import json
+import secrets
 import subprocess
 import sys
 from pathlib import Path
@@ -110,18 +112,31 @@ def test_draft_preflight_cli(tmp_path, section, field, value, error, emit_bundle
     }
     output = tmp_path / "synthetic-student.pdf"
 
-    for decision in ({}, {**approval, "scope": "RELEASE"}):
-        with pytest.raises(ValueError, match="separate pre-run approval"):
-            render_approved_student(bundle, source, decision, output)
+    key = secrets.token_bytes(32)
+
+    def sign(record):
+        message = json.dumps(record, sort_keys=True, separators=(",", ":")).encode("ascii")
+        return {**record, "hmac_sha256": hmac.new(key, b"mts/mock-assessment/pre-run/v1\0" + message, "sha256").hexdigest()}
+
+    signed = sign(approval)
+    for decision, decision_key, error in (
+        (approval, key, "authentication failed"),
+        ({**signed, "reviewer": "Changed reviewer"}, key, "authentication failed"),
+        (signed, secrets.token_bytes(32), "authentication failed"),
+        (signed, b"", "trusted approval key"),
+        (sign({**approval, "scope": "RELEASE"}), key, "separate pre-run approval"),
+    ):
+        with pytest.raises(ValueError, match=error):
+            render_approved_student(bundle, source, decision, output, approval_key=decision_key)
     for name in before:
         path = bundle / name
         path.write_bytes(before[name] + b"\n")
         with pytest.raises(ValueError, match="does not match"):
-            render_approved_student(bundle, source, approval, output)
+            render_approved_student(bundle, source, signed, output, approval_key=key)
         path.write_bytes(before[name])
     assert not output.exists()
 
-    render_approved_student(bundle, source, approval, output)
+    render_approved_student(bundle, source, signed, output, approval_key=key)
     with pymupdf.open(output) as pdf, pymupdf.open(source) as original:
         page = pdf[0]
         assert not page.get_xobjects()
@@ -137,5 +152,5 @@ def test_draft_preflight_cli(tmp_path, section, field, value, error, emit_bundle
             )
     before_output = output.read_bytes()
     with pytest.raises(FileExistsError):
-        render_approved_student(bundle, source, approval, output)
+        render_approved_student(bundle, source, signed, output, approval_key=key)
     assert output.read_bytes() == before_output
