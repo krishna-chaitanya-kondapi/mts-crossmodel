@@ -1,6 +1,6 @@
 # Mock Assessment verification report
 
-**NOT_DONE. Iteration 28.** The revision-bound gate records **3 / 76 mandatory criteria PASS**; 73 remain open. V01.01 and V01.02 pass for requirements-source recovery only; ARCH.01 passes for the dedicated executable. This acceptance count is not the unit-test count and does not claim end-to-end implementation, academic correctness, or release readiness.
+**NOT_DONE. Iteration 29.** The revision-bound gate records **3 / 76 mandatory criteria PASS**; 73 remain open. V01.01 and V01.02 pass for requirements-source recovery only; ARCH.01 passes for the dedicated executable. This acceptance count is not the unit-test count and does not claim end-to-end implementation, academic correctness, or release readiness.
 
 ## Historical evidence
 
@@ -136,3 +136,7 @@ The [preflight integration tests](../tests/mock_assessment/test_preflight.py) pa
 ## Iteration 28: RunSpec review packet
 
 The [synthetic CLI tests](../tests/mock_assessment/test_preflight.py) verified selection pages, unique source question numbers, item format counts, and a draft PDF/JSON pair. The CLI rejected caller-supplied approval and did not overwrite existing packets. **40 focused tests passed.** The bundle still cannot authorize generation; full RunSpec and approval criteria remain NOT_VERIFIED. No historical assessment was generated or published.
+
+## Iteration 29: digest-bound pre-run approval
+
+The [approval helper](../src/mts/products/mock_assessment/approval.py) revalidates the draft and source before dispatch. The synthetic integration test verified that missing, release-scoped, or stale decisions prevented rendering and that a matching pre-run decision dispatched the test renderer. **40 focused tests passed.** No new criteria pass: a trusted approval source and real planned-run dispatch are not connected, and no historical assessment was generated or published.

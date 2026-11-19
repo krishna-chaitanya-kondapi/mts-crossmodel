@@ -1,8 +1,8 @@
 {
   "status": "NOT_DONE",
-  "iteration": 28,
+  "iteration": 29,
   "date": "2026-11-19",
-  "revision": "271d36adb580176eb112bef51550b39e2e9253ba",
+  "revision": "295d4c8d3ecc3673e80a1bd9d264dd0910d4c513",
   "registry_sha256": "c70cf4b237e712c11943ed16ac5a479a9310c65a6d1fd284baddb23d956f0aa4",
   "mandatory_pass": 3,
   "mandatory_total": 76,
@@ -81,7 +81,7 @@
     }
   ],
   "next": [
-    "Implement and test a separate pre-run approval record bound to the exact draft PDF and JSON digests; reject stale approvals in the synthetic planned-run path before allowing it to call a renderer.",
+    "Connect the tested digest-bound pre-run helper to a trusted approval source and planned-run dispatcher; verify that rendering consumes only approved inputs. Keep the existing review-only CLI separate.",
     "Obtain and record written authorization, a license, or another documented rights basis covering the intended reproduction, reformatting, local storage, and distribution of the selected NYSED content; do not generate or revise source-derived candidates until resolved.",
     "While rights are pending, complete non-content criterion traceability and product-neutral architecture/synthetic-fixture checks; keep source-dependent criteria NOT_VERIFIED.",
     "After authorization, build and compare the source-derived ELA candidate (including raster-only source pages 10 and 16), then repair and fully compare the recorded Grade 4 golden differences.",
@@ -882,6 +882,14 @@
       "sha256": "42164d3fa25adb149e9adf4300e91077683511c11cf34f0661d6cd460a278eaa",
       "note": "The first full run had 261 passed and one Weekly bypass integration failure. The isolated test passed, then a clean full-suite rerun passed 262 tests. The first failure's cause was not captured; test-written transaction fixtures were restored."
     }
+  },
+  "iteration_29_approval": {
+    "command": ".venv\\Scripts\\python.exe -m pytest tests\\mock_assessment -q",
+    "result": "40 passed in 15.12s",
+    "implementation": "src/mts/products/mock_assessment/approval.py",
+    "test": "tests/mock_assessment/test_preflight.py",
+    "observed": "Missing and release-scoped decisions and independent PDF and JSON digest changes prevented synthetic rendering; the matching pre-run decision dispatched the synthetic renderer.",
+    "limitations": "The caller must authenticate the decision. Production integration, rights verification, and approval enforcement for full benchmark runs remain unverified."
   },
   "iteration_28_run_spec_review": {
     "command": ".venv\\Scripts\\python.exe -m pytest tests\\mock_assessment -q",
