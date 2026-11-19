@@ -1,8 +1,8 @@
 {
   "status": "NOT_DONE",
-  "iteration": 34,
+  "iteration": 35,
   "date": "2026-11-19",
-  "revision": "1c4e741eae86544fa213330e5cbc69b59b1f8df9",
+  "revision": "35102946e104fd99e71fd8b397f6feed05fe9023",
   "registry_sha256": "c70cf4b237e712c11943ed16ac5a479a9310c65a6d1fd284baddb23d956f0aa4",
   "mandatory_pass": 5,
   "mandatory_total": 76,
@@ -935,6 +935,12 @@
       },
       "result": "Both HTTP 200 PDF downloads match the local historical goldens and prior Drive fingerprint inventory."
     }
+  },
+  "iteration_35_preflight_bounds": {
+    "command": "$env:PYTHONPATH = Join-Path (Get-Location) 'src'; .venv\\Scripts\\python.exe -m pytest tests\\mock_assessment -q",
+    "result": "44 passed in 12.50s; Pylance found no diagnostics in preflight.py.",
+    "observed": "Before the fix, preflight accepted a crop extending beyond the PDF page. It now rejects out-of-page and empty rectangles both with and without a requested review bundle, and creates no invalid bundle.",
+    "limitations": "Synthetic geometry only; no source fidelity, copyright, print, or release claim. A browser retry did not yield the Grade 4 chat worksheet bytes; Math attachment identity remains unverified."
   },
   "iteration_33_local_approval_authentication": {
     "command": ".venv\\Scripts\\python.exe -m pytest tests\\mock_assessment -q",

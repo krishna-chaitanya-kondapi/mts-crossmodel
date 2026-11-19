@@ -2,7 +2,7 @@
 
 **5 / 76 (7%) mandatory criteria verified**
 
-**Status NOT_DONE** · Iteration 34 · audited revision `1c4e741eae86544fa213330e5cbc69b59b1f8df9`
+**Status NOT_DONE** · Iteration 35 · audited revision `35102946e104fd99e71fd8b397f6feed05fe9023`
 
 The acceptance count is separate from the test count. V01.01 and V01.02 pass for requirements-source recovery, V01.04 for original question-paper identification, V06.02 for exact ELA golden PDF identity, and ARCH.01 for the dedicated executable. This does not establish end-to-end generation, educational correctness, or release readiness.
 
@@ -18,6 +18,8 @@ The acceptance count is separate from the test count. V01.01 and V01.02 pass for
 | Architecture and isolation | 1 / 10 (10%) |
 
 ## Work completed
+
+- Iteration 35: **44 focused tests passed**. Preflight rejects empty and out-of-page source crop bounds before producing a review packet.
 
 - Iteration 34: [Verified exact ELA golden PDF identity](iteration-34-ela-golden-identity.txt). The authenticated and recovered student/key SHA-256 values matched; no assessment was generated.
 

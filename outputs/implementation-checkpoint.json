@@ -1,6 +1,6 @@
 {
   "status": "NOT_DONE",
-  "iteration": 34,
+  "iteration": 35,
   "baseline_revision": "728596db0ec7deedc087b9e509da14701b7d088d",
   "criteria": [
     {
@@ -331,7 +331,7 @@
     "Artifact-specific human final approval is absent from the handoffs. This prevents production publication only; no publication is authorized without that approval.",
     "The detailed ELA requirements remain proposed/incomplete and no ELA subject design document was found; do not treat weekly ELA materials as approved Mock Assessment policy."
   ],
-  "audited_revision": "1c4e741eae86544fa213330e5cbc69b59b1f8df9",
+  "audited_revision": "35102946e104fd99e71fd8b397f6feed05fe9023",
   "evidence": [
     "outputs/iteration-34-ela-golden-identity.txt",
     "specs/generate_mock_assessment/fixtures/historical-benchmark-targets.json",
