@@ -1,0 +1,20 @@
+Criterion V06.02: identify the final ELA golden reference.
+
+The user designated the Format ELA Mock Test conversation as a golden run.
+Its final delivered Grade 6 ELA pair (2025 NYSED source) was verified by
+hashing both authenticated ChatGPT Library PDF downloads and independently
+rehashing and opening the existing local reference PDFs with PyMuPDF.
+
+MTS-ELA-MockTest-6thGrade-2026-09-23.pdf
+255543 bytes, 4 pages
+SHA-256: 1f3688f5141837ffb037cc97fd64399d6a752d6624465f209b12c406f994a8b9
+
+MTS-ELA-MockTest-6thGrade-2026-09-23-KEY.pdf
+135491 bytes, 2 pages
+SHA-256: 5a744c0f2b5ea742ba1bcafa9f383c2812f08e0e870eb8e7e627e7b7770a01f2
+
+Both hashes match the previously tracked historical fingerprint inventory.
+The Drive aliases name WeeklyWorksheet, but the bytes are the designated
+Mock Assessment PDFs. This does not establish a Weekly Practice dependency.
+Scope: artifact identity only; not academic review, reproduction, rights,
+or release approval. No PDFs or private links are committed in this record.
