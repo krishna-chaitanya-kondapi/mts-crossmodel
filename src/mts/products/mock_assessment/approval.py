@@ -3,9 +3,11 @@ from collections.abc import Callable, Mapping
 from hashlib import sha256
 import json
 from pathlib import Path
+from tempfile import TemporaryDirectory
 from typing import TypeVar
 
 from .preflight import validate_draft
+from .source_render import render_student
 
 Result = TypeVar("Result")
 
@@ -38,3 +40,49 @@ def run_approved_draft(
         raise ValueError("Approval must refer to a RunSpec draft packet")
     draft = validate_draft(packet.get("runspec"), source_path)
     return execute(draft)
+
+
+def render_approved_student(
+    review_dir: Path,
+    source_path: Path,
+    decision: Mapping[str, object],
+    destination: Path,
+) -> None:
+    """Render a local crop draft after the caller verifies approval and source rights.
+
+    The vector renderer clips display, not source data. Do not distribute this PDF.
+    """
+    def execute(draft: dict[str, object]) -> None:
+        source = draft["source"]
+        presentation = draft["presentation"]
+        assert isinstance(source, dict) and isinstance(presentation, dict)
+        selection = source["selection"]
+        pagination = presentation["student_pagination"]
+        regions = []
+        for item in selection:
+            bounds = item.get("bounds")
+            if (
+                not isinstance(bounds, list)
+                or len(bounds) != 4
+                or not all(type(value) in (int, float) for value in bounds)
+            ):
+                raise ValueError(f"Approved source item {item['source_number']} requires four numeric bounds")
+            regions.append({"id": item["source_number"], "source_page": item["source_page"], "bounds": bounds})
+
+        with TemporaryDirectory(prefix="mock-approved-") as directory:
+            candidate = Path(directory) / "student.pdf"
+            manifest = {
+                "title": "Mock Assessment - Local review",
+                "source_sha256": source["sha256"],
+                "scale": 0.75,
+                "regions": regions,
+            }
+            if pagination["policy"] in ("maximum", "exact"):
+                manifest["maximum_pages"] = pagination["pages"]
+            placements = render_student(source_path, manifest, candidate)
+            if pagination["policy"] == "exact" and placements[-1]["page"] != pagination["pages"]:
+                raise ValueError("Student PDF does not meet the approved exact page count")
+            with destination.open("xb") as output:
+                output.write(candidate.read_bytes())
+
+    run_approved_draft(review_dir, source_path, decision, execute)

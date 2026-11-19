@@ -7,8 +7,7 @@ from pathlib import Path
 import pymupdf
 import pytest
 
-from mts.products.mock_assessment.approval import run_approved_draft
-from mts.products.mock_assessment.source_render import render_student
+from mts.products.mock_assessment.approval import render_approved_student
 
 ROOT = Path(__file__).resolve().parents[2]
 
@@ -37,7 +36,10 @@ ROOT = Path(__file__).resolve().parents[2]
 def test_draft_preflight_cli(tmp_path, section, field, value, error, emit_bundle):
     source = tmp_path / "source.pdf"
     with pymupdf.open() as pdf:
-        pdf.new_page().insert_text((36, 36), "Original synthetic fixture")
+        page = pdf.new_page()
+        page.insert_text((36, 36), "First synthetic selection")
+        page.insert_text((36, 90), "Excluded synthetic text")
+        page.insert_text((36, 150), "Second synthetic selection")
         pdf.save(source)
     draft = {
         "run": {"worksheet_type": "mock_assessment", "subject": "ela", "grade": 6},
@@ -47,8 +49,8 @@ def test_draft_preflight_cli(tmp_path, section, field, value, error, emit_bundle
             "rights_basis": "Original synthetic test fixture created by this test.",
             "sha256": hashlib.sha256(source.read_bytes()).hexdigest(),
             "selection": [
-                {"source_number": 8, "source_page": 1, "type": "multiple_choice"},
-                {"source_number": 9, "source_page": 1, "type": "constructed_response"},
+                {"source_number": 8, "source_page": 1, "type": "multiple_choice", "bounds": [28, 15, 225, 50]},
+                {"source_number": 9, "source_page": 1, "type": "constructed_response", "bounds": [28, 130, 225, 165]},
             ],
         },
         "blueprint": {"questions": 2, "multiple_choice": 1, "constructed_response": 1},
@@ -108,28 +110,23 @@ def test_draft_preflight_cli(tmp_path, section, field, value, error, emit_bundle
     }
     output = tmp_path / "synthetic-student.pdf"
 
-    def render(approved):
-        assert approved == draft
-        return render_student(source, {
-            "title": "Synthetic approved-run fixture",
-            "source_sha256": approved["source"]["sha256"],
-            "scale": 0.75,
-            "maximum_pages": 2,
-            "regions": [{"id": 8, "source_page": 1, "bounds": [28, 15, 225, 50]}],
-        }, output)
-
     for decision in ({}, {**approval, "scope": "RELEASE"}):
         with pytest.raises(ValueError, match="separate pre-run approval"):
-            run_approved_draft(bundle, source, decision, render)
+            render_approved_student(bundle, source, decision, output)
     for name in before:
         path = bundle / name
         path.write_bytes(before[name] + b"\n")
         with pytest.raises(ValueError, match="does not match"):
-            run_approved_draft(bundle, source, approval, render)
+            render_approved_student(bundle, source, approval, output)
         path.write_bytes(before[name])
     assert not output.exists()
 
-    placements = run_approved_draft(bundle, source, approval, render)
-    assert [placement["id"] for placement in placements] == [8]
+    render_approved_student(bundle, source, approval, output)
     with pymupdf.open(output) as pdf:
-        assert "Original synthetic fixture" in pdf[0].get_text()
+        rendered = pdf[0].get_text()
+    assert rendered.index("First synthetic selection") < rendered.index("Second synthetic selection")
+    assert "Excluded synthetic text" not in rendered
+    before_output = output.read_bytes()
+    with pytest.raises(FileExistsError):
+        render_approved_student(bundle, source, approval, output)
+    assert output.read_bytes() == before_output

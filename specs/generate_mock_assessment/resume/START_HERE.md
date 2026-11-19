@@ -24,7 +24,7 @@ Check a draft source-based benchmark RunSpec, optionally writing a PDF and JSON 
 
 Omit `--review-dir` for validation only. The draft requires `source.sha256`, a nonempty `source.rights_basis` reference, and `source.selection` entries with unique `source_number`, one-based `source_page`, and `type` (`multiple_choice` or `constructed_response`). Preflight checks the source PDF, selection and blueprint counts, and portrait US Letter student pagination. The packet is explicitly DRAFT; caller-provided approval or release fields are rejected. Preflight does not evaluate the referenced rights, authorize generation, or gate the existing local review renderers.
 
-The planned-run approval helper compares both packet digests against a separate pre-run decision, then revalidates the draft against the source before dispatch. Its caller must authenticate the decision and reviewer. The helper is exercised by a synthetic integration test; it is not wired into the local review CLI or production publication.
+The planned-run approval helper compares both packet digests against a separate pre-run decision, then revalidates the draft against the source before dispatch. The local student dispatcher requires `bounds` (four PDF coordinates) on each approved selection and accepts no separate crop manifest. Its caller must authenticate the decision and verify source rights. The dispatcher is exercised by a synthetic integration test; it is not wired into the local review CLI or production publication. Vector clipping is not redaction: do not distribute its PDFs.
 
 ## Copilot prompt
 
