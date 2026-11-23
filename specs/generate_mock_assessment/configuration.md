@@ -16,6 +16,19 @@
 
 A profile is a reusable preset combining dimensions, not a separate worksheet type. Benchmark and diagnostic can overlap in utility; primary purpose drives blueprint and scoring. Academic length is not physical page count.
 
+## Assessment identifier and artifact naming
+
+Assessment identity is independent of purpose, length, source, grade, subject, and instructional week.
+
+- `BM` = Benchmark Assessment; `BM-02` = Benchmark Assessment #02 (sequence 02).
+- The assessment identifier is a stable, human-readable key shared by the RunSpec, release manifest, verification reports, and published file names. Do not derive the identifier from the source exam's location or year (for example, `NY-2022`).
+- Keep the type code and sequence as structured fields (`assessment_type_code: BM`, `assessment_sequence: 2`) and derive `assessment_id: BM-02`; retain source exam jurisdiction/year separately as provenance.
+- Student document suffix: `Mock-Assessment`; teacher key suffix: `Answer-Key`.
+- Canonical printable PDF name: `MTS-{Assessment-ID}-Grade-{Grade}-{Subject}-{Document-Type}.pdf`. Examples: `MTS-BM-02-Grade-4-Math-Mock-Assessment.pdf`, `MTS-BM-02-Grade-4-Math-Answer-Key.pdf`.
+- In the flat PrintReady release, enforce unique names and exact student/key pairs by assessment ID, grade, and subject. Preserve source and scoring references in metadata, not the printable file name.
+
+This is an approved naming/traceability contract, not a claim that the generator, JSON schema, or historical archive has been migrated. Implement and validate generator/manifest enforcement separately.
+
 ## Presentation requirements
 
 Historical compact Math benchmark values (conversation-derived; verify against original implementation):
